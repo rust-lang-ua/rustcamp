@@ -15,6 +15,9 @@ This project represents a hard-way step-by-step [Rust] learning course from lang
 1. [Create][1] a new [GitHub repository] for yourself using this one [as template][2].
 2. [Invite as a collaborator][3] of your repository the person you want to review your lessons (lead).
 
+## Additional information
+
+Rust books, articles, libraries and other additinal information repository [learn_rust_together](https://github.com/rust-lang-ua/learn_rust_together).
 
 ### Schedule
 

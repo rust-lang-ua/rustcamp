@@ -1,3 +1,4 @@
-fn main() {
-    println!("Implement me!");
+fn main()
+{
+  println!("Implement me!");
 }

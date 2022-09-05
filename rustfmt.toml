@@ -1,0 +1,27 @@
+edition = "2021"
+hard_tabs = false
+max_width = 130
+newline_style = "Unix"
+use_try_shorthand = true
+space_before_colon = true
+space_after_colon = true
+spaces_around_ranges = true
+tab_spaces = 2
+type_punctuation_density = "Wide"
+use_small_heuristics = "Default"
+where_single_line = false
+blank_lines_upper_bound = 2
+brace_style = "AlwaysNextLine"
+control_brace_style = "AlwaysNextLine"
+empty_item_single_line = true
+fn_args_layout = "Tall"
+fn_single_line = true
+imports_layout = "Mixed"
+match_arm_leading_pipes = "Preserve"
+imports_granularity = "Preserve"
+reorder_imports = false
+group_imports = "Preserve"
+reorder_impl_items = true
+
+unstable_features = true
+
