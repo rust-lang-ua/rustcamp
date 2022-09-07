@@ -27,7 +27,7 @@ Each step has estimated time for being completed. If any deeper investigation on
 
 Do not hesitate to ask your lead with questions, however you won't receive a concrete answer, but rather a direction for investigation. _Lead is the one who asks questions about everything here and demands a concrete answers_.
 
-- [ ] [0. Become familiar with Rust basics][Step 0] (3 days)
+- [X] [0. Become familiar with Rust basics][Step 0] (3 days)
 - [ ] [1. Concepts][Step 1] (2 days)
     - [ ] [1.1. Default values, cloning and copying][Step 1.1] (1 day)
     - [ ] [1.2. Boxing and pinning][Step 1.2] (1 day)
