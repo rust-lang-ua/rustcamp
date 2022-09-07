@@ -5,16 +5,32 @@ struct Point
   y : f32,
 }
 
-#[ derive( Debug, Clone, PartialEq ) ]
-struct Polyline( Vec< Point >);
+#[ derive( Debug ) ]
+struct EmptyPolyline;
 
-fn main()
+#[ derive( Debug, Clone, PartialEq ) ]
+struct Polyline( Vec< Point > );
+
+impl TryFrom< Vec< Point > > for Polyline
 {
-  println!( "Implement me!" );
+  type Error = EmptyPolyline;
+
+  fn try_from( points: Vec< Point > ) -> Result< Self, Self::Error >
+  {
+    if points.is_empty()
+    {
+      return Err( EmptyPolyline )
+    }
+    Ok( Self( points ) )
+  }
 }
+
+fn main() {}
 
 #[ cfg( test ) ]
 mod tests {
+  use std::convert::TryFrom;
+
   use super::*;
 
   #[ test ]
@@ -33,11 +49,18 @@ mod tests {
   }
 
   #[ test ]
+  #[ should_panic ]
+  fn can_not_create_empty_polyline()
+  {
+    Polyline::try_from( vec![] ).unwrap();
+  }
+
+  #[ test ]
   fn copy_polyline()
   {
-    let polyline = Polyline( 
+    let polyline = Polyline::try_from(
       vec![ Point::default(), Point::default() ]
-    );
+    ).unwrap();
     let copy_polyline = polyline.clone();
     assert_eq!( polyline, copy_polyline );
   }
