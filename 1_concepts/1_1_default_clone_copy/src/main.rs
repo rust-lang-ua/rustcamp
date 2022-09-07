@@ -29,14 +29,12 @@ fn main() {}
 
 #[ cfg( test ) ]
 mod tests {
-  use std::convert::TryFrom;
-
   use super::*;
 
   #[ test ]
   fn default_point()
   {
-    let point : Point = Default::default();
+    let point = Point::default();
     assert_eq!( Point{ x : 0.0, y : 0.0 }, point );
   }
 
