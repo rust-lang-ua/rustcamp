@@ -1,18 +1,22 @@
 use std::pin::Pin;
 
-trait MutMeSomehow {
+trait MutMeSomehow 
+{
   fn mut_me_somehow( self: Pin< &mut Self > );
 }
 
-trait SayHi: std::fmt::Debug {
-  fn say_hi(self: Pin<&Self>) {
-      println!("Hi from {:?}", self)
+trait SayHi: std::fmt::Debug 
+{
+  fn say_hi( self: Pin< &Self > ) 
+  {
+    println!( "Hi from {:?}", self )
   }
 }
 
 impl< T : Default > MutMeSomehow for Box< T >
 {
-  fn mut_me_somehow( mut self: Pin< &mut Self > ) {
+  fn mut_me_somehow( mut self: Pin< &mut Self > ) 
+  {
     self.set( Box::new( T::default() ) );
   }
 }
@@ -40,7 +44,7 @@ impl SayHi for String {}
 
 fn main() {}
 
-#[ cfg( test )]
+#[ cfg( test ) ]
 mod tests
 {
   use super::*;
