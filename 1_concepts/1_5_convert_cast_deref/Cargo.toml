@@ -3,3 +3,6 @@ name = "step_1_5"
 version = "0.1.0"
 edition = "2021"
 publish = false
+
+[dependencies]
+validator = "0.16.0"
