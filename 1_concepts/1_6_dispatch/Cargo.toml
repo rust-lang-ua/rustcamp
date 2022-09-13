@@ -3,3 +3,7 @@ name = "step_1_6"
 version = "0.1.0"
 edition = "2021"
 publish = false
+
+[lib]
+name = "step_1_6"
+path = "src/main.rs"

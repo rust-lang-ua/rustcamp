@@ -3,3 +3,6 @@ name = "step_1_7"
 version = "0.1.0"
 edition = "2021"
 publish = false
+
+[dependencies]
+step_1_6 = { path = "../1_6_dispatch" }
