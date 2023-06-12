@@ -9,7 +9,7 @@ Polish your familiarity by completing [Rust By Example].
 
 Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
-After completing these steps, consider the following terms and questions. Try to answer and explain them providing useful context like examples, use cases are, comparisons.
+After completing these steps, consider the following terms and questions. Try to answer and explain them providing useful context like examples, use cases, comparisons.
 
 ## Basics
 - What is Rust?
@@ -25,7 +25,7 @@ After completing these steps, consider the following terms and questions. Try to
 - Constants, variables.
 - Smart pointers.
 - What is a type? *
-- Static variables *
+- Static variables. *
 
 ## Working with memory
 
@@ -37,7 +37,7 @@ After completing these steps, consider the following terms and questions. Try to
 - Pointers.
 - Unsafe.
 
-## Programming techniques (todo: naming)
+## Programming techniques
 
 - Expressions, statements.
 - What is pattern matching?
@@ -54,26 +54,17 @@ After completing these steps, consider the following terms and questions. Try to
 - Error propagation, ? operator.
 - Panic.
 - Unwrap, when it's fine to use it.
-- Useful shortcuts.
 
 ## Generics & Polymorphism
 
 - Traits.
 - Auto traits.
-- Blanket impl, uncovered type. *
+- Blanket impl
+- Uncovered type.
 - Marker traits.
+- Trait objects.
 - Static dispatch VS dynamic dispatch.
-
-
-## Bugs
-Explain what these are, do you know how to avoid them?
-- Memory leak
-- Data race
-- Use after free
-- Deadlock
-- Out of memory
-
-todo: add some more (important) bugs
+- Why do we need object safety rules? *
 
 ## Project structure
 
@@ -81,16 +72,38 @@ todo: add some more (important) bugs
 - What is a workspace? Name the benefits of using workspaces.
 - Visibility.
 - How do you add dependencies to your project?
+- What are features and why do we need them?
 
+## Collections
 
+- Compare array `[T; N]`, vector `Vec<T>`, slice `&[T; N]`, 
+- What is an iterator? How do they differ? How are they used?
+- Compare `&str` and `String` types. (TODO: I'm not sure if we treat strings as collections)
+- Compare `HashMap` and `BTreeMap`. *
 
-- What is an iterator? What is a collection? How do they differ? How are they used?
-- What are macros? Which problems do they solve? What is the difference between declarative and procedural macro?
+## Concurrency
 
+- What is concurrency, why is it useful?
+- How Rust helps you writing concurrent programs?
+- Compare thread pool to asynchronous programming. (TODO: refine question)
+- Explain the meaning behind `Send` and `Sync`. *
 
-- Why [Rust] has `&str` and `String` types? How do they differ? When should you use them? Why str slice coexist with slice? 
-- Is [Rust] OOP language? Is it possible to use SOLID/GRASP? Does it have an inheritance? Is Rust functional language?
+## Metaprogramming
 
+- What are macros? Name a few.
+- Compare declarative and procedural macros.
+- Are there any drawbacks?
+
+## Bugs
+
+Explain what these are, do you know how to avoid them?
+- Memory leak
+- Data race
+- Use after free
+- Deadlock
+- Out of memory
+
+todo: maybe add some more (important) bugs
 
 
 After you're done notify your lead in an appropriate PR (pull request), and he will exam what you have learned.
