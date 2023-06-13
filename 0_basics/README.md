@@ -34,8 +34,7 @@ After completing these steps, consider the following terms and questions. Try to
 - References, slices, lifetimes.
 - Ownership and borrowing.
 - Mutability.
-- Pointers.
-- Unsafe.
+- Boxing.
 
 ## Programming techniques
 
@@ -47,16 +46,9 @@ After completing these steps, consider the following terms and questions. Try to
 - Dereferencing.
 - Never type. *
 
-## Error handling
-
-- Runtime error.
-- Compile time error.
-- Error propagation, ? operator.
-- Panic.
-- Unwrap, when it's fine to use it.
-
 ## Generics & Polymorphism
 
+- Generics.
 - Traits.
 - Auto traits.
 - Blanket impl
@@ -81,6 +73,31 @@ After completing these steps, consider the following terms and questions. Try to
 - Compare `&str` and `String` types. (TODO: I'm not sure if we treat strings as collections)
 - Compare `HashMap` and `BTreeMap`. *
 
+## Functional programming in Rust
+
+- Methods and functions.
+- Builders. (TODO: not sure if it belongs here)
+- Closures, what is special about them?
+- How to pass functions around?
+- Iterators and combinators.
+
+## Error handling
+
+- Runtime error.
+- Compile time error.
+- Error propagation, ? operator.
+- Panic.
+- Unwrap, when it's fine to use it.
+
+
+## Working with memory (advanced)
+
+- Internal mutability.
+- Reference counting.
+- Pointers.
+- Pinning.
+- Unsafe.
+
 ## Concurrency
 
 - What is concurrency, why is it useful?
@@ -97,16 +114,20 @@ After completing these steps, consider the following terms and questions. Try to
 ## Bugs
 
 Explain what these are, do you know how to avoid them?
-- Memory leak
-- Data race
-- Use after free
-- Deadlock
-- Out of memory
+- Memory leak.
+- Data race.
+- Use after free.
+- Deadlock.
+- Out of memory.
+- Out of bounds.
+- Undefined behavior. *
 
 todo: maybe add some more (important) bugs
 
 
 After you're done notify your lead in an appropriate PR (pull request), and he will exam what you have learned.
+
+TODO: Group related articles into categories.
 
 _Additional_ articles, which may help to understand the above topic better:
 - [Chris Morgan: Rust ownership, the hard way][1]
@@ -124,6 +145,7 @@ _Additional_ articles, which may help to understand the above topic better:
 - [Common Lifetime Misconception][11]
 - [Visualizing Memory Layout][12]
 - [Package vs. Crate terminology (r/rust)][13]
+- [Sylvain Kerkour: Functional Programming in Rust][25]
 - [Packages and crates (Rust wiki)][14]
 - [Full list of available crates on Rust Playground][16]
 - [Blanket impl definition][17]
@@ -165,3 +187,4 @@ Additional:
 [22]: https://web.archive.org/web/20230319015854/https://ybnesm.github.io/blah/articles/true-observer-pattern-rust
 [23]: https://ochagavia.nl/blog/you-are-holding-it-wrong
 [24]: https://hashrust.com/blog/a-guide-to-closures-in-rust
+[25]: https://kerkour.com/rust-functional-programming
