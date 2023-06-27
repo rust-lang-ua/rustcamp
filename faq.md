@@ -56,3 +56,51 @@ git merge upstream/master
 ```
 
 *If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories`  flag to the last command.*
+
+NOTE: it is possible that the mentioned commands may result in numerous merge conflicts that would be tedious to resolve by hand.
+This might happen if the repository is modified in some way before it is synced with the template.
+If the changes are not significant, it is probably easier to try again from the start. Otherwise, here is one way to fix such an issue:
+
+1. Save your progress.
+
+```bash
+# stage your changes
+git add *
+# commit and publish the changes
+git commit
+git push
+```
+
+2. Create a new branch and reset it to the state of the `upstream/master` (it is assumed that `upstream` is the template repository)
+
+```bash
+# fetch the data from the template repository
+git fetch upstream master
+# create a new brench and switch into it
+git checkout -b template
+# reset the branch to the state of upstream/master
+git reset upstream/master
+```
+
+Now any changes that were made to the repository will be marked as unstaged, and it is your task to pick and choose what to discard and what to keep.
+
+3. Run `git status` and choose what to keep.
+
+git status
+та discard або stage відповідні зміни зі списку, після чого збережіть їх
+git commit
+4. Переносимо зміни до нашої master
+git checkout master
+git merge template -Xtheirs --allow-unrelated-histories
+
+Готово! На цьому етапі усі зміни з репозиторію шаблону були пов'язані з вашою копією, і вони тепер мають спільну історію, а тому звичайні
+git fetch upstream master
+git merge upstream/master
+мають працювати без особливих проблем та --allow-unrelated-histories
+
+Якщо ви задоволені результатом, можна зробити
+git branch -D template
+git push
+щоб видалити вже використану гілку template та запостити свої дії до GitHub.
+
+Наврядчи комусь насправді корисно буде, але 2 години роботи хотілось якось закріпити]
