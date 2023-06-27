@@ -48,11 +48,11 @@ Add the main repository as a remote.
 
 ```bash
 # Add the remote
-git remote add template git@github.com:rust-lang-ua/rust_incubator.git
+git remote add upstream git@github.com:rust-lang-ua/rust_incubator.git
 # Fetch the changes from the repository
 git fetch --all
 # Merge the changes
-git merge template/master
+git merge upstream/master
 ```
 
 *If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories`  flag to the last command.*
