@@ -27,7 +27,7 @@ Also, Rust is not the worst choice nowadays:
 
 - [A large and friendly community](https://medium.com/mozilla-tech/growing-the-rust-community-6b6d23725085)
 - [Trending language: 7 years in a row as a favorite programming language ](https://survey.stackoverflow.co/2022/#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
-- [Fast](Швидкий) and [secure](https://vegibit.com/is-rust-the-future-of-systems-programming/)
+- [Fast](https://levelup.gitconnected.com/which-is-faster-rust-or-c-lets-find-out-who-is-the-usain-bolt-87495c774c8) and [secure](https://vegibit.com/is-rust-the-future-of-systems-programming/)
 - [Recognition by world leaders: Mozilla, Dropbox, Cloudflare, Discord, AWS](https://www.rust-lang.org/production/users)
 - [Rich ecosystem: cargo out of the box](https://lib.rs/stats)
 - Rust in the cores of [Linux](https://www.infoq.com/news/2022/12/linux-6-1-rust/) and [Windows](https://www.theregister.com/2023/04/27/microsoft_windows_rust/) : the language will not disappear and will continue to evolve
@@ -182,10 +182,12 @@ If you're feeling that the certification might be too challenging at this point,
 [deadlines]: #deadlines
 [Rust Incubator]: https://github.com/rust-lang-ua/rust_incubator/README.md
 [certification test]: https://www.youtube.com/watch?v=cInMjEaH1q0
-[how to fork - step by step]: ./how_to_start.md
+[how to fork - step by step]: ./how_to_fork.md
 [PR]: https://help.github.com/articles/github-glossary/#pull-request
 [workspace]: https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html
 [Rust]: https://www.rust-lang.org
+[Clippy]: https://github.com/rust-lang/rust-clippy
+[rustfmt]: https://github.com/rust-lang/rustfmt
 
 [Orientation]: ./orientation.md
 [Getting Started]: https://github.com/rust-lang-ua/rust_incubator#getting-started
