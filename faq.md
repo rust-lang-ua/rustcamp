@@ -57,21 +57,29 @@ git merge upstream/master
 
 *If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories`  flag to the last command.*
 
-NOTE: it is possible that the mentioned commands may result in numerous merge conflicts that would be tedious to resolve by hand.
-This might happen if the repository is modified in some way before it is synced with the template.
-If the changes are not significant, it is probably easier to try again from the start. Otherwise, here is one way to fix such an issue:
+> NOTE: it is possible that the mentioned commands may result in numerous merge conflicts that would be tedious to resolve by hand.
+> This might happen if the repository is modified in some way before it is synced with the template.
+> If the changes are not significant, it is probably easier to try again from the start. Otherwise, here is one way to fix such an issue:
 
-1. Save your progress.
+#### What to do if you merged with `--allow-unrelated-histories`, but there are too many merge conflicts
+
+1. You need to restore the state of your repository before the unsuccessful merge.
+
+Beacuse of how `--allow-unrelated-histories` merges commits, the only actual way to do so is to make a brand new clone of your repository from the state it was saved on your GitHub.
+If you didn't publish your progress before attempting to merge, unfortunately, you are going to lose that progress.
 
 ```bash
-# stage your changes
-git add *
-# commit and publish the changes
-git commit
-git push
+git clone https://github.com/YourUsername/your_repo.git
+cd your_repo
 ```
 
-2. Create a new branch and reset it to the state of the `upstream/master` (it is assumed that `upstream` is the template repository)
+Since this is a new clone, we are going to need to setup a new remote for the template repository.
+
+```bash
+git remote add upstream https://github.com/rust-lang-ua/rust_incubator.git
+```
+
+2. Create a new branch and reset it to the state of the `upstream/master`
 
 ```bash
 # fetch the data from the template repository
@@ -82,25 +90,48 @@ git checkout -b template
 git reset upstream/master
 ```
 
-Now any changes that were made to the repository will be marked as unstaged, and it is your task to pick and choose what to discard and what to keep.
+Now, instead of a bunch of conflicts, you have unstaged changes, which are much easier to work with.
+In my case, I just had to discard all of the changes(correct state of the repository took priority). Your situation might be different.
 
 3. Run `git status` and choose what to keep.
 
+```bash
+# this will show you all the unstaged changes
 git status
-та discard або stage відповідні зміни зі списку, після чого збережіть їх
+# if you wish to keep some of the changes, you may add them
+git add file1 file2 ...
+# or, to keep all of the changes,
+git add *
+# if you wish to discard a particular change, run
+git restore file1 file2 ...
+# or you may discard all of the changes
+git restore *
+```
+
+Once you're done with staging the changes, commit them. You may do so in multiple steps, if you wish.
+
+```bash
 git commit
-4. Переносимо зміни до нашої master
+```
+
+4. Finally, you may merge the branches
+
+```bash
 git checkout master
 git merge template -Xtheirs --allow-unrelated-histories
+```
+Done! At this point, all of your commits have common history with the template repository, and therefore ordinary
 
-Готово! На цьому етапі усі зміни з репозиторію шаблону були пов'язані з вашою копією, і вони тепер мають спільну історію, а тому звичайні
+```bash
 git fetch upstream master
 git merge upstream/master
-мають працювати без особливих проблем та --allow-unrelated-histories
+```
 
-Якщо ви задоволені результатом, можна зробити
+should suffice when it comes to updating your repository, and it should work without any unexpected problems or '--allow-unrelated-histories'.
+
+If you are satisfied with the result, you can remove the `template` branch and publish your changes to GitHub.
+
+```bash
 git branch -D template
 git push
-щоб видалити вже використану гілку template та запостити свої дії до GitHub.
-
-Наврядчи комусь насправді корисно буде, але 2 години роботи хотілось якось закріпити]
+```
