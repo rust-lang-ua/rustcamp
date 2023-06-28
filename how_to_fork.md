@@ -10,7 +10,7 @@ To get started, you'll need to create a **private** fork of the [Rust Incubator]
  <img src="/asset/img/fork/1.png"  width="600" align="center" />
  </p>
 
- - On the creation page, name your repository. Set visibility to **Private** and include all branches. Click **"Create repository from template"**.
+ - On the creation page, name your repository. Set visibility to **Private** and only **master** branch (**NOT** include all branches). Click **"Create repository from template"**.
  <p align="center">
  <img src="/asset/img/fork/2.png"  width="600" align="center" />
  </p>
