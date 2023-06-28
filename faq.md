@@ -82,7 +82,7 @@ git merge upstream/master
 > This might happen if the repository is modified in some way before it is synced with the template.
 > If the changes are not significant, it is probably easier to try again from the start. Otherwise, here is one way to fix such an issue:
 
-#### What to do if you merged with `--allow-unrelated-histories`, but there are too many merge conflicts
+#### - What to do if you merged with `--allow-unrelated-histories`, but there are too many merge conflicts?
 
 1. You need to restore the state of your repository before the unsuccessful merge.
 
