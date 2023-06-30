@@ -15,20 +15,18 @@ After completing these steps, you should be able to answer (and understand why) 
 - What statically typing means? What is a benefit of using it? Weak typing vs strong typing? Implicit / explicit?
 - What are generics and parametric polymorphism? Which problems do they solve?
 - What is nominative typing and structural typing? What is difference?
-- What are traits? How are they used? How do they compare to interfaces? What are an auto trait and a blanket impl? Uncovered type? What is a marker trait?
+- What are traits? How are they used? How do they compare to interfaces? What are an auto trait and a blanket impl? What is a marker trait?
 - What are static and dynamic dispatches? Which should I use, and when? What is monomorphisation?
-- What is a crate, module and package in Rust? How do they differ? How are the used? What is workspace?
-- What is cloning? What is copying? How do they compare? What is for trait drop? What is special about the trait?
-- What is immutability? What is the benefit of using it? What is the difference between immutability and const?
+- What is a crate, a module? How do they differ? How are the used? What is a workspace?
+- What is cloning? What is copying? How do they compare? Purpose of `Drop` trait? What is special about it?
+- What is immutability? How [Rust] benefits from it? What is the difference between immutability and const?
 - What are move semantics? What are borrowing rules? What is the benefit of using them?
 - What is RAII? How is it implemented in [Rust]? What is the benefit of using it?
 - What are lifetimes? Which problems do they solve? Which benefits do they give?
 - What is an iterator? What is a collection? How do they differ? How are they used?
 - What are macros? Which problems do they solve? What is the difference between declarative and procedural macro?
-- How code is tested in [Rust]? Where should you put tests and why?
 - What is special about slice? What is layout of Rust standard data types? Difference between fat and thin pointers?
-- Why [Rust] has `&str` and `String` types? How do they differ? When should you use them? Why str slice coexist with slice?
-- Is [Rust] OOP language? Is it possible to use SOLID/GRASP? Does it have an inheritance? Is Rust functional language?
+- What is the difference between `&str` and `String` types? When should you use them? Why `&str` slice coexist with byte slice `&[u8]`?
 
 After you're done notify your lead in an appropriate PR (pull request), and he will exam what you have learned.
 
