@@ -50,8 +50,13 @@ __Estimated time__: 1 day
 
 
 
-1. For the following types: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`.  
-   Implement the following traits:
+1. Implement the `SayHi` and `MutMeSomehow` traits **for the following types**: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`. 
+   #### Important:
+   > - `mut_me_somehow` must mutate self somehow.
+   > - You can add trait bounds to the types.
+   > - Write simple tests to demonstrate mut_me_somehow.
+  
+
    ```rust
    trait SayHi: fmt::Debug {
        fn say_hi(self: Pin<&Self>) {
@@ -71,6 +76,7 @@ __Estimated time__: 1 day
        }
    }
    ```
+
 
 2. For the following structure:
    ```rust
