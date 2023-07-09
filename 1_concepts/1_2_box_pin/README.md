@@ -51,7 +51,7 @@ __Estimated time__: 1 day
 
 
 1. For the following types: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`.  
-   Implement the following traits:
+   Implement the following traits(you may use modules to avoid conflicting implementations):
    ```rust
    trait SayHi: fmt::Debug {
        fn say_hi(self: Pin<&Self>) {
@@ -79,7 +79,7 @@ __Estimated time__: 1 day
        started_at: Option<std::time::Instant>,
    }
    ```
-   Provide a [`Future`] trait implementation, transparently polling the `inner_future`, and printing its execution time in nanoseconds once it's ready. Using `Fut: Unpin` trait bound (or similar) is not allowed. 
+   Provide a [`Future`] trait implementation, transparently polling the `inner_future`, and printing its execution time in nanoseconds once it's ready. Using `Fut: Unpin` trait bound (or similar) is not allowed.
 
 
 
