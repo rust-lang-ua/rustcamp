@@ -50,8 +50,10 @@ __Estimated time__: 1 day
 
 
 
-1. Implement the `SayHi` and `MutMeSomehow` traits **for the following types**: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`. 
+1. Implement the `SayHi` and `MutMeSomehow` traits **for the following types**: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`.
+    
    #### Important:
+   ##### THERE HAS TO BE NO `unsafe` CODE (DON'T USE `unsafe`)
    > - `mut_me_somehow` must mutate self somehow.
    > - You can add trait bounds to the types.
    > - Write simple tests to demonstrate mut_me_somehow.
@@ -78,7 +80,7 @@ __Estimated time__: 1 day
    ```
 
 
-2. For the following structure:
+3. For the following structure:
    ```rust
    struct MeasurableFuture<Fut> {
        inner_future: Fut,
