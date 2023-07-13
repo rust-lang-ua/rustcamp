@@ -14,6 +14,7 @@ For better understanding [static][1] and [dynamic][2] dispatches purpose, design
 - [Joshleeb: Traits and Trait Objects in Rust][12]
 - [Rust Book: 17.2. Using Trait Objects That Allow for Values of Different Types][3]
 - [Adam Schwalm: Exploring Dynamic Dispatch in Rust][13]
+- [Marco Amann: Rust Dynamic Dispatching deep-dive][20]
 - [Nicholas Matsakis: Dyn async traits, part 2][17]
 - [Armin Ronacher: Rust Any Part 1: Extension Maps in Rust][18]
 - [Armin Ronacher: Rust Any Part 2: As-Any Hack][19]
@@ -202,3 +203,4 @@ After completing everything above, you should be able to answer (and understand 
 [17]: https://smallcultfollowing.com/babysteps/blog/2021/10/01/dyn-async-traits-part-2
 [18]: https://lucumr.pocoo.org/2022/1/6/rust-extension-map
 [19]: https://lucumr.pocoo.org/2022/1/7/as-any-hack
+[20]: https://medium.com/digitalfrontiers/rust-dynamic-dispatching-deep-dive-236a5896e49b

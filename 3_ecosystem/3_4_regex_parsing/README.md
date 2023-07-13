@@ -51,9 +51,10 @@ If regular expressions are [not powerful enough][2] for your parsing problem, th
     - [`pom`] crate, providing [PEG][5] parser combinators created using operator overloading without macros.
     - [`chomp`] crate, a fast [monadic][13]-style [parser combinator][4] library.
 - [Parser generators][12]:
-    - [`pest`] crate, a simple yet flexible [parser generator][12] that makes it easy to write robust parsers, based on the [Parsing Expression Grammar][5] formalism.
+    - [`peg`] crate, a simple yet flexible [parser generator][12] that makes it easy to write robust parsers, based on the [Parsing Expression Grammar][5] formalism.
     - [`pest`] crate, with a focus on accessibility, correctness, and performance, using [PEG (parsing expression grammar)][5] as an input and deriving parser's code for it.
     - [`lalrpop`] crate, generating [LR(1) parser][6] code from custom grammar files.
+    - [`parsel`] crate, a library for generating parsers directly from syntax tree node types.
 
 For better understanding parsing problem and approaches, along with some examples, read through the following articles:
 - [Laurence Tratt: Which Parsing Approach?][9]
@@ -127,6 +128,8 @@ After completing everything above, you should be able to answer (and understand 
 [`lalrpop`]: https://docs.rs/lalrpop
 [`nom`]: https://docs.rs/nom
 [`once_cell`]: https://docs.rs/once_cell
+[`parsel`]: https://docs.rs/parsel
+[`peg`]: https://docs.rs/peg
 [`pest`]: https://docs.rs/pest
 [`pcre2`]: https://docs.rs/pcre2
 [`pom`]: https://docs.rs/pom

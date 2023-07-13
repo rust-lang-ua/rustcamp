@@ -170,7 +170,7 @@ After completing everything above, you should be able to answer (and understand 
 [4]: https://serde.rs/examples.html
 [5]: https://serde.rs/lifetimes.html#understanding-deserializer-lifetimes
 [6]: https://owengage.com/writing/2021-07-23-serde-expand
-[7]: https://owengage.com/writing/2021-08-14-serde-toy
+[7]: https://owengage.com/writing/2021-08-14-exploring-serdes-data-model-with-a-toy-deserializer
 [8]: https://serde.rs/field-attrs.html#with
 [9]: https://doc.rust-lang.org/book/trait-objects.html
 [10]: https://json-schema.org

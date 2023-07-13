@@ -36,6 +36,7 @@ For more familiarity with [OpenAPI] and using it in [Rust], read through the fol
 - [Official `utoipa` crate docs][`cynic`]
 - [Official `okapi` crate docs][`okapi`]
 - [Twilio Docs: Generate a Rust client for Twilio's API][121]
+- [Fabian Odenthal: Auto-Generating & Validating OpenAPI Docs in Rust: A Streamlined Approach with Utoipa and Schemathesis][123]
 
 
 
@@ -179,6 +180,7 @@ After completing everything above, you should be able to answer (and understand 
 [111]: https://nordicapis.com/whats-the-difference-between-rpc-and-rest
 [121]: https://www.twilio.com/docs/openapi/generating-a-rust-client-for-twilios-api
 [122]: https://support.smartbear.com/swaggerhub/docs/tutorials/openapi-3-tutorial.html
+[123]: https://identeco.de/en/blog/generating_and_validating_openapi_docs_in_rust
 [200]: https://graphql.org/learn/queries
 [201]: https://graphql.org/learn/schema
 [202]: https://graphql.org/learn/introspection

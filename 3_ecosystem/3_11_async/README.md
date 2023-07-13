@@ -41,7 +41,7 @@ Though, [`async` keyword in not supported in trait methods yet][2], there is the
 For better understanding `async`/`.await` keywords design, desugaring, usage, and features, read through the following articles:
 - [Rust RFC 2394: `async_await`][16]
 - [Asynchronous Programming in Rust: 3. `async`/`.await`][21]
-- [Hayden Stainsby: how I finally understood async/await in Rust (part 1)][61]
+- [Hayden Stainsby: how I finally understood async/await in Rust (part 1)][63]
 - [David Tolnay: Await a minute, why bother?][19]
 - [Arpad Borsos: Implementation Details of async Rust][27]
 - [Tyler Madry: How Rust optimizes async/await I][29]
@@ -59,6 +59,7 @@ When a task is suspended due to waiting some non-blocking operation to complete 
 For better understanding [`Waker`] design, usage, and features, read through the following articles:
 - [Official `std::task::Waker` docs][`Waker`]
 - [Asynchronous Programming in Rust: 2.2. Task Wakeups with `Waker`][22]
+- [Hayden Stainsby: how I finally understood async/await in Rust (part 2)][64]
 - [Arpad Borsos: Rust Futures and Tasks][28]
 
 
@@ -312,3 +313,4 @@ After completing everything above, you should be able to answer (and understand 
 [61]: https://kerkour.com/rust-async-await-what-is-a-runtime
 [62]: https://quickwit.io/blog/quickwit-actor-framework
 [63]: https://hegdenu.net/posts/understanding-async-await-1
+[64]: https://hegdenu.net/posts/understanding-async-await-2

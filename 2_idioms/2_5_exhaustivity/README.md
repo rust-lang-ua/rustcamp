@@ -175,6 +175,7 @@ After completing everything above, you should be able to answer (and understand 
 
 
 [API]: https://en.wikipedia.org/wiki/API
+[Rust]: https://www.rust-lang.org
 
 [1]: https://doc.rust-lang.org/book/ch18-00-patterns.html
 [2]: https://news.ycombinator.com/item?id=27553775

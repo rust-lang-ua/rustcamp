@@ -11,6 +11,8 @@
     }
   }],
   "ignorePatterns": [{
+    "pattern": "^!--"
+  },{
     "pattern": "^https://github.com/instrumentisto/rust-incubator/generate"
   }, {
     "pattern": "^https://crates.io/search\\?"

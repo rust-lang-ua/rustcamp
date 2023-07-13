@@ -22,13 +22,11 @@ Finally, a comprehensive assessment will be conducted at the end of the certific
 
 ## Getting Started
 
-Before starting wait for the invite to your new repository from [our bot](https://github.com/1tbot).
+Please, read [instructions][Getting Started].
 
 ## Submitting Solutions
 
-Each chapter/step of the bootcamp must be submitted as a separate [PR (pull request)][PR] with a [relevant title](https://github.com/rust-lang-ua/rust_incubator/blob/master/faq.md#--how-should-i-name-pr). Upon completion, mark the step as complete in the README's curriculum. Note that each step is a [Cargo workspace member][workspace], which means you can run/test it from the project root (i.e. `cargo run -p step_1_8`). We highly recommend using tools like [rustfmt] and [Clippy] while you're writing your [Rust] code.
-
-Don't hesitate to approach your mentor/lead with questions. However, keep in mind that you may not receive a straightforward answer. Instead, you'll be guided towards a direction for your own exploration. Remember, in this learning journey, _it is primarily the mentor/lead who poses the questions, expecting comprehensive and precise responses._
+Please, read [instructions][Submitting Solutions].
 
 ## Curriculum
 
@@ -188,10 +186,10 @@ Don't hesitate to approach your mentor/lead with questions. However, keep in min
 [This Week in Rust]: https://this-week-in-rust.org
 [bot]: https://github.com/1tbot
 [how to fork - step by step]: ./how_to_fork.md
-[how to fork]: ./orientation.md#getting-started
 
 [Orientation]: ./orientation.md
 [Getting Started]: ./orientation.md#getting-started
+[Submitting Solutions]: ./orientation.md#submitting-solutions
 [Exercism]: https://exercism.org/tracks/rust
 [Rust Quiz]: https://github.com/dtolnay/rust-quiz
 [Learning Materials]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md

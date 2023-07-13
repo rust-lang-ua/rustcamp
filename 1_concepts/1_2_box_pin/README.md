@@ -34,11 +34,14 @@ Note, that pinning and [`Unpin`] only affect the pointed-to type `P::Target`, no
 For better understanding [`Pin`] purpose, design, limitations and use cases read through:
 - [Official `std::pin` docs][`std::pin`]
 - [Reddit: Pinned objects ELI5?][2]
+- [SoByte: Pin and Unpin in Rust][10]
 - [Adam Chalmers: Pin, Unpin, and why Rust needs them][4]
 - [Tamme Schichler: Pinning in plain English][5]
 - [Yoshua Wuyts: Safe Pin Projections Through View Types][6]
 - [Official `#[pin_project]` docs][7]
 - [Alice Ryhl answers on "Pin tutorial are confusing me"][9]
+- [Rust Forum: Why is it unsafe to pin a shared reference?][11]
+- [Ohad Ravid: Put a Pin on That][12]
 
 
 
@@ -50,8 +53,17 @@ __Estimated time__: 1 day
 
 
 
-1. For the following types: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`.  
-   Implement the following traits(you may use modules to avoid conflicting implementations):
+   Implement the following traits:
+1. Implement the `SayHi` and `MutMeSomehow` traits **for the following types**: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`.
+    
+   #### Important:
+   ##### THERE HAS TO BE NO `unsafe` CODE (DON'T USE `unsafe`)
+   > - `mut_me_somehow` must mutate self somehow.
+   > - You can add trait bounds to the types.
+   > - Write simple tests to demonstrate mut_me_somehow.
+   > - you may use modules to avoid conflicting implementations
+  
+
    ```rust
    trait SayHi: fmt::Debug {
        fn say_hi(self: Pin<&Self>) {
@@ -72,7 +84,8 @@ __Estimated time__: 1 day
    }
    ```
 
-2. For the following structure:
+
+3. For the following structure:
    ```rust
    struct MeasurableFuture<Fut> {
        inner_future: Fut,
@@ -116,3 +129,6 @@ After completing everything above, you should be able to answer (and understand 
 [7]: https://docs.rs/pin-project/latest/pin_project/attr.pin_project.html
 [8]: https://mahdi.blog/rust-box-str-vs-string
 [9]: https://users.rust-lang.org/t/pin-tutorial-are-confusing-me/91003/18
+[10]: https://www.sobyte.net/post/2022-07/rust-pin-unpin
+[11]: https://users.rust-lang.org/t/why-is-it-unsafe-to-pin-a-shared-reference/40309
+[12]: https://ohadravid.github.io/posts/2023-07-put-a-pin-on-that

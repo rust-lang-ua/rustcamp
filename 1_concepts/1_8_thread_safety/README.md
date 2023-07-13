@@ -30,7 +30,7 @@ Implement the following types, which meet conditions:
 3. `SyncAndSend` is both `Sync` and `Send`.
 4. `NotSyncNotSend` is both `!Sync` and `!Send`.
 
-All inner details of implementation  are on your choice.
+All inner details of implementation are on your choice.
 
 Play with these types from multiple threads to see how compile time [fearless concurrency][2] works in practice.
 

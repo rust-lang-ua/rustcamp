@@ -1,7 +1,21 @@
-# Orientation
+# Guidelines for Success
 
 > "Self-education is, I firmly believe, the only kind of education there is."
 _<div align="right">Isaac Asimov</div>_
+
+### Mission
+
+Our boot camp's mission is to cultivate **well-trained professionals** who can immediately add value to any team and are equipped with the skills to tackle real-world challenges. Graduates will earn professional certificates, which significantly reduce the risk for companies that might otherwise hire under-prepared individuals. We are here to mentor and guide anyone who needs it.
+
+However, our focus is not on:
+
+- Providing an entertaining experience where participants pretend to be Rust developers.
+- Offering just an introductory overview of the subject matter.
+- Creating content where ample high-quality resources already exist online.
+- Delivering lectures.
+- Providing unnecessary hand-holding or 'babysitting.'
+
+These are **non-goals** of the boot camp.
 
 ### Prerequisites
 
@@ -9,15 +23,15 @@ Before you begin the certification program, you should have a solid understandin
 
 ### Perspective
 
-**Choosing to participate** in our boot camp means embarking on an intensive, **fast-paced journey** of learning, with a focus on the critical areas of information technology. The boot camp's accelerated pace is designed to be the most effective method to acquire new skills swiftly. If your ambition is to gain practical, hands-on skills that can make an immediate impact. Usually **boot camps outperform** traditional university courses, pet projects, and even on-the-job training, especially when starting without a strong foundation in these crucial skills.
+**Choosing to participate** in our boot camp means embarking on an intensive, **fast-paced journey** of learning, focusing on the critical areas of information technology. The boot camp's accelerated pace is designed to be the most effective method for rapidly acquiring new skills. Usually, **boot camps outperform** traditional university courses, pet projects, and even on-the-job training, especially when starting without a strong foundation in these crucial skills. A pet project simply does not challenge you in the same way a boot camp does, pushing you outside of your comfort zone. Boot camps also hold an advantage over commercial projects: you have much more freedom and time to build up missing skills, and our curriculum encourages you to master one skill at a time, never pushing you too far beyond your current abilities.
 
-Participants in the boot camp will be divided into closely-knit small groups. Meetings within these groups will occur four times a week, excluding weekends. These meetings are an opportunity for dynamic discussion, mutual learning, and answering any questions you might have. Additionally, participants can expect to answer insightful questions posed by their mentors, fostering a proactive learning environment.
+Participants in the boot camp will join closely-knit small groups. Meetings within these groups will take place four times a week, excluding weekends. These meetings provide an opportunity for dynamic discussion, mutual learning, and the answering of any questions you might have. Additionally, participants can expect to answer insightful questions posed by their mentors, fostering a proactive learning environment. You can also make new friends and acquaintances who can help you with your career -- after all, **networking is a pillar of success**.
 
-Our learning process is meticulously designed to enhance skills daily, leveraging the most exceptional learning materials available. We do not produce content unless there is no adequate resource available online. Our philosophy rests on utilizing state-of-the-art tools and **premium materials**, rather than creating substandard content ourselves. We furnish an interactive platform for tracking progress, assuring a well-defined path towards skill enhancement and achievement.
+Our learning process is meticulously designed to enhance skills daily, leveraging the most exceptional learning materials available. We do not produce content unless there is no adequate resource available online. Our philosophy rests on utilizing state-of-the-art tools and **premium learning materials**, rather than creating substandard content ourselves. We furnish an interactive platform for tracking progress, ensuring a well-defined path towards skill enhancement and achievement.
 
 Participants will also be challenged with designing, developing, and presenting a **capstone project**. This project provides a fantastic opportunity to apply the skills learned throughout the boot camp in a practical, impactful way.
 
-Finally, a **comprehensive assessment** will be conducted at the end of the certification program. Upon successful completion, participants will earn a certificate. This certificate is more than just a document; it's a testament to your ability to utilize best practices and write idiomatic code that employers will value highly. Imagine the doors that could open with this certificate in hand!
+Finally, a **comprehensive assessment** will be conducted at the end of the certification program. Upon successful completion, participants will earn a certificate. This certificate is more than just a document; it's a testament to your ability to utilize best practices and write idiomatic code, which employers highly value. Imagine the doors that could open with this certificate in hand!
 
 Join us in this boot camp and fast-track your IT career to new heights. The journey might be intense, but the reward is immeasurable.
 
@@ -74,7 +88,11 @@ We encourage you to meet all deadlines to maximize your learning experience and 
 
 ### Calendar
 
-The calendar is your ally. Utilize it and allocate at least **20 hours per week** to immerse yourself in the program and adhere to the deadlines. Remember to **check the calendar** at least once a week. All meetings and deadlines are marked there. Please note that all deadlines fall on Thursdays. Do not miss the hard deadlines - they are crucial to your progression in the program.
+The calendar is your ally. Utilize it and allocate at least **20 hours per week** to immerse yourself in the program and adhere to the deadlines. Make it a habit to **check the calendar** at least once a week. All meetings and deadlines are marked there. Please note that all deadlines are set for Thursdays. Missing these hard deadlines can significantly hinder your progression in the program, so be sure to respect them.
+
+Please arrive at each meeting **prepared and ready for discussion**. Your homework and tasks should be completed before the meeting, not after. Mentors expect you to come prepared, and their role is to help deepen your understanding of the concepts.
+
+As soon as you complete one chapter, start the next without delay. This will help you stay on track. Treat the boot camp as a job or a competition, not just as entertainment. To succeed, it's essential to **study regularly** and avoid taking more than one day off at a time. A loss of a couple of days can set you back significantly, and recovery may be stressful. So, take care of yourself and manage your time wisely.
 
 ### Honor code
 
@@ -96,7 +114,7 @@ Our certification process is meticulously designed to maintain the highest level
 
 During the certification test, participants will be [supervised by a proctor][certification test]. We require participants to use two cameras and share their desktop throughout the test to prevent any unauthorized communication. In addition, we will monitor all active processes on the participant's computer at the beginning and during the test to curb any fraudulent activities.
 
-It's important to note that passing the certification test is challenging due to its intricate and tricky questions. Each participant is granted **only one attempt** to pass the test. However, a condensed version of the test will be publicly available for practice. Participants who complete the first or second part of the program ahead of others, or those whose capstone project receives the most likes from mentors during presentation, will be awarded an extra attempt.
+It's important to note that passing the certification test is challenging due to its intricate and tricky questions. Each participant is granted **only one attempt** to pass the test. However, a condensed version of the test will be publicly available for practice. Participants who complete the first or second part of the program ahead of others, or those whose capstone project receives the most likes from mentors during presentation, will be awarded an extra attempt. We recommend utilizing available online quizzes as part of your **preparation for the certification test**. This method will help you thoroughly understand the topics related to any questions you might stumble upon.
 
 Any attempt to cheat during the certification test will lead to immediate expulsion from the boot camp.
 
@@ -128,7 +146,7 @@ Wait for the invite to your new repository from [our bot](https://github.com/1tb
 
 1. [Our bot](https://github.com/1tbot) will create a private fork of the main [Rust Incubator repository](https://github.com/rust-lang-ua/rust_incubator) in [our organization](https://github.com/rust-lang-ua) and invite you.
 
-2. Also, your mentors will already be in the repository. 
+2. Also, your mentors will already be in the repository.
 
 3. Stay Up-to-Date.
 
@@ -154,9 +172,13 @@ If you get the error `fatal: refusing to merge unrelated histories` add option `
 
 ## Submitting Solutions
 
-Each chapter/step of the boot camp must be submitted as a separate [PR (pull request)][PR] with a [relevant title](https://github.com/rust-lang-ua/rust_incubator/blob/master/faq.md#--how-should-i-name-pr). Upon completion, mark the step as complete in the README's curriculum. Note that each step is a [Cargo workspace member][workspace], which means you can run/test it from the project root (i.e. `cargo run -p step_1_8`). We recommend using tools like [rustfmt] and [Clippy] while you're writing your [Rust] code.
+For each chapter or step of the bootcamp, you should create and submit a separate [PR (pull request)][PR]. Make sure to give your PR a [relevant title](https://github.com/rust-lang-ua/rust_incubator/blob/master/faq.md#--how-should-i-name-pr). After you've completed your pull request, please remove any markers like "NOT READY", "DRAFT", or "WIP" from the title. In the description of your pull request, remember to tag all your mentors.
 
-Don't hesitate to approach your mentor/lead with questions. However, keep in mind that you may not receive a straightforward answer. Instead, you'll be guided towards a direction for your own exploration. Remember, in this learning journey, _it is primarily the mentor/lead who poses the questions, expecting comprehensive and precise responses._
+Before merging the pull request into the main branch, you need to receive approval from at least one mentor. If more than one mentor has reviewed your Pull Request and requested changes, you must receive approval from all involved mentors.
+
+Each step of the bootcamp is a [Cargo workspace member][workspace], meaning you can run and test it from the project root using commands like `cargo run -p step_1_8`. We highly recommend using tools like [rustfmt] and [Clippy] while writing your [Rust] code.
+
+Never hesitate to reach out to your mentor or lead with questions. However, be aware that you may not always receive a direct answer. Instead, they may guide you towards a path for your own exploration and discovery. Remember, in this learning journey, it's usually the mentor or lead who asks the questions, expecting thorough and precise responses from you.
 
 ## Useful links
 
@@ -190,7 +212,8 @@ If you're feeling that the certification might be too challenging at this point,
 [rustfmt]: https://github.com/rust-lang/rustfmt
 
 [Orientation]: ./orientation.md
-[Getting Started]: https://github.com/rust-lang-ua/rust_incubator/orientation.md#getting-started
+[Getting Started]: ./orientation.md#getting-started
+[Submitting Solutions]: ./orientation.md#submitting-solutions
 [Exercism]: https://exercism.org/tracks/rust
 [Rust Quiz]: https://github.com/dtolnay/rust-quiz
 [Learning Materials]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md

@@ -1,40 +1,27 @@
----
-name: Task
-about: Perform a task related to the project.
----
+<!-- To use "Bugfix" PR template add `&template=Bugfix.md` to this page's URL. -->
 
-<To use "Bugfix" PR template add `&template=Bugfix.md` to this page's URL>
+<!-- To use "Roadmap" PR template add `&template=Roadmap.md` to this page's URL. -->
 
-<To use "Roadmap" PR template add `&template=Roadmap.md` to this page's URL>
+<!-- To use "Task" PR template add `&template=Task.md` to this page's URL. -->
 
-<To use "Release" PR template add `&template=Release.md` to this page's URL>
-
-<Remove everything above before submitting this PR>
+<!-- Remove everything above before submitting this PR. -->
 
 
-Resolves <paste issue reference>  
-<and/or>  
-Part of <paste issue/PR reference>  
-<and/or>  
-Required for <paste issues/PRs references>  
-<and/or>  
-Requires <paste issues/PRs references>  
-<and/or>  
-Related to <paste issues/PRs references>  
+<!-- Name this PR as: "Step <step-number>: <step-name>". -->
 
-<Remove the lines above if there are no related issues/PRs>
+Resolves [Step <!-- paste step number -->](<!-- paste step link -->)
 
 
 
 
-## Synopsis
+## Task
 
-<Give a brief overview of the problem>
+<!-- Copy the task description here. -->
 
 
 
 
 ## Solution
 
-<Describe how exactly the problem is (or will be) resolved>
-
+<!-- Describe how exactly the task is solved by you. Reason about it, if possible. -->
+<!-- Give some useful insights about your solution to help understanding it better. -->
