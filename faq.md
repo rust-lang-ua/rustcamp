@@ -93,6 +93,11 @@ We are making a lot of efforts to involve companies in interviews with bootcamp 
 
 We encourage you to open an __issue__ if you see any problems.
 
+#### - What should I do if my contact information has changed?
+
+If you change your GitHub username, email, or telegram, be sure to let [Stepan](https://t.me/stepko_o) know.
+
+
 #### - How can I incorporate changes from the main repository?
 
 Add the main repository as a remote.
