@@ -55,7 +55,7 @@ Yes, you should. Open a PR as soon as you can, marking it with "NOT READY / DRAF
 
 #### - Can I merge PR? How many mentors need to approve PR for merge?
 
-You cannot merge Pull Requests. Your mentors make the merge themselves. 
+Please don`t do PR merge yourself. Your mentors make the merge themselves. 
 If one mentor has reviewed your PR and everything is fine, his will immediately merge your PR. However, if several mentors have reviewed your PR and asked for changes, the merge will be completed by the mentors only when both of them approve it.
 
 
