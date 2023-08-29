@@ -1,0 +1,13 @@
+runs:
+  using: composite
+  steps:
+    - name: Cache and Install toml-cli
+      uses: taiki-e/cache-cargo-install-action@v1
+      with:
+        tool: toml-cli@0.2.3
+
+    - name: Cache and Install xq
+      uses: taiki-e/cache-cargo-install-action@v1
+      with:
+        # xq is jq but in Rust
+        tool: xq@0.2.44

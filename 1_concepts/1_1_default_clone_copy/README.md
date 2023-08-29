@@ -10,7 +10,7 @@ Step 1.1: Default values, cloning and copying
 
 It can be auto-derived, but only for a `struct` whose all members have [`Default`] implementations. It is implemented for a great many types in the standard library, and also used in a surprising number of places. So if your type has a value that can be construed as being "default", it is a good idea to implement this trait.
 
-If you're not enough with [std] deriving capabilities for [`Default`], consider to use [smart-default] crate. An example is quite self-explanatory:
+If you're not satisfied with [std] deriving capabilities for [`Default`], consider using [smart-default] crate. An example is quite self-explanatory:
 ```rust
 #[derive(SmartDefault)]
 enum Foo {
@@ -50,7 +50,7 @@ However, [`Copy`] marker trait (see [official docs][`Copy`]) enables 'copy seman
 [Official `Copy` docs][`Copy`] are quite explanatory about which types _should_ be [`Copy`] and which types _cannot_:
 
 > Some types can't be copied safely. For example, copying `&mut T` would create an aliased mutable reference. Copying `String` would duplicate responsibility for managing the `String`'s buffer, leading to a double free.
-> 
+>
 > Generalizing the latter case, any type implementing `Drop` can't be `Copy`, because it's managing some resource besides its own `size_of::<T>` bytes.
 
 > Generally speaking, if your type can implement `Copy`, it should. Keep in mind, though, that implementing `Copy` is part of the public API of your type. If the type might become non-`Copy` in the future, it could be prudent to omit the `Copy` implementation now, to avoid a breaking API change.
@@ -71,7 +71,9 @@ __Estimated time__: 1 day
 
 
 - Create a `Point` type which represents a 2D point (`x` and `y` coordinates). This type has to be `Copy` and `Default`.
-- Create a `Polyline` type which represents a non-empty set of `Point`s of unknown size. This type has to be `Clone` and non-`Default`.
+- Create a `Polyline` type which represents a non-empty collection(whichever you want) of `Point`s of unknown size. This type has to be `Clone` and non-`Default`.
+    - Polyline must implement basic collection methods: addition of an item, removal of an item,
+      getting an item. You may add additional methods & features if you desire.
 
 
 

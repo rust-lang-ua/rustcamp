@@ -53,6 +53,7 @@ __Estimated time__: 1 day
 
 
 
+   Implement the following traits:
 1. Implement the `SayHi` and `MutMeSomehow` traits **for the following types**: `Box<T>`, `Rc<T>`, `Vec<T>`, `String`, `&[u8]`, `T`.
     
    #### Important:
@@ -60,6 +61,7 @@ __Estimated time__: 1 day
    > - `mut_me_somehow` must mutate self somehow.
    > - You can add trait bounds to the types.
    > - Write simple tests to demonstrate mut_me_somehow.
+   > - you may use modules to avoid conflicting implementations
   
 
    ```rust
@@ -90,7 +92,7 @@ __Estimated time__: 1 day
        started_at: Option<std::time::Instant>,
    }
    ```
-   Provide a [`Future`] trait implementation, transparently polling the `inner_future`, and printing its execution time in nanoseconds once it's ready. Using `Fut: Unpin` trait bound (or similar) is not allowed. 
+   Provide a [`Future`] trait implementation, transparently polling the `inner_future`, and printing its execution time in nanoseconds once it's ready. Using `Fut: Unpin` trait bound (or similar) is not allowed.
 
 
 

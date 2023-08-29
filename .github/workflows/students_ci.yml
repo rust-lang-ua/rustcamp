@@ -1,0 +1,90 @@
+name: Tests
+
+on:
+  pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  changed_crates:
+    if: ${{ github.repository_owner != 'instrumentisto' }}
+    name: Detect changes
+    runs-on: ubuntu-latest
+    outputs:
+      has_changes: ${{ steps.crates.outputs.has_changes }}
+      crates: ${{ steps.crates.outputs.crates }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          # Fetch all history so that git diff can compare against any commit
+          fetch-depth: 0
+
+      - uses: ./.github/actions/install-student-ci-deps
+        name: Get dependencies
+
+      - name: Find changed crates
+        id: crates
+        run: |
+          set -e
+
+          crates=()
+          for path in $(git diff --name-only ${{ github.event.pull_request.base.sha }}...${{ github.event.pull_request.head.sha }}); do
+            directory=$(dirname "$path")
+            cargo_toml=$(sh -c "cd ${directory} && cargo locate-project --message-format plain || true")
+
+            if [[ -n "$cargo_toml" ]]; then
+              # If this TOML file does not represent a workspace (does not have the `workspace` key)
+              if ! toml get "$cargo_toml" "workspace" >/dev/null 2>&1; then
+                crate=$(toml get "$cargo_toml" "package.name")
+                crates+=($crate)
+              fi
+            fi
+          done
+
+          # Sort and remove duplicates
+          crates=($(echo ${crates[@]} | tr ' ' '\n' | sort -u))
+
+          # Convert to JSON
+          crates=$(echo ${crates[@]} | xq -cn "[inputs]")
+
+          echo "Changed crates: $crates"
+
+          echo "crates=$crates" >> $GITHUB_OUTPUT
+
+          if [[ "$crates" == "[]" ]]; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+
+  test:
+    needs: changed_crates
+    if: ${{ needs.changed_crates.outputs.has_changes == 'true' }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        crate: ${{ fromJson(needs.changed_crates.outputs.crates) }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Rust
+        id: rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
+
+      # Cache dependencies by the crate name and the Rust version
+      # It does not save/fetch cache from different crates, because `cargo test -p` does not build them
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: ${{ matrix.crate }}-${{ steps.rust.outputs.rustc_hash }}
+
+      - name: Run tests on ${{ matrix.crate }}
+        run: cargo test -p ${{ matrix.crate }}

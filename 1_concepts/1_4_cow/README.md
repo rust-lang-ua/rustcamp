@@ -9,7 +9,7 @@ Step 1.4: Clone-on-write
 [Rust] has a [`Cow`] (clone-on-write) smart pointer in its standard library. Understanding how to use it is _essential to write idiomatic and ergonomic_ [Rust] code.
 
 In a nutshell: 
-- it allows to combine usage of owned and borrowed data in a single abstraction, which __leads to better ergonomics and minimize performance penalties asap__ (as much as possible);
+- it allows to combine usage of owned and borrowed data in a single abstraction, which __leads to better ergonomics and minimize performance penalties as much as possible__;
 - it encloses and provides immutable access to borrowed data, and __clones the data lazily when mutation or ownership is required__.
 
 ```rust
