@@ -127,7 +127,7 @@ After completing everything above, you should be able to answer (and understand 
 [5]: https://blog.schichler.dev/pinning-in-plain-english-ckwdq3pd0065zwks10raohh85
 [6]: https://blog.yoshuawuyts.com/safe-pin-projections-through-view-types
 [7]: https://docs.rs/pin-project/latest/pin_project/attr.pin_project.html
-[8]: https://mahdi.blog/rust-box-str-vs-string
+[8]: https://web.archive.org/web/20230605135444/https://mahdi.blog/rust-box-str-vs-string/
 [9]: https://users.rust-lang.org/t/pin-tutorial-are-confusing-me/91003/18
 [10]: https://www.sobyte.net/post/2022-07/rust-pin-unpin
 [11]: https://users.rust-lang.org/t/why-is-it-unsafe-to-pin-a-shared-reference/40309
