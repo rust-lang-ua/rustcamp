@@ -92,7 +92,8 @@ Please, read [instructions][Submitting Solutions].
 - 🌐 [Zero To Production] - A back-end focused book to broaden your knowledge.
   - Access the book as a [series of articles][Zero To Production as a series of articles].
 - ❔ [FAQ] - Answers to frequently asked questions at your fingertips.
-- ✅ [Progress Board] - Participant progress board
+
+- 🔄 [Progress Board] - Participant progress board
 - 💼 [Game server for 2d PvP fighting game](https://github.com/advanced-user/rust_bootcamp_capsote/pull/1) - The player must enter the game ID to create a new game or to join an existing one. The game is designed for two players in one match. 
 - 💼 [Link Verifier](https://github.com/polcovnic/link_verifier) - Link Verifier is a CLI tool designed to verify links within given .md files. Designed with versatility in mind, it can seamlessly integrate with GitHub Actions, making it an essential tool for maintaining up-to-date and accurate links in your markdown files.   
 - 💼 [fbmark](https://github.com/kstepanovdev/fbmark_v2) - TUI Bookmark manager with synchronization to a third-party bookmark manager. Main features: CRUD for bookmarks, using SQLite3, Fuzzy search among bookmarks, TUI, Synchronization with a third-party service (Tagpacker only for now), Tags for searching"  
@@ -115,7 +116,6 @@ Please, read [instructions][Submitting Solutions].
 - 💼 [Weather CLI](https://github.com/mhnap/weather-cli) - Simple CLI to retrieve information about current weather conditions. Supports multiple API providers.
 - 💼 [redis-config](https://github.com/danik-tro/redis-config) - Implementation of Redis source as Async source for config-rs crate.
 - 💼 [Event Appointments Server](https://github.com/pahoma/event-appointments) - Web server - service that managing appointments and invitations! This server provides a set of endpoints to manage appointments, generate QR invitations, and validate them. 
-
 
 ## Too hard?
 
