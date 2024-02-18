@@ -104,7 +104,7 @@ After completing everything above, you should be able to answer (and understand 
 
 [1]: https://en.wikipedia.org/wiki/Metaprogramming
 [3]: https://docs.rs/log/#compile-time-filters
-[4]: https://dzone.com/articles/what-is-structured-logging
+[4]: http://web.archive.org/web/20230331224150/https://dzone.com/articles/what-is-structured-logging
 [5]: https://github.com/slog-rs/slog/wiki/What-makes-slog-fast
 [6]: https://github.com/slog-rs/slog/wiki/FAQ
 [7]: https://docs.rs/tracing#spans
