@@ -150,7 +150,7 @@ Do not hesitate to ask your mentor/lead with questions, however you won't receiv
 
 Rustcamp materials were based on the [Rust Incubator](https://github.com/instrumentisto/rust-incubator) program created by the Legendary [Kai](https://github.com/tyranron) 💜 and Member of the Jedi High Council [Luca Palmieri](https://github.com/LukeMathWalker) 🧙‍♂️
 
-[Step 0]: 0_basics
+[Step 0]: 0_vocabulary
 [Step 1]: 1_concepts
 [Step 1.1]: 1_concepts/1_1_default_clone_copy
 [Step 1.2]: 1_concepts/1_2_box_pin
