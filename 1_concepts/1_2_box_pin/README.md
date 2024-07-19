@@ -60,10 +60,9 @@ __Estimated time__: 1 day
    #### Important:
    ##### THERE HAS TO BE NO `unsafe` CODE (DON'T USE `unsafe`)
    > - `mut_me_somehow` must mutate self somehow.
-   > - You can add trait bounds to the types.
+   > - You can add trait bounds to the types. (using `Unpin` trait bound is not allowed)
    > - Write simple tests to demonstrate mut_me_somehow.
    > - you may use modules to avoid conflicting implementations
-  
 
    ```rust
    trait SayHi: fmt::Debug {
