@@ -5,7 +5,7 @@ Task 1.6: Static and dynamic dispatch
 
 __[Static dispatch][1]__ (also called "early binding") __happens only at compile time__. The compiler generates separate code for each concrete type that is used. In [Rust] static dispatch is a __default way for polymorphism__ and is introduced simply by generics (parametric polymorphism): `MyType<T, S, F>`.
 
-__[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __[type is erased][4] at compile time__, so compiler doesn't know it, therefore generates `vtable` which dispatches call at runtime and __comes with a performance penalty__. In [Rust] dynamic dispatch is introduced via [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
+__[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __[type is erased][4] at compile time__, so compiler doesn't know it, therefore generates [vtable] which dispatches call at runtime and __comes with a performance penalty__. In [Rust] dynamic dispatch is introduced via [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
 
 You _have to_ use [dynamic dispatch][2] in situations where [type erasure][4] is required. If the problem can be solved with a [static dispatch][1] then you'd better to do so to avoid performance penalties. The most common example when you cannot use [static dispatch][1] and have to go with [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
 
@@ -18,7 +18,7 @@ For better understanding [static][1] and [dynamic][2] dispatches purpose, design
 - [Nicholas Matsakis: Dyn async traits, part 2][17]
 - [Armin Ronacher: Rust Any Part 1: Extension Maps in Rust][18]
 - [Armin Ronacher: Rust Any Part 2: As-Any Hack][19]
-
+- [Dynamic Dispatch Representation][21]
 
 
 
@@ -187,6 +187,7 @@ After completing everything above, you should be able to answer (and understand 
 [enum_dispatch]: https://docs.rs/enum_dispatch
 [momo]: https://github.com/llogiq/momo
 [Rust]: https://www.rust-lang.org
+[vtable]: https://en.wikipedia.org/wiki/Virtual_method_table
 
 [1]: https://en.wikipedia.org/wiki/Static_dispatch
 [2]: https://en.wikipedia.org/wiki/Dynamic_dispatch
@@ -204,3 +205,4 @@ After completing everything above, you should be able to answer (and understand 
 [18]: https://lucumr.pocoo.org/2022/1/6/rust-extension-map
 [19]: https://lucumr.pocoo.org/2022/1/7/as-any-hack
 [20]: https://medium.com/digitalfrontiers/rust-dynamic-dispatching-deep-dive-236a5896e49b
+[21]: https://www.cs.brandeis.edu/~cs146a/rust/doc-02-21-2015/book/static-and-dynamic-dispatch.html#representation
