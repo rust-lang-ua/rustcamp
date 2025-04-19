@@ -1,7 +1,8 @@
 Task 2.2: Swapping values with `mem::replace`
 =============================================
 
-As [Rust] implies [move semantics][1] by default and quite strict [borrowing rules][2], often, there are situations (especially, with large `struct`s and `enum`s) where mutating value in-place or values swapping may not be allowed by borrow checker, which is quite confusing and leads to doing needless clones (so providing redudant performance costs). For example:
+As [Rust] implies [move semantics][1] by default and quite strict [borrowing rules][2], often, there are situations (especially, with large `struct`s and `enum`s) where mutating value in-place or values swapping may not be allowed by borrow checker, which is quite confusing and leads to doing needless clones (so providing redundant performance costs). For example:
+
 ```rust
 impl<T> Buffer<T> {
     fn get_and_reset(&mut self) -> Vec<T> {
@@ -14,6 +15,7 @@ impl<T> Buffer<T> {
 ```
 
 A neat and need-to-know trick in such situations is to use [`mem::replace`] (or [`mem::swap`]). It allows to swap two values of the same type without moving things around, partial destructuring and references mess. So, the example above is simply turns into:
+
 ```rust
 impl<T> Buffer<T> {
     fn get_and_reset(&mut self) -> Vec<T> {
@@ -23,6 +25,7 @@ impl<T> Buffer<T> {
 ```
 
 For better understanding [`mem::replace`], [`mem::swap`] and [`mem::take`] purpose, design, limitations and use cases, read through the following articles:
+
 - [Official `mem::replace` docs][`mem::replace`]
 - [Official `mem::swap` docs][`mem::swap`]
 - [Official `mem::take` docs][`mem::take`]
@@ -31,16 +34,14 @@ For better understanding [`mem::replace`], [`mem::swap`] and [`mem::take`] purpo
 
 Some examples of useful applying these functions are described below.
 
-
-
-
 ## Keeping owned values in changed enums
 
 This situation has detailed explanation in the following article:
+
 - [Rust Design Patterns: `mem::replace` to keep owned values in changed enums][3]
 
 > The borrow checker won't allow us to take out `name` of the enum (because _something_ must be there). We could of course `.clone()` name and put the clone into our `MyEnum::B`, but that would be an instance of the "Clone to satisfy the borrow checker" antipattern. Anyway, we can avoid the extra allocation by changing `e` with only a mutable borrow.
-> 
+>
 > `mem::replace` lets us swap out the value, replacing it with something else. In this case, we put in an empty `String`, which does not need to allocate. As a result, we get the original `name` _as an owned value_. We can then wrap this in another enum.
 
 ```rust
@@ -62,12 +63,10 @@ fn swizzle(e: &mut MyEnum) {
 
 > Look ma, no allocation! Also you may feel like Indiana Jones while doing it.
 
-
-
-
 ## Mutating embedded collection
 
 Consider the following situation:
+
 ```rust
 struct Names {
     exclusions: Vec<String>,
@@ -86,7 +85,9 @@ impl Names {
     }
 }
 ```
+
 which does not compile due to 2 mutable borrows:
+
 ```rust
 error[E0500]: closure requires unique access to `*self` but it is already borrowed
   --> src/lib.rs:10:44
@@ -101,6 +102,7 @@ error[E0500]: closure requires unique access to `*self` but it is already borrow
 ```
 
 Using [`mem::take`] here allows us to avoid the problem with 2 mutable borrows at almost no cost (`Vec::defaukt()` is no-op), by swapping out the value in a temporary variable:
+
 ```rust
 impl Names {
     fn apply_exclusions(&mut self) {
@@ -116,7 +118,8 @@ impl Names {
 }
 ```
 
-It's worth mentioning, that this problem became much less common after [disjoint capture in closures had been introduced in 2021 Rust edition][5]. For illustration, the `self.name` mutation is intentionally separated into its own method, so we can lock the whole `&mut self`. If we simplify the code straightforwardly, it just compiles fine, due to mutable borrows are disjoint: 
+It's worth mentioning, that this problem became much less common after [disjoint capture in closures had been introduced in 2021 Rust edition][5]. For illustration, the `self.name` mutation is intentionally separated into its own method, so we can lock the whole `&mut self`. If we simplify the code straightforwardly, it just compiles fine, due to mutable borrows are disjoint:
+
 ```rust
 struct Names {
     exclusions: Vec<String>,
@@ -132,29 +135,19 @@ impl Names {
 }
 ```
 
-
-
-
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
-Improve and optimize the code contained in [this task's crate](src/main.rs) to cut off redudant performance costs.
+Improve and optimize the code contained in [this task's crate](src/main.rs) to cut off redundant performance costs.
 Add tests.
-
-
 
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is the reason of [`mem::replace`] existing in [Rust]? What does it give to us? Why cannot we solve the same problems without it?
 - Provide some meaningful examples of using [`mem::replace`] in [Rust].
-
-
-
 
 [`mem::replace`]: https://doc.rust-lang.org/std/mem/fn.replace.html
 [`mem::swap`]: https://doc.rust-lang.org/std/mem/fn.swap.html

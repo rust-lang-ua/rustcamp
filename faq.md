@@ -5,7 +5,6 @@
 - [Completing tasks and PR](#completing-tasks-and-pr)
 - [Capstone project](#capstone-project)
 
-
 ## About Rustcamp
 
 ##### <ins>*- What is the motivation of mentors to mentor?*</ins><br/>
@@ -19,7 +18,6 @@ We are making a lot of efforts to involve companies in interviews with rustcamp 
 ##### <ins>*- Can I only complete the course assignments on weekends?*</ins><br/>
 
 To achieve quality results, you should dedicate more than 20 hours a week to your studies. Three months of intensive study can equate to two years of independent practice. If you only study on weekends, you'd need to dedicate 10 hours each day. We recommend distributing your study time evenly throughout the week.
-
 
 ## Communication
 
@@ -64,6 +62,7 @@ Each task should be submitted as a separate PR on its own branch. Use the follow
 - "task_5_3_11" for the 11th subtask of the third task in the fifth section,
 
 ##### <ins>*- Should I answer theoretical questions in PR?*</ins><br/>
+
 Only in the [final tasks](https://github.com/rust-lang-ua/rustcamp/edit/master/faq.md#--what-is-the-final-task).
 In tasks that are not final, you do not need to answer theoretical questions. For example, in Problems 1_1, 1_2, you do not need to answer the theoretical questions in writing because they are not final.
 In the final tasks, please write your answers in the same PR as the solution to the practical problem. Do not create a separate PR to answer the questions; it will not be accepted by mentors.
@@ -83,13 +82,14 @@ A task is marked as completed when you've made a Pull Request, and it's been rev
 ##### <ins>*- How do mentors distinguish between finished Pull Requesters and unfinished Pull Requesters?*</ins><br/>
 
 A task is marked as completed when you've made a Pull Request, and it's been reviewed and approved by one of the reviewers. After you complete your Pull Request, remove the "NOT READY / DRAFT / WIP" marker from the title and specify [our bot](https://github.com/1tbot) as a reviewer and tag all of your mentors in the comments section.
+
 ##### <ins>*- Should I open an unfinished PR?*</ins><br/>
 
 Yes, you should. Open a PR as soon as you can, marking it with "NOT READY / DRAFT / WIP" in the title . Your mentors will review it once you remove this marker and specify [our bot](https://github.com/1tbot) as a reviewer and tag all of your mentors in the comments section.
 
 ##### <ins>*- Can I merge PR?*</ins><br/>
 
-Please don't do PR merge yourself. Your mentors make the merge themselves. 
+Please don't do PR merge yourself. Your mentors make the merge themselves.
 
 ##### <ins>*- How many mentors need to approve before I can merge?*</ins><br/>
 
@@ -118,7 +118,7 @@ git fetch --all
 git merge upstream/master
 ```
 
-*If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories`  flag to the last command.*
+*If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories` flag to the last command.*
 
 > NOTE: it is possible that the mentioned commands may result in numerous merge conflicts that would be tedious to resolve by hand.
 > This might happen if the repository is modified in some way before it is synced with the template.
@@ -183,6 +183,7 @@ git commit
 git checkout master
 git merge template -Xtheirs --allow-unrelated-histories
 ```
+
 Done! At this point, all of your commits have common history with the template repository, and therefore ordinary
 
 ```bash
@@ -230,7 +231,7 @@ For those who enjoy reading 200-page RFCs, a decoder for a simple (most likely l
 <details>
 <summary>Reddit to Lemmy Proxy Bot</summary>
 <br>
-Make a bot that reposts subreddits to Lemmy.    
+Make a bot that reposts subreddits to Lemmy.
 However, website parsing will be required. You can also earn stars on GitHub for this project.
 </details>
 

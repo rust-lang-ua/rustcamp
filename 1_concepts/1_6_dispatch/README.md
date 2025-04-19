@@ -7,9 +7,10 @@ __[Static dispatch][1]__ (also called "early binding") __happens only at compile
 
 __[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __[type is erased][4] at compile time__, so compiler doesn't know it, therefore generates [vtable] which dispatches call at runtime and __comes with a performance penalty__. In [Rust] dynamic dispatch is introduced via [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
 
-You _have to_ use [dynamic dispatch][2] in situations where [type erasure][4] is required. If the problem can be solved with a [static dispatch][1] then you'd better to do so to avoid performance penalties. The most common example when you cannot use [static dispatch][1] and have to go with [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
+You _have to_ use [dynamic dispatch][2] in situations where [type erasure][4] is required. If the problem can be solved with a [static dispatch][1] then you'd be better to do so to avoid performance penalties. The most common example when you cannot use [static dispatch][1] and have to go with [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
 
 For better understanding [static][1] and [dynamic][2] dispatches purpose, design, limitations and use cases, read through the following articles:
+
 - [Rust Blog: Abstraction without overhead: traits in Rust][11]
 - [Joshleeb: Traits and Trait Objects in Rust][12]
 - [Rust Book: 17.2. Using Trait Objects That Allow for Values of Different Types][3]
@@ -19,8 +20,6 @@ For better understanding [static][1] and [dynamic][2] dispatches purpose, design
 - [Armin Ronacher: Rust Any Part 1: Extension Maps in Rust][18]
 - [Armin Ronacher: Rust Any Part 2: As-Any Hack][19]
 - [Dynamic Dispatch Representation][21]
-
-
 
 ## Object safety
 
@@ -36,18 +35,17 @@ The other reason to go with [static dispatch][1] is that except performance pena
 This can lead to quite tricky and non-obvious situations when writing code.
 
 For better understanding [object safety][5] purpose, design and limitations, read through the following articles:
+
 - [Rust Book: 17.2. Object Safety Is Required for Trait Objects][5]
 - [Rust Reference: 6.1. Traits: Object Safety][6]
 - [Nicholas Matsakis: Dyn async traits, part 2][17]
-
-
-
 
 ## Dynamic-to-static optimization for closed types set
 
 In situations where you need to deal with different types, but all possible types form a [closed set][14] (you know _all_ the used types), [dynamic dispatch][2] can be replaced with a [static dispatch][1] in a price of some `enum`-based boilerplate.
 
 For example the following [dynamically dispatched][2] code:
+
 ```rust
 trait SayHello {
     fn say_hello(&self);
@@ -75,6 +73,7 @@ let greetings: Vec<Box<dyn SayHello>> = vec![
 ```
 
 Can be refactored in the following way (as far as we know that only `English` and `Spanish` types will be used):
+
 ```rust
 trait SayHello {
     fn say_hello(&self);
@@ -113,21 +112,21 @@ let greetings: Vec<Language> = vec![English, Spanish];
 
 There is also a handy [enum_dispatch] crate, which generates this boilerplate automatically in some cases. It has [illustrative benchmarks][15] about performance gains of using `enum` for dispatching.
 
-
-
-
 ## Reducing code bloat optimization
 
 [Static dispatch][1] with type parameters has a downside of generating rather a lot of code (for each type), bloating binary size and potentially pessimizing execution cache usage. However, often generics aren’t really needed for speed, but for ergonomics.
 
-The canonical solution of this problem is to factor out an inner method that contains all of the code minus the generic conversions, and leave the outer method as a shell. For example:
+The canonical solution of this problem is to factor out an inner method that contains all the code minus the generic conversions, and leave the outer method as a shell. For example:
+
 ```rust
 pub fn this<I: Into<String>>(i: I) -> usize {
     // do something really complicated with `i.into()`
     // potentially spanning multiple pages of code
 }
 ```
+
 becomes
+
 ```rust
 #[inline]
 pub fn this<I: Into<String>>(i: I) -> usize {
@@ -137,22 +136,19 @@ fn _this_inner(i: String) -> usize {
     // same code as above without the conversion
 }
 ```
+
 This ensures only the conversion gets monomorphized, leading to leaner code and compile-time performance wins.
 
 There is a handy [momo] crate, which generates this boilerplate automatically in some cases. Read through its explanation article:
+
 - [Llogiq: Momo · Get Back Some Compile Time From Monomorphization][16]
-
-
-
 
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Given the following `Storage` abstraction and `User` entity:
+
 ```rust
 trait Storage<K, V> {
     fn set(&mut self, key: K, val: V);
@@ -170,19 +166,15 @@ struct User {
 Implement `UserRepository` type with injectable `Storage` implementation, which can get, add, update and remove `User` in the injected `Storage`. Make two different implementations: one should use [dynamic dispatch][2] for `Storage` injecting, and the other one should use [static dispatch][1].
 Prove your implementation correctness with tests.
 
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is dispatch? When a function call represents a dispatch and when not?
 - How does static dispatch work?
 - How does dynamic dispatch work? Why is it required? Which limitations does it have in [Rust]? Why does it have them?
-- When dynamic dispatch can be replaced with static dispatch? When not? What are the trade-offs?
+- When dynamic dispatch can be replaced with static dispatch? When aren't? What are the trade-offs?
 - How can we reduce the size of compiler-generated code when using static dispatch?
-
-
-
 
 [enum_dispatch]: https://docs.rs/enum_dispatch
 [momo]: https://github.com/llogiq/momo
