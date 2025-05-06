@@ -6,6 +6,7 @@ These tasks describe common crates and tools in [Rust] ecosystem required for ap
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
+
 - What testing capabilities does [Rust] offer and when should I use them? Why should I follow [BDD] style?
 - What are macros? How do they differ? What benefits does their usage give? When should I write one?
 - How to work with date and time in [Rust]? How should I store time? How should I return it to other applications?
@@ -19,7 +20,6 @@ After doing them you should be able to answer the following questions:
 - Why multithreading is required for [Rust] programs and what problems does it solve? How threads concurrency differs with parallelism? How can I parallelize code in [Rust]?
 - What is asynchronicity and what problems does it solve? How is it compared to threads concurrency? What is [Rust] solution for asynchronicity and why it has such design?
 - What are actors? When are they useful?
-
 
 ## Some usefull tools
 
@@ -36,12 +36,10 @@ After doing them you should be able to answer the following questions:
 
 __Estimated time__: 2 days
 
-
-
-
 Write a [CLI] tool for stripping [JPEG] images [metadata][21] and minimizing their size (a simplified analogue of [tinyjpg.com]).
 
 Requirements:
+
 - Accept input list of files and remote [URL]s via: either [CLI] arguments, [STDIN], or read it from a specified file ([EOL]-separated).
 - Allow configuring how much images are processed at the same time.
 - Allow configuring the output directory to store processed images in.
@@ -51,13 +49,11 @@ Requirements:
 - Print execution time in logs, so it's easy to see how much which operation takes during the execution.
 
 If you have enough time after implementing base requirements, consider to add the following to your solution:
+
 - Allow configuring download speed limit for images from remote [URL]s.
 - Cover your implementation with unit and E2E tests.
 - Support [PNG] images as well.
 - Add comprehensive documentation to your code.
-
-
-
 
 [BDD]: https://en.wikipedia.org/wiki/Behavior-driven_development
 [CLI]: https://en.wikipedia.org/wiki/Command-line_interface

@@ -5,12 +5,10 @@ Task 2.1: Rich types ensure correctness
 
 "Programming with types" inevitably implies its own idioms and patterns. The most common are described below.
 
-
-
-
 ## Newtype
 
 Consider the following example, which demonstrates a possible bug:
+
 ```rust
 #[derive(Clone)]
 struct Post {
@@ -26,9 +24,11 @@ fn repost(post: &Post, new_author_id: u64) -> Post {
     new_post
 }
 ```
+
 Here the problem occurs because our entities are expressed in values, so compiler makes no difference between `Post::id` and `Post::user_id` as they have the same type.
 
 Let's express those entities in types:
+
 ```rust
 mod post {
     #[derive(Clone, Debug, PartialEq)]
@@ -59,7 +59,9 @@ fn repost(post: &Post, new_author_id: user::Id) -> Post {
     new_post
 }
 ```
+
 Now, compiler is able to cut off this type of bugs _totally_ at compile time, and to be quite informative with errors:
+
 ```rust
 error[E0308]: mismatched types
   --> src/main.rs:27:19
@@ -76,14 +78,13 @@ This is what is called ["newtype pattern"][1]. [Newtypes][1] are a zero-cost abs
 The downside of using [newtype pattern][1] is a necessity of writing _more boilerplate code_, because you should provide common traits implementations by yourself (like `Clone`, `Copy`, `From`/`Into`/`AsRef`/`AsMut`), as without them the type won't be ergonomic in use. However, most of them can be _derived automatically_ with `std` capabilities or third-party derive-crates (like [`derive_more`]), so the cost is acceptable in most cases. Furthermore, the excellent [`nutype`] crate pushes this idea even further, aiming to provide the best ergonomics for [newtype pattern][1] without compromising any guarantees it gives.
 
 For better understanding [newtype pattern][1], read through the following articles:
+
 - [Rust Design Patterns: Newtype][1]
 - [Rust By Example: 14.7. New Type Idiom][2]
 - [Alexis King: Parse, don’t validate][7] ([ru][7_ru])
+- [Alexis King: Parse, don’t validate][7] ([eng][7_eng])
 - [Stefan Baumgartner: Refactoring in Rust: Abstraction with the Newtype Pattern][10]
 - [Official `nutype` crate docs][`nutype`]
-
-
-
 
 ## Typestates
 
@@ -94,6 +95,7 @@ Not always, but _yes_ in some cases. One possible way is to use [typestates][3] 
 A real-world example of applying this idiom in [Rust] would be the awesome [`state_machine_future`] crate.
 
 For better understanding [typestates][3], read through the following articles:
+
 - [David Teller: Typestates in Rust][3]
 - [Cliff L. Biffle: The Typestate Pattern in Rust][5]
 - [Ana Hobden: Pretty State Machine Patterns in Rust][4]
@@ -102,18 +104,13 @@ For better understanding [typestates][3], read through the following articles:
 - [State Pattern - Design Patterns][9]
 - [Azriel Hoh: Compile Time Correctness: Type State][11]
 
-
-
-
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 For the `Post` type described above, assume the following behavior in our application:
-```
+
+```text
 +-----+              +-------------+            +-----------+
 | New |--publish()-->| Unmoderated |--allow()-->| Published |
 +-----+              +-------------+            +-----------+
@@ -127,17 +124,13 @@ For the `Post` type described above, assume the following behavior in our applic
 Implement this behavior using [typestates idiom][3], so that calling `delete()` on `New` post (or calling `deny()` on `Deleted` post) will be a compile-time error.
 Write simple tests for the task.
 
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - Why expressing semantics in types is good? What are the benefits and downsides?
-- What is newtype pattern? How does it work? Which guarantees does it give?
-- What is typestates pattern? How does it work? Which guarantees does it give?
-
-
-
+- What is `newtype` pattern? How does it work? Which guarantees does it give?
+- What is `typestates` pattern? How does it work? Which guarantees does it give?
 
 [`derive_more`]: https://docs.rs/derive_more
 [`nutype`]: https://docs.rs/nutype
