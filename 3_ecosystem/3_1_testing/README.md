@@ -3,24 +3,20 @@ Task 3.1: Testing and mocking
 
 [Rust] testing ecosystem [is not huge, but has grown quite well][1], providing some interesting libraries and solutions.
 
-
-
-
 ## Built-in testing capabilities
 
 [Rust] provides quite good built-in testing capabilities, which are very well described in the following articles:
+
 - [Rust Book: 11. Writing Automated Tests][2]
 - [Rust By Example: 21. Testing][3]
 - [Rust By Example: 12.3. Tests][4]
-
-
-
 
 ## BDD style
 
 [BDD (behavior-driven development)][BDD] testing style implies that _test cases represent a program specification_, while _tests themselves prove the specification correctness_.
 
 While [Rust] ecosystem has [some BDD testing style crates][11] (the most mature one is [`cucumber`] crate), it's not a requirement to use them to follow the [BDD] style (as they may be too complex for some trivial cases, like [unit testing][12]). There is nothing preventing you from following [BDD] style in usual [Rust] tests. So, instead of:
+
 ```rust
 #[cfg(test)]
 mod tests {
@@ -35,7 +31,9 @@ mod tests {
     }
 }
 ```
+
 You're always free to write it more meaningfully:
+
 ```rust
 #[cfg(test)]
 mod hash_spec {
@@ -52,10 +50,8 @@ mod hash_spec {
     }
 }
 ```
+
 This makes tests more granular (and so, more meaningful test failures) and testing intentions become more understandable for readers.
-
-
-
 
 ## Mocking
 
@@ -68,6 +64,7 @@ Additionally, [`mockito`] and [`wiremock`] crates should be mentioned as a quite
 The most powerful, however, is [`mockall`] crate. See [this overview][43] for more details.
 
 For better overview and familiarity with [mocking][41] in [Rust], read through the following articles:
+
 - [Alan Somers: Rust Mock Shootout!][43]
 - [Oduah Chigozie: Mocking in Rust: Mockall and alternatives][45]
 - [Official `mockall` crate docs][`mockall`]
@@ -75,42 +72,36 @@ For better overview and familiarity with [mocking][41] in [Rust], read through t
 - [Official `unimock` crate docs][`unimock`]
 - [Audun Halland: How to write a type-level mock library in Rust][44]
 
-
-
-
 ## Property testing
 
 [Property testing][21] is another testing paradigm for considering. In a nutshell, it can be explained in the following way:
 
-> _Property testing_ is a system of testing code by checking that certain properties of its output or behaviour are fulfilled for all inputs. These inputs are generated automatically, and, critically, when a failing input is found, the input is automatically reduced to a _minimal_ test case.
+> _Property testing_ is a system of testing code by checking that certain properties of its output or behavior are fulfilled for all inputs. These inputs are generated automatically, and, critically, when a failing input is found, the input is automatically reduced to a _minimal_ test case.
 
 [Rust] ecosystem has quite good [`proptest`] and [`quickcheck`] crates, which provide tools and primitives for [property testing][21].
 
 For better understanding and familiarity with [property testing][21] in [Rust], read through the following articles:
+
 - [`proptest` crate description][`proptest`]
 - [`quickcheck` crate description][`quickcheck`]
 - [Proptest Book][22]
-
-
-
 
 ## Fuzzing
 
 [Fuzzing][31] is another testing technique, which involves providing invalid, unexpected, or random data as inputs to a computer program. It [really helps][32] to spot program crashes and memory leaks in edge cases.
 
 [Rust] ecosystem has [several tools][33] for [fuzzing][31] at the moment. Most known are:
+
 - [`cargo-fuzz`] is a command-line wrapper for using [`libFuzzer`].
 - [afl.rs] allows to run [AFL (american fuzzy lop)][AFL] on code written in [Rust].
 - [`honggfuzz`] is a security oriented fuzzer with powerful analysis options, which supports evolutionary, feedback-driven fuzzing based on code coverage (software- and hardware-based).
 
 For better understanding and familiarity with [fuzzing][31] in [Rust], read through the following articles:
+
 - [Rust Fuzz Book][34]
 - [Official `cargo-fuzz` crate docs][`cargo-fuzz`]
 - [Official `honggfuzz` crate docs][`honggfuzz`]
 - [Adrian Taylor: Comparative fuzzing parallel Rust tools][35]
-
-
-
 
 ## More reading
 
@@ -123,6 +114,7 @@ For better understanding and familiarity with [fuzzing][31] in [Rust], read thro
 - [nextest][62]
 
 ## CLI Testing
+
 - [assert_cmd](https://crates.io/crates/assert_cmd) - Easy command initialization and assertions.
 - [assert_fs](https://crates.io/crates/assert_fs) - Filesystem fixtures and assertions for testing.
 - [predicates](https://crates.io/crates/predicates) - Composable first-order predicate functions.
@@ -131,29 +123,20 @@ For better understanding and familiarity with [fuzzing][31] in [Rust], read thro
 - [example with rexpect](https://www.rustadventure.dev/building-a-digital-garden-cli/clap-v4/testing-interactive-clis-with-rexpect)
 - [one more example](https://out-of-cheese-error.netlify.app/the-way)
 
-
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 For the implementation of a small [guessing game][51] in [this task's crate](src/main.rs) provide all possible tests you're able to write.
-
-
-
 
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is TDD style? What is BDD style? Where is the essential accent of BDD?
 - What is mocking? When is it useful?
 - What is property-based testing? How does it achieve its goals?
 - What is fuzzing? How does it differ from property testing?
-
-
-
 
 [`cargo-fuzz`]: https://docs.rs/cargo-fuzz
 [`cucumber`]: https://docs.rs/cucumber

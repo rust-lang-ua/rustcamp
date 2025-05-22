@@ -1,16 +1,14 @@
 Task 2.5: Exhaustivity
 ======================
 
-Exhaustiveness checking in [pattern matching][1] is a very useful tool, allowing to spot certain bugs at compile-time by cheking whether all the combinations of some values where covered and considered in a source code. Being applied correctly, it increases the [fearless refactoring][2] quality of a source code, eliminating possibilities for "forgot to change" bugs to subtly sneak into the codebase whenever it's extended.
-
-
-
+Exhaustiveness checking in [pattern matching][1] is a very useful tool, allowing to spot certain bugs at compile-time by checking whether all the combinations of some values where covered and considered in a source code. Being applied correctly, it increases the [fearless refactoring][2] quality of a source code, eliminating possibilities for "forgot to change" bugs to subtly sneak into the codebase whenever it's extended.
 
 ## Enums
 
 The most canonical and iconic example of exhaustiveness checking is using an enum in a `match` expression. The point here is to __[omit][5] using [`_` (wildcard pattern)][4] or match-anything bindings__, as such `match` expressions won't break in compile-time when something new is added.
 
 For example, this is a very bad code:
+
 ```rust
 fn grant_permissions(role: &Role) -> Permissions {
     match role {
@@ -20,9 +18,11 @@ fn grant_permissions(role: &Role) -> Permissions {
     }
 }
 ```
+
 If, for some reason, a new `Role::Guest` is added, __with very high probability this code won't be changed accordingly__, introducing a security bug, by granting `Permissions::All` to any guest. This mainly happens, because the code itself doesn't signal back in any way that it should be reconsidered.
 
-By leveraging exhaustivity, the code can be altered in the way __it breaks at compile-time whenever a new `Role` variant is added__:
+By leveraging exhaustively, the code can be altered in the way __it breaks at compile-time whenever a new `Role` variant is added__:
+
 ```rust
 fn grant_permissions(role: &Role) -> Permissions {
     match role {
@@ -32,7 +32,8 @@ fn grant_permissions(role: &Role) -> Permissions {
     }
 }
 ```
-```
+
+```rust
 error[E0004]: non-exhaustive patterns: `&Role::Guest` not covered
   --> src/lib.rs:16:11
    |
@@ -48,14 +49,12 @@ note: `Role` defined here
    |     ^^^^^ not covered
 ```
 
-
-
-
 ## Structs
 
-While enums exhaustiveness is quite an obvious idea, due to extensive usage of `match` expressions in a regular code, the structs exhaustiveness, on the other hand, is not, while being as much useful. Exhaustivity for structs is achieved by __using [destructuring][6] without [`..` syntax (multiple fields ignoring)][7]__.
+While enums exhaustiveness is quite an obvious idea, due to extensive usage of `match` expressions in a regular code, the struct's exhaustiveness, on the other hand, is not, while being as much useful. Exhaustively for structs is achieved by __using [destructuring][6] without [`..` syntax (multiple fields ignoring)][7]__.
 
 For example, having the following code:
+
 ```rust
 struct Address {
     country: Country,
@@ -73,9 +72,11 @@ impl fmt::Display for Address {
     }
 }
 ```
+
 It's super __easy to forget changing the `Display` implementation when a new `state` field is added__.
 
 So, altering the code with __exhaustive destructuring allows to omit such a subtle bug, by breaking in compile-time__:
+
 ```rust
 impl fmt::Display for Address {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
@@ -92,7 +93,8 @@ impl fmt::Display for Address {
     }
 }
 ```
-```
+
+```rust
 error[E0027]: pattern does not mention field `state`
   --> src/lib.rs:19:13
    |
@@ -116,10 +118,8 @@ help: if you don't care about this missing field, you can explicitly ignore it
 ```
 
 Another real-world use-cases of maintaining invariants covering all struct fields via exhaustiveness checking are illustrated in the following articles:
+
 - [Ashley Mannix: How we organize a complex Rust codebase][8]
-
-
-
 
 ## `#[non_exhaustive]`
 
@@ -130,12 +130,14 @@ __`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose 
 > Within the defining crate, `non_exhaustive` has no effect.
 
 > Outside of the defining crate, types annotated with `non_exhaustive` have limitations that preserve backwards compatibility when new fields or variants are added.
-> 
+>
 > Non-exhaustive types cannot be constructed outside of the defining crate:
+>
 > - Non-exhaustive variants (`struct` or `enum` variant) cannot be constructed with a `StructExpression` (including with functional update syntax).
 > - `enum` instances can be constructed.
 
 > There are limitations when matching on non-exhaustive types outside of the defining crate:
+>
 > - When pattern matching on a non-exhaustive variant (`struct` or `enum` variant), a `StructPattern` must be used which must include a `...` Tuple variant constructor visibility is lowered to `min($vis, pub(crate))`.
 > - When pattern matching on a non-exhaustive `enum`, matching on a variant does not contribute towards the exhaustiveness of the arms.
 
@@ -143,36 +145,26 @@ __`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose 
 
 > Non-exhaustive types are always considered inhabited in downstream crates.
 
-Despite being opposite qualities, both exhaustivity and non-exhaustivity are intended for [future-proofing][12] a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really has sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
+Despite being opposite qualities, both exhaustively and non-exhaustivety are intended for [future-proofing][12] a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really have sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
 
 For better understanding `#[non_exhaustive]` attribute purpose, design, limitations and use cases, read through the following articles:
+
 - [Rust Reference: 7.6. The `non_exhaustive` attribute][9]
 - [Rust RFC 2008: `non_exhaustive`][10]
 - [Turreta: Using `#[non_exhaustive]` for Non-exhaustive Rust Structs][11]
-
-
-
 
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Refactor the code contained in [this task's crate](src/lib.rs), so the bugs introduced there will be uncovered at compile-time, and fix them appropriately.
-
-
-
 
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - How can exhaustiveness checking be useful in [Rust] code for enums and structs? When should we use it, when not?
 - How does `#[non_exhaustive]` attribute work in [Rust]? What are its use-cases? When should it be used, when not?
-
-
-
 
 [API]: https://en.wikipedia.org/wiki/API
 [Rust]: https://www.rust-lang.org

@@ -3,9 +3,6 @@ Task 3.8: Logging and tracing
 
 [Rust] has flexible type system and [metaprogramming][1] capabilities, allowing to build both efficient and highly reusable log system. The idea is very similar to [`serde`] and is introduced in a widely used [`log`], [`slog`] and [`tracing`] crates.
 
-
-
-
 ## Simple logging
 
 [`log`] crate represents a __single unified frontend interface (facade)__ which is used by all libraries at the same time, but is backed by one actual backend implementation on your choice. This allows to control all the logs (of application and its dependencies) from a single place and in a unified manner: opt-in and opt-out logs of libraries, separate logs by destinations, etc.
@@ -16,11 +13,9 @@ Task 3.8: Logging and tracing
 One interesting part is that log levels can be [disabled at compile time][3], thus have __no runtime performance impact at all__, unless you're debugging.
 
 For better understanding and familiarity with [`log`]'s design, concepts, usage, and features, read through the following articles:
+
 - [Official `log` crate docs][`log`]
 - [Jimmy Hartzell: Using the Log Crate in Your Rust Projects][12]
-
-
-
 
 ## Structured logging
 
@@ -31,11 +26,9 @@ For [structured logging][4] there is the excellent [`slog`] crate in [Rust] ecos
 It's __backward and forward compatible with [`log`]__ crate, extending its ideas and is baked with an [excellent performance][5].
 
 For better understanding and familiarity with [`slog`]'s design, concepts, usage, and features, read through the following articles:
+
 - [Official `slog` crate docs][`slog`]
 - [Official `slog` crate wiki][6]
-
-
-
 
 ## Tracing
 
@@ -48,48 +41,40 @@ Its "killer feature", undoubtedly, is [spans functionality][7], so [people tend 
 Speaking of [tracing][10], the [`tracing`] crate has good integrations with [OpenTelemetry]-compatible distributed tracing systems (and similar ones). All this allows to reuse the same solution both for logging, tracing (like [Jaeger], [Zipkin]), profiling (like [coz], [Tracy]), error reporting (like [Sentry]), etc.
 
 For better understanding and familiarity with [`tracing`]'s design, concepts, usage, and features, read through the following articles:
+
 - [Official `tracing` crate docs][`tracing`]
 - [Joshua Mo: Getting Started with Tracing in Rust][13]
 - [Yoav Danieli: Guide to OpenTelemetry Distributed Tracing in Rust][11]
 - [Tokio Blog: Diagnostics with Tracing][14]
 - [Hayden Stainsby: debugging tokio instrumentation][15]
 
-
-
-
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Implement two loggers:
+
 1. Global main `app.log` logger which prints all its logs to `STDOUT`, but `WARN` level (and higher) logs to `STDERR`.
 2. Local `access.log` logger which writes all its logs to `access.log` file.
 
 All logs should be structured and logged in a JSON format, and have time field with nanoseconds ([RFC 3339] formatted).
 
 Examples:
+
 ```json
 {"lvl":"ERROR","file":"app.log","time":"2018-07-30T12:14:14.196483657Z","msg":"Error occurred"}
 {"lvl":"INFO","file":"access.log","time":"2018-07-30T12:17:18.721127239Z","msg":"http","method":"POST","path":"/some"}
 ```
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - How does [`log`] crate achieve its reusability over ecosystem? What are the ideas behind it?
 - Why logging is preferred over printing (`println!` usage)? When it's not?
 - What is structured logging? What benefits does it provide?
 - Why [`tracing`] crate is good for logging? What makes it preferred over [`slog`] and [`log`] crates?
 - What is tracing? Why is it beneficial for observability?
-
-
-
 
 [`log`]: https://docs.rs/log
 [`serde`]: https://docs.rs/serde

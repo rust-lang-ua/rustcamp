@@ -5,18 +5,15 @@ Naturally, in [client-server][4] applications, a client and a server negotiate w
 
 [Rust] ecosystem provides support for all modern widely-used and adopted [RPC] technologies, and even comes with its [own unique ones][`tarpc`].
 
-
-
-
 ## RESTful
 
 Since [REST] is rather an __architecture convention/style__ than a strict [specification][3] for [RPC], and [REST]ful [API]s are typically __loosely based on [HTTP] methods__ directly, there is usually __no need in special frameworks__ in [Rust] to implement a [REST]ful [API] server or to request the one. Just any [HTTP server][101] or [HTTP client][231] will do.
 
-This approach, however, __suffers from lacking [API] schema__, and so, makes it hard to build a rich ecosystem around with ready-to-use tooling (or connect with existing ones). Fortunately, this is easily solved by using a concrete [RPC specification][3] on top of [REST] conventions, and following it strictly. 
+This approach, however, __suffers from lacking [API] schema__, and so, makes it hard to build a rich ecosystem around with ready-to-use tooling (or connect with existing ones). Fortunately, this is easily solved by using a concrete [RPC specification][3] on top of [REST] conventions, and following it strictly.
 
 For more information about [REST], read through the following articles:
-- [Tyler Charboneau: What’s the Difference Between RPC and REST?][111]
 
+- [Tyler Charboneau: What’s the Difference Between RPC and REST?][111]
 
 ### OpenAPI
 
@@ -31,6 +28,7 @@ In [Rust] ecosystem, most [OpenAPI] crates follow the __code-first approach__ (g
 For the opposite (generating source code from [OpenAPI] schema) [Rust] ecosystem lacks its own pure implementation, and the original [OpenAPI] tool [`openapi-generator`] should be used (powered by the [`swagger`] crate).
 
 For more familiarity with [OpenAPI] and using it in [Rust], read through the following articles:
+
 - [OpenAPI Initiative]
 - [SwaggerHub Documentation: OpenAPI 3.0 Tutorial][122]
 - [Official `utoipa` crate docs][`utoipa`]
@@ -41,9 +39,6 @@ For more familiarity with [OpenAPI] and using it in [Rust], read through the fol
 - [Olly Dixon: Auto-generating API service using Rust, to TypeScript & Dart][124]
 - [Joshua Mo: Working with OpenAPI using Rust][125]
 
-
-
-
 ## GraphQL
 
 [GraphQL] is a [flexible][200] query language for [API]s, allowing to request data partially and compose multiple nested requests as a single one, seasoned with a schema having an [expressive][201] [type system][1] (comparing to other [API] schemas) and [very strong][202] [introspection][2] capabilities out-of-the-box.
@@ -53,9 +48,9 @@ One of the strongest parts of [GraphQL] is its [whole ecosystem][203] built arou
 Another strong part of [GraphQL] is that its __protocol is [transport][204]-agnostic__, so the same schema and queries, used via [HTTP], are __easily reusable via [WebSocket]__, allowing to [stream data][205] with almost zero effort atop.
 
 For more familiarity with [GraphQL], read through the following articles:
+
 - [GraphQL docs: Introduction to GraphQL][206]
 - [The Fullstack Tutorial for GraphQL][207]
-
 
 ### Server
 
@@ -64,12 +59,12 @@ For implementing a [GraphQL] server in [Rust], there are two major crates in its
 [`juniper-from-schema`] crate, however, tries to take it in opposite direction, and to some degree successfully __provides schema-to-code approach__ (generating [Rust] code using [`juniper`] from a provided [GraphQL] schema).
 
 For more familiarity with implementing [GraphQL] server in [Rust], read through the following articles:
+
 - [Official `juniper` crate docs][`juniper`]
 - [Juniper Book]
 - [Official `juniper-from-schema` crate docs][`juniper-from-schema`]
 - [Official `async-graphql` crate docs][`async-graphql`]
 - [Async-graphql Book]
-
 
 ### Client
 
@@ -80,26 +75,17 @@ However, if more static guarantees is needed, then the [`graphql-client`] crate 
 [`cynic`] crate takes the __opposite code-to-query approach__ of generating a [GraphQL] query out of [Rust] code and validating it statically against a provided [GraphQL] schema.
 
 For more familiarity with making [GraphQL] requests in [Rust], read through the following articles:
+
 - [Official `graphql-client` crate description][`graphql-client`]
 - [Official `cynic` crate docs][`cynic`]
 - [Official `cynic` crate guide](https://cynic-rs.dev)
-
-
-
-
-
-
-
-
 
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Rework [the task from the previous task](../4_2_http/README.md#task) in a ["thick client" paradigm][41]:
+
 - Server represents a [REST]ful [API] with separate endpoints for each operation.
 - [CLI] client parses commands by itself and makes accurate requests to the server [REST]ful [API].
 
@@ -109,20 +95,15 @@ Additionally, implement generation of [OpenAPI] schema out of you server [REST]f
 
 Avoid architecture [over-engineering][42] for this task, just use simple, straightforward and obvious solutions.
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is API? What is RPC? How do they relate?
 - What does "code-first" approach mean? What does "schema-first" approach mean? Which advantages and disadvantages do they have?
 - What does REST paradigm mean? What are essentials of RESTful API? Which strengths does it have? What does it lack?  
 - What is OpenAPI? What is Swagger? How do they relate? Why are they beneficial for RESTful API?
-- What is GraphQL? Which are strong sides of this technology? What problems does it bring in practice? 
-
-
-
+- What is GraphQL? Which are strong sides of this technology? What problems does it bring in practice?
 
 [`apistos`]: https://docs.rs/apistos
 [`async-graphql`]: https://docs.rs/async-graphql
