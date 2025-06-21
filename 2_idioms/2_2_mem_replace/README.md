@@ -100,7 +100,7 @@ error[E0500]: closure requires unique access to `*self` but it is already borrow
    |             ---- second borrow occurs due to use of `*self` in closure
 ```
 
-Using [`mem::take`] here allows us to avoid the problem with 2 mutable borrows at almost no cost (`Vec::defaukt()` is no-op), by swapping out the value in a temporary variable:
+Using [`mem::take`] here allows us to avoid the problem with 2 mutable borrows at almost no cost (`Vec::default()` is no-op), by swapping out the value in a temporary variable:
 ```rust
 impl Names {
     fn apply_exclusions(&mut self) {
