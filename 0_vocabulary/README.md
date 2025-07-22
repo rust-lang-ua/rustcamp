@@ -12,7 +12,26 @@ Polish your familiarity by completing [Rust By Example] and [rustlings].
 Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
-- What [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
+- What [memory model][31] [Rust] has?    
+**Answer**
+rust uses an **ownership that based as memory model**
+- Is [Rust] single-threaded or multi-threaded?
+**Answer**
+he is supports both **single hreaded and multi threaded** code via 'std::thread'
+Is it synchronous or asynchronous?
+**Answer**
+supports both synchronous - normal  and asyynchronous  execution 'async/ .await' code.  
+- What are the memory layouts of `Box` and `Vector`?
+**Answer**
+**Box<T>** - keeps a pointer on stack but also the real data lives on the heap/ 
+**Vec<T>** - stores a pointer length and capacity on stack and the actual elements on the heap.
+-What are a heap and a stack?
+**Answer**
+stack is fast and uses asimle data smal structs and numbers.
+heap is slower but used big or grow data - string, vectors, that can live in static memory - constans and can be placed in CPU registers.
+ - Where, but on heap and stack data could live in RAM?
+**Answer**
+ - stack and heap data live in static memory for constants Rust supported thread local memory for data used only by the thread, have cases include memory mapped I/O and custom alocators like arenas.  
 - What runtime [Rust] has? Does it use a GC (garbage collector)?
 - What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
 - Why does [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
