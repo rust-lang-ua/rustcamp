@@ -118,7 +118,7 @@ git fetch --all
 git merge upstream/master
 ```
 
-*If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories` flag to the last command.*
+_If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories` flag to the last command._
 
 > NOTE: it is possible that the mentioned commands may result in numerous merge conflicts that would be tedious to resolve by hand.
 > This might happen if the repository is modified in some way before it is synced with the template.
@@ -199,3 +199,50 @@ If you are satisfied with the result, you can remove the `template` branch and p
 git branch -D template
 git push
 ```
+
+## Capstone project
+
+#### _- I can't choose my capstone project. Can you suggest some?_
+
+<details>
+<summary>Gamepad Tester and Mapper</summary>
+
+A program that displays button presses on a gamepad with cross-platform support. Implement creating an SDL mapping string for the button mapping.
+</details>
+
+<details>
+<summary>Small TTV (Twitch TV) client</summary>
+
+TTV client will use ttv.lol to remove ads and prevent the purple screen of death. You can use GStreamer bindings, but I recommend using libmpv as the player to play around with C-Rust interop. Code from Streamlink, Xtra, and others will be helpful.
+</details>
+
+<details>
+<summary>Easy to use VPN through NAT traversal</summary>
+
+I'm not sure if such a thing exists or if it makes sense, but a VPN through STUN or some kind of NAT traversal. You can use a part of WebRTC that generates SDP offers and establish a connection through a punched tunnel. The user only needs to insert a base64 string from another client, and the connection is established. Of course, this won't work with 50% of connections.
+</details>
+
+<details>
+<summary>Decoder for an audio format</summary>
+
+For those who enjoy reading 200-page RFCs, a decoder for a simple (most likely lossless and outdated, like .ape) audio format. However, it should be implemented as an addition to the Symphonia crate.
+</details>
+
+<details>
+<summary>Reddit to Lemmy Proxy Bot</summary>
+
+Make a bot that reposts subreddits to Lemmy.
+However, website parsing will be required. You can also earn stars on GitHub for this project.
+</details>
+
+<details>
+<summary>Razer Chroma SDK REST API reimplementation with OpenRGB</summary>
+
+For those who want to contribute to Linux gaming, a Razer Chroma SDK REST API reimplementation with OpenRGB. It's for those who want to work with backend frameworks. The server will map and redirect Chroma API calls to the OpenRGB API. A shim DLL can also be created to support games that use DLL. With this, even those who play on Linux under Wine will be able to experience RGB effects and it also will provide support for a greater number of devices. Of course, it won't be possible to cover the entire API in a week, but basic functionalities can be implemented.
+</details>
+
+<details>
+<summary>Wireless Audio Transmitter</summary>
+
+Wireless audio transmitter on an Arduino (NOT Bluetooth). Everyone is familiar with full-size wireless headphones that use a radio channel to transmit audio without delay and with higher quality than Bluetooth. The goal is to create an adapter with a jack connector that will transmit data to a USB receiver on a PC. The NRF24L01 radio module can be used for the wireless module.
+</details>
