@@ -81,7 +81,7 @@ For better understanding [mio] and [tokio] design, concepts, usage, and features
 
 - [Official `mio` crate docs][`mio`]
 - [Official `tokio` crate docs][`tokio`]
-- [Official `tokio` crate guide][13]
+- [Official `tokio` crate guide][72]
 - [Nick Cameron: Asynchronous programming with Rust: Introduction][14]
 - [Tokio on asyncronous tasks and executors][15]
 
@@ -310,3 +310,4 @@ After completing everything above, you should be able to answer (and understand 
 [69]: https://without.boats/blog/why-async-rust
 [70]: https://without.boats/blog/let-futures-be-futures
 [71]: https://without.boats/blog/futures-unordered
+[72]: https://tokio.rs/tokio/tutorial/io

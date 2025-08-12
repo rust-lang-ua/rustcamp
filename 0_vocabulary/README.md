@@ -13,7 +13,7 @@ Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
 
-- What [memory model][31] [Rust] has? Is it single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
+- What [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
 - What runtime [Rust] has? Does it use a GC (garbage collector)?
 - What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
 - Why does [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why `str` slice coexists with slice? What is the difference between `String` and `Vec`?
@@ -63,7 +63,7 @@ _Additional_ articles, which may help to understand the above topic better:
 
 Additional:
 
-- [Rust API guidline checklist][19]
+- [Rust API guidelines checklist][19]
 - [Interview Questions on Rust Programming][20]
 - [Step-by-step instruction to start development in Rust][26]
 - [Awesome collection of crates for productive development in Rust][27]

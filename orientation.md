@@ -58,7 +58,7 @@ Each participant has been assigned to a specific group, with each group having 2
 
 ### Routines
 
-Expect to join calls with your fellow learners and mentors four days a week. During these group sessions, we strongly encourage you to **voice your questions** and engage actively in discussions. Be prepared to answer queries posed by your mentor. We also recommend turning on your **video camera** to foster a more personable and engaging experience for both participants and mentors. Please join meetings **5 minutes before** they start to show respect to peers and mentors.
+Expect to join calls with your fellow learners and mentors four days a week. During these group sessions, we strongly encourage you to **voice your questions** and engage actively in discussions. Be prepared to answer queries posed by your mentor. We also recommend turning on your **video camera** to foster a more personable and engaging experience for both participants and mentors. Please join meetings **5 minutes before** they start to show respect to peers and mentors. Note, that these meetings will not be recorded.
 
 ### Topology of curriculum
 
