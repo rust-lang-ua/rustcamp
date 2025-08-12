@@ -6,19 +6,18 @@ Most types in [Rust] have a particular size, in bytes, that is knowable at compi
 All types with a constant size known at compile time in [Rust] implement [`Sized`] marker trait. And all type parameters (except `Self` in traits) have always an implicit bound of [`Sized`]. So, you should not bother about specifying [`Sized`] marker trait in code, usually.
 
 For better understanding [`Sized`] and `?Sized` purpose, design, limitations and use cases, read through the following articles:
+
 - [Official `Sized` docs][`Sized`]
 - [Old Rust Book: 3.31. Unsized Types][4]
 - [Rust Forum: Trait Objects and the Sized Trait][5]
 - [pretzelhammer: Sizedness in Rust][6]
-
-
-
 
 ## Using `?Sized` to accept more types
 
 The more important concept to understand for day-to-day routine is a `?Sized` trait bound, which __lifts the implicit [`Sized`] bound allowing to use more types__ in generic code (so provide better API and ergonomics).
 
 A real-world example would be:
+
 ```rust
 trait CommandHandler<C: Command> {
     type Context: ?Sized;
@@ -27,7 +26,9 @@ trait CommandHandler<C: Command> {
     fn handle_command(&self, cmd: &C, ctx: &Self::Context) -> Self::Result;
 }
 ```
+
 which allows to use "unsized" types like [trait objects][3]
+
 ```rust
 impl CommandHandler<CreateUser> for User {
     type Context = dyn UserRepository;
@@ -40,31 +41,20 @@ impl CommandHandler<CreateUser> for User {
 }
 ```
 
-
-
-
 ## Task
 
 __Estimated time__: 1 day
-
-
-
 
 Given the [`User` and `UserRepository` implementations from the previous task](../1_6_dispatch#task), write the actual code for `CommandHandler<CreateUser>` implementation described above.
 
 Provide tests for `CommandHandler<CreateUser>` implementation where `dyn UserRepository` is mocked with another hand-written type for testing purposes (you will need to transform the `UserRepository` type into a trait).
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is [`Sized`] trait about? When [Rust] implies it? And when not?
+
+- What is [`Sized`] trait about? When [Rust] implies it? And when aren't?
 - Why `?Sized` trait bound is important? When should we use it and why?
-
-
-
 
 [Rust]: https://www.rust-lang.org
 [`Sized`]: https://doc.rust-lang.org/std/marker/trait.Sized.html

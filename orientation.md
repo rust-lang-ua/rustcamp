@@ -43,9 +43,9 @@ _<div align="right">Seneca</div>_
 Also, Rust is not the worst choice nowadays:
 
 - [A large and friendly community](https://medium.com/mozilla-tech/growing-the-rust-community-6b6d23725085)
-- [Trending language: 7 years in a row as a favorite programming language ](https://survey.stackoverflow.co/2022/#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
+- [Trending language: 7 years in a row as a favorite programming language](https://survey.stackoverflow.co/2022/#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
 - [Fast](https://levelup.gitconnected.com/which-is-faster-rust-or-c-lets-find-out-who-is-the-usain-bolt-87495c774c8) and [secure](https://medium.com/@elvisouma943/the-future-of-systems-programming-e99a46e3739b)
-- [Recognition by world leaders: Mozilla, Dropbox, Cloudflare, Discord, AWS](https://www.rust-lang.org/production/users)
+- [Recognition by world leaders: Mozilla, Dropbox, Cloudflare, Discord, AWS](https://web.archive.org/web/20240716121310/https://www.rust-lang.org/production/users)
 - [Rich ecosystem: cargo out of the box](https://lib.rs/stats)
 - Rust in the cores of [Linux](https://www.infoq.com/news/2022/12/linux-6-1-rust/) and [Windows](https://www.theregister.com/2023/04/27/microsoft_windows_rust/) : the language will not disappear and will continue to evolve
 - [Efficient teamwork: Standardization and idiomatic code for clear and clean code](https://github.com/mre/idiomatic-rust)
@@ -84,14 +84,17 @@ We encourage you to meet all deadlines to maximize your learning experience and 
 
 Deadlines are set for the opening and any changes in your PR. If you managed to complete the task before the deadline, but received the approve from the mentors after the deadline, the task is still considered completed.
 
-__Deadline: Thursday 23:59__
+**Deadline: Thursday 23:59**
+
 - By this time, you should have submitted your latest version of the PR
 - If you do not do this, you get a foul
-- Mentors check your PR over the next day or two, and by Sunday you receive an aprove
+- Mentors check your PR over the next day or two, and by Sunday you receive an approve
 - 3 fouls received means expulsion from the bootcamp
+
 > 💡 If you still have corrections to make after Thursday, you can make them before the hard deadline - but this is also a foul (so try to have the final version of your PR by Thursday)
 
-__Expulsion: Sunday 23:59__
+**Expulsion: Sunday 23:59**
+
 - If by this time you still haven't submitted your PR or made the last edits, you are out of the bootcamp
 
 > 💡 Advice: Tasks 4.4 and 6 are non-trivial and will easily take a week of work. Make sure you reserve more than a few days for these tasks.
@@ -136,7 +139,7 @@ You are welcome to **ask questions** in our chat without asking to share a solut
 
 Please be **respectful and polite** to peers and mentors.
 
-> 💡 Advice: mutual support is our *value*. Don't underestimate the importance of soft skills.
+> 💡 Advice: mutual support is our _value_. Don't underestimate the importance of soft skills.
 
 ### Expulsion
 
@@ -149,11 +152,11 @@ There are a few potential reasons for expulsion from the group, which include bu
 - Choosing to withdraw on your own accord
 
 > 💡 Advice: If circumstances require you to leave the group prematurely, please do so with respect and professionalism. We encourage you to provide a brief, public explanation or acknowledgment prior to your departure. Please remember, we're all human and understand that unforeseen circumstances can arise. Rest assured, there will be no hard feelings if you must leave the boot camp early.
-> 
+>
 
 ### Exclusion algorithm
 
-- Write to the person responsible for the expulsion of students - [Bootcamp coordinator](https://t.me/kos_my)
+- Write to the person responsible for the expulsion of students - [Stepan](https://t.me/stepko_o)
 - Say goodbye to everyone in a telegram chat. (You can also write your feedback and tell the reason of your living if you want).
 - Log out of the chat within 24 hours.
 
@@ -161,9 +164,9 @@ There are a few potential reasons for expulsion from the group, which include bu
 
 ## Getting Started
 
-Wait for the invite to your new repository from [our bot](https://github.com/1tbot). For each exercise, you'll need to create separate pull requests. Then, when the reviewer checks and approves your pull request, [our bot](https://github.com/1tbot) will merge it into the master/main branch. After that, the exercise will be considered done.
+Wait for the invite to your new repository from [our bot](https://github.com/1tbot). For each exercise, you'll need to create separate pull requests. Then, when the reviewer checks and approves your pull request, one of your mentors will merge it into the master/main branch. After that, the exercise will be considered done.
 
-1. [Our bot](https://github.com/1tbot) will create a private fork of the main [Rustcamp repository](https://github.com/rust-lang-ua/rustcamp) in [our organization](https://github.com/rust-bootcamp) and invite you.
+1. [Our bot](https://github.com/1tbot) will create a private fork of the main [Rustcamp repository](https://github.com/rust-lang-ua/rustcamp) in [our organization](https://github.com/rust-lang-ua) and invite you.
 
 2. Also, your mentors will already be in the repository.
 
@@ -171,16 +174,14 @@ This course is continually evolving, and it's important to stay updated with the
 
 ## Submitting Solutions
 
-For each task of the rustcamp, you should create and submit a separate [PR (pull request)][PR]. Make sure to give your PR a [relevant title](https://github.com/rust-lang-ua/rustcamp/blob/master/faq.md#--how-should-i-name-pr). After you've completed your pull request, please remove any markers like "NOT READY", "DRAFT", or "WIP" from the title and specify [our bot](https://github.com/1tbot) as a reviewer and tag all of your mentors in the comments section. All communication about PR-s happens via GitHub, so please always use the PR comment section to tag mentors and ask for a review.
+For each task of the rustcamp, you should create and submit a separate [PR (pull request)][PR]. Make sure to give your PR a [relevant title](https://github.com/rust-lang-ua/rustcamp/blob/master/faq.md#--how-should-i-name-pr). After you've completed your pull request, please remove any markers like "NOT READY", "DRAFT", or "WIP" from the title and specify [our bot](https://github.com/1tbot) as a reviewer and tag all of your mentors in the comments section.
 
-Please, don't do PR merge yourself. 
-To ensure a thorough review and exchange of experience between mentors, your pull request must be approved by **all** of your assigned mentors before it can be merged into the main branch. After receiving approvals from all mentors, [our bot](https://github.com/1tbot) will merge your PR.
+Please, don't do PR merge yourself.
+Before merging the pull request into the main branch, you need to receive approval from at least one mentor. If more than one mentor has reviewed your Pull Request and requested changes, you must receive approval from all involved mentors. If all the conditions are executed, mentors will be able to merge your PR.
 
 Each task of the rustcamp is a [Cargo workspace member][workspace], meaning you can run and test it from the project root using commands like `cargo run -p task_1_8`. We highly recommend using tools like [rustfmt] and [Clippy] while writing your [Rust] code.
 
 Never hesitate to reach out to your mentor or lead with questions. However, be aware that you may not always receive a direct answer. Instead, they may guide you towards a path for your own exploration and discovery. Remember, in this learning journey, it's usually the mentor or lead who asks the questions, expecting thorough and precise responses from you.
-
-If you haven't received the review 1-2 days after the submit, feel free to write to mentors privately to remind them about your PR.
 
 ## Useful links
 
@@ -201,7 +202,7 @@ If you're feeling that the certification might be too challenging at this point,
 - 🎓 [Exercism] - Dive into coding exercises with the guidance of mentors.
 - 🐣 [Rustlings] - Small exercises designed to familiarize you with reading and writing Rust code.
 - 📘 [Rust Book] - An indispensable guide to Rust. While it's a must-have starting point, we strongly encourage revisiting it throughout your learning journey.
-<!-- - 🗂️ Awesome List of [Learning Materials on Git][Learning Materials on Git] - Essential resources for mastering Git. -->
+- 🗂️ Awesome List of [Learning Materials on Git] - Essential resources for mastering Git.
 
 [Plagiarism]: #honor-code
 [deadlines]: #deadlines
@@ -226,6 +227,6 @@ If you're feeling that the certification might be too challenging at this point,
 [FAQ]: ./faq.md
 [Step-by-Step Introduction]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/introduction.md
 [Rustlings]: https://github.com/rust-lang/rustlings
-[Learning Materials on Git]: https://github.com/Learn-Together-Pro/LearnGitTogether
+[Learning Materials on Git]: https://github.com/Learn-Together-Pro/Git
 [Rust Book]: https://doc.rust-lang.org/book
 [Progress Board]: https://github.com/rust-lang-ua/rustcamp_progress

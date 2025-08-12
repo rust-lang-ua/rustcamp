@@ -12,10 +12,11 @@ Polish your familiarity by completing [Rust By Example] and [rustlings].
 Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
+
 - What [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
 - What runtime [Rust] has? Does it use a GC (garbage collector)?
 - What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
-- Why does [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
+- Why does [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why `str` slice coexists with slice? What is the difference between `String` and `Vec`?
 - What static typing means? What are the benefits of using it? Weak vs strong typing? Implicit vs explicit typing?
 - What are generics and parametric polymorphism? Which problems do they solve?
 - What are nominative typing and structural typing? What is the difference?
@@ -35,6 +36,7 @@ After completing these steps, you should be able to answer (and understand why) 
 After you are done, notify your lead in an appropriate PR (pull request), and they will examine what you have learned.
 
 _Additional_ articles, which may help to understand the above topic better:
+
 - [Chris Morgan: Rust ownership, the hard way][1]
 - [Adolfo Ochagavía: You are holding it wrong][23]
 - [Vikram Fugro: Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30]
@@ -59,9 +61,9 @@ _Additional_ articles, which may help to understand the above topic better:
 - [Georgios Antonopoulos: Rust vs Common C++ Bugs][21]
 - [Yurii Shymon: True Observer Pattern with Unsubscribe mechanism using Rust][22]
 
-
 Additional:
-- [Rust API guidline checklist][19]
+
+- [Rust API guidelines checklist][19]
 - [Interview Questions on Rust Programming][20]
 - [Step-by-step instruction to start development in Rust][26]
 - [Awesome collection of crates for productive development in Rust][27]
@@ -104,4 +106,3 @@ Additional:
 [28]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md
 [30]: https://dev.to/vikram2784/beyond-pointers-how-rust-outshines-c-with-its-borrow-checker-1mad
 [31]: https://en.wikipedia.org/wiki/Memory_model_(programming)
-

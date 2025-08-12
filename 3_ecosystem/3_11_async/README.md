@@ -7,18 +7,17 @@ As of now, [Rust] has no async primitives in its standard library yet, so "by de
 
 It's important to note, that async story in [Rust] is [still][2] [maturing][3]. That's why things could be [quite cumbersome][5] at the moment, often [causing frustration][6] (especially, when it [comes to abstractions][7]). [wg-async][4] (async working group) works on making this easier, simpler, more ergonomic and powerful in the future.
 
-
-
-
 ## `Future`
 
 The basic primitive of async story in [Rust] is a [future abstraction][8] (also often called "promise" in some other programming languages). There are two major concepts which differ [Rust implementation of futures][9] from other programming languages:
+
 1. Futures are [poll-based][10] rather than push-based. This means that after creation, a future is not going to be executed automatically in-place, but rather should be explicitly executed by some executor (runtime/event-loop for futures). __Future does nothing unless polled__, so generally represents a [lazy computation][12].
 2. Futures are [zero cost][11]. This means that the code written on futures compiles down to something equivalent (or better than) a “hand-rolled” implementation, which would typically use manual state machines and careful memory management.
 
 [Rust] provides only basic trait definitions in the [`std::future`] module of its standard library. To use futures with all its power, consider to use the [`futures`] crate (and/or similar ones like [`futures-lite`], [`futures-time`], etc).
 
 To understand [Rust] futures concepts and design better, read through the following articles:
+
 - [Aaron Turon: Zero-cost futures in Rust][11]
 - [Aaron Turon: Designing futures for Rust][9]
 - [Rust RFC 2592: `futures_api`][13]
@@ -26,7 +25,6 @@ To understand [Rust] futures concepts and design better, read through the follow
 - [Conrad Ludgate: Let's talk about this async][14]
 
 It's important to mention, that before [futures design has been stabilized][13], for quite a long period of time [Rust] ecosystem used [`futures@0.1`] crate, which resulted in a big part of ecosystem being built on top of them. Hopefully, as for now, only quite few outdated or dead crates still do use [`futures@0.1`], and, fortunately, they still can be used simultaneously with the modern [`std::future`]-based ecosystem by using the [compatibility layer][15].
-
 
 ### `async`/`.await`
 
@@ -36,9 +34,10 @@ It's important to mention, that before [futures design has been stabilized][13],
 
 [Rust] automatically [desugars `async` functions and blocks into the ones returning a `Future`][17], applying the correct [lifetime capturing and elision rules][18] for the syntax ergonomics.
 
-Though, [`async` keyword in not supported in trait methods yet][2], there is the [`async-trait`] crate, which allows this for traits by desugaring into a [`Box`]ed [`Future`] (the main downside of which is being non-transparent over auto-traits like `Send`/`Sync`). 
+Though, [`async` keyword in not supported in trait methods yet][2], there is the [`async-trait`] crate, which allows this for traits by desugaring into a [`Box`]ed [`Future`] (the main downside of which is being non-transparent over auto-traits like `Send`/`Sync`).
 
 For better understanding `async`/`.await` keywords design, desugaring, usage, and features, read through the following articles:
+
 - [Rust RFC 2394: `async_await`][16]
 - [Asynchronous Programming in Rust: 3. `async`/`.await`][21]
 - [Hayden Stainsby: how I finally understood async/await in Rust (part 1)][63]
@@ -46,7 +45,6 @@ For better understanding `async`/`.await` keywords design, desugaring, usage, an
 - [Arpad Borsos: Implementation Details of async Rust][27]
 - [Tyler Madry: How Rust optimizes async/await I][29]
 - [Tyler Madry: How Rust optimizes async/await II: Program analysis][30]
-
 
 ### Tasks and `Waker`
 
@@ -57,11 +55,11 @@ When a task is suspended due to waiting some non-blocking operation to complete 
 > `Waker` provides a `wake()` method that can be used to tell the executor that the associated task should be awoken. When `wake()` is called, the executor knows that the task associated with the `Waker` is ready to make progress, and its future should be polled again.
 
 For better understanding [`Waker`] design, usage, and features, read through the following articles:
+
 - [Official `std::task::Waker` docs][`Waker`]
 - [Asynchronous Programming in Rust: 2.2. Task Wakeups with `Waker`][22]
 - [Hayden Stainsby: how I finally understood async/await in Rust (part 2)][64]
 - [Arpad Borsos: Rust Futures and Tasks][28]
-
 
 ### More reading
 
@@ -75,27 +73,23 @@ For better understanding [`Waker`] design, usage, and features, read through the
 - [Saoirse Shipwreckt: Let futures be futures][70]
 - [Saoirse Shipwreckt: FuturesUnordered and the order of futures][71]
 
-
-
-
 ## Async I/O
 
 Async I/O in [Rust] is possible due to two main ingredients: __[non-blocking I/O operations][1]__ provided by operating system and an __asynchronous runtime__, which wraps those operations into usable asynchronous abstractions and provides an [event loop][48] for executing and driving them to completion.
 
 For better understanding [mio] and [tokio] design, concepts, usage, and features, read through the following articles:
+
 - [Official `mio` crate docs][`mio`]
 - [Official `tokio` crate docs][`tokio`]
 - [Official `tokio` crate guide][72]
 - [Nick Cameron: Asynchronous programming with Rust: Introduction][14]
 - [Tokio on asyncronous tasks and executors][15]
 
-
 ### Non-blocking I/O
 
 The async programming is not possible without support for [non-blocking I/O][1], which is represented by various [API]s on different operating systems, for example: [epoll] on [Linux] (or promising [io_uring]), [kqueue] on [macOS]/[iOS], [IOCP] on [Windows].
 
 The low-level crates, like [`mio`] (powering [`tokio`]) and [`polling`] (powering [`async-std`]), provide a single multi-platform unified interface to the majority of those [API]s. There are also low-level crates, specialized on a concrete [API], like [`io-uring`].
-
 
 ### Runtime
 
@@ -104,17 +98,19 @@ The high-level crates, like [`tokio`] (pioneer and most mature, by far) and [`as
 All [Rust] asynchronous runtimes for [`Future`]s implement the idea of [cooperative multitasking][35], meaning that the tasks ([`Future`]s in our case) yield control back to their runtime voluntarily (on `.await` points in our case), in contrast with [preemptive multitasking][36] where the runtime can suspend and take control back whenever it decides to (like in [OS threads][33] or [Erlang VM][37]). This gives the benefit of precise control on what is executed and how, but has the disadvantage of requiring to take great care about how [asynchronous tasks][22] are organized (like [avoiding blocking][39] them with synchronous or [CPU-bound] operations and [yielding manually][38] in busy loops).
 
 Also, important to classify [Rust] asynchronous runtimes in the following manner:
+
 - __Single-thread__ runtimes, __scheduling and executing [`Future`]s only on the current [thread][33]__ they're run on.  
   _Examples: [`tokio`'s current-thread scheduler][40], [`tokio-uring`], [`futures::executor::LocalPool`]._
 - __Multi-thread__ runtimes, scheduling and executing [`Future`]s on a [thread pool][41]:
-    - With __[work-stealing][42]__, where [`Future`]s are __both scheduled and executed on different [threads][33]__, so one [thread][33] can [steal and execute `Future`s initally scheduled on another thread][43], and as the result, workload is distributed more evenly in cost of synchronization overhead ([`Future`]s are required to be [`Send`]).  
+  - With __[work-stealing][42]__, where [`Future`]s are __both scheduled and executed on different [threads][33]__, so one [thread][33] can [steal and execute `Future`s initally scheduled on another thread][43], and as the result, workload is distributed more evenly in cost of synchronization overhead ([`Future`]s are required to be [`Send`]).  
       _Examples: [`tokio`'s multi-thread scheduler][44], [`async-executor`] of [`async-std`], [`futures::executor::ThreadPool`]._
-    - Using __[thread-per-core][45]__ model, where [`Future`]s are __scheduled on different [threads][33], but never leave their [thread][33] until executed completely__, and so, avoid any synchronization overhead ([`Future`]s are not required to be [`Send`]).  
+  - Using __[thread-per-core][45]__ model, where [`Future`]s are __scheduled on different [threads][33], but never leave their [thread][33] until executed completely__, and so, avoid any synchronization overhead ([`Future`]s are not required to be [`Send`]).  
       _Examples: [`actix-rt`] built on top of multiple [`tokio`'s current-thread schedulers][40], [`glommio`]._
 
 Unfortunately, at the moment, there is no meaningful way to abstract over multiple asynchronous runtimes in [Rust]. That's why authors of the libraries using [non-blocking I/O][1] either stick with a single concrete runtime only ([`tokio`], mostly), or support multiple runtimes via [Cargo features][46].
 
 For better understanding, read through the following articles:
+
 - [Official `tokio` crate docs][`tokio`]
 - [Official `async-std` crate docs][`async-std`]
 - [Tokio Tutorial][47]
@@ -124,9 +120,6 @@ For better understanding, read through the following articles:
 - [Hayden Stainsby: how I finally understood async/await in Rust (part 3)][65]
 - [Ibraheem Ahmed: Learning Async Rust With Entirely Too Many Web Servers][66]
 - [Saoirse Shipwreckt: Thread-per-core][68]
-
-
-
 
 ## Actors
 
@@ -150,13 +143,11 @@ The most famous [actors][49] implementation in [Rust] is [`actix`]. At the time 
 More general-purpose and complex [actors system][49] implementations (similar to [Akka]) are [`bastion`] and [`riker`].
 
 For better understanding [actors][49] design, concepts, usage, and implementations, read through the following articles:
+
 - [Karan Pratap Singh: CSP vs Actor model for concurrency][55]
 - [Official `actix` crate docs][`actix`]
 - [Official `actix` user guide][58]
 - [Evance Soumaoro: Efficient indexing with Quickwit Rust actor framework][62]
-
-
-
 
 ## Mutlithreading vs Async
 
@@ -170,34 +161,28 @@ Let’s take a simple analogy:
 - Asynchronous, single threaded: you start the eggs cooking and set a timer. You start the toast cooking, and set a timer. While they are both cooking, you clean the kitchen. When the timers go off you take the eggs off the heat and the toast out of the toaster and serve them.
 - Asynchronous, multithreaded: you hire two more cooks, one to cook eggs and one to cook toast. Now you have the problem of coordinating the cooks so that they do not conflict with each other in the kitchen when sharing resources. And you have to pay them.
 
-From that analogy, we can conclude that **Multithreading is about workers, Async is about tasks.**
+From that analogy, we can conclude that __Multithreading is about workers, Async is about tasks.__
 
 ![Synchronous vs Async vs Multithreading](https://i.imgur.com/o0wETfj.png)
-
-
-
 
 ## Task
 
 __Estimated time__: 2 days
 
-
-
-
 Implement an async-driven [CLI] tool, which downloads specified web pages:
+
 ```bash
 cargo run -p task_3_11 -- [--max-threads=<number>] <file>
 ```
+
 It must read a list of links from the `<file>`, and then concurrently download a content of each link into a separate `.html` file (named by a link).
 
 `--max-threads` argument must control the maximum number of _simultaneously running threads_ in the program (should default to CPUs number).
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is asynchronous programming? How does it relate to multithreading? Which problems does it solve? What are the prerequisites for its existing?
 - How does non-blocking I/O works? How does it differs from blocking I/O?
 - What is a [`Future`]? Why do we need it? How does it work in [Rust] and how do its semantics differ from other programming languages? What makes it zero-cost?
@@ -209,9 +194,6 @@ After completing everything above, you should be able to answer (and understand 
 - What kinds of asynchronous runtimes do exist in [Rust] regarding multithreading? Which advantages and disadvantages does each one have?
 - Why blocking an asynchronous runtime is bad? How to avoid it in practice?
 - What are the key points of actor model concurrency paradigm? How may it be useful in [Rust]?
-
-
-
 
 [`actix`]: https://docs.rs/actix
 [`actix-rt`]: https://docs.rs/actix-rt

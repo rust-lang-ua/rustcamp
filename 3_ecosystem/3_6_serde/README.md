@@ -1,9 +1,6 @@
 Task 3.6: Serialization and deserialization
 ===========================================
 
-
-
-
 ## `serde`
 
 [Rust] ecosystem has the well-known [`serde`] crate, which provides a common (standard, de facto) approach and toolset for serialization and deserialization.
@@ -30,9 +27,10 @@ fn main() {
 }
 ```
 
-[`serde`] by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already [implemented backends for most used formats][2], and you're free to [implement backend for your own format][3] if it's not implemented yet. 
+[`serde`] by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already [implemented backends for most used formats][2], and you're free to [implement backend for your own format][3] if it's not implemented yet.
 
 For better understanding and familiarity with [`serde`]'s design, concepts, usage, and features (like [zero-copy deserialization][5]), read through the following articles:
+
 - [Official `serde` crate guide][0]
 - [Official `serde` crate docs][`serde`]
 - [Official `serde_json` crate docs][`serde_json`]
@@ -43,18 +41,15 @@ For better understanding and familiarity with [`serde`]'s design, concepts, usag
 - [Manish Goregaokar: Zero-Copy All the Things! (Zero-Copy #2)][13]
 - [Manish Goregaokar: So Zero It's ... Negative? (Zero-Copy #3)][14]
 
-
 ### Extras
 
 Being the de facto ecosystem standard, [`serde`] crate itself is quite conservative about stability guarantees, so often may feel lacking obvious features. Therefore, additional ecosystem crates are worth considering, which extend [`serde`] capabilities, being built on top of its machinery:
+
 - [`erased-serde`] crate, providing type-erased versions of `serde`’s `Serialize`, `Serializer` and `Deserializer` traits that can be used as [trait objects][9].
 - [`serde_state`] crate, extending the normal `Deserialize` and `Serialize` traits to allow state to be passed to every value which is serialized or deserialized.
 - [`serde_repr`] crate, deriving `serde`'s `Serialize` and `Deserialize` traits in a way that delegates to the underlying repr of a C-like enum.
 - [`serde_with`] crate, providing custom de/serialization helpers to use in combination with [`serde`’s `with`-annotation][8] and with the improved `serde_as`-annotation.
-- [`serde_valid`] crate, enabling [JSON Schema][10] based validation. 
-
-
-
+- [`serde_valid`] crate, enabling [JSON Schema][10] based validation.
 
 ## `musli`
 
@@ -68,7 +63,7 @@ Being the de facto ecosystem standard, [`serde`] crate itself is quite conservat
 >
 > We make less use of the Visitor pattern in certain instances where it’s deemed unnecessary, such as [when decoding collections][21]. The result is usually cleaner decode implementations
 
-However, the __main "killer feature"__ of [`musli`] is its __ability to serialize/deserialize the same data model in different [modes][22]__. 
+However, the __main "killer feature"__ of [`musli`] is its __ability to serialize/deserialize the same data model in different [modes][22]__.
 
 > Another major aspect where Müsli differs is in the concept of [modes][22] (note the `M` parameter above). Since this is a parameter of the `Encode` and `Decode` traits it allows for the same data model to be serialized in many different ways.
 
@@ -104,11 +99,9 @@ However, the __main "killer feature"__ of [`musli`] is its __ability to serializ
 > ```
 
 For better understanding and familiarity with [`musli`]'s design, concepts, usage, and features, read through the following articles:
+
 - [Official `musli` crate docs][`musli`]
 - [John-John Tedro: A fresh look on incremental zero copy serialization][23]
-
-
-
 
 ## `rkyv`
 
@@ -118,38 +111,28 @@ For better understanding and familiarity with [`musli`]'s design, concepts, usag
 >
 > Unlike serde, rkyv produces data that is guaranteed deserialization free. If you wrote your data to disk, you can just `mmap` your file into memory, cast a pointer, and your data is ready to use. This makes it ideal for high-performance and IO-bound applications.
 
-> While rkyv is a great format for final data, it lacks a full schema system and isn’t well equipped for data migration and schema upgrades. If your use case requires these capabilities, you may need additional libraries the build these features on top of rkyv. You can use other serialization frameworks like serde with the same types as rkyv conflict-free.
+> While rkyv is a great format for final data, it lacks a full schema system and isn’t well-equipped for data migration and schema upgrades. If your use case requires these capabilities, you may need additional libraries the build these features on top of rkyv. You can use other serialization frameworks like serde with the same types as rkyv conflict-free.
 
 For better understanding and familiarity with [`rkyv`]'s design, concepts, usage, and features, read through the following articles:
+
 - [Official `rkyv` crate docs][`rkyv`]
 - [`rkyv` book][30]
-
-
-
 
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Write a program which deserializes the [following JSON](request.json) into a static `Request` type and prints out its serialization in a YAML and TOML formats. Consider to choose correct types for data representation.
 
 Prove your implementation correctness with tests.
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - How does [`serde`] achieve its performance? How does it model data and decouple responsibilities?
 - When does it have sense to prefer [`musli`] rather than [`serde`]?
 - What is zero-copy deserialization? Why is it beneficial? How does it work in [`serde`]? How does it work in [`rkyv`]?
-
-
-
 
 [`erased-serde`]: https://docs.rs/erased-serde
 [`musli`]: https://docs.rs/musli

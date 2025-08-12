@@ -40,7 +40,6 @@ Please, read [instructions][Submitting Solutions].
 - [rustup] for installing [Rust] toolchain and keeping it up-to-date.
 - [RustRover] as development environment (or any other on your choice).
 
-
 ### Bookshelf
 
 - [Rust Book] teaches and explains [Rust] basics.
@@ -61,12 +60,9 @@ Please, read [instructions][Submitting Solutions].
 - [This Week in Rust] represents handpicked and subscribable [Rust] weekly updates.
 - [Baby Steps] blog of [Nicholas Matsakis](https://github.com/nikomatsakis) shares useful [Rust] patterns, ideas and design decisions.
 
-
-
-
 ### Schedule
 
-Each task must be performed as a separate [PR (pull request)][PR] with an appropriate name and checkmarked here in README's schedule after completion. Each task is a [Cargo workspace member][13], so you can run/test it from the project root (i.e. `cargo run -p task_1_8`). __Consider to use [rustfmt] and [Clippy] when you're writing [Rust] code.__
+Each task must be performed as a separate [PR (pull request)][PR] with an appropriate name and checkmarked here in README's schedule after completion. Each task is a [Cargo workspace member][13], so you can run/test it from the project root (i.e. `cargo run -p task_1_8`). **Consider to use [rustfmt] and [Clippy] when you're writing [Rust] code.**
 
 Each task has the estimated time for completion. If any deeper investigation on task's theme is needed by you, then it's on your own.
 
@@ -76,55 +72,55 @@ Do not hesitate to ask your mentor/lead with questions, however you won't receiv
 
 - [ ] [0. Become familiar with Rust basics][Task 0] (1 week)
 - [ ] [1. Concepts][Task 1] (2 weeks)
-    - [ ] [1.1. Default values, cloning and copying][Task 1.1]
-    - [ ] [1.2. Boxing and pinning][Task 1.2]
-    - [ ] [1.3. Shared ownership and interior mutability][Task 1.3]
-    - [ ] [1.4. Clone-on-write][Task 1.4]
-    - [ ] [1.5. Conversions, casting and dereferencing][Task 1.5]
-    - [ ] [1.6. Static and dynamic dispatch][Task 1.6]
-    - [ ] [1.7. `Sized` and `?Sized` types][Task 1.7]
-    - [ ] [1.8. Thread safety][Task 1.8]
-    - [ ] [1.9. Phantom types][Task 1.9]
-    - [ ] [1.10. Summary Task][Task 1 Summary Task]
+  - [ ] [1.1. Default values, cloning and copying][Task 1.1]
+  - [ ] [1.2. Boxing and pinning][Task 1.2]
+  - [ ] [1.3. Shared ownership and interior mutability][Task 1.3]
+  - [ ] [1.4. Clone-on-write][Task 1.4]
+  - [ ] [1.5. Conversions, casting and dereferencing][Task 1.5]
+  - [ ] [1.6. Static and dynamic dispatch][Task 1.6]
+  - [ ] [1.7. `Sized` and `?Sized` types][Task 1.7]
+  - [ ] [1.8. Thread safety][Task 1.8]
+  - [ ] [1.9. Phantom types][Task 1.9]
+  - [ ] [1.10. Summary Task][Task 1 Summary Task]
 - [ ] [2. Idioms][Task 2] (2 weeks)
-    - [ ] [2.1. Rich types ensure correctness][Task 2.1]
-    - [ ] [2.2. Swapping values with `mem::replace`][Task 2.2]
-    - [ ] [2.3. Bound behavior, not data][Task 2.3]
-    - [ ] [2.4. Abstract type in, concrete type out][Task 2.4]
-    - [ ] [2.5. Exhaustivity][Task 2.5]
-    - [ ] [2.6. Sealing][Task 2.6]
-    - [ ] [2.7. Summary Task][Task 2 Summary Task]
+  - [ ] [2.1. Rich types ensure correctness][Task 2.1]
+  - [ ] [2.2. Swapping values with `mem::replace`][Task 2.2]
+  - [ ] [2.3. Bound behavior, not data][Task 2.3]
+  - [ ] [2.4. Abstract type in, concrete type out][Task 2.4]
+  - [ ] [2.5. Exhaustivity][Task 2.5]
+  - [ ] [2.6. Sealing][Task 2.6]
+  - [ ] [2.7. Summary Task][Task 2 Summary Task]
 - [ ] [3. Ecosystem][Task 3] (3 weeks)
-    - [ ] [3.1. Testing and mocking][Task 3.1]
-    - [ ] [3.2. Declarative and procedural macros][Task 3.2]
-    - [ ] [3.3. Date and time][Task 3.3]
-    - [ ] [3.4. Regular expressions and custom parsers][Task 3.4]
-    - [ ] [3.5. Collections and iterators][Task 3.5]
-    - [ ] [3.6. Serialization and deserialization][Task 3.6]
-    - [ ] [3.7. Randomness and cryptography][Task 3.7]
-    - [ ] [3.8. Logging and tracing][Task 3.8]
-    - [ ] [3.9. Command-line arguments, environment variables and configs][Task 3.9]
-    - [ ] [3.10. Multithreading and parallelism][Task 3.10]
-    - [ ] [3.11. Async I/O, futures and actors][Task 3.11]
-    - [ ] [3.12. Summary Task][Task 3 Summary Task]
+  - [ ] [3.1. Testing and mocking][Task 3.1]
+  - [ ] [3.2. Declarative and procedural macros][Task 3.2]
+  - [ ] [3.3. Date and time][Task 3.3]
+  - [ ] [3.4. Regular expressions and custom parsers][Task 3.4]
+  - [ ] [3.5. Collections and iterators][Task 3.5]
+  - [ ] [3.6. Serialization and deserialization][Task 3.6]
+  - [ ] [3.7. Randomness and cryptography][Task 3.7]
+  - [ ] [3.8. Logging and tracing][Task 3.8]
+  - [ ] [3.9. Command-line arguments, environment variables and configs][Task 3.9]
+  - [ ] [3.10. Multithreading and parallelism][Task 3.10]
+  - [ ] [3.11. Async I/O, futures and actors][Task 3.11]
+  - [ ] [3.12. Summary Task][Task 3 Summary Task]
 - [ ] [4. Backend ecosystem][Task 4] (2 weeks)
-    - [ ] [4.1. Databases, connection pools and ORMs][Task 4.1]
-    - [ ] [4.2. HTTP servers and clients][Task 4.2]
-    - [ ] [4.3. API servers, clients and tools][Task 4.3]
-    - [ ] [4.4. Summary Task][Task 4 Summary Task]
+  - [ ] [4.1. Databases, connection pools and ORMs][Task 4.1]
+  - [ ] [4.2. HTTP servers and clients][Task 4.2]
+  - [ ] [4.3. API servers, clients and tools][Task 4.3]
+  - [ ] [4.4. Summary Task][Task 4 Summary Task]
 - [ ] [Agree your capstone project][Task 6.1]
 - [ ] [5. Zero To Production][Task 5] (3 weeks)
-    - [ ] [5.1. Basic actix-web][Task 5.1]
-    - [ ] [5.2. Logging][Task 5.2]
-    - [ ] [5.3. Docker and deployment][Task 5.3]
-    - [ ] [5.4. Type-Driven Development and testing][Task 5.4]
-    - [ ] [5.5. Advanced actix-web and error handling][Task 5.5]
-    - [ ] [5.6. Authorization][Task 5.6]
+  - [ ] [5.1. Basic actix-web][Task 5.1]
+  - [ ] [5.2. Logging][Task 5.2]
+  - [ ] [5.3. Docker and deployment][Task 5.3]
+  - [ ] [5.4. Type-Driven Development and testing][Task 5.4]
+  - [ ] [5.5. Advanced actix-web and error handling][Task 5.5]
+  - [ ] [5.6. Authorization][Task 5.6]
 - [ ] [6. Capstone Project][Task 6] (1 week)
-    - [ ] [6.1. Agree your capstone project][Task 6.1]
-    - [ ] [6.2. Get approvement of basic implementation from the first mentor][Task 6.2]
-    - [ ] [6.3. Get 4 reviews from peers and mentors][Task 6.3]
-    - [ ] [6.4. Present your project][Task 6.4]
+  - [ ] [6.1. Agree your capstone project][Task 6.1]
+  - [ ] [6.2. Get approvement of basic implementation from the first mentor][Task 6.2]
+  - [ ] [6.3. Get 4 reviews from peers and mentors][Task 6.3]
+  - [ ] [6.4. Present your project][Task 6.4]
 
 ## Useful links
 
@@ -137,14 +133,14 @@ Do not hesitate to ask your mentor/lead with questions, however you won't receiv
   - Access the book as a [series of articles][Zero To Production as a series of articles].
 - ❔ [FAQ] - Answers to frequently asked questions at your fingertips.
 - 🔄 [Progress Board] - Participant progress board
-- 🚀 [Graduates' Capstone Projects] - Graduates' сapstone зrojects
+- 🚀 [Graduates' Capstone Projects] - Graduates' сapstone projects
   
 ## Too hard?
 
 - 👣 [Step-by-Step Introduction] - A gradual introduction to Rust programming.
 - 🐣 [Rustlings] - Small exercises designed to familiarize you with reading and writing Rust code.
 - 📘 [Rust Book] - An indispensable guide to Rust. While it's a must-have starting point, we strongly encourage revisiting it throughout your learning journey.
-<!-- - 🗂️ Awesome List of [Learning Materials on Git][Learning Materials on Git] - Essential resources for mastering Git. -->
+- 🗂️ Awesome List of [Learning Materials on Git] - Essential resources for mastering Git.
 
 ## Credits
 
@@ -246,10 +242,9 @@ Rustcamp materials were based on the [Rust Incubator](https://github.com/instrum
 [FAQ]: ./faq.md
 [Step-by-Step Introduction]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/introduction.md
 [Rustlings]: https://github.com/rust-lang/rustlings
-[Learning Materials on Git]: https://github.com/Learn-Together-Pro/LearnGitTogether
+[Learning Materials on Git]: https://github.com/Learn-Together-Pro/Git
 [Rust Book]: https://doc.rust-lang.org/book
 [Progress Board]: https://github.com/rust-lang-ua/rustcamp_progress/blob/master/README.md
 [Graduates' Capstone Projects]: https://github.com/rust-lang-ua/rustcamp_projects
-
 
 [13]: https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html

@@ -4,6 +4,7 @@ Task 4.4: RPC
 [gRPC] is a widely-adopted high performance [RPC] framework, having a __strict schema__, powered with pluggable support for load balancing, tracing, health checking and authentication, built on top of [HTTP/2] (and so, having a __mandatory encryption__), and __heavily using code-from-schema generation__.
 
 For more familiarity with [gRPC], read through the following articles:
+
 - [gRPC docs: Introduction to gRPC][301]
 - [gRPC docs: Core concepts, architecture and lifecycle][302]
 
@@ -11,9 +12,10 @@ For more familiarity with [gRPC], read through the following articles:
 
 For implementing a [gRPC] server in [Rust], there are two main production-ready crates in its ecosystem: [`tonic`] (pure [Rust] implementation, based on [`tokio`]) and [`grpcio`] (wrapper around [gRPC core][311] implementation).
 
-In [gRPC] ecosystem, usually, implementing a [gRPC] client doesn't differ much from implementing a server, since both are auto-generated from the same `.proto` schema. So, for [Rust], the same [`tonic`] and [`grpcio`] crates do the job when it comes to making [gRPC] requests. 
+In [gRPC] ecosystem, usually, implementing a [gRPC] client doesn't differ much from implementing a server, since both are auto-generated from the same `.proto` schema. So, for [Rust], the same [`tonic`] and [`grpcio`] crates do the job when it comes to making [gRPC] requests.
 
 For more familiarity with using [gRPC] in [Rust], read through the following articles:
+
 - [Official `tonic` crate docs][`tonic`]
 - [Official `grpcio` crate docs][`grpcio`]
 
@@ -32,8 +34,9 @@ Try to keep your solution as simple and straightforward as possible.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is gRPC? What is the difference between RPC and gRPC?
-- What are the strengths of gRPC? Which are good use-cases for it, and which are not? Why? 
+- What are the strengths of gRPC? Which are good use-cases for it, and which are not? Why?
 
 [`grpcio`]: https://docs.rs/crate/grpcio
 [`tarpc`]: https://docs.rs/tarpc

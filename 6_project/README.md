@@ -6,11 +6,11 @@ Create a portfolio project using Rust within a **3-day** timeframe. The project 
 
 Good project, it is project, that:
 
--   You can add to your portfolio / resume;
--   Falls within the scope of the specialization.
--   Has a clearly defined main objective.
+- You can add to your portfolio / resume;
+- Falls within the scope of the specialization.
+- Has a clearly defined main objective.
 
-### This project should be open-source.
+### This project should be open-source
 
 > ❗️ Please create a new **public repository** (in the personal namespace) for your capstone project.
 
@@ -26,9 +26,9 @@ If you're having trouble finding a suitable subject for your project, don't hesi
 
 To get approval of the subject of the project from a mentor, you must fulfill the following requirements:
 
--   Provide a clear description of the project's main objective.
--   Ensure that the main objective can be realistically implemented within a **3-day** timeframe.
--   Include a description of what the project will do and what it will not do.
+- Provide a clear description of the project's main objective.
+- Ensure that the main objective can be realistically implemented within a **3-day** timeframe.
+- Include a description of what the project will do and what it will not do.
 
 > ❗️ You have to approve the subject of the project with your mentor.
 
@@ -44,14 +44,14 @@ Teamwork is crucial in our program, as is respecting senior team members and ack
 
 You are required to obtain approval from (at least 1 per category):
 
--   Rust forum
-    -   https://users.rust-lang.org/c/code-review/11
-    -   Create a new topic in the "Code Review" category. And ask for a review of your project.
--   Mentor from the current bootcamp (outside your immediate group)
--   Mentor from the current bootcamp (inside your immediate group)
--   Student from the current bootcamp (from any group)
+- Rust forum
+  - <https://users.rust-lang.org/c/code-review/11>
+  - Create a new topic in the "Code Review" category. And ask for a review of your project.
+- Mentor from the current bootcamp (outside your immediate group)
+- Mentor from the current bootcamp (inside your immediate group)
+- Student from the current bootcamp (from any group)
 
-### You need to collect proof of these reviews. And sent it as Pull Request in your private repository in the bootcamp organization:
+### You need to collect proof of these reviews. And sent it as Pull Request in your private repository in the bootcamp organization
 
 1. Collect proofs of these reviews as a screenshots + links to the comments.
 2. Come back your private repository in the bootcamp organization (where you did previous tasks).

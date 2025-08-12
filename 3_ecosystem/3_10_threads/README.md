@@ -3,25 +3,20 @@ Task 3.10: Multithreading and parallelism
 
 One of main [Rust]'s design goals is a [concurrency][1]. [Rust] has a [strong opinion][2] about that, while allows different concurrent models to coexist.
 
-
-
-
 ## Threads
 
 [Rust] has built-in support for [native threads][3] in form of the [`std::thread`] module of its standard library.
 
 Traditionally, [threads][3] are used for solving [CPU-bound] problems, as they allow to execute tasks in parallel. However, in practice, threads are often used to solve [I/O-bound] problems too, especially when [asynchronous I/O][4] is not supported well (which is true for [Rust] `std` library at the moment).
 
-[`crossbeam`] crate also provides implementation of [scoped threads][5], which allow to borrow values from a stack. They are also available in form of [`std::thread::scope`], as of [Rust] 1.63. 
+[`crossbeam`] crate also provides implementation of [scoped threads][5], which allow to borrow values from a stack. They are also available in form of [`std::thread::scope`], as of [Rust] 1.63.
 
 For better understanding [Rust] threads design, concepts, usage, and features (especially [TLS][4] is important and widely used one), read through the following articles:
+
 - [Rust Book: 16.1. Using Threads to Run Code Simultaneously][6]
 - [Rust By Example: 20.1. Threads][7]
 - [Official `std::thread` docs][`std::thread`]
 - [Nicky Meuleman: Multithreading in Rust][29]
-
-
-
 
 ## Synchronization
 
@@ -31,11 +26,12 @@ The [threads synchronization][11] is a wide topic, but generally it's done via [
 
 [Exclusive access][13] may be controlled via primitives of [`std::sync`] module of [Rust] standard library.
 
-Threads communication is commonly represented via [channels][14] and is implemented in [`std::sync::mpsc`] module of [Rust] standard library. 
+Threads communication is commonly represented via [channels][14] and is implemented in [`std::sync::mpsc`] module of [Rust] standard library.
 
 Despite that, there is also the [`crossbeam`] crate, providing more feature-rich and optimized concurrency and synchronization primitives. The most notable is [`crossbeam-channel`] as [an enhancement][15] of `std` channel implementations.
 
 For better understanding and familiarity with [Rust] synchronization primitives design, concepts, usage, and features, read through the following articles:
+
 - [Rust Book: 16.2. Using Message Passing to Transfer Data Between Threads][16]
 - [Rust Book: 16.3. Shared-State Concurrency][13]
 - [Rust Blog: Fearless Concurrency with Rust][2]
@@ -51,9 +47,6 @@ For better understanding and familiarity with [Rust] synchronization primitives 
 - [Mahmoud Al-Qudsi: Implementing truly safe semaphores in rust][32]
 - [Michael Snoyman: My Best and Worst Deadlock in Rust][35]
 
-
-
-
 ## Parallelism
 
 The important concept to understand is [how concurrency and parallelism differ][21].
@@ -63,6 +56,7 @@ The important concept to understand is [how concurrency and parallelism differ][
 Another way to perform parallel data processing _without using [threads][3]_ is [SIMD] instructions usage. If an algorithm is parallelizable enough, applying [SIMD] instructions may [increase performance drastically][24]. [Rust] ecosystem provides basic support for [SIMD] instructions in a form of [`packed_simd`] crate.
 
 For better understanding and familiarity with parallelism in [Rust], read through the following articles:
+
 - [Nicky Meuleman: Concurrent vs parallel][28]
 - [Official `rayon` crate docs][`rayon`]
 - [`rayon` crate FAQ][22]
@@ -74,15 +68,9 @@ For better understanding and familiarity with parallelism in [Rust], read throug
 - [Official `packed_simd` crate docs][`packed_simd`]
 - [vgatherps: Parsing numbers into base-10 decimals with SIMD][33]
 
-
-
-
 ## Multiprocessing
 
 Multiprocessing is a system that has more than one or two processors. In Multiprocessing, CPUs are added for increasing computing speed of the system. Because of Multiprocessing, There are many processes are executed simultaneously.
-
-
-
 
 ## Multiprocessing vs Multithreading
 
@@ -97,32 +85,24 @@ Multiprocessing is a system that has more than one or two processors. In Multipr
 | Pickling objects | Multiprocessing relies on pickling objects in memory to send to other processes.                                                          | Multithreading avoids pickling.                                                                                              |
 | Program          | Multiprocessing system allows executing multiple programs and tasks.                                                                      | Multithreading system executes multiple threads of the same or different processes.                                          |
 
-
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Write a program with the following workflow:
-- `Producer` is a separate thread, which continuously generates square matrixes of random `u8` elements and size `4096`.
+
+- `Producer` is a separate thread, which continuously generates square matrices of random `u8` elements and size `4096`.
 - `Consumer` is a separate thread, which takes a generated matrix, counts sum of all its elements and prints the sum to STDOUT.
 - There are only 1 `Producer` and 2 `Consumer`s.
 - Counting sum of matrix elements should be parallelized.
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What is concurrency? What is parallelism? How do they relate to each other and how do they differ?
 - How parallelism is represented in [Rust]? Which are common crates for using it?
 - What are the main ways of threads synchronization in [Rust]? Which advantages and disadvantages does each one have? What are the use-cases for each one?
-
-
-
 
 [`atomic`]: https://docs.rs/atomic
 [`crossbeam`]: https://docs.rs/crossbeam

@@ -1,10 +1,7 @@
 Task 2.6: Sealing
 =================
 
-Sealing, in programming, usually means that some API (mostly public) cannot be inherited, extended or implemented outside its definition place. For example, a [sealed class or interface in Kotlin][1] cannot be inherited or implemented outside the library where it's defined. In [Rust], this idiom may be applied to [traits][2]. 
-
-
-
+Sealing, in programming, usually means that some API (mostly public) cannot be inherited, extended or implemented outside its definition place. For example, a [sealed class or interface in Kotlin][1] cannot be inherited or implemented outside the library where it's defined. In [Rust], this idiom may be applied to [traits][2].
 
 ## Traits
 
@@ -33,9 +30,11 @@ __Sealed trait__ is a __publicly accessible__ trait, which __cannot be implement
 >     impl Sealed for usize {}
 > }
 > ```
+>
 > The empty private `Sealed` supertrait cannot be named by downstream crates, so we are guaranteed that implementations of `Sealed` (and therefore `TheTrait`) only exist in the current crate.
 
 This is the most common way to seal a trait. The boilerplate could be completely cut off by using a [`sealed`] crate, providing a convenient macro to generate the one:
+
 ```rust
 use sealed::sealed;
 
@@ -55,38 +54,29 @@ The main purpose of sealing a trait is, of course, [future-proofing][7] of [API]
 It's important to note that __trait sealing fully relies on__ tricking over visibility rules (__using a public [supertrait][8]__ or type, which __name is not publicly exported__), and so, has no impact on the type system semantics (a sealed public trait is just a regular public trait from the type system perspective). In theory, sealing a trait should affect its [coherence][9], by [relaxing its strictness for the use-cases which can never happen with a sealed trait][10]. However, that would require a special support by compiler, which seems [not gonna happen in the near future][11].
 
 For better understanding traits sealing, its design and use-cases, read through the following articles:
+
 - [Rust API Guidelines: 10. Future proofing: Sealed traits protect against downstream implementations (C-SEALED)][3]
 - [Predrag Gruevski: A definitive guide to sealed traits in Rust][4]
 - [Jack Wrenn: Private Methods on a Public Trait][13]
 - [Official `sealed` crate docs][`sealed`]
 
-
-
-
 ## Task
 
 __Estimated time__: 1 day
 
-
-
-
 Seal the traits defined in [this task's crate](src/lib.rs) in the following way:
+
 - Make the [`MyIteratorExt` trait](src/my_iterator_ext.rs) fully sealed. Do it manually, using the [`sealed`] crate or a similar one is __not allowed__.
 - Make the [`MyError` trait](src/my_error.rs) partially sealed. Only seal the method marked with `#[doc(hidden)]` attribute.
 - Sealing should work on both module level (disallowing to implement the sealed trait or the sealed method in the root module of the crate or any other module outside the one where the traits are defined, prove it by providing commented implementations in the root module of the crate, which doesn't compile due to the seal, if uncommented) and crate level (prove it by creating [documentation tests which doesn't compile][12] due to the seal).
 
-
-
-
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
+
 - What does sealing mean in programming in a broad sense?
 - What is trait sealing in [Rust]? When is it useful?
 - What limitations does trait sealing in [Rust] have? What could it be able to provide if supported by compiler?
-
-
-
 
 [`sealed`]: https://docs.rs/sealed
 [API]: https://en.wikipedia.org/wiki/API
