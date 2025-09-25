@@ -50,11 +50,7 @@ pub struct EventNumber(NonZeroU64);
 
 impl EventNumber {
     /// The minimum [EventNumber].
-    #[allow(unsafe_code)]
-    pub const MIN_VALUE: EventNumber =
-        // One is absolutely non-zero, and this is required for this to be
-        // usable in a `const` context.
-        EventNumber(unsafe { NonZeroU64::new_unchecked(1) });
+    pub const MIN_VALUE: EventNumber = EventNumber(NonZeroU64::new(1).unwrap());
 
     /// Increments the event number to the next value.
     #[inline]
