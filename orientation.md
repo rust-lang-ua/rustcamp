@@ -80,6 +80,9 @@ In this bootcamp, we have the deadlines and expulsions.
 
 Each chapter of our program has its own deadline. Please note that some chapters may take more than one week to complete. We use a week as our standard unit of measurement.
 
+<img width="851" height="402" alt="Deadlines" src="https://github.com/user-attachments/assets/ba8ad339-cbfc-4267-b9c6-5f615f379c2f" />
+
+
 We encourage you to meet all deadlines to maximize your learning experience and successfully complete the boot camp.
 
 Deadlines are set for the opening and any changes in your PR. If you managed to complete the task before the deadline, but received the approve from the mentors after the deadline, the task is still considered completed.
