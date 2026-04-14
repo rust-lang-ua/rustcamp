@@ -110,7 +110,7 @@ We ask you to complete the assignments independently and not to share your own w
 
 ### Capstone project
 
-You will be tasked with creating a portfolio project using Rust in Chapter 6. To achieve a high-quality result, you are strongly encouraged to begin preparation in advance. This will give you the necessary time for code reviews, iteration, and refinement before the final deadline. The project should highlight your proficiency in Rust and your chosen specialization, showcase your coding style, and demonstrate your problem-solving skills. The objective is to build a functional project that can be presented to potential employers or shared within the programming community.
+You will be tasked with creating a portfolio project using Rust in chapter 6. To achieve a high-quality result, you are strongly encouraged to begin preparation in advance. This will give you the necessary time for code reviews, iteration, and refinement before the final deadline. The project should highlight your proficiency in Rust and your chosen specialization, showcase your coding style, and demonstrate your problem-solving skills. The objective is to build a functional project that can be presented to potential employers or shared within the programming community.
 
 Select a project idea that can be effectively implemented within a **one-week timeframe**. Consider the project's complexity and feasibility. You are expected to present your project to your peers and mentors, which enables you to receive comprehensive feedback, enhancing your growth and learning experience.
 
@@ -125,12 +125,12 @@ Our certification process is meticulously designed to maintain the highest level
 During the certification test, participants will be [supervised by a proctor][certification test]. We require participants to use two cameras and share their desktop throughout the test to prevent any unauthorized communication. In addition, we will monitor all active processes on the participant's computer before and during the test to curb any fraudulent activities.
 
 It's important to note that passing the certification test is challenging due to its intricate and tricky questions. Each participant is granted two initial attempts, which function as follows:
-- **Shortened Attempt:** An opportunity to complete 10 questions in 10 minutes. If all questions are answered correctly (100% score), you will be awarded a certificate without the need to take the basic test.
-- **Basic Test:** To successfully pass the basic test, you must achieve a minimum score of 75%.
+- **Shortened attempt:** An opportunity to complete 10 questions in 10 minutes. If all questions are answered correctly (100% score), you will be awarded a certificate without the need to take the basic test.
+- **Basic test:** To successfully pass the basic test, you must achieve a minimum score of 75%.
 
-**Please note:** Participants who choose a specific specialization must also pass a separate specialization test, which follows the same format (offering both a shortened and a basic attempt).
+**Please note:** Participants who choose a specific specialization must also pass a separate specialization test, which follows the same format (offering both a shortened attempt and a basic test).
 
-Participants who complete any chapter (except Chapter 6) ahead of others, or attend all group meetings without exception, will be awarded an extra attempt. A single participant cannot receive more than one extra attempt for completing multiple chapters early. However, by meeting different criteria (e.g., finishing a chapter first AND perfect attendance), they can earn a maximum of two extra attempts in total.
+Participants who complete any chapter (except chapter 6) ahead of others, or attend all group meetings without exception, will be awarded an extra attempt. A single participant cannot receive more than one extra attempt for completing multiple chapters early. However, by meeting different criteria (e.g., finishing a chapter first and perfect attendance), they can earn a maximum of two extra attempts in total.
 
 We recommend utilizing available online quizzes as part of your **preparation for the certification test**. This method will help you thoroughly understand the topics related to any questions you might encounter.
 
