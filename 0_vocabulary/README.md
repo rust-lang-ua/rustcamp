@@ -11,6 +11,22 @@ Polish your familiarity by completing [Rust By Example] and [rustlings].
 
 Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
+The table below maps Rust concepts to their closest analogue elsewhere, so you can anchor new ideas to what you already know. Treat these as starting points, not equivalences - the "closest analogue" column is often where the differences matter most.
+
+| Rust concept                    | C / C++                                                | Java / C# / Go (GC'd)                                     | Python / JS / Ruby (dynamic)                    |
+| ------------------------------- | ------------------------------------------------------ | --------------------------------------------------------- | ----------------------------------------------- |
+| Ownership & move semantics      | manual `new`/`delete`, `std::move`                     | no equivalent - GC owns everything                        | no equivalent - GC/refcounting owns everything  |
+| Borrowing (`&`, `&mut`)         | raw pointers/references, no compile-time checks        | references (always shared, no exclusivity rule)           | references (always shared, no exclusivity rule) |
+| RAII / `Drop`                   | destructors, RAII (C++)                                | `try`-with-resources (Java), `using` (C#), `defer` (Go)   | context managers (`with`, Python), `finally`    |
+| Lifetimes                       | nothing enforced - dangling pointers are UB            | GC makes this moot                                        | GC makes this moot                              |
+| Traits                          | abstract base classes, concepts (C++20)                | interfaces                                                | duck typing, protocols (Python), mixins         |
+| `enum` (sum types / ADTs)       | tagged unions (manual), `std::variant`                 | sealed classes (Java/Kotlin-ish), no true ADT in C#/Go    | no true equivalent - usually classes or dicts   |
+| `Option<T>` / `Result<T, E>`    | `nullptr`/error codes, `std::optional`/`std::expected` | `null` + exceptions, `Optional<T>` (Java)                 | `None` + exceptions                             |
+| Static vs dynamic dispatch      | virtual functions (dynamic), templates (static)        | interfaces are dynamic dispatch by default                | always dynamic dispatch                         |
+| Macros (declarative/procedural) | preprocessor macros, templates                         | annotations/reflection (no real macros)                   | decorators, metaclasses                         |
+| Crate / module / package        | translation unit / namespace / library                 | package/namespace + build artifact                        | module/package + package manager entry          |
+| Generics & monomorphization     | templates (compile-time, similar)                      | generics via type erasure (Java) or reified (C#/Go 1.18+) | not applicable - dynamic typing                 |
+
 After completing these steps, you should be able to answer (and understand why) the following questions:
 
 - What [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
