@@ -1,17 +1,18 @@
-Chapter 0: Building Up an Vocabulary
+Chapter 0: Building Up a Vocabulary
 ========================================
 
 __Estimated time__: 4 days
 
 > ❗️ To meet the first deadline, please open a Pull Request by Sunday of  the first week and include answers to at least one question in it.
 
-Read through [Rust Book], [Rust FAQ], and become familiar with basic [Rust] concepts, syntax, memory model, type and module systems.
+Read through [Rust Book], and become familiar with basic [Rust] concepts, syntax, memory model, type and module systems.
 
 Polish your familiarity by completing [Rust By Example] and [rustlings].
 
 Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
+
 - What [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
 - What runtime [Rust] has? Does it use a GC (garbage collector)?
 - What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
@@ -35,7 +36,7 @@ After completing these steps, you should be able to answer (and understand why) 
 After you are done, notify your lead in an appropriate PR (pull request), and they will examine what you have learned.
 
 _Additional_ articles, which may help to understand the above topic better:
-- [Chris Morgan: Rust ownership, the hard way][1]
+- [Chris Morgan: Rust ownership, the hard way][1] _(written pre-[NLL][15]; borrow scopes are narrower today than the article describes, but the core ownership model still holds)_
 - [Adolfo Ochagavía: You are holding it wrong][23]
 - [Vikram Fugro: Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30]
 - [HashRust: A guide to closures in Rust][24]
@@ -51,7 +52,6 @@ _Additional_ articles, which may help to understand the above topic better:
 - [Trait Drop][10]
 - [Common Lifetime Misconception][11]
 - [Visualizing Memory Layout][12]
-- [Package vs. Crate terminology (r/rust)][13]
 - [Packages and crates (Rust wiki)][14]
 - [Full list of available crates on Rust Playground][16]
 - [Blanket impl definition][17]
@@ -62,7 +62,6 @@ _Additional_ articles, which may help to understand the above topic better:
 
 Additional:
 - [Rust API guidline checklist][19]
-- [Interview Questions on Rust Programming][20]
 - [Step-by-step instruction to start development in Rust][26]
 - [Awesome collection of crates for productive development in Rust][27]
 - [Awesome Collection of Materials to Learn Rust][28]
@@ -72,7 +71,6 @@ Additional:
 [Rust]: https://www.rust-lang.org
 [Rust Book]: https://doc.rust-lang.org/book
 [Rust By Example]: https://doc.rust-lang.org/rust-by-example
-[Rust FAQ]: https://prev.rust-lang.org/faq.html
 [rustlings]: https://rustlings.cool
 
 [1]: https://chrismorgan.info/blog/rust-ownership-the-hard-way
@@ -82,18 +80,17 @@ Additional:
 [5]: https://web.archive.org/web/20220328114028/https://jeffa.io/rust_guide_generics_demystified_part_2
 [6]: https://www.brandons.me/blog/polymorphism-in-rust
 [7]: https://www.tangramvision.com/blog/c-rust-generics-and-specialization#substitution-ordering--failures
-[8]: https://cooscoos.github.io/blog/stress-about-strings
+[8]: https://web.archive.org/web/20251117032322/https://cooscoos.github.io/blog/stress-about-strings/
 [9]: https://www.thecodedmessage.com/posts/raii
 [10]: https://vojtechkral.github.io/blag/rust-drop-order/
 [11]: https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md
 [12]: https://youtu.be/7_o-YRxf_cc?si=gSVQ6wWSnr2le6rc
-[13]: https://www.reddit.com/r/rust/comments/lvtzri/confused_about_package_vs_crate_terminology/
 [14]: https://rustwiki.org/en/book/ch07-01-packages-and-crates.html
+[15]: https://blog.rust-lang.org/2022/08/05/nll-by-default/
 [16]: https://github.com/integer32llc/rust-playground/blob/master/compiler/base/Cargo.toml
 [17]: https://doc.rust-lang.org/reference/glossary.html#blanket-implementation
 [18]: https://doc.rust-lang.org/reference/special-types-and-traits.html#auto-traits
 [19]: https://rust-lang.github.io/api-guidelines/checklist.html
-[20]: https://iq.opengenus.org/questions-on-rust/
 [21]: https://geo-ant.github.io/blog/2022/common-cpp-errors-vs-rust
 [22]: https://web.archive.org/web/20230319015854/https://ybnesm.github.io/blah/articles/true-observer-pattern-rust
 [23]: https://ochagavia.nl/blog/you-are-holding-it-wrong
@@ -104,4 +101,3 @@ Additional:
 [28]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md
 [30]: https://dev.to/vikram2784/beyond-pointers-how-rust-outshines-c-with-its-borrow-checker-1mad
 [31]: https://en.wikipedia.org/wiki/Memory_model_(programming)
-
