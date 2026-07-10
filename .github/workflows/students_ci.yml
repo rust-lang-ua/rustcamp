@@ -10,13 +10,13 @@ jobs:
   changed_crates:
     if: ${{ github.repository_owner != 'instrumentisto' }}
     name: Detect changes
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.GH_RUNNER_LABEL_CI || 'ubuntu-latest' }}
     outputs:
       has_changes: ${{ steps.crates.outputs.has_changes }}
       crates: ${{ steps.crates.outputs.crates }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
           # Fetch all history so that git diff can compare against any commit
           fetch-depth: 0
@@ -63,28 +63,26 @@ jobs:
   test:
     needs: changed_crates
     if: ${{ needs.changed_crates.outputs.has_changes == 'true' }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ vars.GH_RUNNER_LABEL_CI || 'ubuntu-latest' }}
     strategy:
       fail-fast: false
       matrix:
         crate: ${{ fromJson(needs.changed_crates.outputs.crates) }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Install Rust
         id: rust
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@fa04a1451ff1842e2626ccb99004d0195b455a88 # master (2026-06-30)
         with:
           toolchain: stable
-          override: true
-          profile: minimal
 
       # Cache dependencies by the crate name and the Rust version
       # It does not save/fetch cache from different crates, because `cargo test -p` does not build them
-      - uses: Swatinem/rust-cache@v2
+      - uses: Swatinem/rust-cache@e18b497796c12c097a38f9edb9d0641fb99eee32 # v2.9.1
         with:
-          shared-key: ${{ matrix.crate }}-${{ steps.rust.outputs.rustc_hash }}
+          shared-key: ${{ matrix.crate }}-${{ steps.rust.outputs.cachekey }}
 
       - name: Run tests on ${{ matrix.crate }}
         run: cargo test -p ${{ matrix.crate }}
