@@ -17,6 +17,7 @@ For better understanding [`Box`] purpose, design, limitations and use cases read
 - [Official `std::boxed` docs][`std::boxed`]
 - [Amos: What's in the box?][3]
 - [Mahdi Dibaiee: What is `Box<str>` and how is it different from `String` in Rust?][8]
+- [Crust of Rust: The Drop Check][14]
 
 
 
@@ -133,3 +134,4 @@ After completing everything above, you should be able to answer (and understand 
 [11]: https://users.rust-lang.org/t/why-is-it-unsafe-to-pin-a-shared-reference/40309
 [12]: https://ohadravid.github.io/posts/2023-07-put-a-pin-on-that
 [13]: https://itnext.io/leaky-abstractions-and-a-rusty-pin-fbf3b84eea1f
+[14]: https://www.youtube.com/watch?v=TJOFSMpJdzg
