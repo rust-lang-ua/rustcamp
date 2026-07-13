@@ -6,10 +6,10 @@ These tasks describe common crates and tools in 📚 [Rust] ecosystem required f
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
-- How should I interact with databases in 📚 [Rust] application and why? How can I organize migrations for my project?
-- What should I use for 📰 [HTTP] server implementation in 📚 [Rust], when and why? What about 📰 [WebSocket] connections?
-- What are options for making 📰 [HTTP] request (including 📰 [WebSocket] ones)?
-- What is 📰 [RPC]? Name several the most adopted technologies, their advantages and disadvantages, explain which one could be used under which circumstances, and what and where is their best fit? 
+1. How should I interact with databases in 📚 [Rust] application and why? How can I organize migrations for my project?
+2. What should I use for 📰 [HTTP] server implementation in 📚 [Rust], when and why? What about 📰 [WebSocket] connections?
+3. What are options for making 📰 [HTTP] request (including 📰 [WebSocket] ones)?
+4. What is 📰 [RPC]? Name several the most adopted technologies, their advantages and disadvantages, explain which one could be used under which circumstances, and what and where is their best fit? 
 
 
 

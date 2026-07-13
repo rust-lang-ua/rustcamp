@@ -6,15 +6,15 @@ These tasks describe common and necessary-to-know concepts for everyday programm
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
-- How do I recognize that data is allocated at the heap rather than at the stack? When data should be allocated at the heap?
-- What is copying and cloning data in 📚 [Rust]? What's the difference? When and why should I use them?
-- How can a single piece of data be owned by multiple parts of program? When and why is this commonly required?
-- How borrowing rules may be violated? In what price? When and why is this commonly required?
-- How to deal with owned and borrowed data simultaneously? When and why is this commonly required?
-- How to share values between threads? What is `Send` and `Sync` markers? Why are they required, when should be used?
-- How do static and dynamic dispatches differ? Why do they exist? When and why should I choose between them?
-- Why `?Sized` types exist? How are they used? Why should I care about them?
-- Why phantom types exist? What problems do they solve?
+1. How do I recognize that data is allocated at the heap rather than at the stack? When data should be allocated at the heap?
+2. What is copying and cloning data in 📚 [Rust]? What's the difference? When and why should I use them?
+3. How can a single piece of data be owned by multiple parts of program? When and why is this commonly required?
+4. How borrowing rules may be violated? In what price? When and why is this commonly required?
+5. How to deal with owned and borrowed data simultaneously? When and why is this commonly required?
+6. How to share values between threads? What is `Send` and `Sync` markers? Why are they required, when should be used?
+7. How do static and dynamic dispatches differ? Why do they exist? When and why should I choose between them?
+8. Why `?Sized` types exist? How are they used? Why should I care about them?
+9. Why phantom types exist? What problems do they solve?
 
 The following articles may help you to sum up your experience:
 - 📰 [Wrapper Types in Rust: Choosing Your Guarantees][1]

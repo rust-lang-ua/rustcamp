@@ -6,19 +6,19 @@ These tasks describe common crates and tools in 📚 [Rust] ecosystem required f
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
-- What testing capabilities does 📚 [Rust] offer and when should I use them? Why should I follow 📰 [BDD] style?
-- What are macros? How do they differ? What benefits does their usage give? When should I write one?
-- How to work with date and time in 📚 [Rust]? How should I store time? How should I return it to other applications?
-- How are regular expressions used in 📚 [Rust]? When are they not enough? How can I write a custom parser in 📚 [Rust]?
-- How do iterator and collection compare and differ in 📚 [Rust]? What is the purpose of immutable collections? Why should I care about using concurrent collections?
-- What should I use for serialization in 📚 [Rust]? Why this is good or bad?
-- How can I generate randomness in 📚 [Rust]? Which guarantees of random generator should I choose and when?
-- What should I use for password hashing in 📚 [Rust]? How can I encrypt a message with 📚 [Rust]? How should I compare secret values and why?
-- How logging is organized in 📚 [Rust] ecosystem? Why should I care about structured logging?
-- What should I use for building 📰 [CLI] interface in 📚 [Rust]? How can I organize a configuration for my application and why?
-- Why multithreading is required for 📚 [Rust] programs and what problems does it solve? How threads concurrency differs with parallelism? How can I parallelize code in 📚 [Rust]?
-- What is asynchronicity and what problems does it solve? How is it compared to threads concurrency? What is 📚 [Rust] solution for asynchronicity and why it has such design?
-- What are actors? When are they useful?
+1. What testing capabilities does 📚 [Rust] offer and when should I use them? Why should I follow 📰 [BDD] style?
+2. What are macros? How do they differ? What benefits does their usage give? When should I write one?
+3. How to work with date and time in 📚 [Rust]? How should I store time? How should I return it to other applications?
+4. How are regular expressions used in 📚 [Rust]? When are they not enough? How can I write a custom parser in 📚 [Rust]?
+5. How do iterator and collection compare and differ in 📚 [Rust]? What is the purpose of immutable collections? Why should I care about using concurrent collections?
+6. What should I use for serialization in 📚 [Rust]? Why this is good or bad?
+7. How can I generate randomness in 📚 [Rust]? Which guarantees of random generator should I choose and when?
+8. What should I use for password hashing in 📚 [Rust]? How can I encrypt a message with 📚 [Rust]? How should I compare secret values and why?
+9. How logging is organized in 📚 [Rust] ecosystem? Why should I care about structured logging?
+10. What should I use for building 📰 [CLI] interface in 📚 [Rust]? How can I organize a configuration for my application and why?
+11. Why multithreading is required for 📚 [Rust] programs and what problems does it solve? How threads concurrency differs with parallelism? How can I parallelize code in 📚 [Rust]?
+12. What is asynchronicity and what problems does it solve? How is it compared to threads concurrency? What is 📚 [Rust] solution for asynchronicity and why it has such design?
+13. What are actors? When are they useful?
 
 
 ## Some usefull tools
