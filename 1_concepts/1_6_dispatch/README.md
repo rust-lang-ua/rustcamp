@@ -5,7 +5,7 @@ Task 1.6: Static and dynamic dispatch
 
 __[Static dispatch][1]__ (also called "early binding") __happens only at compile time__. The compiler generates separate code for each concrete type that is used. In [Rust] static dispatch is a __default way for polymorphism__ and is introduced simply by generics (parametric polymorphism): `MyType<T, S, F>`.
 
-__[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __[type is erased][4] at compile time__, so compiler doesn't know it, therefore generates [vtable] which dispatches call at runtime and __comes with a performance penalty__. In [Rust] dynamic dispatch is introduced via [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
+__[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __[type is erased][4] at compile time__, so compiler doesn't know it, therefore generates 📰 [vtable] which dispatches call at runtime and __comes with a performance penalty__. In [Rust] dynamic dispatch is introduced via [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
 
 You _have to_ use [dynamic dispatch][2] in situations where [type erasure][4] is required. If the problem can be solved with a [static dispatch][1] then you'd better to do so to avoid performance penalties. The most common example when you cannot use [static dispatch][1] and have to go with [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
 
@@ -24,7 +24,7 @@ For better understanding [static][1] and [dynamic][2] dispatches purpose, design
 
 ## Object safety
 
-The other reason to go with [static dispatch][1] is that except performance penalties, [trait objects][3] have the other major downside: not all traits can be used for creating [trait objects][3]. A trait needs to meet special [object safety requirements][6]:
+The other reason to go with [static dispatch][1] is that except performance penalties, [trait objects][3] have the other major downside: not all traits can be used for creating [trait objects][3]. A trait needs to meet special 📚 [object safety requirements][6]:
 
 > - The trait cannot require `Self: Sized`.
 > - Method references the `Self` type in its arguments or return type.
@@ -35,7 +35,7 @@ The other reason to go with [static dispatch][1] is that except performance pena
 
 This can lead to quite tricky and non-obvious situations when writing code.
 
-For better understanding [object safety][5] purpose, design and limitations, read through the following articles:
+For better understanding 📚 [object safety][5] purpose, design and limitations, read through the following articles:
 - 📚 [Rust Book: 17.2. Object Safety Is Required for Trait Objects][5]
 - 📚 [Rust Reference: 6.1. Traits: Object Safety][6]
 - 📰 [Nicholas Matsakis: Dyn async traits, part 2][17]
@@ -45,7 +45,7 @@ For better understanding [object safety][5] purpose, design and limitations, rea
 
 ## Dynamic-to-static optimization for closed types set
 
-In situations where you need to deal with different types, but all possible types form a [closed set][14] (you know _all_ the used types), [dynamic dispatch][2] can be replaced with a [static dispatch][1] in a price of some `enum`-based boilerplate.
+In situations where you need to deal with different types, but all possible types form a 📰 [closed set][14] (you know _all_ the used types), [dynamic dispatch][2] can be replaced with a [static dispatch][1] in a price of some `enum`-based boilerplate.
 
 For example the following [dynamically dispatched][2] code:
 ```rust
@@ -111,7 +111,7 @@ impl SayHello for Language {
 let greetings: Vec<Language> = vec![English, Spanish];
 ```
 
-There is also a handy [enum_dispatch] crate, which generates this boilerplate automatically in some cases. It has [illustrative benchmarks][15] about performance gains of using `enum` for dispatching.
+There is also a handy 📚 [enum_dispatch] crate, which generates this boilerplate automatically in some cases. It has 📚 [illustrative benchmarks][15] about performance gains of using `enum` for dispatching.
 
 
 
@@ -139,7 +139,7 @@ fn _this_inner(i: String) -> usize {
 ```
 This ensures only the conversion gets monomorphized, leading to leaner code and compile-time performance wins.
 
-There is a handy [momo] crate, which generates this boilerplate automatically in some cases. Read through its explanation article:
+There is a handy 📰 [momo] crate, which generates this boilerplate automatically in some cases. Read through its explanation article:
 - 📰 [Llogiq: Momo · Get Back Some Compile Time From Monomorphization][16]
 
 

@@ -71,14 +71,14 @@ error[E0308]: mismatched types
               found type `user::Id`
 ```
 
-This is what is called ["newtype pattern"][1]. [Newtypes][1] are a zero-cost abstraction - __there is no runtime overhead__. Additionally, you may __enforce desired invariants on values of the type__ (for example, `Email` type may allow only valid email address strings to be its values, and another good example is [`uom`] crate). Also, [newtype pattern][1] __makes code more understandable for developers__, as domain knowledge is reflected in types, so is described and documented more explicitly.
+This is what is called ["newtype pattern"][1]. [Newtypes][1] are a zero-cost abstraction - __there is no runtime overhead__. Additionally, you may __enforce desired invariants on values of the type__ (for example, `Email` type may allow only valid email address strings to be its values, and another good example is 📚 [`uom`] crate). Also, [newtype pattern][1] __makes code more understandable for developers__, as domain knowledge is reflected in types, so is described and documented more explicitly.
 
-The downside of using [newtype pattern][1] is a necessity of writing _more boilerplate code_, because you should provide common traits implementations by yourself (like `Clone`, `Copy`, `From`/`Into`/`AsRef`/`AsMut`), as without them the type won't be ergonomic in use. However, most of them can be _derived automatically_ with `std` capabilities or third-party derive-crates (like [`derive_more`]), so the cost is acceptable in most cases. Furthermore, the excellent [`nutype`] crate pushes this idea even further, aiming to provide the best ergonomics for [newtype pattern][1] without compromising any guarantees it gives.
+The downside of using [newtype pattern][1] is a necessity of writing _more boilerplate code_, because you should provide common traits implementations by yourself (like `Clone`, `Copy`, `From`/`Into`/`AsRef`/`AsMut`), as without them the type won't be ergonomic in use. However, most of them can be _derived automatically_ with `std` capabilities or third-party derive-crates (like 📚 [`derive_more`]), so the cost is acceptable in most cases. Furthermore, the excellent 📚 [`nutype`] crate pushes this idea even further, aiming to provide the best ergonomics for [newtype pattern][1] without compromising any guarantees it gives.
 
 For better understanding [newtype pattern][1], read through the following articles:
 - 📰 [Rust Design Patterns: Newtype][1]
 - 📚 [Rust By Example: 14.7. New Type Idiom][2]
-- [Alexis King: Parse, don’t validate][7] ([ru][7_ru])
+- 📰 [Alexis King: Parse, don’t validate][7] (📰 [ru][7_ru])
 - 📰 [Stefan Baumgartner: Refactoring in Rust: Abstraction with the Newtype Pattern][10]
 - 📚 [Official `nutype` crate docs][`nutype`]
 
@@ -91,7 +91,7 @@ For better understanding [newtype pattern][1], read through the following articl
 
 Not always, but _yes_ in some cases. One possible way is to use [typestates][3] to represent (in types) a _sequence of states_ our type is able to be in, and to declare transitions (via functions) between these states. Doing so will allow compiler to __cut off incorrect state transitions at compile time__.
 
-A real-world example of applying this idiom in [Rust] would be the awesome [`state_machine_future`] crate.
+A real-world example of applying this idiom in [Rust] would be the awesome 📚 [`state_machine_future`] crate.
 
 For better understanding [typestates][3], read through the following articles:
 - 📰 [David Teller: Typestates in Rust][3]

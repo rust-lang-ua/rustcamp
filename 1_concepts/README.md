@@ -33,7 +33,7 @@ __Estimated time__: 2 days
 
 
 
-Provide your own implementation of [doubly linked list][11] data structure. It should be [thread safe][12] without a necessity to use explicit synchronization primitives (like `Arc<Mutex<T>>`) on top of it.
+Provide your own implementation of 📰 [doubly linked list][11] data structure. It should be 📰 [thread safe][12] without a necessity to use explicit synchronization primitives (like `Arc<Mutex<T>>`) on top of it.
 
 > ❗️ Don't use unsafe for this task.
 

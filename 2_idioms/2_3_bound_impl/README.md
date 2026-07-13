@@ -54,7 +54,7 @@ impl<R: UserRepo> UserService<R> {
 }
 ```
 
-Placing trait bounds on `impl` blocks, methods and functions, rather than on types, _reduces the trait bounds pollution_, _lowers [coupling][1] of code parts_ and _makes generic code more clean, straightforward and ergonomic_.
+Placing trait bounds on `impl` blocks, methods and functions, rather than on types, _reduces the trait bounds pollution_, _lowers 📰 [coupling][1] of code parts_ and _makes generic code more clean, straightforward and ergonomic_.
 
 
 

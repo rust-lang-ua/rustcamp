@@ -1,7 +1,7 @@
 Task 1.5: Conversions, casting and dereferencing
 ================================================
 
-As [Rust] is a [strongly typed][1] language, all type conversions must be performed explicitly in the code. As [Rust] has a rich type system (programming logic and semantics are mostly expressed in types rather than in values), type conversions are inevitable in almost every single line of code. Fortunately, [Rust] offers [well-designed type conversion capabilities][`std::convert`], which are quite ergonomic, intuitive and are pleasant to use.
+As [Rust] is a 📰 [strongly typed][1] language, all type conversions must be performed explicitly in the code. As [Rust] has a rich type system (programming logic and semantics are mostly expressed in types rather than in values), type conversions are inevitable in almost every single line of code. Fortunately, [Rust] offers 📚 [well-designed type conversion capabilities][`std::convert`], which are quite ergonomic, intuitive and are pleasant to use.
 
 
 
@@ -18,7 +18,7 @@ let big_num: u64 = num.into();
 let small_num: u16 = big_num.try_into().expect("Value is too big");
 ```
 
-Note, that __all these traits consume ownership__ of a passed value. However, they [can be implemented for references too][2] if you're treating a reference as a value.
+Note, that __all these traits consume ownership__ of a passed value. However, they 📚 [can be implemented for references too][2] if you're treating a reference as a value.
 
 For better understanding [`From`]/[`Into`] and [`TryFrom`]/[`TryInto`] purpose, design, limitations and use cases read through:
 - 📚 [Rust By Example: 6.1. From and Into][8]
@@ -117,14 +117,14 @@ impl AsRef<Id> for u8 {
 }
 ```
 
-That's exactly what [`ref-cast`] crate checks and does, without necessity of writing `unsafe` explicitly. See [crate's documentation][`ref-cast`] for more explanations.
+That's exactly what [`ref-cast`] crate checks and does, without necessity of writing `unsafe` explicitly. See 📚 [crate's documentation][`ref-cast`] for more explanations.
 
 
 
 
 ## Dereferencing
 
-[`Deref`]/[`DerefMut`] standard library trait __allows to implicitly coerce from a custom type to a reference__ when dereferencing (operator `*v`) is used. The most common example of this is using [`Box<T>`][`Box`] where `&T` is expected.
+[`Deref`]/📚 [`DerefMut`] standard library trait __allows to implicitly coerce from a custom type to a reference__ when dereferencing (operator `*v`) is used. The most common example of this is using 📚 [`Box<T>`][`Box`] where `&T` is expected.
 
 ```rust
 fn hello(name: &str) {
@@ -145,11 +145,11 @@ For better understanding [`Deref`] purpose, design, limitations and use cases re
 
 The implicit coercion that [Rust] implements for [`Deref`] is a sweet honey pot which may lead you to misuse of this feature.
 
-The common temptation is to use [`Deref`] in a combination with [newtype pattern][4], so you can use your inner type via outer type without any explicit requirements. However, this is considered to be a bad practice, and [official `Deref` docs][`Deref`] clearly states:
+The common temptation is to use [`Deref`] in a combination with 📰 [newtype pattern][4], so you can use your inner type via outer type without any explicit requirements. However, this is considered to be a bad practice, and [official `Deref` docs][`Deref`] clearly states:
 
 > __`Deref` should only be implemented for smart pointers.__
 
-The wider explanation of this bad practice is given in [this SO answer][5] and [`Deref` polymorphism anti-pattern][6] description.
+The wider explanation of this bad practice is given in ❓ [this SO answer][5] and 📰 [`Deref` polymorphism anti-pattern][6] description.
 
 
 
@@ -166,7 +166,7 @@ fn average(values: &[f64]) -> f64 {
 }
 ```
 
-However, it supports only a [small, fixed set of transformations][7], and __is [not idiomatic][11] to use when other conversion possibilities are available__ (like [`From`], [`TryFrom`], [`AsRef`]).
+However, it supports only a 📚 [small, fixed set of transformations][7], and __is 📚 [not idiomatic][11] to use when other conversion possibilities are available__ (like [`From`], [`TryFrom`], [`AsRef`]).
 
 See also:
 - 📚 [Rust By Example: 5.1. Casting][9]

@@ -6,7 +6,7 @@ These tasks describe common crates and tools in [Rust] ecosystem required for ap
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
-- What testing capabilities does [Rust] offer and when should I use them? Why should I follow [BDD] style?
+- What testing capabilities does [Rust] offer and when should I use them? Why should I follow 📰 [BDD] style?
 - What are macros? How do they differ? What benefits does their usage give? When should I write one?
 - How to work with date and time in [Rust]? How should I store time? How should I return it to other applications?
 - How are regular expressions used in [Rust]? When are they not enough? How can I write a custom parser in [Rust]?
@@ -39,21 +39,21 @@ __Estimated time__: 2 days
 
 
 
-Write a [CLI] tool for stripping [JPEG] images [metadata][21] and minimizing their size (a simplified analogue of [tinyjpg.com]).
+Write a [CLI] tool for stripping [JPEG] images 📰 [metadata][21] and minimizing their size (a simplified analogue of 📰 [tinyjpg.com]).
 
 Requirements:
-- Accept input list of files and remote [URL]s via: either [CLI] arguments, [STDIN], or read it from a specified file ([EOL]-separated).
+- Accept input list of files and remote [URL]s via: either [CLI] arguments, 📰 [STDIN], or read it from a specified file (📰 [EOL]-separated).
 - Allow configuring how much images are processed at the same time.
 - Allow configuring the output directory to store processed images in.
 - Allow configuring the output [JPEG] quality of processed images.
-- Read configuration with ascending priority from: a file (format is on your choice), [environment variables][22], [CLI] arguments. All are optional for specifying.
+- Read configuration with ascending priority from: a file (format is on your choice), 📰 [environment variables][22], [CLI] arguments. All are optional for specifying.
 - Support `RUST_LOG` environment variable, allowing granular tuning of log levels per module.
 - Print execution time in logs, so it's easy to see how much which operation takes during the execution.
 
 If you have enough time after implementing base requirements, consider to add the following to your solution:
 - Allow configuring download speed limit for images from remote [URL]s.
 - Cover your implementation with unit and E2E tests.
-- Support [PNG] images as well.
+- Support 📰 [PNG] images as well.
 - Add comprehensive documentation to your code.
 
 

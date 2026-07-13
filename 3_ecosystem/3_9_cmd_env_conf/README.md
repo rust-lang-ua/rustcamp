@@ -6,11 +6,11 @@ Task 3.9: Command-line arguments, environment variables and configs
 
 ## CLI
 
-[Rust] provides a _simple_ [`std::env::Arg`] iterator to access command-line arguments passed to a program.
+[Rust] provides a _simple_ 📚 [`std::env::Arg`] iterator to access command-line arguments passed to a program.
 
 However, most of the time you require more advanced tool for that, which provides `--help` and `--version` flags out-of-the-box and a _convenient way to setup and describe custom options/flags to build your own_ [CLI (command-line interface)][CLI]. For such cases there is the well-known [`clap`] crate in [Rust] ecosystem.
 
-It has the [`derive` Cargo feature][6] (formerly, [`structopt`] crate) allowing to define [CLI] in a _declarative and clean way_.
+It has the 📚 [`derive` Cargo feature][6] (formerly, 📚 [`structopt`] crate) allowing to define [CLI] in a _declarative and clean way_.
 
 For better understanding and familiarity with [CLI] tools in [Rust] ecosystem, read through the following articles:
 - 📚 [Rust Book: 12.1. Accepting Command Line Arguments][1]
@@ -23,13 +23,13 @@ For better understanding and familiarity with [CLI] tools in [Rust] ecosystem, r
 
 ## Environment variables
 
-[Rust] provides common primitives in [`std::env`] for working with [environment variables][2] as strings.
+[Rust] provides common primitives in 📚 [`std::env`] for working with [environment variables][2] as strings.
 
-However, most of the time you want to operate with typed data, not with raw strings. Similarly to [`clap`] for CLI, there is the [`envy`] crate in [Rust] ecosystem, which uses [`serde`] as facade and allows to read data from [environment variables][2] in a _declarative and clean way_ (due to [serde attributes][4] support).
+However, most of the time you want to operate with typed data, not with raw strings. Similarly to [`clap`] for CLI, there is the 📚 [`envy`] crate in [Rust] ecosystem, which uses [`serde`] as facade and allows to read data from [environment variables][2] in a _declarative and clean way_ (due to 📰 [serde attributes][4] support).
 
-It's worth mentioning, that [`clap`] crate is [able to parse from environment variables][7] too, which is super handy when it comes to backing your [CLI] with [environment variables][2].
+It's worth mentioning, that [`clap`] crate is 📚 [able to parse from environment variables][7] too, which is super handy when it comes to backing your [CLI] with [environment variables][2].
 
-Finally, [`dotenv`] crate should be mentioned. It sets [environment variables][2] basing on [`.env` file][8] contents, which is widely used convention to simplify environment configuration and to omit declaring all the required environment variables by hand each time when running some program. This one is especially _useful in development_ (consider also [`rs-env`] and [`direnv`] for better development experience).
+Finally, 📚 [`dotenv`] crate should be mentioned. It sets [environment variables][2] basing on 📰 [`.env` file][8] contents, which is widely used convention to simplify environment configuration and to omit declaring all the required environment variables by hand each time when running some program. This one is especially _useful in development_ (consider also 📰 [`rs-env`] and 📰 [`direnv`] for better development experience).
 
 For better understanding and familiarity with [environment variables][2] tools in [Rust] ecosystem, read through the following articles:
 - 📚 [Rust Book: 12.5. Working with Environment Variables][3]
@@ -42,7 +42,7 @@ For better understanding and familiarity with [environment variables][2] tools i
 
 ## Configuration
 
-For dealing with configurations there is the well-known [`config`] crate in [Rust] ecosystem, which simplifies creation and usage of hierarchical typed configuration structures in a [12-factor] way.
+For dealing with configurations there is the well-known [`config`] crate in [Rust] ecosystem, which simplifies creation and usage of hierarchical typed configuration structures in a 📰 [12-factor] way.
 
 > `Config` lets you set a set of default parameters and then extend them via merging in configuration from a variety of sources:
 > - Environment variables

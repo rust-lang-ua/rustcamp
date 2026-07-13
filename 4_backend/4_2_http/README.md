@@ -1,7 +1,7 @@
 Task 4.2: HTTP servers and clients
 ==================================
 
-The current situation regarding [HTTP] in [Rust] ecosystem can be grasped quite well in [the "Web programming" section of "Awesome Rust"][1] and in the ["Web Frameworks"][2], ["HTTP Clients"][3] and ["Lower Web-Stack" topics of "Are we web yet?"][4]. Of course, most of them use [async I/O][5].
+The current situation regarding [HTTP] in [Rust] ecosystem can be grasped quite well in 📋 [the "Web programming" section of "Awesome Rust"][1] and in the ["Web Frameworks"][2], 📰 ["HTTP Clients"][3] and 📰 ["Lower Web-Stack" topics of "Are we web yet?"][4]. Of course, most of them use [async I/O][5].
 
 
 
@@ -10,11 +10,11 @@ The current situation regarding [HTTP] in [Rust] ecosystem can be grasped quite 
 
 There are few core crates, providing general-purpose [HTTP] implementation, powering the whole variety of [web frameworks][21] and [HTTP] clients in [Rust] ecosystem.
 
-The most prominent and mature one is, of course, the [`hyper`] crate (built using [`tokio`]). Almost all [web frameworks][21] of [Rust] ecosystem are built on top of it.
+The most prominent and mature one is, of course, the [`hyper`] crate (built using 📚 [`tokio`]). Almost all [web frameworks][21] of [Rust] ecosystem are built on top of it.
 
 The main alternatives are:
-- [`async-h1`], powering the [`async-std`] ecosystem for [HTTP].
-- [`actix-http`], powering the [`actix-web`] ecosystem.
+- 📚 [`async-h1`], powering the [`async-std`] ecosystem for [HTTP].
+- 📚 [`actix-http`], powering the [`actix-web`] ecosystem.
 
 For more details, read through the following articles:
 - 📚 [Official `hyper` crate docs][`hyper`]
@@ -27,15 +27,15 @@ For more details, read through the following articles:
 ## Server
 
 While [`hyper`] provides its own server implementation, using it directly can feel quite low-level and unergonomic, due to its nature. Naturally, there are [numerous web frameworks][2] built on top of [`hyper`], which provide high-level, ergonomic and friendly interface. The most notable are:
-- [`axum`] - a [web application framework][21] that focuses on ergonomics and modularity, and provides macro-free request routing (yet ergonomic and declarative), simple and predictive error-handling, and leverages full advantage of the [`tower`] and [`tower-http`] ecosystem of [middleware][22], services, and utilities.
-- [`warp`] - a super-easy, composable, [web server framework][21] for warp speeds, built around the "everything is a [`Filter`]" concept.
-- [`rocket`] - a [web framework][21], aims to be fast, easy, and flexible while offering guaranteed safety and security where it can, and, importantly, aiming to be fun (accomplishing this by ensuring that you write as little code as needed to accomplish your task).
-- [`poem`] - a full-featured and easy-to-use [web framework][21], focusing on providing all the capabilities (like [i18n]) out-of-the-box.
-- [`salvo`] - a powerful and simple [web server framework][21], adopting [HTTP/3] implementation.
+- 📚 [`axum`] - a [web application framework][21] that focuses on ergonomics and modularity, and provides macro-free request routing (yet ergonomic and declarative), simple and predictive error-handling, and leverages full advantage of the 📚 [`tower`] and 📚 [`tower-http`] ecosystem of 📰 [middleware][22], services, and utilities.
+- 📚 [`warp`] - a super-easy, composable, [web server framework][21] for warp speeds, built around the "everything is a 📚 [`Filter`]" concept.
+- 📚 [`rocket`] - a [web framework][21], aims to be fast, easy, and flexible while offering guaranteed safety and security where it can, and, importantly, aiming to be fun (accomplishing this by ensuring that you write as little code as needed to accomplish your task).
+- 📚 [`poem`] - a full-featured and easy-to-use [web framework][21], focusing on providing all the capabilities (like 📰 [i18n]) out-of-the-box.
+- 📚 [`salvo`] - a powerful and simple [web server framework][21], adopting 📰 [HTTP/3] implementation.
 
-For those who prefer [`async-std`] ecosystem, the definitive choice (and the single one, at the moment) is the [`tide`] crate.
+For those who prefer [`async-std`] ecosystem, the definitive choice (and the single one, at the moment) is the 📚 [`tide`] crate.
 
-All the [web frameworks][21] above inherit the [work-stealing][23] from the asynchronous runtime they're run on, and so, require the proper synchronization (being [`Send`]) from user-provided [HTTP] request handlers, which may introduce an unnecessary or undesired overhead. That's why __[`actix-web`] crate was designed__ and implemented specifically with this consideration in mind (__to avoid [work-stealing][23]__), being built on top of [`actix-rt`] crate (leveraging [thread-per-core][24] model), and thus, not requiring any synchronization in its request handlers (allowing `!Send` [`Future`]s). Also, [`actix-web`], at the time, was the first mature and production-ready [web framework][21] in [Rust] ecosystem, possessing a [top of "TechEmpower Web Framework Benchmarks"][25].
+All the [web frameworks][21] above inherit the [work-stealing][23] from the asynchronous runtime they're run on, and so, require the proper synchronization (being 📚 [`Send`]) from user-provided [HTTP] request handlers, which may introduce an unnecessary or undesired overhead. That's why __[`actix-web`] crate was designed__ and implemented specifically with this consideration in mind (__to avoid [work-stealing][23]__), being built on top of 📚 [`actix-rt`] crate (leveraging 📰 [thread-per-core][24] model), and thus, not requiring any synchronization in its request handlers (allowing `!Send` 📚 [`Future`]s). Also, [`actix-web`], at the time, was the first mature and production-ready [web framework][21] in [Rust] ecosystem, possessing a 📰 [top of "TechEmpower Web Framework Benchmarks"][25].
 
 For better understanding and familiarity with [HTTP] servers in [Rust], read through the following articles:
 - 📚 [Official `actix-web` crate docs][`actix-web`]
@@ -53,15 +53,15 @@ For better understanding and familiarity with [HTTP] servers in [Rust], read thr
 
 ## Client
 
-Similarly to a server, while [`hyper`] provides its own client implementation, using it directly can feel quite low-level and unergonomic. So, the "default choice" [HTTP] client (and mostly used) in [Rust] ecosystem is the [`reqwest`] crate, built on top of [`hyper`].
+Similarly to a server, while [`hyper`] provides its own client implementation, using it directly can feel quite low-level and unergonomic. So, the "default choice" [HTTP] client (and mostly used) in [Rust] ecosystem is the 📚 [`reqwest`] crate, built on top of [`hyper`].
 
 [`isahc`] crate, as an alternative, is a runtime-agnostic wrapper (with major focus on being practical and ergonomic) around the famous [cURL] library.
 
-For simple and trivial scenarios, __where an asynchronous runtime is redundant__ and/or low overhead is preferred, the viable alternative is the [`ureq`] crate.
+For simple and trivial scenarios, __where an asynchronous runtime is redundant__ and/or low overhead is preferred, the viable alternative is the 📚 [`ureq`] crate.
 
-For [`async-std`] ecosystem, the main crate is [`surf`], which is, however, not restricted to [`async-std`] only, and is able to use alternative backends: [cURL] (via [`isahc`]), [`hyper`], [WASM] (via [browser's `window.fetch` API][32]).
+For [`async-std`] ecosystem, the main crate is 📚 [`surf`], which is, however, not restricted to [`async-std`] only, and is able to use alternative backends: [cURL] (via [`isahc`]), [`hyper`], 📰 [WASM] (via 📰 [browser's `window.fetch` API][32]).
 
-For [`actix-web`] ecosystem, the meaningful option would be the [`awc`] crate, which supports [WebSocket] connections out-of-the-box (while most other [HTTP] clients lacks that).
+For [`actix-web`] ecosystem, the meaningful option would be the 📚 [`awc`] crate, which supports [WebSocket] connections out-of-the-box (while most other [HTTP] clients lacks that).
 
 For better understanding and familiarity with [HTTP] clients in [Rust], read through the following articles:
 - 📚 [Official `reqwest` crate docs][`reqwest`]
@@ -77,9 +77,9 @@ For better understanding and familiarity with [HTTP] clients in [Rust], read thr
 
 ## WebSocket
 
-Many [HTTP] clients and servers in [Rust] lack a built-in [WebSocket] implementation. Therefore, the [`tungstenite`] crate was created, providing a barebone and agnostic [WebSocket] implementation. Crates, like [`async-tungstenite`] and [`tokio-tungstenite`], provide the actual ready-for-use client/server implementation for the desired ecosystem and asynchronous runtime.
+Many [HTTP] clients and servers in [Rust] lack a built-in [WebSocket] implementation. Therefore, the 📚 [`tungstenite`] crate was created, providing a barebone and agnostic [WebSocket] implementation. Crates, like 📚 [`async-tungstenite`] and 📚 [`tokio-tungstenite`], provide the actual ready-for-use client/server implementation for the desired ecosystem and asynchronous runtime.
 
-For [`actix-web`] ecosystem, the idiomatic solution is the [`actix-web-actors::ws`] module, providing implementation in a form of [actor][41] (via [`actix`]).
+For [`actix-web`] ecosystem, the idiomatic solution is the 📚 [`actix-web-actors::ws`] module, providing implementation in a form of 📰 [actor][41] (via 📚 [`actix`]).
 
 For better understanding and familiarity with [WebSocket] implementations in [Rust], read through the following articles:
 - 📚 [Official `tungstenite` crate docs][`tungstenite`]
@@ -97,7 +97,7 @@ __Estimated time__: 1 day
 
 
 
-Rework [the task from the previous task](../4_1_db/README.md#task) in a [client-server architecture][51]. It should consist of a [CLI] client and a server [daemon][52], and utilize the ["thin client" approach][53]:
+Rework [the task from the previous task](../4_1_db/README.md#task) in a 📰 [client-server architecture][51]. It should consist of a [CLI] client and a server [daemon][52], and utilize the 📰 ["thin client" approach][53]:
 - [CLI] client does nothing except sending commands "as is" to the server and rendering its responses.
 - Server [daemon][52], having a single [HTTP] endpoint, does all the parsing and executing of commands sent by the [CLI] client.
 

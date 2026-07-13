@@ -38,7 +38,7 @@ For better understanding [`Cow`] purpose, design, limitations and use cases read
 
 ## Alternative implementations
 
-[`beef`] crate provides alternative `Cow` types, being faster and leaner.
+📚 [`beef`] crate provides alternative `Cow` types, being faster and leaner.
 
 > There are two versions of `Cow` exposed by this crate:
 >
@@ -59,7 +59,7 @@ For better understanding [`Cow`] purpose, design, limitations and use cases read
 > assert_eq!(size_of::<beef::lean::Cow<str>>(), 2 * WORD);
 > ```
 
-Read implementation details and design insights in [its README][7].
+Read implementation details and design insights in 📰 [its README][7].
 
 
 

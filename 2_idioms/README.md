@@ -22,7 +22,7 @@ __Estimated time__: 2 days
 
 
 
-Design and implement a `VendingMachine` type, which behaves like a [vending machine][1]:
+Design and implement a `VendingMachine` type, which behaves like a 📰 [vending machine][1]:
 - `Product` should have a price and a name;
 - `VendingMachine` should have a limited capacity of `Product`s;
 - `VendingMachine` should be able to give change;

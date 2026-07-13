@@ -1,7 +1,7 @@
 Task 2.2: Swapping values with `mem::replace`
 =============================================
 
-As [Rust] implies [move semantics][1] by default and quite strict [borrowing rules][2], often, there are situations (especially, with large `struct`s and `enum`s) where mutating value in-place or values swapping may not be allowed by borrow checker, which is quite confusing and leads to doing needless clones (so providing redudant performance costs). For example:
+As [Rust] implies ❓ [move semantics][1] by default and quite strict 📚 [borrowing rules][2], often, there are situations (especially, with large `struct`s and `enum`s) where mutating value in-place or values swapping may not be allowed by borrow checker, which is quite confusing and leads to doing needless clones (so providing redudant performance costs). For example:
 ```rust
 impl<T> Buffer<T> {
     fn get_and_reset(&mut self) -> Vec<T> {
@@ -116,7 +116,7 @@ impl Names {
 }
 ```
 
-It's worth mentioning, that this problem became much less common after [disjoint capture in closures had been introduced in 2021 Rust edition][5]. For illustration, the `self.name` mutation is intentionally separated into its own method, so we can lock the whole `&mut self`. If we simplify the code straightforwardly, it just compiles fine, due to mutable borrows are disjoint: 
+It's worth mentioning, that this problem became much less common after 📚 [disjoint capture in closures had been introduced in 2021 Rust edition][5]. For illustration, the `self.name` mutation is intentionally separated into its own method, so we can lock the whole `&mut self`. If we simplify the code straightforwardly, it just compiles fine, due to mutable borrows are disjoint: 
 ```rust
 struct Names {
     exclusions: Vec<String>,

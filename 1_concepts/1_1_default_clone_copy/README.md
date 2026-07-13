@@ -10,7 +10,7 @@ Task 1.1: Default values, cloning and copying
 
 It can be auto-derived, but only for a `struct` whose all members have [`Default`] implementations. It is implemented for a great many types in the standard library, and also used in a surprising number of places. So if your type has a value that can be construed as being "default", it is a good idea to implement this trait.
 
-If you're not satisfied with [std] deriving capabilities for [`Default`], consider using [smart-default] crate. An example is quite self-explanatory:
+If you're not satisfied with 📚 [std] deriving capabilities for [`Default`], consider using 📚 [smart-default] crate. An example is quite self-explanatory:
 ```rust
 #[derive(SmartDefault)]
 enum Foo {
@@ -41,7 +41,7 @@ let x = Foo { bar: baz, ..Default::default() };
 
 ## Cloning and copying
 
-By default, all types in [Rust] follow ['move semantics'][1].
+By default, all types in [Rust] follow ❓ ['move semantics'][1].
 
 If you need a duplicate of a value, then its type should implement [`Clone`] trait (see [official docs][`Clone`]), and a duplicate is created by calling [`Clone`] methods __explicitly__. Cloning can be __either cheap or expensive__ operation depending on type semantics.
 

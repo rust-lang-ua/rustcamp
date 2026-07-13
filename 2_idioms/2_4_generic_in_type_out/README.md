@@ -72,7 +72,7 @@ add_hi(&mut nickname);
 just_print_stringy(&nickname);
 ```
 
-This is one of the key features, which drive [Rust] expressiveness and ergonomics. Just look over `std` library to see how widely it's used: [`Iterator::eq()`][1], [`Vec::drain()`][2], [`HashMap::extend()`][3], etc.
+This is one of the key features, which drive [Rust] expressiveness and ergonomics. Just look over `std` library to see how widely it's used: 📚 [`Iterator::eq()`][1], 📚 [`Vec::drain()`][2], 📚 [`HashMap::extend()`][3], etc.
 
 The downside of this idiom is that compiler generates more code due to monomorphization, so potentially leads to code bloating. The way it can be optimized has already been [explained in "Reducing code bloat optimization" section of 1.6 task][6].
 
@@ -88,7 +88,7 @@ Further reading on theme:
 
 While for an input parameter we want to accept as much types as possible, for return types a vice versa will be a good practice: __return the most concrete type to provide as much information as possible__, so prefer returning a concrete type instead of `impl Trait` or a type parameter. This extends usage API of a returned type (as it's concrete type not erased), and, potentially, may reduce monomorphization (actually, it shouldn't, as monomorphization mostly happens due to input type parameters).
 
-Consider [`Iterator`] adapter methods as an example: [`Iterator::map()`][7], [`Iterator::enumerate()`][8], [`Iterator::filter()`][9], etc. They all return a concrete adapter type, rather than `impl Iterator<..>` abstraction.
+Consider 📚 [`Iterator`] adapter methods as an example: 📚 [`Iterator::map()`][7], 📚 [`Iterator::enumerate()`][8], 📚 [`Iterator::filter()`][9], etc. They all return a concrete adapter type, rather than `impl Iterator<..>` abstraction.
 
 However, this is not a strict rule, so should not be applied blindly. If you _really need_ to abstract over a return type (for example, to future-proof your API), then just do it.
 

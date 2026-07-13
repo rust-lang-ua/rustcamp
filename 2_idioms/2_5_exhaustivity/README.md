@@ -1,14 +1,14 @@
 Task 2.5: Exhaustivity
 ======================
 
-Exhaustiveness checking in [pattern matching][1] is a very useful tool, allowing to spot certain bugs at compile-time by cheking whether all the combinations of some values where covered and considered in a source code. Being applied correctly, it increases the [fearless refactoring][2] quality of a source code, eliminating possibilities for "forgot to change" bugs to subtly sneak into the codebase whenever it's extended.
+Exhaustiveness checking in 📚 [pattern matching][1] is a very useful tool, allowing to spot certain bugs at compile-time by cheking whether all the combinations of some values where covered and considered in a source code. Being applied correctly, it increases the 📰 [fearless refactoring][2] quality of a source code, eliminating possibilities for "forgot to change" bugs to subtly sneak into the codebase whenever it's extended.
 
 
 
 
 ## Enums
 
-The most canonical and iconic example of exhaustiveness checking is using an enum in a `match` expression. The point here is to __[omit][5] using [`_` (wildcard pattern)][4] or match-anything bindings__, as such `match` expressions won't break in compile-time when something new is added.
+The most canonical and iconic example of exhaustiveness checking is using an enum in a `match` expression. The point here is to __📚 [omit][5] using 📚 [`_` (wildcard pattern)][4] or match-anything bindings__, as such `match` expressions won't break in compile-time when something new is added.
 
 For example, this is a very bad code:
 ```rust
@@ -53,7 +53,7 @@ note: `Role` defined here
 
 ## Structs
 
-While enums exhaustiveness is quite an obvious idea, due to extensive usage of `match` expressions in a regular code, the structs exhaustiveness, on the other hand, is not, while being as much useful. Exhaustivity for structs is achieved by __using [destructuring][6] without [`..` syntax (multiple fields ignoring)][7]__.
+While enums exhaustiveness is quite an obvious idea, due to extensive usage of `match` expressions in a regular code, the structs exhaustiveness, on the other hand, is not, while being as much useful. Exhaustivity for structs is achieved by __using 📚 [destructuring][6] without 📚 [`..` syntax (multiple fields ignoring)][7]__.
 
 For example, having the following code:
 ```rust

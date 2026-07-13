@@ -7,12 +7,12 @@ Task 3.4: Regular expressions and custom parsers
 
 To operate with [regular expressions][1] there is the [`regex`] crate in [Rust] ecosystem, which is kinda a default choice to go with in most cases.
 
-> A Rust library for parsing, compiling, and executing regular expressions. Its syntax is similar to Perl-style regular expressions, but lacks a few features like look around and backreferences. In exchange, all searches execute in linear time with respect to the size of the regular expression and search text. Much of the syntax and implementation is inspired by [RE2].
+> A Rust library for parsing, compiling, and executing regular expressions. Its syntax is similar to Perl-style regular expressions, but lacks a few features like look around and backreferences. In exchange, all searches execute in linear time with respect to the size of the regular expression and search text. Much of the syntax and implementation is inspired by 📰 [RE2].
 
 If you need additional features (like look around and backreferences), consider using:
-- [`fancy-regex`] crate, building additional functionality on top of the [`regex`] crate.
-- [`pcre2`] crate, providing a safe high level Rust binding to [PCRE2] library.
-- [`hyperscan`] crate, wrapping a [Hyperscan] library.
+- 📚 [`fancy-regex`] crate, building additional functionality on top of the [`regex`] crate.
+- 📚 [`pcre2`] crate, providing a safe high level Rust binding to 📰 [PCRE2] library.
+- 📚 [`hyperscan`] crate, wrapping a 📰 [Hyperscan] library.
 
 
 ### Compile only once
@@ -25,7 +25,7 @@ fn is_email(email: &str) -> bool {
 }
 ```
 
-To omit unnecessary performance penalty we should __compile regular expression once and reuse its compilation result__. This is easily achieved by using the [`once_cell`] crate both in global and/or local scopes:
+To omit unnecessary performance penalty we should __compile regular expression once and reuse its compilation result__. This is easily achieved by using the 📚 [`once_cell`] crate both in global and/or local scopes:
 ```rust
 static REGEX_EMAIL: Regex = once_cell::sync::Lazy::new(|| {
     Regex::new(".+@.+").unwrap()
@@ -36,25 +36,25 @@ fn is_email(email: &str) -> bool {
 }
 ```
 
-This may feel different with how [regular expressions][1] are used in other programming languages, because some of them implicitly cache compilation results and/or do not expose compilation API at all (like [PHP]). But if your background is a language like [Go] or [Java], this concept should be familiar to you.
+This may feel different with how [regular expressions][1] are used in other programming languages, because some of them implicitly cache compilation results and/or do not expose compilation API at all (like 📰 [PHP]). But if your background is a language like 📰 [Go] or 📰 [Java], this concept should be familiar to you.
 
 
 
 
 ## Custom parsers
 
-If regular expressions are [not powerful enough][2] for your parsing problem, then you are ended up with writing your own parser. [Rust] ecosystem has [numerous][3] crates to help with that:
+If regular expressions are ❓ [not powerful enough][2] for your parsing problem, then you are ended up with writing your own parser. [Rust] ecosystem has 📋 [numerous][3] crates to help with that:
 - [Parser combinators][4]:
-    - [`nom`] crate, nearly the most performant among others, and especially good for parsing binary stuff (byte/bit-oriented).
-    - [`chumsky`] crate, focusing on high-quality errors and ergonomics over performance.
-    - [`combine`] crate, inspired by the [Parsec] library in [Haskell].
-    - [`pom`] crate, providing [PEG][5] parser combinators created using operator overloading without macros.
-    - [`chomp`] crate, a fast [monadic][13]-style [parser combinator][4] library.
+    - 📚 [`nom`] crate, nearly the most performant among others, and especially good for parsing binary stuff (byte/bit-oriented).
+    - 📚 [`chumsky`] crate, focusing on high-quality errors and ergonomics over performance.
+    - 📚 [`combine`] crate, inspired by the 📰 [Parsec] library in 📰 [Haskell].
+    - 📚 [`pom`] crate, providing [PEG][5] parser combinators created using operator overloading without macros.
+    - 📚 [`chomp`] crate, a fast 📰 [monadic][13]-style [parser combinator][4] library.
 - [Parser generators][12]:
-    - [`peg`] crate, a simple yet flexible [parser generator][12] that makes it easy to write robust parsers, based on the [Parsing Expression Grammar][5] formalism.
-    - [`pest`] crate, with a focus on accessibility, correctness, and performance, using [PEG (parsing expression grammar)][5] as an input and deriving parser's code for it.
-    - [`lalrpop`] crate, generating [LR(1) parser][6] code from custom grammar files.
-    - [`parsel`] crate, a library for generating parsers directly from syntax tree node types.
+    - 📚 [`peg`] crate, a simple yet flexible [parser generator][12] that makes it easy to write robust parsers, based on the [Parsing Expression Grammar][5] formalism.
+    - 📚 [`pest`] crate, with a focus on accessibility, correctness, and performance, using [PEG (parsing expression grammar)][5] as an input and deriving parser's code for it.
+    - 📚 [`lalrpop`] crate, generating 📰 [LR(1) parser][6] code from custom grammar files.
+    - 📚 [`parsel`] crate, a library for generating parsers directly from syntax tree node types.
 
 For better understanding parsing problem and approaches, along with some examples, read through the following articles:
 - 📰 [Laurence Tratt: Which Parsing Approach?][9]
@@ -77,7 +77,7 @@ __Estimated time__: 1 day
 
 
 
-Given the following [Rust `fmt` syntax grammar][7]:
+Given the following 📚 [Rust `fmt` syntax grammar][7]:
 > ```
 > format_string := text [ maybe_format text ] *
 > maybe_format := '{' '{' | '}' '}' | format

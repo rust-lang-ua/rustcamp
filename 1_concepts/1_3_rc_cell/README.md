@@ -8,7 +8,7 @@ Task 1.3: Shared ownership and interior mutability
 
 [Rust] ownership model allows _only one owner of a value_. However, there are situations when multiple ownership is required, and it's important to understand how this can be accomplished.
 
-The key piece is to put a value behind a smart pointer, so the pointer itself can be __cloned many times__ (thus allowing multiple owners), but is __pointing always to the same value__ (thus sharing a value). In [Rust] there is a [`Rc`] (["reference counted"][`std::rc`]) smart pointer for this purpose, and [`Arc`] ("atomic reference counted") for use in multiple threads. Both automatically destroy a value once there are no references left.
+The key piece is to put a value behind a smart pointer, so the pointer itself can be __cloned many times__ (thus allowing multiple owners), but is __pointing always to the same value__ (thus sharing a value). In [Rust] there is a [`Rc`] (📚 ["reference counted"][`std::rc`]) smart pointer for this purpose, and 📚 [`Arc`] ("atomic reference counted") for use in multiple threads. Both automatically destroy a value once there are no references left.
 
 The code below won't compile as `a` is owned by `x` and moved to a heap before is passed to `y`:
 ```rust
@@ -148,7 +148,7 @@ __Estimated time__: 1 day
 
 
 
-Write a `GlobalStack<T>` collection which represents a trivial unsized [stack] (may grow infinitely) and has the following semantics:
+Write a `GlobalStack<T>` collection which represents a trivial unsized 📰 [stack] (may grow infinitely) and has the following semantics:
 - can be mutated through multiple shared references (`&GlobalStack<T>`);
 - cloning doesn't clone data, but only produces a pointer, so multiple owners mutate the same data.
 

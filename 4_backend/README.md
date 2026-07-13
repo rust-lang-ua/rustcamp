@@ -9,7 +9,7 @@ After doing them you should be able to answer the following questions:
 - How should I interact with databases in [Rust] application and why? How can I organize migrations for my project?
 - What should I use for [HTTP] server implementation in [Rust], when and why? What about [WebSocket] connections?
 - What are options for making [HTTP] request (including [WebSocket] ones)?
-- What is [RPC]? Name several the most adopted technologies, their advantages and disadvantages, explain which one could be used under which circumstances, and what and where is their best fit? 
+- What is 📰 [RPC]? Name several the most adopted technologies, their advantages and disadvantages, explain which one could be used under which circumstances, and what and where is their best fit? 
 
 
 
@@ -35,10 +35,10 @@ Web frameworks, tools and database choices are up to you. Keep things simple to 
 
 If you have enough time after implementing base requirements, consider to add the following to your solution:
 - Provide migrations for database schema (if possible).
-- Add comprehensive documentation to your code and [API], and generate it in [HTML] form.
+- Add comprehensive documentation to your code and 📰 [API], and generate it in 📰 [HTML] form.
 - Cover your implementation with unit and E2E tests.
-- Implement [GraphQL] query [depth limiting][21].
-- Use [dataloading][22] to optimize interaction with database in [GraphQL] resolvers. 
+- Implement [GraphQL] query 📰 [depth limiting][21].
+- Use 🧭 [dataloading][22] to optimize interaction with database in [GraphQL] resolvers. 
 
 
 

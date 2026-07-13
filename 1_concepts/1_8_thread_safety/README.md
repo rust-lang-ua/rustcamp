@@ -1,7 +1,7 @@
 Task 1.8: Thread safety
 =======================
 
-[Rust] has [`Send`] and [`Sync`] marker traits which are fundamental for concurrency and thread safety story in [Rust] and represent one of [fearless concurrency][2] corner stones (which allow to [avoid data races][1] at compile time).
+[Rust] has [`Send`] and [`Sync`] marker traits which are fundamental for concurrency and thread safety story in [Rust] and represent one of [fearless concurrency][2] corner stones (which allow to 📚 [avoid data races][1] at compile time).
 
 For better understanding [`Send`]/[`Sync`] purpose, design, limitations and use cases, read through the following articles:
 - 📚 [Official `Send` docs][`Send`]

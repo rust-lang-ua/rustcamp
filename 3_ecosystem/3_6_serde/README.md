@@ -6,9 +6,9 @@ Task 3.6: Serialization and deserialization
 
 ## `serde`
 
-[Rust] ecosystem has the well-known [`serde`] crate, which provides a common (standard, de facto) approach and toolset for serialization and deserialization.
+📚 [Rust] ecosystem has the well-known [`serde`] crate, which provides a common (standard, de facto) approach and toolset for serialization and deserialization.
 
-The sweet part is that [`serde`] __does not rely on a runtime reflection__ mechanism and uses trait implementation for each type, so __eliminates most runtime costs__ and in most cases __makes serialization as performant as handwritten serializer for a particular case__, yet __remains ergonomic due to [automatic code deriving][1]__.
+The sweet part is that [`serde`] __does not rely on a runtime reflection__ mechanism and uses trait implementation for each type, so __eliminates most runtime costs__ and in most cases __makes serialization as performant as handwritten serializer for a particular case__, yet __remains ergonomic due to 📰 [automatic code deriving][1]__.
 
 ```rust
 use serde::{Deserialize, Serialize};
@@ -30,9 +30,9 @@ fn main() {
 }
 ```
 
-[`serde`] by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already [implemented backends for most used formats][2], and you're free to [implement backend for your own format][3] if it's not implemented yet. 
+[`serde`] by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already 📰 [implemented backends for most used formats][2], and you're free to 📰 [implement backend for your own format][3] if it's not implemented yet. 
 
-For better understanding and familiarity with [`serde`]'s design, concepts, usage, and features (like [zero-copy deserialization][5]), read through the following articles:
+For better understanding and familiarity with [`serde`]'s design, concepts, usage, and features (like 📰 [zero-copy deserialization][5]), read through the following articles:
 - 📰 [Official `serde` crate guide][0]
 - 📚 [Official `serde` crate docs][`serde`]
 - 📚 [Official `serde_json` crate docs][`serde_json`]
@@ -47,11 +47,11 @@ For better understanding and familiarity with [`serde`]'s design, concepts, usag
 ### Extras
 
 Being the de facto ecosystem standard, [`serde`] crate itself is quite conservative about stability guarantees, so often may feel lacking obvious features. Therefore, additional ecosystem crates are worth considering, which extend [`serde`] capabilities, being built on top of its machinery:
-- [`erased-serde`] crate, providing type-erased versions of `serde`’s `Serialize`, `Serializer` and `Deserializer` traits that can be used as [trait objects][9].
-- [`serde_state`] crate, extending the normal `Deserialize` and `Serialize` traits to allow state to be passed to every value which is serialized or deserialized.
-- [`serde_repr`] crate, deriving `serde`'s `Serialize` and `Deserialize` traits in a way that delegates to the underlying repr of a C-like enum.
-- [`serde_with`] crate, providing custom de/serialization helpers to use in combination with [`serde`’s `with`-annotation][8] and with the improved `serde_as`-annotation.
-- [`serde_valid`] crate, enabling [JSON Schema][10] based validation. 
+- 📚 [`erased-serde`] crate, providing type-erased versions of `serde`’s `Serialize`, `Serializer` and `Deserializer` traits that can be used as 📚 [trait objects][9].
+- 📚 [`serde_state`] crate, extending the normal `Deserialize` and `Serialize` traits to allow state to be passed to every value which is serialized or deserialized.
+- 📚 [`serde_repr`] crate, deriving `serde`'s `Serialize` and `Deserialize` traits in a way that delegates to the underlying repr of a C-like enum.
+- 📚 [`serde_with`] crate, providing custom de/serialization helpers to use in combination with 📰 [`serde`’s `with`-annotation][8] and with the improved `serde_as`-annotation.
+- 📚 [`serde_valid`] crate, enabling 📰 [JSON Schema][10] based validation. 
 
 
 
@@ -66,7 +66,7 @@ Being the de facto ecosystem standard, [`serde`] crate itself is quite conservat
 >
 > We make use of GATs to provide tighter abstractions, which should be easier for Rust to optimize.
 >
-> We make less use of the Visitor pattern in certain instances where it’s deemed unnecessary, such as [when decoding collections][21]. The result is usually cleaner decode implementations
+> We make less use of the Visitor pattern in certain instances where it’s deemed unnecessary, such as 📚 [when decoding collections][21]. The result is usually cleaner decode implementations
 
 However, the __main "killer feature"__ of [`musli`] is its __ability to serialize/deserialize the same data model in different [modes][22]__. 
 
@@ -112,9 +112,9 @@ For better understanding and familiarity with [`musli`]'s design, concepts, usag
 
 ## `rkyv`
 
-[`rkyv`] (_archive_) is an another alternative serialization/deserialization framework, __fully focused on [zero-copy][31] operations__.
+[`rkyv`] (_archive_) is an another alternative serialization/deserialization framework, __fully focused on 📰 [zero-copy][31] operations__.
 
-> Like [serde][0], rkyv uses Rust’s powerful trait system to serialize data without the need for reflection. Despite having a wide array of features, you also only pay for what you use. If your data checks out, the serialization process can be as simple as a `memcpy`! Like serde, this allows rkyv to perform at speeds similar to handwritten serializers.
+> Like 📰 [serde][0], rkyv uses Rust’s powerful trait system to serialize data without the need for reflection. Despite having a wide array of features, you also only pay for what you use. If your data checks out, the serialization process can be as simple as a `memcpy`! Like serde, this allows rkyv to perform at speeds similar to handwritten serializers.
 >
 > Unlike serde, rkyv produces data that is guaranteed deserialization free. If you wrote your data to disk, you can just `mmap` your file into memory, cast a pointer, and your data is ready to use. This makes it ideal for high-performance and IO-bound applications.
 

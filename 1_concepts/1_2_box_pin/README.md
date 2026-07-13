@@ -6,11 +6,11 @@ Task 1.2: Boxing and pinning
 
 ## Boxing
 
-[`Box`] is a pointer that owns heap-allocated data. This is the most common and simples form of [heap] allocation in [Rust].
+[`Box`] is a pointer that owns heap-allocated data. This is the most common and simples form of 📰 [heap] allocation in [Rust].
 
 It's more idiomatic to use references (`&T`/`&mut T`) for pointing to the data, however they often come with lifetimes complexity. [`Box`] allows to avoid this complexity at the cost of heap allocation.
 
-[`Box`] is also a way to go if an owned [slice] is needed, but is not intended to be resized. For example, `Box<str>`/`Box<[T]>` are often used instead `String`/`Vec<T>` in such cases.
+[`Box`] is also a way to go if an owned 📚 [slice] is needed, but is not intended to be resized. For example, `Box<str>`/`Box<[T]>` are often used instead `String`/`Vec<T>` in such cases.
 
 For better understanding [`Box`] purpose, design, limitations and use cases read through:
 - 📚 [Rust Book: 15.1. Using Box to Point to Data on the Heap][1]
@@ -93,7 +93,7 @@ __Estimated time__: 1 day
        started_at: Option<std::time::Instant>,
    }
    ```
-   Provide a [`Future`] trait implementation, transparently polling the `inner_future`, and printing its execution time in nanoseconds once it's ready. Using `Fut: Unpin` trait bound (or similar) is not allowed.
+   Provide a 📚 [`Future`] trait implementation, transparently polling the `inner_future`, and printing its execution time in nanoseconds once it's ready. Using `Fut: Unpin` trait bound (or similar) is not allowed.
 
 
 

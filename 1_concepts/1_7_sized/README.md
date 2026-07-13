@@ -27,7 +27,7 @@ trait CommandHandler<C: Command> {
     fn handle_command(&self, cmd: &C, ctx: &Self::Context) -> Self::Result;
 }
 ```
-which allows to use "unsized" types like [trait objects][3]
+which allows to use "unsized" types like 📚 [trait objects][3]
 ```rust
 impl CommandHandler<CreateUser> for User {
     type Context = dyn UserRepository;

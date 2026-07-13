@@ -1,7 +1,7 @@
 Task 4.4: RPC
 ========================================
 
-[gRPC] is a widely-adopted high performance [RPC] framework, having a __strict schema__, powered with pluggable support for load balancing, tracing, health checking and authentication, built on top of [HTTP/2] (and so, having a __mandatory encryption__), and __heavily using code-from-schema generation__.
+[gRPC] is a widely-adopted high performance 📰 [RPC] framework, having a __strict schema__, powered with pluggable support for load balancing, tracing, health checking and authentication, built on top of 📰 [HTTP/2] (and so, having a __mandatory encryption__), and __heavily using code-from-schema generation__.
 
 For more familiarity with [gRPC], read through the following articles:
 - 📰 [gRPC docs: Introduction to gRPC][301]
@@ -9,7 +9,7 @@ For more familiarity with [gRPC], read through the following articles:
 
 ### Server and client
 
-For implementing a [gRPC] server in [Rust], there are two main production-ready crates in its ecosystem: [`tonic`] (pure [Rust] implementation, based on [`tokio`]) and [`grpcio`] (wrapper around [gRPC core][311] implementation).
+For implementing a [gRPC] server in [Rust], there are two main production-ready crates in its ecosystem: [`tonic`] (pure [Rust] implementation, based on 📚 [`tokio`]) and [`grpcio`] (wrapper around 📰 [gRPC core][311] implementation).
 
 In [gRPC] ecosystem, usually, implementing a [gRPC] client doesn't differ much from implementing a server, since both are auto-generated from the same `.proto` schema. So, for [Rust], the same [`tonic`] and [`grpcio`] crates do the job when it comes to making [gRPC] requests. 
 
@@ -21,11 +21,11 @@ For more familiarity with using [gRPC] in [Rust], read through the following art
 
 __Estimated time__: 1 day
 
-Rework the application [from the previous task](../4_3_api/README.md#task) by introducing [gRPC] as an [API] between the ["thick client"][41] and the server, while preserving the [REST]ful [API]:
+Rework the application [from the previous task](../4_3_api/README.md#task) by introducing [gRPC] as an [API] between the 📰 ["thick client"][41] and the server, while preserving the [REST]ful [API]:
 
 - Server communicates with the client via [gRPC].
-- [CLI] client parses commands by itself and makes accurate requests to the server via [gRPC].
-- it should be still possible to perform all the operations via [cURL] (or any other [HTTP]/[API] client) directly on the [REST]ful [API] server.
+- 📰 [CLI] client parses commands by itself and makes accurate requests to the server via [gRPC].
+- it should be still possible to perform all the operations via 📰 [cURL] (or any other 📰 [HTTP]/[API] client) directly on the [REST]ful [API] server.
 
 Try to keep your solution as simple and straightforward as possible.
 

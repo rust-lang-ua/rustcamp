@@ -1,7 +1,7 @@
 Task 2.6: Sealing
 =================
 
-Sealing, in programming, usually means that some API (mostly public) cannot be inherited, extended or implemented outside its definition place. For example, a [sealed class or interface in Kotlin][1] cannot be inherited or implemented outside the library where it's defined. In [Rust], this idiom may be applied to [traits][2]. 
+Sealing, in programming, usually means that some API (mostly public) cannot be inherited, extended or implemented outside its definition place. For example, a 📰 [sealed class or interface in Kotlin][1] cannot be inherited or implemented outside the library where it's defined. In [Rust], this idiom may be applied to 📚 [traits][2]. 
 
 
 
@@ -46,13 +46,13 @@ pub trait TheTrait {}
 impl TheTrait for usize {}
 ```
 
-However, there are alternative ways to seal a trait [via its method signature][5], or even [seal it partially][6].
+However, there are alternative ways to seal a trait 🧭 [via its method signature][5], or even 🧭 [seal it partially][6].
 
-The main purpose of sealing a trait is, of course, [future-proofing][7] of [API]s.
+The main purpose of sealing a trait is, of course, 📰 [future-proofing][7] of 📰 [API]s.
 
 > We are free to add methods to `TheTrait` in a non-breaking release even though that would ordinarily be a breaking change for traits that are not sealed. Also we are free to change the signature of methods that are not publicly documented.
 
-It's important to note that __trait sealing fully relies on__ tricking over visibility rules (__using a public [supertrait][8]__ or type, which __name is not publicly exported__), and so, has no impact on the type system semantics (a sealed public trait is just a regular public trait from the type system perspective). In theory, sealing a trait should affect its [coherence][9], by [relaxing its strictness for the use-cases which can never happen with a sealed trait][10]. However, that would require a special support by compiler, which seems [not gonna happen in the near future][11].
+It's important to note that __trait sealing fully relies on__ tricking over visibility rules (__using a public 📚 [supertrait][8]__ or type, which __name is not publicly exported__), and so, has no impact on the type system semantics (a sealed public trait is just a regular public trait from the type system perspective). In theory, sealing a trait should affect its 📚 [coherence][9], by ❓ [relaxing its strictness for the use-cases which can never happen with a sealed trait][10]. However, that would require a special support by compiler, which seems ❓ [not gonna happen in the near future][11].
 
 For better understanding traits sealing, its design and use-cases, read through the following articles:
 - 📚 [Rust API Guidelines: 10. Future proofing: Sealed traits protect against downstream implementations (C-SEALED)][3]
@@ -73,7 +73,7 @@ __Estimated time__: 1 day
 Seal the traits defined in [this task's crate](src/lib.rs) in the following way:
 - Make the [`MyIteratorExt` trait](src/my_iterator_ext.rs) fully sealed. Do it manually, using the [`sealed`] crate or a similar one is __not allowed__.
 - Make the [`MyError` trait](src/my_error.rs) partially sealed. Only seal the method marked with `#[doc(hidden)]` attribute.
-- Sealing should work on both module level (disallowing to implement the sealed trait or the sealed method in the root module of the crate or any other module outside the one where the traits are defined, prove it by providing commented implementations in the root module of the crate, which doesn't compile due to the seal, if uncommented) and crate level (prove it by creating [documentation tests which doesn't compile][12] due to the seal).
+- Sealing should work on both module level (disallowing to implement the sealed trait or the sealed method in the root module of the crate or any other module outside the one where the traits are defined, prove it by providing commented implementations in the root module of the crate, which doesn't compile due to the seal, if uncommented) and crate level (prove it by creating 📚 [documentation tests which doesn't compile][12] due to the seal).
 
 
 

@@ -5,11 +5,11 @@ __Estimated time__: 4 days
 
 > ❗️ To meet the first deadline, please open a Pull Request by Sunday of  the first week and include answers to at least one question in it.
 
-Read through [Rust Book] and become familiar with basic [Rust] concepts, syntax, memory model, type and module systems.
+Read through 📚 [Rust Book] and become familiar with basic [Rust] concepts, syntax, memory model, type and module systems.
 
-Polish your familiarity by completing [Rust By Example] and [rustlings].
+Polish your familiarity by completing 📚 [Rust By Example] and 📰 [rustlings].
 
-Read through [Cargo Book] and become familiar with [Cargo] and its workspaces.
+Read through 📚 [Cargo Book] and become familiar with 📰 [Cargo] and its workspaces.
 
 The table below maps Rust concepts to their closest analogue elsewhere, so you can anchor new ideas to what you already know. Treat these as starting points, not equivalences - the "closest analogue" column is often where the differences matter most.
 
@@ -29,7 +29,7 @@ The table below maps Rust concepts to their closest analogue elsewhere, so you c
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
 
-1. What [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
+1. What 📰 [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
 2. What runtime [Rust] has? Does it use a GC (garbage collector)?
 3. What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
 4. Why does [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?

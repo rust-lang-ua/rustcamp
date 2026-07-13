@@ -15,7 +15,7 @@ In this rustcamp, you will participate in the [Rustcamp], a rigorous, step-by-st
 
 ## Prerequisites
 
-Before you begin the certification program, you should have a solid understanding of Rust and Git/GitHub. We strongly recommend completing the [Rust Book]. It's also beneficial if you have completed [Rustlings] and [Exercism], and have some hands-on practice. If you're transitioning from another programming language, you'll also find this certification program particularly useful.
+Before you begin the certification program, you should have a solid understanding of Rust and Git/GitHub. We strongly recommend completing the [Rust Book]. It's also beneficial if you have completed 📰 [Rustlings] and 📰 [Exercism], and have some hands-on practice. If you're transitioning from another programming language, you'll also find this certification program particularly useful.
 
 ## Process
 
@@ -37,36 +37,36 @@ Please, read [instructions][Submitting Solutions].
 
 ### Toolchain
 
-- [rustup] for installing [Rust] toolchain and keeping it up-to-date.
-- [RustRover] as development environment (or any other on your choice).
+- 📰 [rustup] for installing [Rust] toolchain and keeping it up-to-date.
+- 📰 [RustRover] as development environment (or any other on your choice).
 
 
 ### Bookshelf
 
 - [Rust Book] teaches and explains [Rust] basics.
-- [Rust By Example] teaches you [Rust] basics using editable examples.
-- [Rust Reference] is not a formal spec, but is more detailed and comprehensive than the [Rust Book].
-- [Cheats.rs] and [Rust SVG Cheatsheet] for quick reference.
-- [Rust Edition Guide] for considering improvements of [Rust 2018] and [Rust 2021].
-- [Rust std lib] documentation.
-- [Cargo Book] is a guide to [Cargo], [Rust]'s build tool and dependency manager.
-- [Rustdoc Book] is a guide to `rustdoc` documentation tool.
-- [Rust Cookbook] is a collection of simple examples that demonstrate good practices to accomplish common programming tasks, using the crates of the [Rust] ecosystem.
-- [Rust Design Patterns] is an open source repository of [Rust] design patterns and idioms.
-- [Effective Rust] is a collection of guidelines that had been learned from real world experience of creating software in [Rust].
-- [Rust API Guidelines] is a set of recommendations on how to design and present APIs for [Rust].
-- [Rust FAQ] answers common question about [Rust].
-- [Rust Playground] allows to share and check runnable [Rust] code snippets online.
-- [Awesome Rust] is a curated list of [Rust] code and resources.
-- [This Week in Rust] represents handpicked and subscribable [Rust] weekly updates.
-- [Baby Steps] blog of [Nicholas Matsakis](https://github.com/nikomatsakis) shares useful [Rust] patterns, ideas and design decisions.
+- 📚 [Rust By Example] teaches you [Rust] basics using editable examples.
+- 📚 [Rust Reference] is not a formal spec, but is more detailed and comprehensive than the [Rust Book].
+- 📰 [Cheats.rs] and 📰 [Rust SVG Cheatsheet] for quick reference.
+- 📚 [Rust Edition Guide] for considering improvements of 📚 [Rust 2018] and 📚 [Rust 2021].
+- 📚 [Rust std lib] documentation.
+- 📚 [Cargo Book] is a guide to 📰 [Cargo], [Rust]'s build tool and dependency manager.
+- 📚 [Rustdoc Book] is a guide to `rustdoc` documentation tool.
+- 📰 [Rust Cookbook] is a collection of simple examples that demonstrate good practices to accomplish common programming tasks, using the crates of the [Rust] ecosystem.
+- 📰 [Rust Design Patterns] is an open source repository of [Rust] design patterns and idioms.
+- 📰 [Effective Rust] is a collection of guidelines that had been learned from real world experience of creating software in [Rust].
+- 📚 [Rust API Guidelines] is a set of recommendations on how to design and present APIs for [Rust].
+- 📰 [Rust FAQ] answers common question about [Rust].
+- 📰 [Rust Playground] allows to share and check runnable [Rust] code snippets online.
+- 📋 [Awesome Rust] is a curated list of [Rust] code and resources.
+- 📰 [This Week in Rust] represents handpicked and subscribable [Rust] weekly updates.
+- 📰 [Baby Steps] blog of [Nicholas Matsakis](https://github.com/nikomatsakis) shares useful [Rust] patterns, ideas and design decisions.
 
 
 
 
 ### Schedule
 
-Each task must be performed as a separate [PR (pull request)][PR] with an appropriate name and checkmarked here in README's schedule after completion. Each task is a [Cargo workspace member][13], so you can run/test it from the project root (i.e. `cargo run -p task_1_8`). __Consider to use [rustfmt] and [Clippy] when you're writing [Rust] code.__
+Each task must be performed as a separate 📰 [PR (pull request)][PR] with an appropriate name and checkmarked here in README's schedule after completion. Each task is a 📚 [Cargo workspace member][13], so you can run/test it from the project root (i.e. `cargo run -p task_1_8`). __Consider to use 📰 [rustfmt] and 📰 [Clippy] when you're writing [Rust] code.__
 
 Each task has the estimated time for completion. If any deeper investigation on task's theme is needed by you, then it's on your own.
 
@@ -145,7 +145,7 @@ Do not hesitate to ask your mentor/lead with questions, however you won't receiv
 - 👣 [Step-by-Step Introduction] - A gradual introduction to Rust programming.
 - 🐣 [Rustlings] - Small exercises designed to familiarize you with reading and writing Rust code.
 - 📘 [Rust Book] - An indispensable guide to Rust. While it's a must-have starting point, we strongly encourage revisiting it throughout your learning journey.
-<!-- - 🗂️ Awesome List of [Learning Materials on Git][Learning Materials on Git] - Essential resources for mastering Git. -->
+<!-- - 🗂️ Awesome List of 📰 [Learning Materials on Git][Learning Materials on Git] - Essential resources for mastering Git. -->
 
 ## Credits
 

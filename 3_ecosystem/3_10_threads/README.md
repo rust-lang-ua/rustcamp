@@ -1,18 +1,18 @@
 Task 3.10: Multithreading and parallelism
 =========================================
 
-One of main [Rust]'s design goals is a [concurrency][1]. [Rust] has a [strong opinion][2] about that, while allows different concurrent models to coexist.
+One of main [Rust]'s design goals is a 📰 [concurrency][1]. [Rust] has a 📰 [strong opinion][2] about that, while allows different concurrent models to coexist.
 
 
 
 
 ## Threads
 
-[Rust] has built-in support for [native threads][3] in form of the [`std::thread`] module of its standard library.
+[Rust] has built-in support for [native threads][3] in form of the 📚 [`std::thread`] module of its standard library.
 
-Traditionally, [threads][3] are used for solving [CPU-bound] problems, as they allow to execute tasks in parallel. However, in practice, threads are often used to solve [I/O-bound] problems too, especially when [asynchronous I/O][4] is not supported well (which is true for [Rust] `std` library at the moment).
+Traditionally, [threads][3] are used for solving 📰 [CPU-bound] problems, as they allow to execute tasks in parallel. However, in practice, threads are often used to solve 📰 [I/O-bound] problems too, especially when [asynchronous I/O][4] is not supported well (which is true for [Rust] `std` library at the moment).
 
-[`crossbeam`] crate also provides implementation of [scoped threads][5], which allow to borrow values from a stack. They are also available in form of [`std::thread::scope`], as of [Rust] 1.63. 
+[`crossbeam`] crate also provides implementation of 📚 [scoped threads][5], which allow to borrow values from a stack. They are also available in form of 📚 [`std::thread::scope`], as of [Rust] 1.63. 
 
 For better understanding [Rust] threads design, concepts, usage, and features (especially [TLS][4] is important and widely used one), read through the following articles:
 - 📚 [Rust Book: 16.1. Using Threads to Run Code Simultaneously][6]
@@ -25,15 +25,15 @@ For better understanding [Rust] threads design, concepts, usage, and features (e
 
 ## Synchronization
 
-The [threads synchronization][11] is a wide topic, but generally it's done via [atomic operations][12], shared state with an [exclusive access][13], or by [threads communication][14]. [Rust] has built-in support for all of them.
+The 📰 [threads synchronization][11] is a wide topic, but generally it's done via [atomic operations][12], shared state with an [exclusive access][13], or by [threads communication][14]. [Rust] has built-in support for all of them.
 
-[Atomic operations][12] are represented by [`std::sync::atomic`] module of [Rust] standard library (and, additionally, [`atomic`] crate).
+[Atomic operations][12] are represented by 📚 [`std::sync::atomic`] module of [Rust] standard library (and, additionally, 📚 [`atomic`] crate).
 
-[Exclusive access][13] may be controlled via primitives of [`std::sync`] module of [Rust] standard library.
+[Exclusive access][13] may be controlled via primitives of 📚 [`std::sync`] module of [Rust] standard library.
 
-Threads communication is commonly represented via [channels][14] and is implemented in [`std::sync::mpsc`] module of [Rust] standard library. 
+Threads communication is commonly represented via [channels][14] and is implemented in 📚 [`std::sync::mpsc`] module of [Rust] standard library. 
 
-Despite that, there is also the [`crossbeam`] crate, providing more feature-rich and optimized concurrency and synchronization primitives. The most notable is [`crossbeam-channel`] as [an enhancement][15] of `std` channel implementations.
+Despite that, there is also the [`crossbeam`] crate, providing more feature-rich and optimized concurrency and synchronization primitives. The most notable is 📚 [`crossbeam-channel`] as [an enhancement][15] of `std` channel implementations.
 
 For better understanding and familiarity with [Rust] synchronization primitives design, concepts, usage, and features, read through the following articles:
 - 📚 [Rust Book: 16.2. Using Message Passing to Transfer Data Between Threads][16]
@@ -56,11 +56,11 @@ For better understanding and familiarity with [Rust] synchronization primitives 
 
 ## Parallelism
 
-The important concept to understand is [how concurrency and parallelism differ][21].
+The important concept to understand is ❓ [how concurrency and parallelism differ][21].
 
-[Rust] ecosystem has support for parallelism in form of [`rayon`] and [`dpc-pariter`] crates, which make it easy to convert a sequential iterator to _execute in parallel threads_.
+[Rust] ecosystem has support for parallelism in form of 📚 [`rayon`] and 📚 [`dpc-pariter`] crates, which make it easy to convert a sequential iterator to _execute in parallel threads_.
 
-Another way to perform parallel data processing _without using [threads][3]_ is [SIMD] instructions usage. If an algorithm is parallelizable enough, applying [SIMD] instructions may [increase performance drastically][24]. [Rust] ecosystem provides basic support for [SIMD] instructions in a form of [`packed_simd`] crate.
+Another way to perform parallel data processing _without using [threads][3]_ is [SIMD] instructions usage. If an algorithm is parallelizable enough, applying [SIMD] instructions may 📰 [increase performance drastically][24]. [Rust] ecosystem provides basic support for [SIMD] instructions in a form of 📚 [`packed_simd`] crate.
 
 For better understanding and familiarity with parallelism in [Rust], read through the following articles:
 - 📰 [Nicky Meuleman: Concurrent vs parallel][28]
