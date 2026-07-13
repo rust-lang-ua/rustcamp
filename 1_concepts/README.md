@@ -1,13 +1,13 @@
 Chapter 1: Concepts
 ================
 
-These tasks describe common and necessary-to-know concepts for everyday programming in [Rust].
+These tasks describe common and necessary-to-know concepts for everyday programming in 📚 [Rust].
 
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
 - How do I recognize that data is allocated at the heap rather than at the stack? When data should be allocated at the heap?
-- What is copying and cloning data in [Rust]? What's the difference? When and why should I use them?
+- What is copying and cloning data in 📚 [Rust]? What's the difference? When and why should I use them?
 - How can a single piece of data be owned by multiple parts of program? When and why is this commonly required?
 - How borrowing rules may be violated? In what price? When and why is this commonly required?
 - How to deal with owned and borrowed data simultaneously? When and why is this commonly required?

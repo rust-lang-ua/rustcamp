@@ -6,13 +6,13 @@ Task 1.2: Boxing and pinning
 
 ## Boxing
 
-[`Box`] is a pointer that owns heap-allocated data. This is the most common and simples form of 📰 [heap] allocation in [Rust].
+📚 [`Box`] is a pointer that owns heap-allocated data. This is the most common and simples form of 📰 [heap] allocation in 📚 [Rust].
 
-It's more idiomatic to use references (`&T`/`&mut T`) for pointing to the data, however they often come with lifetimes complexity. [`Box`] allows to avoid this complexity at the cost of heap allocation.
+It's more idiomatic to use references (`&T`/`&mut T`) for pointing to the data, however they often come with lifetimes complexity. 📚 [`Box`] allows to avoid this complexity at the cost of heap allocation.
 
-[`Box`] is also a way to go if an owned 📚 [slice] is needed, but is not intended to be resized. For example, `Box<str>`/`Box<[T]>` are often used instead `String`/`Vec<T>` in such cases.
+📚 [`Box`] is also a way to go if an owned 📚 [slice] is needed, but is not intended to be resized. For example, `Box<str>`/`Box<[T]>` are often used instead `String`/`Vec<T>` in such cases.
 
-For better understanding [`Box`] purpose, design, limitations and use cases read through:
+For better understanding 📚 [`Box`] purpose, design, limitations and use cases read through:
 - 📚 [Rust Book: 15.1. Using Box to Point to Data on the Heap][1]
 - 📚 [Official `std::boxed` docs][`std::boxed`]
 - 📰 [Amos: What's in the box?][3]
@@ -26,13 +26,13 @@ For better understanding [`Box`] purpose, design, limitations and use cases read
 
 It is sometimes useful to have objects that are guaranteed to not move, in the sense that their placement in memory does not change, and can thus be relied upon. A prime example of such a scenario would be building self-referential structs, since moving an object with pointers to itself will invalidate them, which could cause undefined behavior.
 
-[`Pin<P>`][`Pin`] ensures that the pointee of any pointer type `P` has a stable location in memory, meaning it cannot be moved elsewhere and its memory cannot be deallocated until it gets dropped. We say that the pointee is "pinned".
+📚 [`Pin<P>`][`Pin`] ensures that the pointee of any pointer type `P` has a stable location in memory, meaning it cannot be moved elsewhere and its memory cannot be deallocated until it gets dropped. We say that the pointee is "pinned".
 
-However, many types are always freely movable, even when pinned, because they do not rely on having a stable address. This includes all the basic types (like `bool`, `i32`, references) as well as types consisting solely of these types. Types that do not care about pinning implement the [`Unpin`] marker trait, which cancels the effect of [`Pin`]. For `T: Unpin`, `Pin<Box<T>>` and `Box<T>` function identically, as do `Pin<&mut T>` and `&mut T`.
+However, many types are always freely movable, even when pinned, because they do not rely on having a stable address. This includes all the basic types (like `bool`, `i32`, references) as well as types consisting solely of these types. Types that do not care about pinning implement the 📚 [`Unpin`] marker trait, which cancels the effect of 📚 [`Pin`]. For `T: Unpin`, `Pin<Box<T>>` and `Box<T>` function identically, as do `Pin<&mut T>` and `&mut T`.
 
-Note, that pinning and [`Unpin`] only affect the pointed-to type `P::Target`, not the pointer type `P` itself that got wrapped in `Pin<P>`. For example, whether or not `Box<T>` is `Unpin` has no effect on the behavior of `Pin<Box<T>>` (here, `T` is the pointed-to type).
+Note, that pinning and 📚 [`Unpin`] only affect the pointed-to type `P::Target`, not the pointer type `P` itself that got wrapped in `Pin<P>`. For example, whether or not `Box<T>` is `Unpin` has no effect on the behavior of `Pin<Box<T>>` (here, `T` is the pointed-to type).
 
-For better understanding [`Pin`] purpose, design, limitations and use cases read through:
+For better understanding 📚 [`Pin`] purpose, design, limitations and use cases read through:
 - 📚 [Official `std::pin` docs][`std::pin`]
 - ❓ [Reddit: Pinned objects ELI5?][2]
 - 📰 [SoByte: Pin and Unpin in Rust][10]
@@ -101,12 +101,12 @@ __Estimated time__: 1 day
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What does "boxing" mean in [Rust]? How is it useful? When and why is it required?
-- What is [`Pin`] and why is it required? What guarantees does it provide? How does it fulfill them?
-- How does [`Unpin`] affect the [`Pin`]? What does it mean?
-- Is it allowed to move pinned data after the [`Pin`] dies? Why?
+- What does "boxing" mean in 📚 [Rust]? How is it useful? When and why is it required?
+- What is 📚 [`Pin`] and why is it required? What guarantees does it provide? How does it fulfill them?
+- How does 📚 [`Unpin`] affect the 📚 [`Pin`]? What does it mean?
+- Is it allowed to move pinned data after the 📚 [`Pin`] dies? Why?
 - What is structural pinning? When it should be used and why?
-- What is [`Pin`] projection? Why does it exist? How is it used?
+- What is 📚 [`Pin`] projection? Why does it exist? How is it used?
 
 
 

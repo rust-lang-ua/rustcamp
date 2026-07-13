@@ -1,15 +1,15 @@
 Task 1.6: Static and dynamic dispatch
 =====================================
 
-[Static][1] and [dynamic][2] dispatches are important concepts to understand how your code is compiled and works in runtime, and how you can solve certain day-to-day coding problems (related to polymorphism).
+📰 [Static][1] and 📰 [dynamic][2] dispatches are important concepts to understand how your code is compiled and works in runtime, and how you can solve certain day-to-day coding problems (related to polymorphism).
 
-__[Static dispatch][1]__ (also called "early binding") __happens only at compile time__. The compiler generates separate code for each concrete type that is used. In [Rust] static dispatch is a __default way for polymorphism__ and is introduced simply by generics (parametric polymorphism): `MyType<T, S, F>`.
+__📰 [Static dispatch][1]__ (also called "early binding") __happens only at compile time__. The compiler generates separate code for each concrete type that is used. In 📚 [Rust] static dispatch is a __default way for polymorphism__ and is introduced simply by generics (parametric polymorphism): `MyType<T, S, F>`.
 
-__[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __[type is erased][4] at compile time__, so compiler doesn't know it, therefore generates 📰 [vtable] which dispatches call at runtime and __comes with a performance penalty__. In [Rust] dynamic dispatch is introduced via [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
+__📰 [Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime__. The concrete used __📰 [type is erased][4] at compile time__, so compiler doesn't know it, therefore generates 📰 [vtable] which dispatches call at runtime and __comes with a performance penalty__. In 📚 [Rust] dynamic dispatch is introduced via 📚 [trait objects][3]: `&dyn MyTrait`, `Box<dyn MyTrait>`.
 
-You _have to_ use [dynamic dispatch][2] in situations where [type erasure][4] is required. If the problem can be solved with a [static dispatch][1] then you'd better to do so to avoid performance penalties. The most common example when you cannot use [static dispatch][1] and have to go with [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
+You _have to_ use 📰 [dynamic dispatch][2] in situations where 📰 [type erasure][4] is required. If the problem can be solved with a 📰 [static dispatch][1] then you'd better to do so to avoid performance penalties. The most common example when you cannot use 📰 [static dispatch][1] and have to go with 📰 [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
 
-For better understanding [static][1] and [dynamic][2] dispatches purpose, design, limitations and use cases, read through the following articles:
+For better understanding 📰 [static][1] and 📰 [dynamic][2] dispatches purpose, design, limitations and use cases, read through the following articles:
 - 📰 [Rust Blog: Abstraction without overhead: traits in Rust][11]
 - 📰 [Joshleeb: Traits and Trait Objects in Rust][12]
 - 📚 [Rust Book: 17.2. Using Trait Objects That Allow for Values of Different Types][3]
@@ -24,7 +24,7 @@ For better understanding [static][1] and [dynamic][2] dispatches purpose, design
 
 ## Object safety
 
-The other reason to go with [static dispatch][1] is that except performance penalties, [trait objects][3] have the other major downside: not all traits can be used for creating [trait objects][3]. A trait needs to meet special 📚 [object safety requirements][6]:
+The other reason to go with 📰 [static dispatch][1] is that except performance penalties, 📚 [trait objects][3] have the other major downside: not all traits can be used for creating 📚 [trait objects][3]. A trait needs to meet special 📚 [object safety requirements][6]:
 
 > - The trait cannot require `Self: Sized`.
 > - Method references the `Self` type in its arguments or return type.
@@ -45,9 +45,9 @@ For better understanding 📚 [object safety][5] purpose, design and limitations
 
 ## Dynamic-to-static optimization for closed types set
 
-In situations where you need to deal with different types, but all possible types form a 📰 [closed set][14] (you know _all_ the used types), [dynamic dispatch][2] can be replaced with a [static dispatch][1] in a price of some `enum`-based boilerplate.
+In situations where you need to deal with different types, but all possible types form a 📰 [closed set][14] (you know _all_ the used types), 📰 [dynamic dispatch][2] can be replaced with a 📰 [static dispatch][1] in a price of some `enum`-based boilerplate.
 
-For example the following [dynamically dispatched][2] code:
+For example the following 📰 [dynamically dispatched][2] code:
 ```rust
 trait SayHello {
     fn say_hello(&self);
@@ -118,7 +118,7 @@ There is also a handy 📚 [enum_dispatch] crate, which generates this boilerpla
 
 ## Reducing code bloat optimization
 
-[Static dispatch][1] with type parameters has a downside of generating rather a lot of code (for each type), bloating binary size and potentially pessimizing execution cache usage. However, often generics aren’t really needed for speed, but for ergonomics.
+📰 [Static dispatch][1] with type parameters has a downside of generating rather a lot of code (for each type), bloating binary size and potentially pessimizing execution cache usage. However, often generics aren’t really needed for speed, but for ergonomics.
 
 The canonical solution of this problem is to factor out an inner method that contains all of the code minus the generic conversions, and leave the outer method as a shell. For example:
 ```rust
@@ -167,7 +167,7 @@ struct User {
 }
 ```
 
-Implement `UserRepository` type with injectable `Storage` implementation, which can get, add, update and remove `User` in the injected `Storage`. Make two different implementations: one should use [dynamic dispatch][2] for `Storage` injecting, and the other one should use [static dispatch][1].
+Implement `UserRepository` type with injectable `Storage` implementation, which can get, add, update and remove `User` in the injected `Storage`. Make two different implementations: one should use 📰 [dynamic dispatch][2] for `Storage` injecting, and the other one should use 📰 [static dispatch][1].
 Prove your implementation correctness with tests.
 
 
@@ -177,7 +177,7 @@ Prove your implementation correctness with tests.
 After completing everything above, you should be able to answer (and understand why) the following questions:
 - What is dispatch? When a function call represents a dispatch and when not?
 - How does static dispatch work?
-- How does dynamic dispatch work? Why is it required? Which limitations does it have in [Rust]? Why does it have them?
+- How does dynamic dispatch work? Why is it required? Which limitations does it have in 📚 [Rust]? Why does it have them?
 - When dynamic dispatch can be replaced with static dispatch? When not? What are the trade-offs?
 - How can we reduce the size of compiler-generated code when using static dispatch?
 

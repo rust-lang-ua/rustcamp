@@ -1,7 +1,7 @@
 Task 2.6: Sealing
 =================
 
-Sealing, in programming, usually means that some API (mostly public) cannot be inherited, extended or implemented outside its definition place. For example, a 📰 [sealed class or interface in Kotlin][1] cannot be inherited or implemented outside the library where it's defined. In [Rust], this idiom may be applied to 📚 [traits][2]. 
+Sealing, in programming, usually means that some API (mostly public) cannot be inherited, extended or implemented outside its definition place. For example, a 📰 [sealed class or interface in Kotlin][1] cannot be inherited or implemented outside the library where it's defined. In 📚 [Rust], this idiom may be applied to 📚 [traits][2]. 
 
 
 
@@ -35,7 +35,7 @@ __Sealed trait__ is a __publicly accessible__ trait, which __cannot be implement
 > ```
 > The empty private `Sealed` supertrait cannot be named by downstream crates, so we are guaranteed that implementations of `Sealed` (and therefore `TheTrait`) only exist in the current crate.
 
-This is the most common way to seal a trait. The boilerplate could be completely cut off by using a [`sealed`] crate, providing a convenient macro to generate the one:
+This is the most common way to seal a trait. The boilerplate could be completely cut off by using a 📚 [`sealed`] crate, providing a convenient macro to generate the one:
 ```rust
 use sealed::sealed;
 
@@ -71,7 +71,7 @@ __Estimated time__: 1 day
 
 
 Seal the traits defined in [this task's crate](src/lib.rs) in the following way:
-- Make the [`MyIteratorExt` trait](src/my_iterator_ext.rs) fully sealed. Do it manually, using the [`sealed`] crate or a similar one is __not allowed__.
+- Make the [`MyIteratorExt` trait](src/my_iterator_ext.rs) fully sealed. Do it manually, using the 📚 [`sealed`] crate or a similar one is __not allowed__.
 - Make the [`MyError` trait](src/my_error.rs) partially sealed. Only seal the method marked with `#[doc(hidden)]` attribute.
 - Sealing should work on both module level (disallowing to implement the sealed trait or the sealed method in the root module of the crate or any other module outside the one where the traits are defined, prove it by providing commented implementations in the root module of the crate, which doesn't compile due to the seal, if uncommented) and crate level (prove it by creating 📚 [documentation tests which doesn't compile][12] due to the seal).
 
@@ -82,8 +82,8 @@ Seal the traits defined in [this task's crate](src/lib.rs) in the following way:
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
 - What does sealing mean in programming in a broad sense?
-- What is trait sealing in [Rust]? When is it useful?
-- What limitations does trait sealing in [Rust] have? What could it be able to provide if supported by compiler?
+- What is trait sealing in 📚 [Rust]? When is it useful?
+- What limitations does trait sealing in 📚 [Rust] have? What could it be able to provide if supported by compiler?
 
 
 

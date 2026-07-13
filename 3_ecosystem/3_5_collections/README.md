@@ -6,9 +6,9 @@ Task 3.5: Collections and iterators
 
 ## `std` collections
 
-[Rust] provides [implementations for commonly used collections][`std::collections`] in its `std` library. They come with 📚 [different guarantees][2] and for 📚 [different purposes][1], and are usually applicable for 90% use cases.
+📚 [Rust] provides 📚 [implementations for commonly used collections][`std::collections`] in its `std` library. They come with 📚 [different guarantees][2] and for 📚 [different purposes][1], and are usually applicable for 90% use cases.
 
-For better understanding [`std::collections`] purpose, design, limitations and use cases, read through the following articles:
+For better understanding 📚 [`std::collections`] purpose, design, limitations and use cases, read through the following articles:
 - 📚 [Rust Book: 8. Common Collections][5]
 - 📚 [Rust By Example: 19.2. Vectors][3]
 - 📚 [Rust By Example: 19.7. HashMap][4]
@@ -21,9 +21,9 @@ For better understanding [`std::collections`] purpose, design, limitations and u
 
 > Iterators are heavily used in idiomatic Rust code, so it's worth becoming familiar with them.
 
-While collection represents a some complete set of data, an [`Iterator`] is a way of iteration over its elements.
+While collection represents a some complete set of data, an 📚 [`Iterator`] is a way of iteration over its elements.
 
-> An iterator has a method, [`next`][7], which when called, returns an `Option<Item>`. [`next`][7] will return `Some(Item)` as long as there are elements, and once they've all been exhausted, will return `None` to indicate that iteration is finished. Individual iterators may choose to resume iteration, and so calling [`next`][7] again may or may not eventually start returning `Some(Item)` again at some point.
+> An iterator has a method, 📚 [`next`][7], which when called, returns an `Option<Item>`. 📚 [`next`][7] will return `Some(Item)` as long as there are elements, and once they've all been exhausted, will return `None` to indicate that iteration is finished. Individual iterators may choose to resume iteration, and so calling 📚 [`next`][7] again may or may not eventually start returning `Some(Item)` again at some point.
 >
 > Iterators are also composable, and it's common to chain them together to do more complex forms of processing.
 
@@ -32,11 +32,11 @@ There are three forms of iteration over a collection in [Rust]:
 - `iter_mut()` iterates over _mutably borrowed_ elements (`&mut T`), so used when in-place elements mutation is required.
 - `into_iter()` iterates over _owned_ element (`T`), so used when whole collection transformation and/or moving is required.
 
-It's important to remember, that __iterators (and their adapters) are lazy__. [`Iterator`] does _nothing_, unless its [`next()`][7] method is called. This property leads to the next one: __iterators do not have to be finite__. So, if you need a sort of an infinite collection (like endless 📰 [fibonacci sequence][8]), an [`Iterator`] implementation is a way to go, as each new element will be evaluated lazily on request.
+It's important to remember, that __iterators (and their adapters) are lazy__. 📚 [`Iterator`] does _nothing_, unless its 📚 [`next()`][7] method is called. This property leads to the next one: __iterators do not have to be finite__. So, if you need a sort of an infinite collection (like endless 📰 [fibonacci sequence][8]), an 📚 [`Iterator`] implementation is a way to go, as each new element will be evaluated lazily on request.
 
-[`Iterator`] comes with a lot of powerful and useful 📚 [adapters][9] in `std` library, which makes them highly composable and pleasant to use. If `std` capabilities are not enough for your needs, consider to use 📚 [`itertools`] crate, which provides more non-trivial adapters.
+📚 [`Iterator`] comes with a lot of powerful and useful 📚 [adapters][9] in `std` library, which makes them highly composable and pleasant to use. If `std` capabilities are not enough for your needs, consider to use 📚 [`itertools`] crate, which provides more non-trivial adapters.
 
-For better understanding [Rust] iterators purpose, design, limitations and use cases, read through the following articles:
+For better understanding 📚 [Rust] iterators purpose, design, limitations and use cases, read through the following articles:
 - 📚 [Rust By Example: 16.4. Iterators][6]
 - 📚 [Official `std::iter` docs][`std::iter`]
 
@@ -47,7 +47,7 @@ For better understanding [Rust] iterators purpose, design, limitations and use c
 
 📰 [Immutable collections][10] (aka "persistent data structures") are collections which preserve interface and behavior of its mutable analogues, but have a different implementation under-the-hood, which __allows each piece of code to work with its own copy of a whole collection without worrying about accidentally changing elements for others__. The key feature is in implicit data deduplication. This inevitably comes in a price of performance, so immutable collection has 📚 [other performance guarantees][11] than mutable ones.
 
-[Rust] ecosystem has 📚 [`im`] and 📚 [`rpds`] crates, which provide immutable implementations for some collections.
+📚 [Rust] ecosystem has 📚 [`im`] and 📚 [`rpds`] crates, which provide immutable implementations for some collections.
 
 For better understanding immutable collections' nature, design, and a motivation behind them, read through the following articles:
 - 📚 [Official `im` crate docs][`im`]
@@ -63,7 +63,7 @@ For better understanding immutable collections' nature, design, and a motivation
 
 When you need to operate with the same collection from multiple threads, the most common and obvious way to go is to put it behind some synchronization primitive (like `Arc<RwLock<VecDeque<T>>>`, for example). However, this _performs too bad_ for an extensive use of a collection. That's why concurrent collections exist: they __allow usage of a collection from multiple threads without explicit synchronization__ and __provide efficient synchronization mechanism under-the-hood__ (usually, leveraging lock-free algorithms).
 
-[Rust] ecosystem has 📚 [`crossbeam`] and 📚 [`lockfree`] crates, providing efficient lock-free implementations for some collections usually used in a concurrent context. Also, consider 📚 [`flurry`] and 📚 [`chashmap`] crates for a concurrent 📚 [hash map][`HashMap`] implementation.
+📚 [Rust] ecosystem has 📚 [`crossbeam`] and 📚 [`lockfree`] crates, providing efficient lock-free implementations for some collections usually used in a concurrent context. Also, consider 📚 [`flurry`] and 📚 [`chashmap`] crates for a concurrent 📚 [hash map][`HashMap`] implementation.
 
 For better understanding concurrent collections' nature, design, and a motivation behind them, read through the following articles:
 - 📰 [Aaron Turon: Lock-freedom without garbage collection][13]

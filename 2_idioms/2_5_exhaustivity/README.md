@@ -123,9 +123,9 @@ Another real-world use-cases of maintaining invariants covering all struct field
 
 ## `#[non_exhaustive]`
 
-Until now, it has been illustrated how __exhaustiveness checking can future-proof a user code__ (the one which uses API of some type, not declares), by making it to __break whenever the used [API] is extended__ and should be reconsidered.
+Until now, it has been illustrated how __exhaustiveness checking can future-proof a user code__ (the one which uses API of some type, not declares), by making it to __break whenever the used 📰 [API] is extended__ and should be reconsidered.
 
-__`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose of [future-proofing][12]__ a source code, but in a totally opposite manner: it's __used in a library code__ (the one which declares [API] of some type for usage) to preserve backwards compatibility __for omitting breaking any user code whenever the used [API] is extended__.
+__`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose of 📰 [future-proofing][12]__ a source code, but in a totally opposite manner: it's __used in a library code__ (the one which declares 📰 [API] of some type for usage) to preserve backwards compatibility __for omitting breaking any user code whenever the used 📰 [API] is extended__.
 
 > Within the defining crate, `non_exhaustive` has no effect.
 
@@ -143,7 +143,7 @@ __`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose 
 
 > Non-exhaustive types are always considered inhabited in downstream crates.
 
-Despite being opposite qualities, both exhaustivity and non-exhaustivity are intended for [future-proofing][12] a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really has sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
+Despite being opposite qualities, both exhaustivity and non-exhaustivity are intended for 📰 [future-proofing][12] a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really has sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
 
 For better understanding `#[non_exhaustive]` attribute purpose, design, limitations and use cases, read through the following articles:
 - 📚 [Rust Reference: 7.6. The `non_exhaustive` attribute][9]
@@ -168,8 +168,8 @@ Refactor the code contained in [this task's crate](src/lib.rs), so the bugs intr
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- How can exhaustiveness checking be useful in [Rust] code for enums and structs? When should we use it, when not?
-- How does `#[non_exhaustive]` attribute work in [Rust]? What are its use-cases? When should it be used, when not?
+- How can exhaustiveness checking be useful in 📚 [Rust] code for enums and structs? When should we use it, when not?
+- How does `#[non_exhaustive]` attribute work in 📚 [Rust]? What are its use-cases? When should it be used, when not?
 
 
 

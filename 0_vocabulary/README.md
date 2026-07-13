@@ -5,7 +5,7 @@ __Estimated time__: 4 days
 
 > ❗️ To meet the first deadline, please open a Pull Request by Sunday of  the first week and include answers to at least one question in it.
 
-Read through 📚 [Rust Book] and become familiar with basic [Rust] concepts, syntax, memory model, type and module systems.
+Read through 📚 [Rust Book] and become familiar with basic 📚 [Rust] concepts, syntax, memory model, type and module systems.
 
 Polish your familiarity by completing 📚 [Rust By Example] and 📰 [rustlings].
 
@@ -29,10 +29,10 @@ The table below maps Rust concepts to their closest analogue elsewhere, so you c
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
 
-1. What 📰 [memory model][31] [Rust] has? Is [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
-2. What runtime [Rust] has? Does it use a GC (garbage collector)?
+1. What 📰 [memory model][31] 📚 [Rust] has? Is 📚 [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
+2. What runtime 📚 [Rust] has? Does it use a GC (garbage collector)?
 3. What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
-4. Why does [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
+4. Why does 📚 [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
 5. What static typing means? What are the benefits of using it? Weak vs strong typing? Implicit vs explicit typing?
 6. What are generics and parametric polymorphism? Which problems do they solve?
 7. What are nominative typing and structural typing? What is the difference?
@@ -42,12 +42,12 @@ After completing these steps, you should be able to answer (and understand why) 
 11. What is cloning? What is copying? How do they compare? What is trait Drop for? What is special about this trait?
 12. What is immutability? What is the benefit of using it? What is the difference between immutability and const?
 13. What are move semantics? What are borrowing rules? What is the benefit of using them?
-14. What is RAII? How is it implemented in [Rust]? What is the benefit of using it?
+14. What is RAII? How is it implemented in 📚 [Rust]? What is the benefit of using it?
 15. What are lifetimes? Which problems do they solve? Which benefits do they provide?
 16. What is an iterator? What is a collection? How do they differ? How are they used?
 17. What are macros? Which problems do they solve? What is the difference between declarative and procedural macro?
-18. How code is tested in [Rust]? Where should you put tests and why?
-19. Is [Rust] an OOP language? Is it possible to use SOLID/GRASP? Does it have inheritance? Is Rust a functional language? What variance rules does Rust have?
+18. How code is tested in 📚 [Rust]? Where should you put tests and why?
+19. Is 📚 [Rust] an OOP language? Is it possible to use SOLID/GRASP? Does it have inheritance? Is Rust a functional language? What variance rules does Rust have?
 
 After you are done, notify your lead in an appropriate PR (pull request), and they will examine what you have learned.
 

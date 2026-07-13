@@ -6,11 +6,11 @@ Task 1.1: Default values, cloning and copying
 
 ## Default values
 
-[Rust] has a standard way to deal with default values of a type via [`Default`] trait. Read through [its official docs][`Default`] to understand the design.
+📚 [Rust] has a standard way to deal with default values of a type via [`Default`] trait. Read through 📚 [its official docs][`Default`] to understand the design.
 
-It can be auto-derived, but only for a `struct` whose all members have [`Default`] implementations. It is implemented for a great many types in the standard library, and also used in a surprising number of places. So if your type has a value that can be construed as being "default", it is a good idea to implement this trait.
+It can be auto-derived, but only for a `struct` whose all members have 📚 [`Default`] implementations. It is implemented for a great many types in the standard library, and also used in a surprising number of places. So if your type has a value that can be construed as being "default", it is a good idea to implement this trait.
 
-If you're not satisfied with 📚 [std] deriving capabilities for [`Default`], consider using 📚 [smart-default] crate. An example is quite self-explanatory:
+If you're not satisfied with 📚 [std] deriving capabilities for 📚 [`Default`], consider using 📚 [smart-default] crate. An example is quite self-explanatory:
 ```rust
 #[derive(SmartDefault)]
 enum Foo {
@@ -31,7 +31,7 @@ enum Foo {
 }
 ```
 
-A great thing that having a [`Default`] implementation you can instantiate your `struct` with only the non-default values and have all other fields filled with default values:
+A great thing that having a 📚 [`Default`] implementation you can instantiate your `struct` with only the non-default values and have all other fields filled with default values:
 ```rust
 let x = Foo { bar: baz, ..Default::default() };
 ```
@@ -41,13 +41,13 @@ let x = Foo { bar: baz, ..Default::default() };
 
 ## Cloning and copying
 
-By default, all types in [Rust] follow ❓ ['move semantics'][1].
+By default, all types in 📚 [Rust] follow ❓ ['move semantics'][1].
 
-If you need a duplicate of a value, then its type should implement [`Clone`] trait (see [official docs][`Clone`]), and a duplicate is created by calling [`Clone`] methods __explicitly__. Cloning can be __either cheap or expensive__ operation depending on type semantics.
+If you need a duplicate of a value, then its type should implement [`Clone`] trait (see 📚 [official docs][`Clone`]), and a duplicate is created by calling [`Clone`] methods __explicitly__. Cloning can be __either cheap or expensive__ operation depending on type semantics.
 
-However, [`Copy`] marker trait (see [official docs][`Copy`]) enables 'copy semantics' for a type, so a value is __copied implicitly__ every time is passed. That's why copying must always perform a __simple bit-to-bit copy operation__.
+However, [`Copy`] marker trait (see 📚 [official docs][`Copy`]) enables 'copy semantics' for a type, so a value is __copied implicitly__ every time is passed. That's why copying must always perform a __simple bit-to-bit copy operation__.
 
-[Official `Copy` docs][`Copy`] are quite explanatory about which types _should_ be [`Copy`] and which types _cannot_:
+📚 [Official `Copy` docs][`Copy`] are quite explanatory about which types _should_ be [`Copy`] and which types _cannot_:
 
 > Some types can't be copied safely. For example, copying `&mut T` would create an aliased mutable reference. Copying `String` would duplicate responsibility for managing the `String`'s buffer, leading to a double free.
 >
@@ -81,10 +81,10 @@ __Estimated time__: 1 day
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What purpose does [`Default`] trait serve in [Rust]?
+- What purpose does 📚 [`Default`] trait serve in 📚 [Rust]?
 - What is `#[derive(Default)]` from `std` capable of? What does it wrong? Which are alternatives?
-- What does [`Clone`] mean semantically?
-- What does [`Copy`] mean semantically? How is it connected with [`Clone`]? Which limitations does it have and why?
+- What does 📚 [`Clone`] mean semantically?
+- What does 📚 [`Copy`] mean semantically? How is it connected with 📚 [`Clone`]? Which limitations does it have and why?
 
 
 

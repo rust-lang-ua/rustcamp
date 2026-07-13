@@ -1,11 +1,11 @@
 Task 1.9: Phantom types
 =======================
 
-Because [Rust] has a rich type system, a programming logic and semantics are mostly expressed in types rather than in data/values, which is known as a "programming with types" concept. Often, this leads to situations where you need to express some type relations without having any values of those types. Here is where ❓ [phantom types][5] come in: they carry some semantics on type level, which invariants are checked by compiler, and are totally compiled out in runtime.
+Because 📚 [Rust] has a rich type system, a programming logic and semantics are mostly expressed in types rather than in data/values, which is known as a "programming with types" concept. Often, this leads to situations where you need to express some type relations without having any values of those types. Here is where ❓ [phantom types][5] come in: they carry some semantics on type level, which invariants are checked by compiler, and are totally compiled out in runtime.
 
 > A phantom type parameter is simply a type parameter which is never used.
 
-However, in [Rust], this often causes the compiler to complain, and the solution is to add a "dummy" use by way of [`PhantomData`].
+However, in 📚 [Rust], this often causes the compiler to complain, and the solution is to add a "dummy" use by way of 📚 [`PhantomData`].
 
 This is a quite common practice when you're writing a highly abstracted generics code. A real-world example (and somewhat scary) would be:
 ```rust
@@ -83,7 +83,7 @@ where
 }
 ```
 
-For better understanding [`PhantomData`] purpose, design, limitations and use cases, read through the following articles:
+For better understanding 📚 [`PhantomData`] purpose, design, limitations and use cases, read through the following articles:
 - 📚 [Official `PhantomData` docs][`PhantomData`]
 - 📚 [Rust By Example: 14.9. Phantom type parameters][1]
 - 📚 [Rustonomicon: 3.10. PhantomData][2]
@@ -96,11 +96,11 @@ For better understanding [`PhantomData`] purpose, design, limitations and use ca
 
 ## Transparency
 
-[`PhantomData`] is transparent for [auto traits][7], which means, for example, that `PhantomData<usize>` is `Send` and `Sized`, while `PhantomData<dyn Any>` is neither `Send` nor `Sized`.
+📚 [`PhantomData`] is transparent for 📚 [auto traits][7], which means, for example, that `PhantomData<usize>` is `Send` and `Sized`, while `PhantomData<dyn Any>` is neither `Send` nor `Sized`.
 
 In some situations this allows us to provide the exact semantics we need for a type (like 📚 [invariance][8] for 📚 [a lifetime][9], for example). 
 
-In other situations we don't actually care about semantics of the phantom type parameter at all. Moreover, we don't want the substituted type to change [auto traits][7] implementations of the whole type in any way, preserving only the semantics of the actual contained data, as this may impose ergonomic problems to us:
+In other situations we don't actually care about semantics of the phantom type parameter at all. Moreover, we don't want the substituted type to change 📚 [auto traits][7] implementations of the whole type in any way, preserving only the semantics of the actual contained data, as this may impose ergonomic problems to us:
 ```rust
 struct Nonce<Of>(PhantomData<Of>, usize);
 
@@ -120,7 +120,7 @@ thread::spawn(move || {
 let nonce: Nonce<dyn Any> = Nonce(PhantomData, 3);
 ```
 
-To omit such problems, let's just form the correct type inside [`PhantomData`], so we always have the desired [auto traits][7] implementations despite the substituted type:
+To omit such problems, let's just form the correct type inside 📚 [`PhantomData`], so we always have the desired 📚 [auto traits][7] implementations despite the substituted type:
 ```rust
 struct Nonce<Of: ?Sized>(PhantomData<AtomicPtr<Box<Of>>>, usize);
 
@@ -139,7 +139,7 @@ let nonce: Nonce<dyn Any> = Nonce(PhantomData, 3);
 
 ## Custom phantom type
 
-Interesting enough, despite the [`PhantomData`] being a 📰 [lang item][10], it's still possible to define a custom type without using the original [`PhantomData`], but behaving like the one. This is demonstrated quite fairly by the 📚 [`ghost`] crate.
+Interesting enough, despite the 📚 [`PhantomData`] being a 📰 [lang item][10], it's still possible to define a custom type without using the original 📚 [`PhantomData`], but behaving like the one. This is demonstrated quite fairly by the 📚 [`ghost`] crate.
 
 ```rust
 use ghost::phantom;
@@ -188,9 +188,9 @@ Fact about Vec: Vec may re-allocate on growing.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- Why does [`PhantomData`] exists in [Rust]? Which problems does it solve?
-- How does [`PhantomData`]'s transparency work in practise?
-- What alternatives of [`PhantomData`] do exist? When is it meaningful to use them?
+- Why does 📚 [`PhantomData`] exists in 📚 [Rust]? Which problems does it solve?
+- How does 📚 [`PhantomData`]'s transparency work in practise?
+- What alternatives of 📚 [`PhantomData`] do exist? When is it meaningful to use them?
 
 
 

@@ -6,7 +6,7 @@ Task 2.4: Abstract type in, concrete type out
 
 ## Abstracting over input type
 
-The common and obvious rules in [Rust] when choosing type for an input parameter are the following:
+The common and obvious rules in 📚 [Rust] when choosing type for an input parameter are the following:
 - If you need a _read-only access_ to the value, then use a shared reference (`&T`).
 - If you want to _mutate the value in-place_, then use a mutable reference (`&mut T`).
 - If you want to _consume and own_ the value, then move it (`T`).
@@ -36,7 +36,7 @@ impl Nickname {
     }
 }
 ```
-However, due to the need of explicit type conversions in [Rust], such API can lack ergonomics in use (notice the explicit conversion methods that API user has to use):
+However, due to the need of explicit type conversions in 📚 [Rust], such API can lack ergonomics in use (notice the explicit conversion methods that API user has to use):
 ```rust
 let mut nickname = Nickname::new("Vasya".to_string());
 add_hi(nickname.as_mut());
@@ -72,7 +72,7 @@ add_hi(&mut nickname);
 just_print_stringy(&nickname);
 ```
 
-This is one of the key features, which drive [Rust] expressiveness and ergonomics. Just look over `std` library to see how widely it's used: 📚 [`Iterator::eq()`][1], 📚 [`Vec::drain()`][2], 📚 [`HashMap::extend()`][3], etc.
+This is one of the key features, which drive 📚 [Rust] expressiveness and ergonomics. Just look over `std` library to see how widely it's used: 📚 [`Iterator::eq()`][1], 📚 [`Vec::drain()`][2], 📚 [`HashMap::extend()`][3], etc.
 
 The downside of this idiom is that compiler generates more code due to monomorphization, so potentially leads to code bloating. The way it can be optimized has already been [explained in "Reducing code bloat optimization" section of 1.6 task][6].
 

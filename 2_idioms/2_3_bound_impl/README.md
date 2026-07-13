@@ -1,7 +1,7 @@
 Task 2.3: Bound behavior, not data
 ==================================
 
-Often, when we want to abstract over some type or behavior in [Rust] we are going from this:
+Often, when we want to abstract over some type or behavior in 📚 [Rust] we are going from this:
 ```rust
 struct UserService {
     repo: UserRepo,
@@ -75,7 +75,7 @@ struct My;
 let loader: Loader<My, My> = ..;
 let copy = loader.clone(); // compile error as `My` doesn't impl `Clone`
 ```
-This happens because `#[derive(Clone)]` applies `K: Clone` and `V: Clone` bounds in the derived code, despite the fact that they are not necessary at all, as [`Arc` always implements `Clone`][2] (also, consider `T: ?Sized` bound in the [linked implementation][2], which lifts implicit `T: Sized` bound, so allows to use `Arc::clone()` even for [unsized types][3] too).
+This happens because `#[derive(Clone)]` applies `K: Clone` and `V: Clone` bounds in the derived code, despite the fact that they are not necessary at all, as 📚 [`Arc` always implements `Clone`][2] (also, consider `T: ?Sized` bound in the 📚 [linked implementation][2], which lifts implicit `T: Sized` bound, so allows to use `Arc::clone()` even for [unsized types][3] too).
 
 By providing hand-baked implementation we are able to clone values of `Loader<My, My>` type without any problems:
 ```rust
@@ -114,7 +114,7 @@ Refactor the code contained in [this task's crate](src/main.rs) to reduce trait 
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- Which problems do trait bounds impose in [Rust] when are placed on a type definition?
+- Which problems do trait bounds impose in 📚 [Rust] when are placed on a type definition?
 - Why placing trait bounds on `impl` blocks is better?
 - When cannot we do that and should use trait bounds on a type definition? When is it preferred?
 - What are the problems with `std` derive macros regarding type parameters? How could they be solved?
