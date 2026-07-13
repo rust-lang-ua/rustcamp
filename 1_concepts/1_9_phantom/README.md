@@ -84,13 +84,13 @@ where
 ```
 
 For better understanding [`PhantomData`] purpose, design, limitations and use cases, read through the following articles:
-- [Official `PhantomData` docs][`PhantomData`]
-- [Rust By Example: 14.9. Phantom type parameters][1]
-- [Rustonomicon: 3.10. PhantomData][2]
-- [Reddit: Why PhantomData][3]
-- [RIP Tutorial: Using PhantomData as a Type Marker][4]
-- [Aayushya Vajpayee: Write Cleaner, More Maintainable Rust Code with PhantomData][11]
-- [Sergey Potapov: Phantom Types in Rust][6]
+- 📚 [Official `PhantomData` docs][`PhantomData`]
+- 📚 [Rust By Example: 14.9. Phantom type parameters][1]
+- 📚 [Rustonomicon: 3.10. PhantomData][2]
+- ❓ [Reddit: Why PhantomData][3]
+- 🧭 [RIP Tutorial: Using PhantomData as a Type Marker][4]
+- 📰 [Aayushya Vajpayee: Write Cleaner, More Maintainable Rust Code with PhantomData][11]
+- 📰 [Sergey Potapov: Phantom Types in Rust][6]
 
 
 
@@ -158,7 +158,7 @@ fn main() {
 ```
 
 For more detailed explanation, read through the following articles:
-- [Official `ghost` crate docs][`ghost`]
+- 📚 [Official `ghost` crate docs][`ghost`]
 
 
 

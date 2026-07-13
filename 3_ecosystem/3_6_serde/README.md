@@ -33,15 +33,15 @@ fn main() {
 [`serde`] by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already [implemented backends for most used formats][2], and you're free to [implement backend for your own format][3] if it's not implemented yet. 
 
 For better understanding and familiarity with [`serde`]'s design, concepts, usage, and features (like [zero-copy deserialization][5]), read through the following articles:
-- [Official `serde` crate guide][0]
-- [Official `serde` crate docs][`serde`]
-- [Official `serde_json` crate docs][`serde_json`]
-- [Owen Gage: Understanding Rust's serde using macro expansion][6]
-- [Owen Gage: Exploring serde's data model with a toy deserializer][7]
-- [Owen Gage: A look at serde-json][11]
-- [Manish Goregaokar: Not a Yoking Matter (Zero-Copy #1)][12]
-- [Manish Goregaokar: Zero-Copy All the Things! (Zero-Copy #2)][13]
-- [Manish Goregaokar: So Zero It's ... Negative? (Zero-Copy #3)][14]
+- 📰 [Official `serde` crate guide][0]
+- 📚 [Official `serde` crate docs][`serde`]
+- 📚 [Official `serde_json` crate docs][`serde_json`]
+- 📰 [Owen Gage: Understanding Rust's serde using macro expansion][6]
+- 📰 [Owen Gage: Exploring serde's data model with a toy deserializer][7]
+- 📰 [Owen Gage: A look at serde-json][11]
+- 📰 [Manish Goregaokar: Not a Yoking Matter (Zero-Copy #1)][12]
+- 📰 [Manish Goregaokar: Zero-Copy All the Things! (Zero-Copy #2)][13]
+- 📰 [Manish Goregaokar: So Zero It's ... Negative? (Zero-Copy #3)][14]
 
 
 ### Extras
@@ -104,8 +104,8 @@ However, the __main "killer feature"__ of [`musli`] is its __ability to serializ
 > ```
 
 For better understanding and familiarity with [`musli`]'s design, concepts, usage, and features, read through the following articles:
-- [Official `musli` crate docs][`musli`]
-- [John-John Tedro: A fresh look on incremental zero copy serialization][23]
+- 📚 [Official `musli` crate docs][`musli`]
+- 📰 [John-John Tedro: A fresh look on incremental zero copy serialization][23]
 
 
 
@@ -121,8 +121,8 @@ For better understanding and familiarity with [`musli`]'s design, concepts, usag
 > While rkyv is a great format for final data, it lacks a full schema system and isn’t well equipped for data migration and schema upgrades. If your use case requires these capabilities, you may need additional libraries the build these features on top of rkyv. You can use other serialization frameworks like serde with the same types as rkyv conflict-free.
 
 For better understanding and familiarity with [`rkyv`]'s design, concepts, usage, and features, read through the following articles:
-- [Official `rkyv` crate docs][`rkyv`]
-- [`rkyv` book][30]
+- 📚 [Official `rkyv` crate docs][`rkyv`]
+- 📰 [`rkyv` book][30]
 
 
 

@@ -6,10 +6,10 @@ Most types in [Rust] have a particular size, in bytes, that is knowable at compi
 All types with a constant size known at compile time in [Rust] implement [`Sized`] marker trait. And all type parameters (except `Self` in traits) have always an implicit bound of [`Sized`]. So, you should not bother about specifying [`Sized`] marker trait in code, usually.
 
 For better understanding [`Sized`] and `?Sized` purpose, design, limitations and use cases, read through the following articles:
-- [Official `Sized` docs][`Sized`]
-- [Old Rust Book: 3.31. Unsized Types][4]
-- [Rust Forum: Trait Objects and the Sized Trait][5]
-- [pretzelhammer: Sizedness in Rust][6]
+- 📚 [Official `Sized` docs][`Sized`]
+- 📚 [Old Rust Book: 3.31. Unsized Types][4]
+- ❓ [Rust Forum: Trait Objects and the Sized Trait][5]
+- 📰 [pretzelhammer: Sizedness in Rust][6]
 
 
 

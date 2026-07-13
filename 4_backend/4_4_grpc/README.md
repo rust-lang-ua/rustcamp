@@ -4,8 +4,8 @@ Task 4.4: RPC
 [gRPC] is a widely-adopted high performance [RPC] framework, having a __strict schema__, powered with pluggable support for load balancing, tracing, health checking and authentication, built on top of [HTTP/2] (and so, having a __mandatory encryption__), and __heavily using code-from-schema generation__.
 
 For more familiarity with [gRPC], read through the following articles:
-- [gRPC docs: Introduction to gRPC][301]
-- [gRPC docs: Core concepts, architecture and lifecycle][302]
+- 📰 [gRPC docs: Introduction to gRPC][301]
+- 📰 [gRPC docs: Core concepts, architecture and lifecycle][302]
 
 ### Server and client
 
@@ -14,8 +14,8 @@ For implementing a [gRPC] server in [Rust], there are two main production-ready 
 In [gRPC] ecosystem, usually, implementing a [gRPC] client doesn't differ much from implementing a server, since both are auto-generated from the same `.proto` schema. So, for [Rust], the same [`tonic`] and [`grpcio`] crates do the job when it comes to making [gRPC] requests. 
 
 For more familiarity with using [gRPC] in [Rust], read through the following articles:
-- [Official `tonic` crate docs][`tonic`]
-- [Official `grpcio` crate docs][`grpcio`]
+- 📚 [Official `tonic` crate docs][`tonic`]
+- 📚 [Official `grpcio` crate docs][`grpcio`]
 
 ## Task
 

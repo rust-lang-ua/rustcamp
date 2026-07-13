@@ -9,10 +9,10 @@ Task 3.5: Collections and iterators
 [Rust] provides [implementations for commonly used collections][`std::collections`] in its `std` library. They come with [different guarantees][2] and for [different purposes][1], and are usually applicable for 90% use cases.
 
 For better understanding [`std::collections`] purpose, design, limitations and use cases, read through the following articles:
-- [Rust Book: 8. Common Collections][5]
-- [Rust By Example: 19.2. Vectors][3]
-- [Rust By Example: 19.7. HashMap][4]
-- [Official `std::collections` docs][`std::collections`]
+- 📚 [Rust Book: 8. Common Collections][5]
+- 📚 [Rust By Example: 19.2. Vectors][3]
+- 📚 [Rust By Example: 19.7. HashMap][4]
+- 📚 [Official `std::collections` docs][`std::collections`]
 
 
 
@@ -37,8 +37,8 @@ It's important to remember, that __iterators (and their adapters) are lazy__. [`
 [`Iterator`] comes with a lot of powerful and useful [adapters][9] in `std` library, which makes them highly composable and pleasant to use. If `std` capabilities are not enough for your needs, consider to use [`itertools`] crate, which provides more non-trivial adapters.
 
 For better understanding [Rust] iterators purpose, design, limitations and use cases, read through the following articles:
-- [Rust By Example: 16.4. Iterators][6]
-- [Official `std::iter` docs][`std::iter`]
+- 📚 [Rust By Example: 16.4. Iterators][6]
+- 📚 [Official `std::iter` docs][`std::iter`]
 
 
 
@@ -50,12 +50,12 @@ For better understanding [Rust] iterators purpose, design, limitations and use c
 [Rust] ecosystem has [`im`] and [`rpds`] crates, which provide immutable implementations for some collections.
 
 For better understanding immutable collections' nature, design, and a motivation behind them, read through the following articles:
-- [Official `im` crate docs][`im`]
-- [Wikipedia: Persistent data structure][10]
-- [Jean Niklas L'orange: Understanding Clojure's Persistent Vectors, pt. 1][15_1]
-- [Jean Niklas L'orange: Understanding Clojure's Persistent Vectors, pt. 2][15_2]
-- [Jean Niklas L'orange: Understanding Clojure's Persistent Vectors, pt. 3][15_3]
-- [Immutable Data Structures and why You want them][15_4]
+- 📚 [Official `im` crate docs][`im`]
+- 📰 [Wikipedia: Persistent data structure][10]
+- 📰 [Jean Niklas L'orange: Understanding Clojure's Persistent Vectors, pt. 1][15_1]
+- 📰 [Jean Niklas L'orange: Understanding Clojure's Persistent Vectors, pt. 2][15_2]
+- 📰 [Jean Niklas L'orange: Understanding Clojure's Persistent Vectors, pt. 3][15_3]
+- 🎥 [Immutable Data Structures and why You want them][15_4]
 
 
 
@@ -66,10 +66,10 @@ When you need to operate with the same collection from multiple threads, the mos
 [Rust] ecosystem has [`crossbeam`] and [`lockfree`] crates, providing efficient lock-free implementations for some collections usually used in a concurrent context. Also, consider [`flurry`] and [`chashmap`] crates for a concurrent [hash map][`HashMap`] implementation.
 
 For better understanding concurrent collections' nature, design, and a motivation behind them, read through the following articles:
-- [Aaron Turon: Lock-freedom without garbage collection][13]
+- 📰 [Aaron Turon: Lock-freedom without garbage collection][13]
 - [Stjepan Glavina: Lock-free Rust: Crossbeam in 2019][14]
-- [Wikipedia: Non-blocking algorithm][12]
-- [Ibraheem Ahmed: A Lock-Free Vector][16]
+- 📰 [Wikipedia: Non-blocking algorithm][12]
+- 📰 [Ibraheem Ahmed: A Lock-Free Vector][16]
 
 
 

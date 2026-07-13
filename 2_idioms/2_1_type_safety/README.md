@@ -76,11 +76,11 @@ This is what is called ["newtype pattern"][1]. [Newtypes][1] are a zero-cost abs
 The downside of using [newtype pattern][1] is a necessity of writing _more boilerplate code_, because you should provide common traits implementations by yourself (like `Clone`, `Copy`, `From`/`Into`/`AsRef`/`AsMut`), as without them the type won't be ergonomic in use. However, most of them can be _derived automatically_ with `std` capabilities or third-party derive-crates (like [`derive_more`]), so the cost is acceptable in most cases. Furthermore, the excellent [`nutype`] crate pushes this idea even further, aiming to provide the best ergonomics for [newtype pattern][1] without compromising any guarantees it gives.
 
 For better understanding [newtype pattern][1], read through the following articles:
-- [Rust Design Patterns: Newtype][1]
-- [Rust By Example: 14.7. New Type Idiom][2]
+- 📰 [Rust Design Patterns: Newtype][1]
+- 📚 [Rust By Example: 14.7. New Type Idiom][2]
 - [Alexis King: Parse, don’t validate][7] ([ru][7_ru])
-- [Stefan Baumgartner: Refactoring in Rust: Abstraction with the Newtype Pattern][10]
-- [Official `nutype` crate docs][`nutype`]
+- 📰 [Stefan Baumgartner: Refactoring in Rust: Abstraction with the Newtype Pattern][10]
+- 📚 [Official `nutype` crate docs][`nutype`]
 
 
 
@@ -94,13 +94,13 @@ Not always, but _yes_ in some cases. One possible way is to use [typestates][3] 
 A real-world example of applying this idiom in [Rust] would be the awesome [`state_machine_future`] crate.
 
 For better understanding [typestates][3], read through the following articles:
-- [David Teller: Typestates in Rust][3]
-- [Cliff L. Biffle: The Typestate Pattern in Rust][5]
-- [Ana Hobden: Pretty State Machine Patterns in Rust][4]
-- [Will Crichton: Type-level Programming in Rust][6]
-- [Sergey Potapov: Builder with typestate in Rust][8]
-- [State Pattern - Design Patterns][9]
-- [Azriel Hoh: Compile Time Correctness: Type State][11]
+- 📰 [David Teller: Typestates in Rust][3]
+- 📰 [Cliff L. Biffle: The Typestate Pattern in Rust][5]
+- 📰 [Ana Hobden: Pretty State Machine Patterns in Rust][4]
+- 📰 [Will Crichton: Type-level Programming in Rust][6]
+- 📰 [Sergey Potapov: Builder with typestate in Rust][8]
+- 🎥 [State Pattern - Design Patterns][9]
+- 📰 [Azriel Hoh: Compile Time Correctness: Type State][11]
 
 
 

@@ -55,32 +55,32 @@ _Additional_ articles, which may help to understand the above topic better:
 
 | Title | Author | Tags |
 | --- | --- | --- |
-| [Rust ownership, the hard way][1] | Chris Morgan | type:article |
-| [You are holding it wrong][23] | Adolfo Ochagavía | type:article |
-| [Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30] | Vikram Fugro | type:article |
-| [A guide to closures in Rust][24] | HashRust | type:guide |
-| [Rusts Module System Explained][2] | Ludwig Stecher | type:article |
-| [Models of Generics and Metaprogramming: Go, Rust, Swift, D and More][3] | Tristan Hume | type:article |
-| [Generics Demystified Part 1][4] | Jeff Anderson | type:article |
-| [Generics Demystified Part 2][5] | Jeff Anderson | type:article |
-| [Demystifying trait generics in Rust][25] | Bradford Hovinen | type:article |
-| [Three Kinds of Polymorphism in Rust][6] | Brandon Smith | type:article |
-| [C++ & Rust: Generics and Specialization][7] | Jeremy Steward | type:article |
-| [&stress about &Strings][8] | cooscoos | type:article |
-| [RAII: Compile-Time Memory Management in C++ and Rust][9] | Jimmy Hartzell | type:article |
-| [Trait Drop][10] | — | type:article |
-| [Common Lifetime Misconception][11] | — | type:article |
-| [Visualizing Memory Layout][12] | — | type:video |
-| [Packages and crates (Rust wiki)][14] | — | type:reference |
-| [Full list of available crates on Rust Playground][16] | — | type:list |
-| [Blanket impl definition][17] | — | type:reference |
-| [Auto-trait definition][18] | — | type:reference |
-| [Rust vs Common C++ Bugs][21] | Georgios Antonopoulos | type:article |
-| [True Observer Pattern with Unsubscribe mechanism using Rust][22] | Yurii Shymon | type:article |
-| [Rust API guidline checklist][19] | — | type:guide |
-| [Step-by-step instruction to start development in Rust][26] | — | type:guide |
-| [Awesome collection of crates for productive development in Rust][27] | — | type:list |
-| [Awesome Collection of Materials to Learn Rust][28] | — | type:list |
+| 📰 [Rust ownership, the hard way][1] | Chris Morgan | type:article |
+| 📰 [You are holding it wrong][23] | Adolfo Ochagavía | type:article |
+| 📰 [Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30] | Vikram Fugro | type:article |
+| 🧭 [A guide to closures in Rust][24] | HashRust | type:guide |
+| 📰 [Rusts Module System Explained][2] | Ludwig Stecher | type:article |
+| 📰 [Models of Generics and Metaprogramming: Go, Rust, Swift, D and More][3] | Tristan Hume | type:article |
+| 📰 [Generics Demystified Part 1][4] | Jeff Anderson | type:article |
+| 📰 [Generics Demystified Part 2][5] | Jeff Anderson | type:article |
+| 📰 [Demystifying trait generics in Rust][25] | Bradford Hovinen | type:article |
+| 📰 [Three Kinds of Polymorphism in Rust][6] | Brandon Smith | type:article |
+| 📰 [C++ & Rust: Generics and Specialization][7] | Jeremy Steward | type:article |
+| 📰 [&stress about &Strings][8] | cooscoos | type:article |
+| 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9] | Jimmy Hartzell | type:article |
+| 📰 [Trait Drop][10] | — | type:article |
+| 📰 [Common Lifetime Misconception][11] | — | type:article |
+| 🎥 [Visualizing Memory Layout][12] | — | type:video |
+| 📚 [Packages and crates (Rust wiki)][14] | — | type:reference |
+| 📋 [Full list of available crates on Rust Playground][16] | — | type:list |
+| 📚 [Blanket impl definition][17] | — | type:reference |
+| 📚 [Auto-trait definition][18] | — | type:reference |
+| 📰 [Rust vs Common C++ Bugs][21] | Georgios Antonopoulos | type:article |
+| 📰 [True Observer Pattern with Unsubscribe mechanism using Rust][22] | Yurii Shymon | type:article |
+| 🧭 [Rust API guidline checklist][19] | — | type:guide |
+| 🧭 [Step-by-step instruction to start development in Rust][26] | — | type:guide |
+| 📋 [Awesome collection of crates for productive development in Rust][27] | — | type:list |
+| 📋 [Awesome Collection of Materials to Learn Rust][28] | — | type:list |
 
 [Cargo]: https://github.com/rust-lang/cargo
 [Cargo Book]: https://doc.rust-lang.org/cargo

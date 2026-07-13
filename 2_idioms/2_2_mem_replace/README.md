@@ -23,11 +23,11 @@ impl<T> Buffer<T> {
 ```
 
 For better understanding [`mem::replace`], [`mem::swap`] and [`mem::take`] purpose, design, limitations and use cases, read through the following articles:
-- [Official `mem::replace` docs][`mem::replace`]
-- [Official `mem::swap` docs][`mem::swap`]
-- [Official `mem::take` docs][`mem::take`]
-- [Karol Kuczmarski: Moving out of a container in Rust][4]
-- [Ferrous Systems: Using `mem::take` to reduce heap allocations][6]
+- 📚 [Official `mem::replace` docs][`mem::replace`]
+- 📚 [Official `mem::swap` docs][`mem::swap`]
+- 📚 [Official `mem::take` docs][`mem::take`]
+- 📰 [Karol Kuczmarski: Moving out of a container in Rust][4]
+- 📰 [Ferrous Systems: Using `mem::take` to reduce heap allocations][6]
 
 Some examples of useful applying these functions are described below.
 
@@ -37,7 +37,7 @@ Some examples of useful applying these functions are described below.
 ## Keeping owned values in changed enums
 
 This situation has detailed explanation in the following article:
-- [Rust Design Patterns: `mem::replace` to keep owned values in changed enums][3]
+- 📰 [Rust Design Patterns: `mem::replace` to keep owned values in changed enums][3]
 
 > The borrow checker won't allow us to take out `name` of the enum (because _something_ must be there). We could of course `.clone()` name and put the clone into our `MyEnum::B`, but that would be an instance of the "Clone to satisfy the borrow checker" antipattern. Anyway, we can avoid the extra allocation by changing `e` with only a mutable borrow.
 > 

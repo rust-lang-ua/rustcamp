@@ -13,7 +13,7 @@ The important concept to understand is a [connection pool][11] pattern. It's wid
 Fortunately, [Rust] ecosystem provides generic implementations of database-agnostic [connection pool][1] in both flavours: synchronous and asynchronous.
 
 For better understanding [connection pooling][1], read through the following articles:
-- [Charlie Custer: What is Connection Pooling, and Why Should You Care][15]
+- 📰 [Charlie Custer: What is Connection Pooling, and Why Should You Care][15]
 
 
 ### Synchronous
@@ -21,7 +21,7 @@ For better understanding [connection pooling][1], read through the following art
 For synchronous connections there is the [`r2d2`] crate (the pioneer among such crates, existed far before [async I/O][3] has landed in [Rust]). You can easily adopt it for your specific use-case (or database) just by implementing [its traits][22]. Obviously, there are [implementations for common drivers][21] already.
 
 For more details, read through the following articles:
-- [Official `r2d2` crate docs][`r2d2`]
+- 📚 [Official `r2d2` crate docs][`r2d2`]
 
 
 ### Asynchronous
@@ -37,10 +37,10 @@ Another alternative implementation is the [`mobc`] crate, yet inspired by [`dead
 [`qp`] (Quick Pool) is a very simple and [limited][29] implementation of the [connection pool][11] pattern, [utilizing lock-free primitives][27] and [focused on being performant][28].
 
 For more details, read through the following articles:
-- [Official `bb8` crate docs][`bb8`]
-- [Official `deadpool` crate docs][`deadpool`]
-- [Official `mobc` crate docs][`mobc`]
-- [Official `qp` crate docs][`qp`]
+- 📚 [Official `bb8` crate docs][`bb8`]
+- 📚 [Official `deadpool` crate docs][`deadpool`]
+- 📚 [Official `mobc` crate docs][`mobc`]
+- 📰 [Official `qp` crate docs][`qp`]
 
 
 
@@ -54,9 +54,9 @@ The canonical implementation of this pattern in [Rust] ecosystem is represented 
 [`barrel`] crate, on the other hand, allows to write [schema migrations][61], rather than querying data.
 
 For more details, read through the following articles:
-- [Official `sea-query` crate docs][`sea-query`]
-- [Official `sql_query_builder` crate docs][`sql_query_builder`]
-- [Official `barrel` crate docs][`barrel`]
+- 📚 [Official `sea-query` crate docs][`sea-query`]
+- 📚 [Official `sql_query_builder` crate docs][`sql_query_builder`]
+- 📚 [Official `barrel` crate docs][`barrel`]
 
 
 ### Non-[DSL] toolkit
@@ -64,7 +64,7 @@ For more details, read through the following articles:
 [`sqlx`] crate, while being a feature-rich toolkit for [SQL], takes a [completely opposite approach][91] here: it focuses on writing pure [SQL] queries (no custom [DSL], no [query building](#query-builder)), which are statically checked to be correct at compile-time.
 
 For better understanding [`sqlx`] design, concepts, usage, and features, read through the following articles:
-- [Official `sqlx` crate docs][`sqlx`]
+- 📚 [Official `sqlx` crate docs][`sqlx`]
 
 
 
@@ -82,12 +82,12 @@ The very first [ORM][41] created in [Rust] was the [`diesel`] crate. Even now, i
 [`rustorm`] is a very simple and [SQL]-centered [ORM][41], focused on easing conversions of database types to their appropriate [Rust] types.
 
 For better understanding [ORMs][41] design, concepts, usage, and features, read through the following articles:
-- [Official `diesel` crate docs][`diesel`]
-- [Official `diesel` crate guides][44]
-- [Official `sea-orm` crate docs][`sea-orm`]
-- [Official `sea-orm` crate guides][45]
-- [Official `ormx` crate docs][`ormx`]
-- [Official `rustorm` crate docs][`rustorm`]
+- 📚 [Official `diesel` crate docs][`diesel`]
+- 🧭 [Official `diesel` crate guides][44]
+- 📚 [Official `sea-orm` crate docs][`sea-orm`]
+- 📰 [Official `sea-orm` crate guides][45]
+- 📚 [Official `ormx` crate docs][`ormx`]
+- 📚 [Official `rustorm` crate docs][`rustorm`]
 
 
 
@@ -103,12 +103,12 @@ For [`sqlx`] users, similarly, the [`sqlx-cli`] tool [provides migrations][64] o
 [`refinery`] and [`migrant`] are another standalone [Rust] tools for [migrations][61], allowing both [CLI] and ["in-application-code"][66] usage. The interesting part about the [`refinery`] crate is that it also allows to write "in-application-code" [migrations][61] via the [`barrel`] schema migration builder.
 
 For being familiar with [migrations][61] tools, their similarities and differences, read through the following articles:
-- [Official `diesel_migrations` crate docs][`diesel_migrations`]
-- [Official `diesel_cli` crate docs][`diesel_cli`]
-- [Official `diesel` crate guides: Getting Started][63]
-- [Official `sqlx` crate docs: Macro `sqlx::migrate`][65]
-- [Official `refinery` crate docs][`refinery`]
-- [Official `migrant` crate docs][`migrant`]
+- 📚 [Official `diesel_migrations` crate docs][`diesel_migrations`]
+- 📚 [Official `diesel_cli` crate docs][`diesel_cli`]
+- 🧭 [Official `diesel` crate guides: Getting Started][63]
+- 📚 [Official `sqlx` crate docs: Macro `sqlx::migrate`][65]
+- 📚 [Official `refinery` crate docs][`refinery`]
+- 📚 [Official `migrant` crate docs][`migrant`]
 
 
 

@@ -10,15 +10,15 @@ __[Dynamic dispatch][2]__ (sometimes called "late binding") __happens at runtime
 You _have to_ use [dynamic dispatch][2] in situations where [type erasure][4] is required. If the problem can be solved with a [static dispatch][1] then you'd better to do so to avoid performance penalties. The most common example when you cannot use [static dispatch][1] and have to go with [dynamic dispatch][2] are _heterogeneous_ collections (where each item is potentially a different concrete type, but each one implements `MyTrait`).
 
 For better understanding [static][1] and [dynamic][2] dispatches purpose, design, limitations and use cases, read through the following articles:
-- [Rust Blog: Abstraction without overhead: traits in Rust][11]
-- [Joshleeb: Traits and Trait Objects in Rust][12]
-- [Rust Book: 17.2. Using Trait Objects That Allow for Values of Different Types][3]
-- [Adam Schwalm: Exploring Dynamic Dispatch in Rust][13]
-- [Marco Amann: Rust Dynamic Dispatching deep-dive][20]
-- [Nicholas Matsakis: Dyn async traits, part 2][17]
-- [Armin Ronacher: Rust Any Part 1: Extension Maps in Rust][18]
-- [Armin Ronacher: Rust Any Part 2: As-Any Hack][19]
-- [Dynamic Dispatch Representation][21]
+- 📰 [Rust Blog: Abstraction without overhead: traits in Rust][11]
+- 📰 [Joshleeb: Traits and Trait Objects in Rust][12]
+- 📚 [Rust Book: 17.2. Using Trait Objects That Allow for Values of Different Types][3]
+- 📰 [Adam Schwalm: Exploring Dynamic Dispatch in Rust][13]
+- 📰 [Marco Amann: Rust Dynamic Dispatching deep-dive][20]
+- 📰 [Nicholas Matsakis: Dyn async traits, part 2][17]
+- 📰 [Armin Ronacher: Rust Any Part 1: Extension Maps in Rust][18]
+- 📰 [Armin Ronacher: Rust Any Part 2: As-Any Hack][19]
+- 📰 [Dynamic Dispatch Representation][21]
 
 
 
@@ -36,9 +36,9 @@ The other reason to go with [static dispatch][1] is that except performance pena
 This can lead to quite tricky and non-obvious situations when writing code.
 
 For better understanding [object safety][5] purpose, design and limitations, read through the following articles:
-- [Rust Book: 17.2. Object Safety Is Required for Trait Objects][5]
-- [Rust Reference: 6.1. Traits: Object Safety][6]
-- [Nicholas Matsakis: Dyn async traits, part 2][17]
+- 📚 [Rust Book: 17.2. Object Safety Is Required for Trait Objects][5]
+- 📚 [Rust Reference: 6.1. Traits: Object Safety][6]
+- 📰 [Nicholas Matsakis: Dyn async traits, part 2][17]
 
 
 
@@ -140,7 +140,7 @@ fn _this_inner(i: String) -> usize {
 This ensures only the conversion gets monomorphized, leading to leaner code and compile-time performance wins.
 
 There is a handy [momo] crate, which generates this boilerplate automatically in some cases. Read through its explanation article:
-- [Llogiq: Momo · Get Back Some Compile Time From Monomorphization][16]
+- 📰 [Llogiq: Momo · Get Back Some Compile Time From Monomorphization][16]
 
 
 

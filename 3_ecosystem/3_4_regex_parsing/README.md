@@ -57,15 +57,15 @@ If regular expressions are [not powerful enough][2] for your parsing problem, th
     - [`parsel`] crate, a library for generating parsers directly from syntax tree node types.
 
 For better understanding parsing problem and approaches, along with some examples, read through the following articles:
-- [Laurence Tratt: Which Parsing Approach?][9]
-- [Richard L. Apodaca: A Beginner's Guide to Parsing in Rust][10]
-- [Eshan Singh: Practical Parsing in Rust with nom][14]
-- [Nazmul Idris: Guide to parsing with nom][18]
-- [Brian Kung: Building a CEDICT parser in Rust with Nom][11]
-- [The Nom Guide (Nominomicon)][19]
-- [Aleksey Kladov: Resilient LL Parsing Tutorial][15]
-- [Aleksey Kladov: Simple but Powerful Pratt Parsing][16]
-- [Aleksey Kladov: From Pratt to Dijkstra][17]
+- 📰 [Laurence Tratt: Which Parsing Approach?][9]
+- 🧭 [Richard L. Apodaca: A Beginner's Guide to Parsing in Rust][10]
+- 📰 [Eshan Singh: Practical Parsing in Rust with nom][14]
+- 🧭 [Nazmul Idris: Guide to parsing with nom][18]
+- 📰 [Brian Kung: Building a CEDICT parser in Rust with Nom][11]
+- 📰 [The Nom Guide (Nominomicon)][19]
+- 🧭 [Aleksey Kladov: Resilient LL Parsing Tutorial][15]
+- 📰 [Aleksey Kladov: Simple but Powerful Pratt Parsing][16]
+- 📰 [Aleksey Kladov: From Pratt to Dijkstra][17]
 
 
 

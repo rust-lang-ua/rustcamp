@@ -116,7 +116,7 @@ help: if you don't care about this missing field, you can explicitly ignore it
 ```
 
 Another real-world use-cases of maintaining invariants covering all struct fields via exhaustiveness checking are illustrated in the following articles:
-- [Ashley Mannix: How we organize a complex Rust codebase][8]
+- 📰 [Ashley Mannix: How we organize a complex Rust codebase][8]
 
 
 
@@ -146,8 +146,8 @@ __`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose 
 Despite being opposite qualities, both exhaustivity and non-exhaustivity are intended for [future-proofing][12] a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really has sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
 
 For better understanding `#[non_exhaustive]` attribute purpose, design, limitations and use cases, read through the following articles:
-- [Rust Reference: 7.6. The `non_exhaustive` attribute][9]
-- [Rust RFC 2008: `non_exhaustive`][10]
+- 📚 [Rust Reference: 7.6. The `non_exhaustive` attribute][9]
+- 📚 [Rust RFC 2008: `non_exhaustive`][10]
 - [Turreta: Using `#[non_exhaustive]` for Non-exhaustive Rust Structs][11]
 
 

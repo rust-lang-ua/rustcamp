@@ -27,13 +27,13 @@ fn describe(error: &Error) -> Cow<'static, str> {
 ```
 
 For better understanding [`Cow`] purpose, design, limitations and use cases read through:
-- [Official `Cow` docs][`Cow`]
-- [Pascal Hertleif: The Secret Life of Cows][1]
-- [Yashodhan Joshi: Using `Cow` in Rust for efficient memory utilization][6]
-- [Konstantin Grechishchev: 6 things you can do with the Cow 🐄 in Rust 🦀][2]
-- [Deref vs AsRef vs Borrow vs Cow][3]
-- [&str docs][4]
-- [dealing with ownerchip and borrowing in public interfaces][5]
+- 📚 [Official `Cow` docs][`Cow`]
+- 📰 [Pascal Hertleif: The Secret Life of Cows][1]
+- 📰 [Yashodhan Joshi: Using `Cow` in Rust for efficient memory utilization][6]
+- 📰 [Konstantin Grechishchev: 6 things you can do with the Cow 🐄 in Rust 🦀][2]
+- 📰 [Deref vs AsRef vs Borrow vs Cow][3]
+- 📚 [&str docs][4]
+- 📰 [dealing with ownerchip and borrowing in public interfaces][5]
 
 
 ## Alternative implementations

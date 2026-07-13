@@ -16,8 +16,8 @@ For random values generation [Rust] ecosystem has the [`rand`] crate, providing 
 One of the most common cases when you need to deal with generating random values is a generation of universally unique identifiers (such as [UUID]). Fortunately, [Rust] has the [`uuid`] crate already, which implements [all versions of UUID specification][3].
 
 More reading:
-- [Aleksey Kladov: On Random Numbers][20]
-- [Orhun Parmaksız: Zero-dependency random number generation in Rust][17]
+- 📰 [Aleksey Kladov: On Random Numbers][20]
+- 📰 [Orhun Parmaksız: Zero-dependency random number generation in Rust][17]
 
 
 
@@ -55,7 +55,7 @@ The motivation [provided by authors][18] is quite self-explanatory:
 > [Rust] developers increasingly need to deploy applications that meet US and Canadian government cryptographic requirements. We evaluated how to deliver [FIPS] validated cryptography in idiomatic and performant [Rust], built around our [AWS-LC] offering. We found that the popular [`ring`] library fulfilled much of the cryptographic needs in the [Rust] community, but it did not meet the needs of developers with [FIPS] requirements. Our intention is to contribute a drop-in replacement for [`ring`] that provides [FIPS] support and is compatible with the [`ring`] API. [Rust] developers with prescribed cryptographic requirements can seamlessly integrate [`aws-lc-rs`] into their applications and deploy them into [AWS] Regions.
 
 More reading:
-- [Sean McGrai: Introducing AWS Libcrypto for Rust, an Open Source Cryptographic Library for Rust][19]
+- 📰 [Sean McGrai: Introducing AWS Libcrypto for Rust, an Open Source Cryptographic Library for Rust][19]
 
 
 
@@ -110,7 +110,7 @@ Despite the fact it's quite a feature rich solution, it [lacks good support for 
 ## More reading
 
 - [Sylvain Kerkour: Overview of the Rust cryptography ecosystem][15] (Tue, Aug 24, 2021)
-- [Cheatsheat on cyphering, hashing adn security][16]
+- 📰 [Cheatsheat on cyphering, hashing adn security][16]
 
 
 

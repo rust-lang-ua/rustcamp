@@ -13,11 +13,11 @@ It's more idiomatic to use references (`&T`/`&mut T`) for pointing to the data, 
 [`Box`] is also a way to go if an owned [slice] is needed, but is not intended to be resized. For example, `Box<str>`/`Box<[T]>` are often used instead `String`/`Vec<T>` in such cases.
 
 For better understanding [`Box`] purpose, design, limitations and use cases read through:
-- [Rust Book: 15.1. Using Box to Point to Data on the Heap][1]
-- [Official `std::boxed` docs][`std::boxed`]
-- [Amos: What's in the box?][3]
-- [Mahdi Dibaiee: What is `Box<str>` and how is it different from `String` in Rust?][8]
-- [Crust of Rust: The Drop Check][14]
+- 📚 [Rust Book: 15.1. Using Box to Point to Data on the Heap][1]
+- 📚 [Official `std::boxed` docs][`std::boxed`]
+- 📰 [Amos: What's in the box?][3]
+- 📰 [Mahdi Dibaiee: What is `Box<str>` and how is it different from `String` in Rust?][8]
+- 🎥 [Crust of Rust: The Drop Check][14]
 
 
 
@@ -33,17 +33,17 @@ However, many types are always freely movable, even when pinned, because they do
 Note, that pinning and [`Unpin`] only affect the pointed-to type `P::Target`, not the pointer type `P` itself that got wrapped in `Pin<P>`. For example, whether or not `Box<T>` is `Unpin` has no effect on the behavior of `Pin<Box<T>>` (here, `T` is the pointed-to type).
 
 For better understanding [`Pin`] purpose, design, limitations and use cases read through:
-- [Official `std::pin` docs][`std::pin`]
-- [Reddit: Pinned objects ELI5?][2]
-- [SoByte: Pin and Unpin in Rust][10]
-- [Adam Chalmers: Pin, Unpin, and why Rust needs them][4]
-- [Tamme Schichler: Pinning in plain English][5]
-- [Yoshua Wuyts: Safe Pin Projections Through View Types][6]
+- 📚 [Official `std::pin` docs][`std::pin`]
+- ❓ [Reddit: Pinned objects ELI5?][2]
+- 📰 [SoByte: Pin and Unpin in Rust][10]
+- 📰 [Adam Chalmers: Pin, Unpin, and why Rust needs them][4]
+- 📰 [Tamme Schichler: Pinning in plain English][5]
+- 📰 [Yoshua Wuyts: Safe Pin Projections Through View Types][6]
 - [Official `#[pin_project]` docs][7]
-- [Alice Ryhl answers on "Pin tutorial are confusing me"][9]
-- [Rust Forum: Why is it unsafe to pin a shared reference?][11]
-- [Ohad Ravid: Put a Pin on That][12]
-- [Razieh Behjati: Leaky Abstractions and a Rusty Pin][13]
+- ❓ [Alice Ryhl answers on "Pin tutorial are confusing me"][9]
+- ❓ [Rust Forum: Why is it unsafe to pin a shared reference?][11]
+- 📰 [Ohad Ravid: Put a Pin on That][12]
+- 📰 [Razieh Behjati: Leaky Abstractions and a Rusty Pin][13]
 
 
 

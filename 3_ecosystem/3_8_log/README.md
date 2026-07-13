@@ -16,8 +16,8 @@ Task 3.8: Logging and tracing
 One interesting part is that log levels can be [disabled at compile time][3], thus have __no runtime performance impact at all__, unless you're debugging.
 
 For better understanding and familiarity with [`log`]'s design, concepts, usage, and features, read through the following articles:
-- [Official `log` crate docs][`log`]
-- [Jimmy Hartzell: Using the Log Crate in Your Rust Projects][12]
+- 📚 [Official `log` crate docs][`log`]
+- 📰 [Jimmy Hartzell: Using the Log Crate in Your Rust Projects][12]
 
 
 
@@ -31,8 +31,8 @@ For [structured logging][4] there is the excellent [`slog`] crate in [Rust] ecos
 It's __backward and forward compatible with [`log`]__ crate, extending its ideas and is baked with an [excellent performance][5].
 
 For better understanding and familiarity with [`slog`]'s design, concepts, usage, and features, read through the following articles:
-- [Official `slog` crate docs][`slog`]
-- [Official `slog` crate wiki][6]
+- 📚 [Official `slog` crate docs][`slog`]
+- 📰 [Official `slog` crate wiki][6]
 
 
 
@@ -48,11 +48,11 @@ Its "killer feature", undoubtedly, is [spans functionality][7], so [people tend 
 Speaking of [tracing][10], the [`tracing`] crate has good integrations with [OpenTelemetry]-compatible distributed tracing systems (and similar ones). All this allows to reuse the same solution both for logging, tracing (like [Jaeger], [Zipkin]), profiling (like [coz], [Tracy]), error reporting (like [Sentry]), etc.
 
 For better understanding and familiarity with [`tracing`]'s design, concepts, usage, and features, read through the following articles:
-- [Official `tracing` crate docs][`tracing`]
-- [Joshua Mo: Getting Started with Tracing in Rust][13]
-- [Yoav Danieli: Guide to OpenTelemetry Distributed Tracing in Rust][11]
-- [Tokio Blog: Diagnostics with Tracing][14]
-- [Hayden Stainsby: debugging tokio instrumentation][15]
+- 📚 [Official `tracing` crate docs][`tracing`]
+- 📰 [Joshua Mo: Getting Started with Tracing in Rust][13]
+- 📰 [Yoav Danieli: Guide to OpenTelemetry Distributed Tracing in Rust][11]
+- 📰 [Tokio Blog: Diagnostics with Tracing][14]
+- 📰 [Hayden Stainsby: debugging tokio instrumentation][15]
 
 
 

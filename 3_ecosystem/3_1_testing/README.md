@@ -9,9 +9,9 @@ Task 3.1: Testing and mocking
 ## Built-in testing capabilities
 
 [Rust] provides quite good built-in testing capabilities, which are very well described in the following articles:
-- [Rust Book: 11. Writing Automated Tests][2]
-- [Rust By Example: 21. Testing][3]
-- [Rust By Example: 12.3. Tests][4]
+- 📚 [Rust Book: 11. Writing Automated Tests][2]
+- 📚 [Rust By Example: 21. Testing][3]
+- 📚 [Rust By Example: 12.3. Tests][4]
 
 
 
@@ -68,12 +68,12 @@ Additionally, [`mockito`] and [`wiremock`] crates should be mentioned as a quite
 The most powerful, however, is [`mockall`] crate. See [this overview][43] for more details.
 
 For better overview and familiarity with [mocking][41] in [Rust], read through the following articles:
-- [Alan Somers: Rust Mock Shootout!][43]
-- [Oduah Chigozie: Mocking in Rust: Mockall and alternatives][45]
-- [Official `mockall` crate docs][`mockall`]
-- [Official `mockiato` crate docs][`mockiato`]
-- [Official `unimock` crate docs][`unimock`]
-- [Audun Halland: How to write a type-level mock library in Rust][44]
+- 📰 [Alan Somers: Rust Mock Shootout!][43]
+- 📰 [Oduah Chigozie: Mocking in Rust: Mockall and alternatives][45]
+- 📚 [Official `mockall` crate docs][`mockall`]
+- 📚 [Official `mockiato` crate docs][`mockiato`]
+- 📚 [Official `unimock` crate docs][`unimock`]
+- 🧭 [Audun Halland: How to write a type-level mock library in Rust][44]
 
 
 
@@ -87,9 +87,9 @@ For better overview and familiarity with [mocking][41] in [Rust], read through t
 [Rust] ecosystem has quite good [`proptest`] and [`quickcheck`] crates, which provide tools and primitives for [property testing][21].
 
 For better understanding and familiarity with [property testing][21] in [Rust], read through the following articles:
-- [`proptest` crate description][`proptest`]
-- [`quickcheck` crate description][`quickcheck`]
-- [Proptest Book][22]
+- 📚 [`proptest` crate description][`proptest`]
+- 📚 [`quickcheck` crate description][`quickcheck`]
+- 📰 [Proptest Book][22]
 
 
 
@@ -104,23 +104,23 @@ For better understanding and familiarity with [property testing][21] in [Rust], 
 - [`honggfuzz`] is a security oriented fuzzer with powerful analysis options, which supports evolutionary, feedback-driven fuzzing based on code coverage (software- and hardware-based).
 
 For better understanding and familiarity with [fuzzing][31] in [Rust], read through the following articles:
-- [Rust Fuzz Book][34]
-- [Official `cargo-fuzz` crate docs][`cargo-fuzz`]
-- [Official `honggfuzz` crate docs][`honggfuzz`]
-- [Adrian Taylor: Comparative fuzzing parallel Rust tools][35]
+- 📰 [Rust Fuzz Book][34]
+- 📚 [Official `cargo-fuzz` crate docs][`cargo-fuzz`]
+- 📚 [Official `honggfuzz` crate docs][`honggfuzz`]
+- 📰 [Adrian Taylor: Comparative fuzzing parallel Rust tools][35]
 
 
 
 
 ## More reading
 
-- [Aleksey Kladov: How to Test][63]
-- [Joshua Mo: Everything you need to know about testing in Rust][64]
+- 🧭 [Aleksey Kladov: How to Test][63]
+- 📰 [Joshua Mo: Everything you need to know about testing in Rust][64]
 
 ## Integrated tests
 
-- [Integrated tests are scam (J.B. Rainsberg)][61]
-- [nextest][62]
+- 🎥 [Integrated tests are scam (J.B. Rainsberg)][61]
+- 📰 [nextest][62]
 
 ## CLI Testing
 - [assert_cmd](https://crates.io/crates/assert_cmd) - Easy command initialization and assertions.

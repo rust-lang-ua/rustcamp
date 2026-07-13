@@ -8,10 +8,10 @@ The main difference between them (except the API, ergonomics and maintaining act
 If you hit limitations of [`time`] and [`chrono`] crates regarding their accuracy (like swallowing [leap seconds][3]) or supported formats/standards (like [TAI]), consider using the [`hifitime`] crate, representing a scientifically accurate and [formally verified][4] date and time library.
 
 For better understanding and familiarity, read through the following documentation:
-- [Official `std::time` docs][`std::time`]
-- [Official `time` crate docs][`time`]
-- [Official `chrono` crate docs][`chrono`]
-- [Official `hifitime` crate docs][`hifitime`]
+- 📚 [Official `std::time` docs][`std::time`]
+- 📚 [Official `time` crate docs][`time`]
+- 📚 [Official `chrono` crate docs][`chrono`]
+- 📚 [Official `hifitime` crate docs][`hifitime`]
 
 
 

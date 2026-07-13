@@ -55,10 +55,10 @@ The main purpose of sealing a trait is, of course, [future-proofing][7] of [API]
 It's important to note that __trait sealing fully relies on__ tricking over visibility rules (__using a public [supertrait][8]__ or type, which __name is not publicly exported__), and so, has no impact on the type system semantics (a sealed public trait is just a regular public trait from the type system perspective). In theory, sealing a trait should affect its [coherence][9], by [relaxing its strictness for the use-cases which can never happen with a sealed trait][10]. However, that would require a special support by compiler, which seems [not gonna happen in the near future][11].
 
 For better understanding traits sealing, its design and use-cases, read through the following articles:
-- [Rust API Guidelines: 10. Future proofing: Sealed traits protect against downstream implementations (C-SEALED)][3]
-- [Predrag Gruevski: A definitive guide to sealed traits in Rust][4]
-- [Jack Wrenn: Private Methods on a Public Trait][13]
-- [Official `sealed` crate docs][`sealed`]
+- 📚 [Rust API Guidelines: 10. Future proofing: Sealed traits protect against downstream implementations (C-SEALED)][3]
+- 🧭 [Predrag Gruevski: A definitive guide to sealed traits in Rust][4]
+- 📰 [Jack Wrenn: Private Methods on a Public Trait][13]
+- 📚 [Official `sealed` crate docs][`sealed`]
 
 
 

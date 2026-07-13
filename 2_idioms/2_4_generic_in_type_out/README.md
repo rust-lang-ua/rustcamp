@@ -77,9 +77,9 @@ This is one of the key features, which drive [Rust] expressiveness and ergonomic
 The downside of this idiom is that compiler generates more code due to monomorphization, so potentially leads to code bloating. The way it can be optimized has already been [explained in "Reducing code bloat optimization" section of 1.6 task][6].
 
 Further reading on theme:
-- [Joe Wilm: From &str to Cow][4]
-- [Pascal Hertleif: Elegant Library APIs in Rust: Use conversion traits][5]
-- [Carl M. Kadie: Nine Rules for Elegant Rust Library APIs][10]
+- 📰 [Joe Wilm: From &str to Cow][4]
+- 📰 [Pascal Hertleif: Elegant Library APIs in Rust: Use conversion traits][5]
+- 📰 [Carl M. Kadie: Nine Rules for Elegant Rust Library APIs][10]
 
 
 

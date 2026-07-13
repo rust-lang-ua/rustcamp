@@ -4,16 +4,16 @@ Task 1.8: Thread safety
 [Rust] has [`Send`] and [`Sync`] marker traits which are fundamental for concurrency and thread safety story in [Rust] and represent one of [fearless concurrency][2] corner stones (which allow to [avoid data races][1] at compile time).
 
 For better understanding [`Send`]/[`Sync`] purpose, design, limitations and use cases, read through the following articles:
-- [Official `Send` docs][`Send`]
-- [Official `Sync` docs][`Sync`]
-- [Rust Book: 16.4. Extensible Concurrency with the Sync and Send Traits][3]
-- [Rustonomicon: 8.2. Send and Sync][4]
-- [Huon Wilson: Some notes on Send and Sync][5]
-- [Piotr Sarnacki: Arc and Mutex in Rust][9]
-- [nyanpasu64: An unsafe tour of Rust's Send and Sync][6]
-- [Josh Haberman: Thread Safety in C++ and Rust][7]
-- [Cliff L. Biffle: Safely writing code that isn't thread-safe][8]
-- [Louis Dureuil: Too dangerous for C++][10]
+- 📚 [Official `Send` docs][`Send`]
+- 📚 [Official `Sync` docs][`Sync`]
+- 📚 [Rust Book: 16.4. Extensible Concurrency with the Sync and Send Traits][3]
+- 📚 [Rustonomicon: 8.2. Send and Sync][4]
+- 📰 [Huon Wilson: Some notes on Send and Sync][5]
+- 📰 [Piotr Sarnacki: Arc and Mutex in Rust][9]
+- 📰 [nyanpasu64: An unsafe tour of Rust's Send and Sync][6]
+- 📰 [Josh Haberman: Thread Safety in C++ and Rust][7]
+- 📰 [Cliff L. Biffle: Safely writing code that isn't thread-safe][8]
+- 📰 [Louis Dureuil: Too dangerous for C++][10]
 
 
 

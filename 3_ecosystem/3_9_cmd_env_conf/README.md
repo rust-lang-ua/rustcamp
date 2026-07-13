@@ -13,10 +13,10 @@ However, most of the time you require more advanced tool for that, which provide
 It has the [`derive` Cargo feature][6] (formerly, [`structopt`] crate) allowing to define [CLI] in a _declarative and clean way_.
 
 For better understanding and familiarity with [CLI] tools in [Rust] ecosystem, read through the following articles:
-- [Rust Book: 12.1. Accepting Command Line Arguments][1]
-- [Official `std::env::Arg` docs][`std::env::Arg`]
-- [Official `clap` crate docs][`clap`]
-- [Pavlo Myroniuk: Rust Clap recipes][9]
+- 📚 [Rust Book: 12.1. Accepting Command Line Arguments][1]
+- 📚 [Official `std::env::Arg` docs][`std::env::Arg`]
+- 📚 [Official `clap` crate docs][`clap`]
+- 📰 [Pavlo Myroniuk: Rust Clap recipes][9]
 
 
 
@@ -32,10 +32,10 @@ It's worth mentioning, that [`clap`] crate is [able to parse from environment va
 Finally, [`dotenv`] crate should be mentioned. It sets [environment variables][2] basing on [`.env` file][8] contents, which is widely used convention to simplify environment configuration and to omit declaring all the required environment variables by hand each time when running some program. This one is especially _useful in development_ (consider also [`rs-env`] and [`direnv`] for better development experience).
 
 For better understanding and familiarity with [environment variables][2] tools in [Rust] ecosystem, read through the following articles:
-- [Rust Book: 12.5. Working with Environment Variables][3]
-- [Official `std::env` docs][`std::env`]
-- [Official `envy` crate docs][`envy`]
-- [Official `dotenv` crate docs][`dotenv`]
+- 📚 [Rust Book: 12.5. Working with Environment Variables][3]
+- 📚 [Official `std::env` docs][`std::env`]
+- 📚 [Official `envy` crate docs][`envy`]
+- 📚 [Official `dotenv` crate docs][`dotenv`]
 
 
 
@@ -57,8 +57,8 @@ For dealing with configurations there is the well-known [`config`] crate in [Rus
 > - Deserialization via `serde` of the configuration or any subset defined via a path
 
 For better understanding and familiarity with [`config`] crate design, concepts, usage, and features, read through the following articles:
-- [Official `config` crate docs][`config`]
-- [`config` crate examples][5]
+- 📚 [Official `config` crate docs][`config`]
+- 📰 [`config` crate examples][5]
 
 
 

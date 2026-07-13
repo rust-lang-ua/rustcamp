@@ -15,7 +15,7 @@ Since [REST] is rather an __architecture convention/style__ than a strict [speci
 This approach, however, __suffers from lacking [API] schema__, and so, makes it hard to build a rich ecosystem around with ready-to-use tooling (or connect with existing ones). Fortunately, this is easily solved by using a concrete [RPC specification][3] on top of [REST] conventions, and following it strictly. 
 
 For more information about [REST], read through the following articles:
-- [Tyler Charboneau: What’s the Difference Between RPC and REST?][111]
+- 📰 [Tyler Charboneau: What’s the Difference Between RPC and REST?][111]
 
 
 ### OpenAPI
@@ -31,15 +31,15 @@ In [Rust] ecosystem, most [OpenAPI] crates follow the __code-first approach__ (g
 For the opposite (generating source code from [OpenAPI] schema) [Rust] ecosystem lacks its own pure implementation, and the original [OpenAPI] tool [`openapi-generator`] should be used (powered by the [`swagger`] crate).
 
 For more familiarity with [OpenAPI] and using it in [Rust], read through the following articles:
-- [OpenAPI Initiative]
-- [SwaggerHub Documentation: OpenAPI 3.0 Tutorial][122]
-- [Official `utoipa` crate docs][`utoipa`]
-- [Official `okapi` crate docs][`okapi`]
-- [Official `apistos` crate docs][`apistos`]
-- [Twilio Docs: Generate a Rust client for Twilio's API][121]
-- [Fabian Odenthal: Auto-Generating & Validating OpenAPI Docs in Rust: A Streamlined Approach with Utoipa and Schemathesis][123]
-- [Olly Dixon: Auto-generating API service using Rust, to TypeScript & Dart][124]
-- [Joshua Mo: Working with OpenAPI using Rust][125]
+- 📰 [OpenAPI Initiative]
+- 🧭 [SwaggerHub Documentation: OpenAPI 3.0 Tutorial][122]
+- 📚 [Official `utoipa` crate docs][`utoipa`]
+- 📰 [Official `okapi` crate docs][`okapi`]
+- 📚 [Official `apistos` crate docs][`apistos`]
+- 📰 [Twilio Docs: Generate a Rust client for Twilio's API][121]
+- 📰 [Fabian Odenthal: Auto-Generating & Validating OpenAPI Docs in Rust: A Streamlined Approach with Utoipa and Schemathesis][123]
+- 📰 [Olly Dixon: Auto-generating API service using Rust, to TypeScript & Dart][124]
+- 📰 [Joshua Mo: Working with OpenAPI using Rust][125]
 
 
 
@@ -53,8 +53,8 @@ One of the strongest parts of [GraphQL] is its [whole ecosystem][203] built arou
 Another strong part of [GraphQL] is that its __protocol is [transport][204]-agnostic__, so the same schema and queries, used via [HTTP], are __easily reusable via [WebSocket]__, allowing to [stream data][205] with almost zero effort atop.
 
 For more familiarity with [GraphQL], read through the following articles:
-- [GraphQL docs: Introduction to GraphQL][206]
-- [The Fullstack Tutorial for GraphQL][207]
+- 📰 [GraphQL docs: Introduction to GraphQL][206]
+- 🧭 [The Fullstack Tutorial for GraphQL][207]
 
 
 ### Server
@@ -64,11 +64,11 @@ For implementing a [GraphQL] server in [Rust], there are two major crates in its
 [`juniper-from-schema`] crate, however, tries to take it in opposite direction, and to some degree successfully __provides schema-to-code approach__ (generating [Rust] code using [`juniper`] from a provided [GraphQL] schema).
 
 For more familiarity with implementing [GraphQL] server in [Rust], read through the following articles:
-- [Official `juniper` crate docs][`juniper`]
-- [Juniper Book]
-- [Official `juniper-from-schema` crate docs][`juniper-from-schema`]
-- [Official `async-graphql` crate docs][`async-graphql`]
-- [Async-graphql Book]
+- 📚 [Official `juniper` crate docs][`juniper`]
+- 📰 [Juniper Book]
+- 📚 [Official `juniper-from-schema` crate docs][`juniper-from-schema`]
+- 📚 [Official `async-graphql` crate docs][`async-graphql`]
+- 📰 [Async-graphql Book]
 
 
 ### Client
@@ -80,8 +80,8 @@ However, if more static guarantees is needed, then the [`graphql-client`] crate 
 [`cynic`] crate takes the __opposite code-to-query approach__ of generating a [GraphQL] query out of [Rust] code and validating it statically against a provided [GraphQL] schema.
 
 For more familiarity with making [GraphQL] requests in [Rust], read through the following articles:
-- [Official `graphql-client` crate description][`graphql-client`]
-- [Official `cynic` crate docs][`cynic`]
+- 📰 [Official `graphql-client` crate description][`graphql-client`]
+- 📚 [Official `cynic` crate docs][`cynic`]
 - [Official `cynic` crate guide](https://cynic-rs.dev)
 
 

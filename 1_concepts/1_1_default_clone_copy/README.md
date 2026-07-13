@@ -56,9 +56,9 @@ However, [`Copy`] marker trait (see [official docs][`Copy`]) enables 'copy seman
 > Generally speaking, if your type can implement `Copy`, it should. Keep in mind, though, that implementing `Copy` is part of the public API of your type. If the type might become non-`Copy` in the future, it could be prudent to omit the `Copy` implementation now, to avoid a breaking API change.
 
 For better understanding the topic, read through:
-- [Official `Clone` docs][`Clone`]
-- [Official `Copy` docs][`Copy`]
-- [HashRust: Moves, copies and clones in Rust][2]
+- 📚 [Official `Clone` docs][`Clone`]
+- 📚 [Official `Copy` docs][`Copy`]
+- 📰 [HashRust: Moves, copies and clones in Rust][2]
 
 
 
