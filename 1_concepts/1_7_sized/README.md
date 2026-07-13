@@ -1,22 +1,22 @@
 Task 1.7: `Sized` and `?Sized` types
 ====================================
 
-Most types in 📚 [Rust] have a particular size, in bytes, that is knowable at compile time. For example, an `i32` is 32 bits big, or 4 bytes. However, there are some types which are useful to express, but do not have a defined size (called "unsized" or "dynamically sized" types). One example is `[T]`: it represents a certain number of `T` in a sequence, but we don’t know how many there are, so the size is not known.
+Most types in 📚 [Rust]⏱0.25h have a particular size, in bytes, that is knowable at compile time. For example, an `i32` is 32 bits big, or 4 bytes. However, there are some types which are useful to express, but do not have a defined size (called "unsized" or "dynamically sized" types). One example is `[T]`: it represents a certain number of `T` in a sequence, but we don’t know how many there are, so the size is not known.
 
-All types with a constant size known at compile time in 📚 [Rust] implement 📚 [`Sized`] marker trait. And all type parameters (except `Self` in traits) have always an implicit bound of 📚 [`Sized`]. So, you should not bother about specifying 📚 [`Sized`] marker trait in code, usually.
+All types with a constant size known at compile time in 📚 [Rust]⏱0.25h implement 📚 [`Sized`]⏱0.25h marker trait. And all type parameters (except `Self` in traits) have always an implicit bound of 📚 [`Sized`]⏱0.25h. So, you should not bother about specifying 📚 [`Sized`]⏱0.25h marker trait in code, usually.
 
-For better understanding 📚 [`Sized`] and `?Sized` purpose, design, limitations and use cases, read through the following articles:
-- 📚 [Official `Sized` docs][`Sized`]
-- 📚 [Old Rust Book: 3.31. Unsized Types][4]
-- ❓ [Rust Forum: Trait Objects and the Sized Trait][5]
-- 📰 [pretzelhammer: Sizedness in Rust][6]
+For better understanding 📚 [`Sized`]⏱0.25h and `?Sized` purpose, design, limitations and use cases, read through the following articles:
+- 📚 [Official `Sized` docs][`Sized`]⏱0.25h
+- 📚 [Old Rust Book: 3.31. Unsized Types][4]⏱0.25h
+- ❓ [Rust Forum: Trait Objects and the Sized Trait][5]⏱0.25h
+- 📰 [pretzelhammer: Sizedness in Rust][6]⏱1h
 
 
 
 
 ## Using `?Sized` to accept more types
 
-The more important concept to understand for day-to-day routine is a `?Sized` trait bound, which __lifts the implicit 📚 [`Sized`] bound allowing to use more types__ in generic code (so provide better API and ergonomics).
+The more important concept to understand for day-to-day routine is a `?Sized` trait bound, which __lifts the implicit 📚 [`Sized`]⏱0.25h bound allowing to use more types__ in generic code (so provide better API and ergonomics).
 
 A real-world example would be:
 ```rust
@@ -27,7 +27,7 @@ trait CommandHandler<C: Command> {
     fn handle_command(&self, cmd: &C, ctx: &Self::Context) -> Self::Result;
 }
 ```
-which allows to use "unsized" types like 📚 [trait objects][3]
+which allows to use "unsized" types like 📚 [trait objects][3]⏱0.25h
 ```rust
 impl CommandHandler<CreateUser> for User {
     type Context = dyn UserRepository;
@@ -60,7 +60,7 @@ Provide tests for `CommandHandler<CreateUser>` implementation where `dyn UserRep
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. What is 📚 [`Sized`] trait about? When 📚 [Rust] implies it? And when not?
+1. What is 📚 [`Sized`]⏱0.25h trait about? When 📚 [Rust]⏱0.25h implies it? And when not?
 2. Why `?Sized` trait bound is important? When should we use it and why?
 
 

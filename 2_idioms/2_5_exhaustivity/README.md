@@ -1,14 +1,14 @@
 Task 2.5: Exhaustivity
 ======================
 
-Exhaustiveness checking in 📚 [pattern matching][1] is a very useful tool, allowing to spot certain bugs at compile-time by cheking whether all the combinations of some values where covered and considered in a source code. Being applied correctly, it increases the 📰 [fearless refactoring][2] quality of a source code, eliminating possibilities for "forgot to change" bugs to subtly sneak into the codebase whenever it's extended.
+Exhaustiveness checking in 📚 [pattern matching][1]⏱0.25h is a very useful tool, allowing to spot certain bugs at compile-time by cheking whether all the combinations of some values where covered and considered in a source code. Being applied correctly, it increases the 📰 [fearless refactoring][2]⏱0.25h quality of a source code, eliminating possibilities for "forgot to change" bugs to subtly sneak into the codebase whenever it's extended.
 
 
 
 
 ## Enums
 
-The most canonical and iconic example of exhaustiveness checking is using an enum in a `match` expression. The point here is to __📚 [omit][5] using 📚 [`_` (wildcard pattern)][4] or match-anything bindings__, as such `match` expressions won't break in compile-time when something new is added.
+The most canonical and iconic example of exhaustiveness checking is using an enum in a `match` expression. The point here is to __📚 [omit][5]⏱8.5h using 📚 [`_` (wildcard pattern)][4]⏱0.5h or match-anything bindings__, as such `match` expressions won't break in compile-time when something new is added.
 
 For example, this is a very bad code:
 ```rust
@@ -53,7 +53,7 @@ note: `Role` defined here
 
 ## Structs
 
-While enums exhaustiveness is quite an obvious idea, due to extensive usage of `match` expressions in a regular code, the structs exhaustiveness, on the other hand, is not, while being as much useful. Exhaustivity for structs is achieved by __using 📚 [destructuring][6] without 📚 [`..` syntax (multiple fields ignoring)][7]__.
+While enums exhaustiveness is quite an obvious idea, due to extensive usage of `match` expressions in a regular code, the structs exhaustiveness, on the other hand, is not, while being as much useful. Exhaustivity for structs is achieved by __using 📚 [destructuring][6]⏱0.5h without 📚 [`..` syntax (multiple fields ignoring)][7]⏱0.5h__.
 
 For example, having the following code:
 ```rust
@@ -116,16 +116,16 @@ help: if you don't care about this missing field, you can explicitly ignore it
 ```
 
 Another real-world use-cases of maintaining invariants covering all struct fields via exhaustiveness checking are illustrated in the following articles:
-- 📰 [Ashley Mannix: How we organize a complex Rust codebase][8]
+- 📰 [Ashley Mannix: How we organize a complex Rust codebase][8]⏱0.25h
 
 
 
 
 ## `#[non_exhaustive]`
 
-Until now, it has been illustrated how __exhaustiveness checking can future-proof a user code__ (the one which uses API of some type, not declares), by making it to __break whenever the used 📰 [API] is extended__ and should be reconsidered.
+Until now, it has been illustrated how __exhaustiveness checking can future-proof a user code__ (the one which uses API of some type, not declares), by making it to __break whenever the used 📰 [API]⏱0.75h is extended__ and should be reconsidered.
 
-__`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose of 📰 [future-proofing][12]__ a source code, but in a totally opposite manner: it's __used in a library code__ (the one which declares 📰 [API] of some type for usage) to preserve backwards compatibility __for omitting breaking any user code whenever the used 📰 [API] is extended__.
+__`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose of 📰 [future-proofing][12]⏱0.5h__ a source code, but in a totally opposite manner: it's __used in a library code__ (the one which declares 📰 [API]⏱0.75h of some type for usage) to preserve backwards compatibility __for omitting breaking any user code whenever the used 📰 [API]⏱0.75h is extended__.
 
 > Within the defining crate, `non_exhaustive` has no effect.
 
@@ -143,11 +143,11 @@ __`#[non_exhaustive]` attribute__, interestedly, __serves the very same purpose 
 
 > Non-exhaustive types are always considered inhabited in downstream crates.
 
-Despite being opposite qualities, both exhaustivity and non-exhaustivity are intended for 📰 [future-proofing][12] a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really has sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
+Despite being opposite qualities, both exhaustivity and non-exhaustivity are intended for 📰 [future-proofing][12]⏱0.5h a codebase, thus cannot be applied blindly everywhere, but rather wisely, where it may really has sense. That's why it's __very important__ to understand their __use-cases and implicability__ very well.
 
 For better understanding `#[non_exhaustive]` attribute purpose, design, limitations and use cases, read through the following articles:
-- 📚 [Rust Reference: 7.6. The `non_exhaustive` attribute][9]
-- 📚 [Rust RFC 2008: `non_exhaustive`][10]
+- 📚 [Rust Reference: 7.6. The `non_exhaustive` attribute][9]⏱0.25h
+- 📚 [Rust RFC 2008: `non_exhaustive`][10]⏱0.25h
 - [Turreta: Using `#[non_exhaustive]` for Non-exhaustive Rust Structs][11]
 
 
@@ -168,8 +168,8 @@ Refactor the code contained in [this task's crate](src/lib.rs), so the bugs intr
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. How can exhaustiveness checking be useful in 📚 [Rust] code for enums and structs? When should we use it, when not?
-2. How does `#[non_exhaustive]` attribute work in 📚 [Rust]? What are its use-cases? When should it be used, when not?
+1. How can exhaustiveness checking be useful in 📚 [Rust]⏱0.25h code for enums and structs? When should we use it, when not?
+2. How does `#[non_exhaustive]` attribute work in 📚 [Rust]⏱0.25h? What are its use-cases? When should it be used, when not?
 
 
 

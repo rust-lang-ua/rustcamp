@@ -1,7 +1,7 @@
 Task 2.2: Swapping values with `mem::replace`
 =============================================
 
-As 📚 [Rust] implies ❓ [move semantics][1] by default and quite strict 📚 [borrowing rules][2], often, there are situations (especially, with large `struct`s and `enum`s) where mutating value in-place or values swapping may not be allowed by borrow checker, which is quite confusing and leads to doing needless clones (so providing redudant performance costs). For example:
+As 📚 [Rust]⏱0.25h implies ❓ [move semantics][1]⏱0.5h by default and quite strict 📚 [borrowing rules][2]⏱0.25h, often, there are situations (especially, with large `struct`s and `enum`s) where mutating value in-place or values swapping may not be allowed by borrow checker, which is quite confusing and leads to doing needless clones (so providing redudant performance costs). For example:
 ```rust
 impl<T> Buffer<T> {
     fn get_and_reset(&mut self) -> Vec<T> {
@@ -13,7 +13,7 @@ impl<T> Buffer<T> {
 }
 ```
 
-A neat and need-to-know trick in such situations is to use 📚 [`mem::replace`] (or 📚 [`mem::swap`]). It allows to swap two values of the same type without moving things around, partial destructuring and references mess. So, the example above is simply turns into:
+A neat and need-to-know trick in such situations is to use 📚 [`mem::replace`]⏱0.25h (or 📚 [`mem::swap`]⏱0.25h). It allows to swap two values of the same type without moving things around, partial destructuring and references mess. So, the example above is simply turns into:
 ```rust
 impl<T> Buffer<T> {
     fn get_and_reset(&mut self) -> Vec<T> {
@@ -22,12 +22,12 @@ impl<T> Buffer<T> {
 }
 ```
 
-For better understanding 📚 [`mem::replace`], 📚 [`mem::swap`] and 📚 [`mem::take`] purpose, design, limitations and use cases, read through the following articles:
-- 📚 [Official `mem::replace` docs][`mem::replace`]
-- 📚 [Official `mem::swap` docs][`mem::swap`]
-- 📚 [Official `mem::take` docs][`mem::take`]
-- 📰 [Karol Kuczmarski: Moving out of a container in Rust][4]
-- 📰 [Ferrous Systems: Using `mem::take` to reduce heap allocations][6]
+For better understanding 📚 [`mem::replace`]⏱0.25h, 📚 [`mem::swap`]⏱0.25h and 📚 [`mem::take`]⏱0.25h purpose, design, limitations and use cases, read through the following articles:
+- 📚 [Official `mem::replace` docs][`mem::replace`]⏱0.25h
+- 📚 [Official `mem::swap` docs][`mem::swap`]⏱0.25h
+- 📚 [Official `mem::take` docs][`mem::take`]⏱0.25h
+- 📰 [Karol Kuczmarski: Moving out of a container in Rust][4]⏱0.25h
+- 📰 [Ferrous Systems: Using `mem::take` to reduce heap allocations][6]⏱0.25h
 
 Some examples of useful applying these functions are described below.
 
@@ -37,7 +37,7 @@ Some examples of useful applying these functions are described below.
 ## Keeping owned values in changed enums
 
 This situation has detailed explanation in the following article:
-- 📰 [Rust Design Patterns: `mem::replace` to keep owned values in changed enums][3]
+- 📰 [Rust Design Patterns: `mem::replace` to keep owned values in changed enums][3]⏱0.25h
 
 > The borrow checker won't allow us to take out `name` of the enum (because _something_ must be there). We could of course `.clone()` name and put the clone into our `MyEnum::B`, but that would be an instance of the "Clone to satisfy the borrow checker" antipattern. Anyway, we can avoid the extra allocation by changing `e` with only a mutable borrow.
 > 
@@ -100,7 +100,7 @@ error[E0500]: closure requires unique access to `*self` but it is already borrow
    |             ---- second borrow occurs due to use of `*self` in closure
 ```
 
-Using 📚 [`mem::take`] here allows us to avoid the problem with 2 mutable borrows at almost no cost (`Vec::default()` is no-op), by swapping out the value in a temporary variable:
+Using 📚 [`mem::take`]⏱0.25h here allows us to avoid the problem with 2 mutable borrows at almost no cost (`Vec::default()` is no-op), by swapping out the value in a temporary variable:
 ```rust
 impl Names {
     fn apply_exclusions(&mut self) {
@@ -116,7 +116,7 @@ impl Names {
 }
 ```
 
-It's worth mentioning, that this problem became much less common after 📚 [disjoint capture in closures had been introduced in 2021 Rust edition][5]. For illustration, the `self.name` mutation is intentionally separated into its own method, so we can lock the whole `&mut self`. If we simplify the code straightforwardly, it just compiles fine, due to mutable borrows are disjoint: 
+It's worth mentioning, that this problem became much less common after 📚 [disjoint capture in closures had been introduced in 2021 Rust edition][5]⏱0.25h. For illustration, the `self.name` mutation is intentionally separated into its own method, so we can lock the whole `&mut self`. If we simplify the code straightforwardly, it just compiles fine, due to mutable borrows are disjoint: 
 ```rust
 struct Names {
     exclusions: Vec<String>,
@@ -150,8 +150,8 @@ Add tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. What is the reason of 📚 [`mem::replace`] existing in 📚 [Rust]? What does it give to us? Why cannot we solve the same problems without it?
-2. Provide some meaningful examples of using 📚 [`mem::replace`] in 📚 [Rust].
+1. What is the reason of 📚 [`mem::replace`]⏱0.25h existing in 📚 [Rust]⏱0.25h? What does it give to us? Why cannot we solve the same problems without it?
+2. Provide some meaningful examples of using 📚 [`mem::replace`]⏱0.25h in 📚 [Rust]⏱0.25h.
 
 
 

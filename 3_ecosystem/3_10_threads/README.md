@@ -1,78 +1,78 @@
 Task 3.10: Multithreading and parallelism
 =========================================
 
-One of main 📚 [Rust]'s design goals is a 📰 [concurrency][1]. 📚 [Rust] has a 📰 [strong opinion][2] about that, while allows different concurrent models to coexist.
+One of main 📚 [Rust]⏱0.25h's design goals is a 📰 [concurrency][1]⏱0.25h. 📚 [Rust]⏱0.25h has a 📰 [strong opinion][2]⏱0.5h about that, while allows different concurrent models to coexist.
 
 
 
 
 ## Threads
 
-📚 [Rust] has built-in support for 📰 [native threads][3] in form of the 📚 [`std::thread`] module of its standard library.
+📚 [Rust]⏱0.25h has built-in support for 📰 [native threads][3]⏱0.75h in form of the 📚 [`std::thread`]⏱0.25h module of its standard library.
 
-Traditionally, 📰 [threads][3] are used for solving 📰 [CPU-bound] problems, as they allow to execute tasks in parallel. However, in practice, threads are often used to solve 📰 [I/O-bound] problems too, especially when 📰 [asynchronous I/O][4] is not supported well (which is true for 📚 [Rust] `std` library at the moment).
+Traditionally, 📰 [threads][3]⏱0.75h are used for solving 📰 [CPU-bound]⏱0.25h problems, as they allow to execute tasks in parallel. However, in practice, threads are often used to solve 📰 [I/O-bound]⏱0.25h problems too, especially when 📰 [asynchronous I/O][4]⏱0.5h is not supported well (which is true for 📚 [Rust]⏱0.25h `std` library at the moment).
 
-📚 [`crossbeam`] crate also provides implementation of 📚 [scoped threads][5], which allow to borrow values from a stack. They are also available in form of 📚 [`std::thread::scope`], as of 📚 [Rust] 1.63. 
+📚 [`crossbeam`]⏱0.25h crate also provides implementation of 📚 [scoped threads][5]⏱0.25h, which allow to borrow values from a stack. They are also available in form of 📚 [`std::thread::scope`]⏱0.25h, as of 📚 [Rust]⏱0.25h 1.63. 
 
-For better understanding 📚 [Rust] threads design, concepts, usage, and features (especially 📰 [TLS][4] is important and widely used one), read through the following articles:
-- 📚 [Rust Book: 16.1. Using Threads to Run Code Simultaneously][6]
-- 📚 [Rust By Example: 20.1. Threads][7]
-- 📚 [Official `std::thread` docs][`std::thread`]
-- 📰 [Nicky Meuleman: Multithreading in Rust][29]
+For better understanding 📚 [Rust]⏱0.25h threads design, concepts, usage, and features (especially 📰 [TLS][4]⏱0.5h is important and widely used one), read through the following articles:
+- 📚 [Rust Book: 16.1. Using Threads to Run Code Simultaneously][6]⏱0.25h
+- 📚 [Rust By Example: 20.1. Threads][7]⏱0.25h
+- 📚 [Official `std::thread` docs][`std::thread`]⏱0.25h
+- 📰 [Nicky Meuleman: Multithreading in Rust][29]⏱0.25h
 
 
 
 
 ## Synchronization
 
-The 📰 [threads synchronization][11] is a wide topic, but generally it's done via 📰 [atomic operations][12], shared state with an 📚 [exclusive access][13], or by 📰 [threads communication][14]. 📚 [Rust] has built-in support for all of them.
+The 📰 [threads synchronization][11]⏱0.5h is a wide topic, but generally it's done via 📰 [atomic operations][12]⏱0.5h, shared state with an 📚 [exclusive access][13]⏱0.25h, or by 📰 [threads communication][14]⏱0.25h. 📚 [Rust]⏱0.25h has built-in support for all of them.
 
-📰 [Atomic operations][12] are represented by 📚 [`std::sync::atomic`] module of 📚 [Rust] standard library (and, additionally, 📚 [`atomic`] crate).
+📰 [Atomic operations][12]⏱0.5h are represented by 📚 [`std::sync::atomic`]⏱0.25h module of 📚 [Rust]⏱0.25h standard library (and, additionally, 📚 [`atomic`]⏱0.25h crate).
 
-📚 [Exclusive access][13] may be controlled via primitives of 📚 [`std::sync`] module of 📚 [Rust] standard library.
+📚 [Exclusive access][13]⏱0.25h may be controlled via primitives of 📚 [`std::sync`]⏱0.25h module of 📚 [Rust]⏱0.25h standard library.
 
-Threads communication is commonly represented via 📰 [channels][14] and is implemented in 📚 [`std::sync::mpsc`] module of 📚 [Rust] standard library. 
+Threads communication is commonly represented via 📰 [channels][14]⏱0.25h and is implemented in 📚 [`std::sync::mpsc`]⏱0.25h module of 📚 [Rust]⏱0.25h standard library. 
 
-Despite that, there is also the 📚 [`crossbeam`] crate, providing more feature-rich and optimized concurrency and synchronization primitives. The most notable is 📚 [`crossbeam-channel`] as [an enhancement][15] of `std` channel implementations.
+Despite that, there is also the 📚 [`crossbeam`]⏱0.25h crate, providing more feature-rich and optimized concurrency and synchronization primitives. The most notable is 📚 [`crossbeam-channel`]⏱0.25h as [an enhancement][15] of `std` channel implementations.
 
-For better understanding and familiarity with 📚 [Rust] synchronization primitives design, concepts, usage, and features, read through the following articles:
-- 📚 [Rust Book: 16.2. Using Message Passing to Transfer Data Between Threads][16]
-- 📚 [Rust Book: 16.3. Shared-State Concurrency][13]
-- 📰 [Rust Blog: Fearless Concurrency with Rust][2]
-- 📚 [Official `std::sync` docs][`std::sync`]
-- 📚 [Official `std::sync::atomic` docs][`std::sync::atomic`]
-- 📚 [Official `std::sync::mpsc` docs][`std::sync::mpsc`]
-- 📚 [Official `atomic` crate docs][`atomic`]
-- 📚 [Official `crossbeam-channel` crate docs][`crossbeam-channel`]
-- 📰 [Nicky Meuleman: Multithreading in Rust][29]
-- 📰 [Carl Fredrik Samson: Explaining Atomics in Rust][26]
-- 📰 [Aleksey Kladov: Mutexes Are Faster Than Spinlocks][27]
-- 📰 [Mara Bos: Comparing Rust's and C++'s Concurrency Library][31]
-- 📰 [Mahmoud Al-Qudsi: Implementing truly safe semaphores in rust][32]
-- 📰 [Michael Snoyman: My Best and Worst Deadlock in Rust][35]
+For better understanding and familiarity with 📚 [Rust]⏱0.25h synchronization primitives design, concepts, usage, and features, read through the following articles:
+- 📚 [Rust Book: 16.2. Using Message Passing to Transfer Data Between Threads][16]⏱0.25h
+- 📚 [Rust Book: 16.3. Shared-State Concurrency][13]⏱0.25h
+- 📰 [Rust Blog: Fearless Concurrency with Rust][2]⏱0.5h
+- 📚 [Official `std::sync` docs][`std::sync`]⏱0.25h
+- 📚 [Official `std::sync::atomic` docs][`std::sync::atomic`]⏱0.25h
+- 📚 [Official `std::sync::mpsc` docs][`std::sync::mpsc`]⏱0.25h
+- 📚 [Official `atomic` crate docs][`atomic`]⏱0.25h
+- 📚 [Official `crossbeam-channel` crate docs][`crossbeam-channel`]⏱0.25h
+- 📰 [Nicky Meuleman: Multithreading in Rust][29]⏱0.25h
+- 📰 [Carl Fredrik Samson: Explaining Atomics in Rust][26]⏱0.75h
+- 📰 [Aleksey Kladov: Mutexes Are Faster Than Spinlocks][27]⏱0.25h
+- 📰 [Mara Bos: Comparing Rust's and C++'s Concurrency Library][31]⏱0.25h
+- 📰 [Mahmoud Al-Qudsi: Implementing truly safe semaphores in rust][32]⏱1.25h
+- 📰 [Michael Snoyman: My Best and Worst Deadlock in Rust][35]⏱0.75h
 
 
 
 
 ## Parallelism
 
-The important concept to understand is ❓ [how concurrency and parallelism differ][21].
+The important concept to understand is ❓ [how concurrency and parallelism differ][21]⏱1h.
 
-📚 [Rust] ecosystem has support for parallelism in form of 📚 [`rayon`] and 📚 [`dpc-pariter`] crates, which make it easy to convert a sequential iterator to _execute in parallel threads_.
+📚 [Rust]⏱0.25h ecosystem has support for parallelism in form of 📚 [`rayon`]⏱0.25h and 📚 [`dpc-pariter`]⏱0.25h crates, which make it easy to convert a sequential iterator to _execute in parallel threads_.
 
-Another way to perform parallel data processing _without using 📰 [threads][3]_ is 📰 [SIMD] instructions usage. If an algorithm is parallelizable enough, applying 📰 [SIMD] instructions may 📰 [increase performance drastically][24]. 📚 [Rust] ecosystem provides basic support for 📰 [SIMD] instructions in a form of 📚 [`packed_simd`] crate.
+Another way to perform parallel data processing _without using 📰 [threads][3]⏱0.75h_ is 📰 [SIMD]⏱0.75h instructions usage. If an algorithm is parallelizable enough, applying 📰 [SIMD]⏱0.75h instructions may 📰 [increase performance drastically][24]⏱0.5h. 📚 [Rust]⏱0.25h ecosystem provides basic support for 📰 [SIMD]⏱0.75h instructions in a form of 📚 [`packed_simd`]⏱0.25h crate.
 
-For better understanding and familiarity with parallelism in 📚 [Rust], read through the following articles:
-- 📰 [Nicky Meuleman: Concurrent vs parallel][28]
-- 📚 [Official `rayon` crate docs][`rayon`]
-- 📰 [`rayon` crate FAQ][22]
-- 📰 [`rayon` crate demos][23]
-- 📰 [Kofi Otuo: Implementing data parallelism with Rayon Rust][34]
-- 📰 [Dawid Ciężarkiewicz: Adding parallelism to your Rust iterators with `dpc-pariter`][30]
-- 📚 [Official `dpc-pariter` crate docs][`dpc-pariter`]
-- 📚 [Rust Edition Guide: 3.9. SIMD for faster computing][25]
-- 📚 [Official `packed_simd` crate docs][`packed_simd`]
-- 📰 [vgatherps: Parsing numbers into base-10 decimals with SIMD][33]
+For better understanding and familiarity with parallelism in 📚 [Rust]⏱0.25h, read through the following articles:
+- 📰 [Nicky Meuleman: Concurrent vs parallel][28]⏱0.25h
+- 📚 [Official `rayon` crate docs][`rayon`]⏱0.25h
+- 📰 [`rayon` crate FAQ][22]⏱0.25h
+- 📰 [`rayon` crate demos][23]⏱0.25h
+- 📰 [Kofi Otuo: Implementing data parallelism with Rayon Rust][34]⏱0.5h
+- 📰 [Dawid Ciężarkiewicz: Adding parallelism to your Rust iterators with `dpc-pariter`][30]⏱0.25h
+- 📚 [Official `dpc-pariter` crate docs][`dpc-pariter`]⏱0.25h
+- 📚 [Rust Edition Guide: 3.9. SIMD for faster computing][25]⏱0.25h
+- 📚 [Official `packed_simd` crate docs][`packed_simd`]⏱0.25h
+- 📰 [vgatherps: Parsing numbers into base-10 decimals with SIMD][33]⏱0.25h
 
 
 
@@ -118,8 +118,8 @@ Write a program with the following workflow:
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
 1. What is concurrency? What is parallelism? How do they relate to each other and how do they differ?
-2. How parallelism is represented in 📚 [Rust]? Which are common crates for using it?
-3. What are the main ways of threads synchronization in 📚 [Rust]? Which advantages and disadvantages does each one have? What are the use-cases for each one?
+2. How parallelism is represented in 📚 [Rust]⏱0.25h? Which are common crates for using it?
+3. What are the main ways of threads synchronization in 📚 [Rust]⏱0.25h? Which advantages and disadvantages does each one have? What are the use-cases for each one?
 
 
 

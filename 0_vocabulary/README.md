@@ -5,11 +5,11 @@ __Estimated time__: 4 days
 
 > ❗️ To meet the first deadline, please open a Pull Request by Sunday of  the first week and include answers to at least one question in it.
 
-Read through 📚 [Rust Book] and become familiar with basic 📚 [Rust] concepts, syntax, memory model, type and module systems.
+Read through 📚 [Rust Book]⏱0.25h and become familiar with basic 📚 [Rust]⏱0.25h concepts, syntax, memory model, type and module systems.
 
-Polish your familiarity by completing 📚 [Rust By Example] and 📰 [rustlings].
+Polish your familiarity by completing 📚 [Rust By Example]⏱0.25h and 📰 [rustlings]⏱0.25h.
 
-Read through 📚 [Cargo Book] and become familiar with 📰 [Cargo] and its workspaces.
+Read through 📚 [Cargo Book]⏱0.25h and become familiar with 📰 [Cargo]⏱0.25h and its workspaces.
 
 The table below maps Rust concepts to their closest analogue elsewhere, so you can anchor new ideas to what you already know. Treat these as starting points, not equivalences - the "closest analogue" column is often where the differences matter most.
 
@@ -29,10 +29,10 @@ The table below maps Rust concepts to their closest analogue elsewhere, so you c
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
 
-1. What 📰 [memory model][31] 📚 [Rust] has? Is 📚 [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
-2. What runtime 📚 [Rust] has? Does it use a GC (garbage collector)?
+1. What 📰 [memory model][31]⏱0.25h 📚 [Rust]⏱0.25h has? Is 📚 [Rust]⏱0.25h single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
+2. What runtime 📚 [Rust]⏱0.25h has? Does it use a GC (garbage collector)?
 3. What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
-4. Why does 📚 [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
+4. Why does 📚 [Rust]⏱0.25h have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
 5. What static typing means? What are the benefits of using it? Weak vs strong typing? Implicit vs explicit typing?
 6. What are generics and parametric polymorphism? Which problems do they solve?
 7. What are nominative typing and structural typing? What is the difference?
@@ -42,12 +42,12 @@ After completing these steps, you should be able to answer (and understand why) 
 11. What is cloning? What is copying? How do they compare? What is trait Drop for? What is special about this trait?
 12. What is immutability? What is the benefit of using it? What is the difference between immutability and const?
 13. What are move semantics? What are borrowing rules? What is the benefit of using them?
-14. What is RAII? How is it implemented in 📚 [Rust]? What is the benefit of using it?
+14. What is RAII? How is it implemented in 📚 [Rust]⏱0.25h? What is the benefit of using it?
 15. What are lifetimes? Which problems do they solve? Which benefits do they provide?
 16. What is an iterator? What is a collection? How do they differ? How are they used?
 17. What are macros? Which problems do they solve? What is the difference between declarative and procedural macro?
-18. How code is tested in 📚 [Rust]? Where should you put tests and why?
-19. Is 📚 [Rust] an OOP language? Is it possible to use SOLID/GRASP? Does it have inheritance? Is Rust a functional language? What variance rules does Rust have?
+18. How code is tested in 📚 [Rust]⏱0.25h? Where should you put tests and why?
+19. Is 📚 [Rust]⏱0.25h an OOP language? Is it possible to use SOLID/GRASP? Does it have inheritance? Is Rust a functional language? What variance rules does Rust have?
 
 After you are done, notify your lead in an appropriate PR (pull request), and they will examine what you have learned.
 
@@ -55,32 +55,32 @@ _Additional_ articles, which may help to understand the above topic better:
 
 | Title | Author | Tags |
 | --- | --- | --- |
-| 📰 [Rust ownership, the hard way][1] | Chris Morgan | type:article |
-| 📰 [You are holding it wrong][23] | Adolfo Ochagavía | type:article |
-| 📰 [Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30] | Vikram Fugro | type:article |
-| 🧭 [A guide to closures in Rust][24] | HashRust | type:guide |
-| 📰 [Rusts Module System Explained][2] | Ludwig Stecher | type:article |
-| 📰 [Models of Generics and Metaprogramming: Go, Rust, Swift, D and More][3] | Tristan Hume | type:article |
-| 📰 [Generics Demystified Part 1][4] | Jeff Anderson | type:article |
-| 📰 [Generics Demystified Part 2][5] | Jeff Anderson | type:article |
-| 📰 [Demystifying trait generics in Rust][25] | Bradford Hovinen | type:article |
-| 📰 [Three Kinds of Polymorphism in Rust][6] | Brandon Smith | type:article |
-| 📰 [C++ & Rust: Generics and Specialization][7] | Jeremy Steward | type:article |
-| 📰 [&stress about &Strings][8] | cooscoos | type:article |
-| 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9] | Jimmy Hartzell | type:article |
-| 📰 [Trait Drop][10] | — | type:article |
-| 📰 [Common Lifetime Misconception][11] | — | type:article |
-| 🎥 [Visualizing Memory Layout][12] | — | type:video |
-| 📚 [Packages and crates (Rust wiki)][14] | — | type:reference |
-| 📋 [Full list of available crates on Rust Playground][16] | — | type:list |
-| 📚 [Blanket impl definition][17] | — | type:reference |
-| 📚 [Auto-trait definition][18] | — | type:reference |
-| 📰 [Rust vs Common C++ Bugs][21] | Georgios Antonopoulos | type:article |
-| 📰 [True Observer Pattern with Unsubscribe mechanism using Rust][22] | Yurii Shymon | type:article |
-| 🧭 [Rust API guidline checklist][19] | — | type:guide |
-| 🧭 [Step-by-step instruction to start development in Rust][26] | — | type:guide |
-| 📋 [Awesome collection of crates for productive development in Rust][27] | — | type:list |
-| 📋 [Awesome Collection of Materials to Learn Rust][28] | — | type:list |
+| 📰 [Rust ownership, the hard way][1]⏱0.5h | Chris Morgan | type:article |
+| 📰 [You are holding it wrong][23]⏱0.25h | Adolfo Ochagavía | type:article |
+| 📰 [Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30]⏱0.5h | Vikram Fugro | type:article |
+| 🧭 [A guide to closures in Rust][24]⏱0.75h | HashRust | type:guide |
+| 📰 [Rusts Module System Explained][2]⏱0.25h | Ludwig Stecher | type:article |
+| 📰 [Models of Generics and Metaprogramming: Go, Rust, Swift, D and More][3]⏱0.5h | Tristan Hume | type:article |
+| 📰 [Generics Demystified Part 1][4]⏱0.25h | Jeff Anderson | type:article |
+| 📰 [Generics Demystified Part 2][5]⏱0.25h | Jeff Anderson | type:article |
+| 📰 [Demystifying trait generics in Rust][25]⏱0.25h | Bradford Hovinen | type:article |
+| 📰 [Three Kinds of Polymorphism in Rust][6]⏱0.25h | Brandon Smith | type:article |
+| 📰 [C++ & Rust: Generics and Specialization][7]⏱0.5h | Jeremy Steward | type:article |
+| 📰 [&stress about &Strings][8]⏱0.5h | cooscoos | type:article |
+| 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9]⏱0.75h | Jimmy Hartzell | type:article |
+| 📰 [Trait Drop][10]⏱0.25h | — | type:article |
+| 📰 [Common Lifetime Misconception][11]⏱0.75h | — | type:article |
+| 🎥 [Visualizing Memory Layout][12]⏱0.75h | — | type:video |
+| 📚 [Packages and crates (Rust wiki)][14]⏱0.25h | — | type:reference |
+| 📋 [Full list of available crates on Rust Playground][16]⏱1h | — | type:list |
+| 📚 [Blanket impl definition][17]⏱0.25h | — | type:reference |
+| 📚 [Auto-trait definition][18]⏱0.25h | — | type:reference |
+| 📰 [Rust vs Common C++ Bugs][21]⏱0.5h | Georgios Antonopoulos | type:article |
+| 📰 [True Observer Pattern with Unsubscribe mechanism using Rust][22]⏱0.25h | Yurii Shymon | type:article |
+| 🧭 [Rust API guidline checklist][19]⏱0.25h | — | type:guide |
+| 🧭 [Step-by-step instruction to start development in Rust][26]⏱0.25h | — | type:guide |
+| 📋 [Awesome collection of crates for productive development in Rust][27]⏱0.75h | — | type:list |
+| 📋 [Awesome Collection of Materials to Learn Rust][28]⏱0.25h | — | type:list |
 
 [Cargo]: https://github.com/rust-lang/cargo
 [Cargo Book]: https://doc.rust-lang.org/cargo

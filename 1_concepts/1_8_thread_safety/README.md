@@ -1,19 +1,19 @@
 Task 1.8: Thread safety
 =======================
 
-📚 [Rust] has 📚 [`Send`] and 📚 [`Sync`] marker traits which are fundamental for concurrency and thread safety story in 📚 [Rust] and represent one of 📚 [fearless concurrency][2] corner stones (which allow to 📚 [avoid data races][1] at compile time).
+📚 [Rust]⏱0.25h has 📚 [`Send`]⏱0.75h and 📚 [`Sync`]⏱1h marker traits which are fundamental for concurrency and thread safety story in 📚 [Rust]⏱0.25h and represent one of 📚 [fearless concurrency][2]⏱0.25h corner stones (which allow to 📚 [avoid data races][1]⏱0.25h at compile time).
 
-For better understanding 📚 [`Send`]/📚 [`Sync`] purpose, design, limitations and use cases, read through the following articles:
-- 📚 [Official `Send` docs][`Send`]
-- 📚 [Official `Sync` docs][`Sync`]
-- 📚 [Rust Book: 16.4. Extensible Concurrency with the Sync and Send Traits][3]
-- 📚 [Rustonomicon: 8.2. Send and Sync][4]
-- 📰 [Huon Wilson: Some notes on Send and Sync][5]
-- 📰 [Piotr Sarnacki: Arc and Mutex in Rust][9]
-- 📰 [nyanpasu64: An unsafe tour of Rust's Send and Sync][6]
-- 📰 [Josh Haberman: Thread Safety in C++ and Rust][7]
-- 📰 [Cliff L. Biffle: Safely writing code that isn't thread-safe][8]
-- 📰 [Louis Dureuil: Too dangerous for C++][10]
+For better understanding 📚 [`Send`]⏱0.75h/📚 [`Sync`]⏱1h purpose, design, limitations and use cases, read through the following articles:
+- 📚 [Official `Send` docs][`Send`]⏱0.75h
+- 📚 [Official `Sync` docs][`Sync`]⏱1h
+- 📚 [Rust Book: 16.4. Extensible Concurrency with the Sync and Send Traits][3]⏱0.25h
+- 📚 [Rustonomicon: 8.2. Send and Sync][4]⏱0.25h
+- 📰 [Huon Wilson: Some notes on Send and Sync][5]⏱0.25h
+- 📰 [Piotr Sarnacki: Arc and Mutex in Rust][9]⏱0.5h
+- 📰 [nyanpasu64: An unsafe tour of Rust's Send and Sync][6]⏱0.25h
+- 📰 [Josh Haberman: Thread Safety in C++ and Rust][7]⏱0.25h
+- 📰 [Cliff L. Biffle: Safely writing code that isn't thread-safe][8]⏱0.5h
+- 📰 [Louis Dureuil: Too dangerous for C++][10]⏱0.25h
 
 
 
@@ -33,7 +33,7 @@ Implement the following types, which meet conditions:
 
 All inner details of implementation are on your choice.
 
-Play with these types from multiple threads to see how compile time 📚 [fearless concurrency][2] works in practice.
+Play with these types from multiple threads to see how compile time 📚 [fearless concurrency][2]⏱0.25h works in practice.
 
 
 
@@ -41,8 +41,8 @@ Play with these types from multiple threads to see how compile time 📚 [fearle
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. What does "fearless concurrency" mean in 📚 [Rust]? With which mechanisms does 📚 [Rust] fulfill this guarantee exactly?
-2. Why do 📚 [`Send`] and 📚 [`Sync`] exist at all? How is it related to interior mutability?
+1. What does "fearless concurrency" mean in 📚 [Rust]⏱0.25h? With which mechanisms does 📚 [Rust]⏱0.25h fulfill this guarantee exactly?
+2. Why do 📚 [`Send`]⏱0.75h and 📚 [`Sync`]⏱1h exist at all? How is it related to interior mutability?
 
 
 

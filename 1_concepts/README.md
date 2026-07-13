@@ -1,13 +1,13 @@
 Chapter 1: Concepts
 ================
 
-These tasks describe common and necessary-to-know concepts for everyday programming in 📚 [Rust].
+These tasks describe common and necessary-to-know concepts for everyday programming in 📚 [Rust]⏱0.25h.
 
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
 1. How do I recognize that data is allocated at the heap rather than at the stack? When data should be allocated at the heap?
-2. What is copying and cloning data in 📚 [Rust]? What's the difference? When and why should I use them?
+2. What is copying and cloning data in 📚 [Rust]⏱0.25h? What's the difference? When and why should I use them?
 3. How can a single piece of data be owned by multiple parts of program? When and why is this commonly required?
 4. How borrowing rules may be violated? In what price? When and why is this commonly required?
 5. How to deal with owned and borrowed data simultaneously? When and why is this commonly required?
@@ -17,12 +17,12 @@ After doing them you should be able to answer the following questions:
 9. Why phantom types exist? What problems do they solve?
 
 The following articles may help you to sum up your experience:
-- 📰 [Wrapper Types in Rust: Choosing Your Guarantees][1]
-- 📰 [Rust, Builder Pattern, Trait Objects, `Box<T>` and `Rc<T>`][2]
-- 📰 [Rust's Built-in Traits, the When, How & Why][3]
-- 📰 [Learn Rust With Entirely Too Many Linked Lists][4]
-- 📚 [Rustonomicon: Subtyping and Variance][13]
-- 🎥 [Crust of Rust: Subtyping and Variance][14]
+- 📰 [Wrapper Types in Rust: Choosing Your Guarantees][1]⏱0.5h
+- 📰 [Rust, Builder Pattern, Trait Objects, `Box<T>` and `Rc<T>`][2]⏱0.25h
+- 📰 [Rust's Built-in Traits, the When, How & Why][3]⏱0.5h
+- 📰 [Learn Rust With Entirely Too Many Linked Lists][4]⏱0.25h
+- 📚 [Rustonomicon: Subtyping and Variance][13]⏱0.25h
+- 🎥 [Crust of Rust: Subtyping and Variance][14]⏱1.75h
 
 
 
@@ -33,7 +33,7 @@ __Estimated time__: 2 days
 
 
 
-Provide your own implementation of 📰 [doubly linked list][11] data structure. It should be 📰 [thread safe][12] without a necessity to use explicit synchronization primitives (like `Arc<Mutex<T>>`) on top of it.
+Provide your own implementation of 📰 [doubly linked list][11]⏱0.25h data structure. It should be 📰 [thread safe][12]⏱0.25h without a necessity to use explicit synchronization primitives (like `Arc<Mutex<T>>`) on top of it.
 
 > ❗️ Don't use unsafe for this task.
 

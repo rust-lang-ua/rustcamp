@@ -1,23 +1,23 @@
 Chapter 3: Common ecosystem
 ========================
 
-These tasks describe common crates and tools in 📚 [Rust] ecosystem required for application and library development.
+These tasks describe common crates and tools in 📚 [Rust]⏱0.25h ecosystem required for application and library development.
 
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
-1. What testing capabilities does 📚 [Rust] offer and when should I use them? Why should I follow 📰 [BDD] style?
+1. What testing capabilities does 📚 [Rust]⏱0.25h offer and when should I use them? Why should I follow 📰 [BDD]⏱0.25h style?
 2. What are macros? How do they differ? What benefits does their usage give? When should I write one?
-3. How to work with date and time in 📚 [Rust]? How should I store time? How should I return it to other applications?
-4. How are regular expressions used in 📚 [Rust]? When are they not enough? How can I write a custom parser in 📚 [Rust]?
-5. How do iterator and collection compare and differ in 📚 [Rust]? What is the purpose of immutable collections? Why should I care about using concurrent collections?
-6. What should I use for serialization in 📚 [Rust]? Why this is good or bad?
-7. How can I generate randomness in 📚 [Rust]? Which guarantees of random generator should I choose and when?
-8. What should I use for password hashing in 📚 [Rust]? How can I encrypt a message with 📚 [Rust]? How should I compare secret values and why?
-9. How logging is organized in 📚 [Rust] ecosystem? Why should I care about structured logging?
-10. What should I use for building 📰 [CLI] interface in 📚 [Rust]? How can I organize a configuration for my application and why?
-11. Why multithreading is required for 📚 [Rust] programs and what problems does it solve? How threads concurrency differs with parallelism? How can I parallelize code in 📚 [Rust]?
-12. What is asynchronicity and what problems does it solve? How is it compared to threads concurrency? What is 📚 [Rust] solution for asynchronicity and why it has such design?
+3. How to work with date and time in 📚 [Rust]⏱0.25h? How should I store time? How should I return it to other applications?
+4. How are regular expressions used in 📚 [Rust]⏱0.25h? When are they not enough? How can I write a custom parser in 📚 [Rust]⏱0.25h?
+5. How do iterator and collection compare and differ in 📚 [Rust]⏱0.25h? What is the purpose of immutable collections? Why should I care about using concurrent collections?
+6. What should I use for serialization in 📚 [Rust]⏱0.25h? Why this is good or bad?
+7. How can I generate randomness in 📚 [Rust]⏱0.25h? Which guarantees of random generator should I choose and when?
+8. What should I use for password hashing in 📚 [Rust]⏱0.25h? How can I encrypt a message with 📚 [Rust]⏱0.25h? How should I compare secret values and why?
+9. How logging is organized in 📚 [Rust]⏱0.25h ecosystem? Why should I care about structured logging?
+10. What should I use for building 📰 [CLI]⏱1.5h interface in 📚 [Rust]⏱0.25h? How can I organize a configuration for my application and why?
+11. Why multithreading is required for 📚 [Rust]⏱0.25h programs and what problems does it solve? How threads concurrency differs with parallelism? How can I parallelize code in 📚 [Rust]⏱0.25h?
+12. What is asynchronicity and what problems does it solve? How is it compared to threads concurrency? What is 📚 [Rust]⏱0.25h solution for asynchronicity and why it has such design?
 13. What are actors? When are they useful?
 
 
@@ -39,21 +39,21 @@ __Estimated time__: 2 days
 
 
 
-Write a 📰 [CLI] tool for stripping 📰 [JPEG] images 📰 [metadata][21] and minimizing their size (a simplified analogue of 📰 [tinyjpg.com]).
+Write a 📰 [CLI]⏱1.5h tool for stripping 📰 [JPEG]⏱2h images 📰 [metadata][21]⏱0.25h and minimizing their size (a simplified analogue of 📰 [tinyjpg.com]⏱0.25h).
 
 Requirements:
-- Accept input list of files and remote 📰 [URL]s via: either 📰 [CLI] arguments, 📰 [STDIN], or read it from a specified file (📰 [EOL]-separated).
+- Accept input list of files and remote 📰 [URL]⏱0.5hs via: either 📰 [CLI]⏱1.5h arguments, 📰 [STDIN]⏱0.5h, or read it from a specified file (📰 [EOL]⏱0.75h-separated).
 - Allow configuring how much images are processed at the same time.
 - Allow configuring the output directory to store processed images in.
-- Allow configuring the output 📰 [JPEG] quality of processed images.
-- Read configuration with ascending priority from: a file (format is on your choice), 📰 [environment variables][22], 📰 [CLI] arguments. All are optional for specifying.
+- Allow configuring the output 📰 [JPEG]⏱2h quality of processed images.
+- Read configuration with ascending priority from: a file (format is on your choice), 📰 [environment variables][22]⏱1.5h, 📰 [CLI]⏱1.5h arguments. All are optional for specifying.
 - Support `RUST_LOG` environment variable, allowing granular tuning of log levels per module.
 - Print execution time in logs, so it's easy to see how much which operation takes during the execution.
 
 If you have enough time after implementing base requirements, consider to add the following to your solution:
-- Allow configuring download speed limit for images from remote 📰 [URL]s.
+- Allow configuring download speed limit for images from remote 📰 [URL]⏱0.5hs.
 - Cover your implementation with unit and E2E tests.
-- Support 📰 [PNG] images as well.
+- Support 📰 [PNG]⏱1.5h images as well.
 - Add comprehensive documentation to your code.
 
 

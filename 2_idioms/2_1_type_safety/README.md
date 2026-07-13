@@ -1,7 +1,7 @@
 Task 2.1: Rich types ensure correctness
 =======================================
 
-📚 [Rust] has a rich type system which allows to express our program primitives, entities, notions, logic and semantics mostly in types, rather than in data/values, which is known as a "programming with types" concept. The benefits of this are obvious: the more compiler knows about our problem - the more false programs it will decline. Or, rephrased: __the more we describe about the program in types - the more we reduce the probability for the program to be incorrect__.
+📚 [Rust]⏱0.25h has a rich type system which allows to express our program primitives, entities, notions, logic and semantics mostly in types, rather than in data/values, which is known as a "programming with types" concept. The benefits of this are obvious: the more compiler knows about our problem - the more false programs it will decline. Or, rephrased: __the more we describe about the program in types - the more we reduce the probability for the program to be incorrect__.
 
 "Programming with types" inevitably implies its own idioms and patterns. The most common are described below.
 
@@ -71,36 +71,36 @@ error[E0308]: mismatched types
               found type `user::Id`
 ```
 
-This is what is called 📰 ["newtype pattern"][1]. 📰 [Newtypes][1] are a zero-cost abstraction - __there is no runtime overhead__. Additionally, you may __enforce desired invariants on values of the type__ (for example, `Email` type may allow only valid email address strings to be its values, and another good example is 📚 [`uom`] crate). Also, 📰 [newtype pattern][1] __makes code more understandable for developers__, as domain knowledge is reflected in types, so is described and documented more explicitly.
+This is what is called 📰 ["newtype pattern"][1]⏱0.25h. 📰 [Newtypes][1]⏱0.25h are a zero-cost abstraction - __there is no runtime overhead__. Additionally, you may __enforce desired invariants on values of the type__ (for example, `Email` type may allow only valid email address strings to be its values, and another good example is 📚 [`uom`]⏱0.25h crate). Also, 📰 [newtype pattern][1]⏱0.25h __makes code more understandable for developers__, as domain knowledge is reflected in types, so is described and documented more explicitly.
 
-The downside of using 📰 [newtype pattern][1] is a necessity of writing _more boilerplate code_, because you should provide common traits implementations by yourself (like `Clone`, `Copy`, `From`/`Into`/`AsRef`/`AsMut`), as without them the type won't be ergonomic in use. However, most of them can be _derived automatically_ with `std` capabilities or third-party derive-crates (like 📚 [`derive_more`]), so the cost is acceptable in most cases. Furthermore, the excellent 📚 [`nutype`] crate pushes this idea even further, aiming to provide the best ergonomics for 📰 [newtype pattern][1] without compromising any guarantees it gives.
+The downside of using 📰 [newtype pattern][1]⏱0.25h is a necessity of writing _more boilerplate code_, because you should provide common traits implementations by yourself (like `Clone`, `Copy`, `From`/`Into`/`AsRef`/`AsMut`), as without them the type won't be ergonomic in use. However, most of them can be _derived automatically_ with `std` capabilities or third-party derive-crates (like 📚 [`derive_more`]⏱0.25h), so the cost is acceptable in most cases. Furthermore, the excellent 📚 [`nutype`]⏱0.25h crate pushes this idea even further, aiming to provide the best ergonomics for 📰 [newtype pattern][1]⏱0.25h without compromising any guarantees it gives.
 
-For better understanding 📰 [newtype pattern][1], read through the following articles:
-- 📰 [Rust Design Patterns: Newtype][1]
-- 📚 [Rust By Example: 14.7. New Type Idiom][2]
-- 📰 [Alexis King: Parse, don’t validate][7] (📰 [ru][7_ru])
-- 📰 [Stefan Baumgartner: Refactoring in Rust: Abstraction with the Newtype Pattern][10]
-- 📚 [Official `nutype` crate docs][`nutype`]
+For better understanding 📰 [newtype pattern][1]⏱0.25h, read through the following articles:
+- 📰 [Rust Design Patterns: Newtype][1]⏱0.25h
+- 📚 [Rust By Example: 14.7. New Type Idiom][2]⏱0.25h
+- 📰 [Alexis King: Parse, don’t validate][7]⏱0.5h (📰 [ru][7_ru]⏱0.5h)
+- 📰 [Stefan Baumgartner: Refactoring in Rust: Abstraction with the Newtype Pattern][10]⏱0.25h
+- 📚 [Official `nutype` crate docs][`nutype`]⏱0.25h
 
 
 
 
 ## Typestates
 
-📰 [Newtype pattern][1] prevents us from invalid use of data. But what about behavior? Can we _enforce some behavioral invariants at compile time_, so compiler is able to _cut off incorrect behavior totally_?
+📰 [Newtype pattern][1]⏱0.25h prevents us from invalid use of data. But what about behavior? Can we _enforce some behavioral invariants at compile time_, so compiler is able to _cut off incorrect behavior totally_?
 
-Not always, but _yes_ in some cases. One possible way is to use 📰 [typestates][3] to represent (in types) a _sequence of states_ our type is able to be in, and to declare transitions (via functions) between these states. Doing so will allow compiler to __cut off incorrect state transitions at compile time__.
+Not always, but _yes_ in some cases. One possible way is to use 📰 [typestates][3]⏱0.25h to represent (in types) a _sequence of states_ our type is able to be in, and to declare transitions (via functions) between these states. Doing so will allow compiler to __cut off incorrect state transitions at compile time__.
 
-A real-world example of applying this idiom in 📚 [Rust] would be the awesome 📚 [`state_machine_future`] crate.
+A real-world example of applying this idiom in 📚 [Rust]⏱0.25h would be the awesome 📚 [`state_machine_future`]⏱0.25h crate.
 
-For better understanding 📰 [typestates][3], read through the following articles:
-- 📰 [David Teller: Typestates in Rust][3]
-- 📰 [Cliff L. Biffle: The Typestate Pattern in Rust][5]
-- 📰 [Ana Hobden: Pretty State Machine Patterns in Rust][4]
-- 📰 [Will Crichton: Type-level Programming in Rust][6]
-- 📰 [Sergey Potapov: Builder with typestate in Rust][8]
-- 🎥 [State Pattern - Design Patterns][9]
-- 📰 [Azriel Hoh: Compile Time Correctness: Type State][11]
+For better understanding 📰 [typestates][3]⏱0.25h, read through the following articles:
+- 📰 [David Teller: Typestates in Rust][3]⏱0.25h
+- 📰 [Cliff L. Biffle: The Typestate Pattern in Rust][5]⏱0.5h
+- 📰 [Ana Hobden: Pretty State Machine Patterns in Rust][4]⏱0.5h
+- 📰 [Will Crichton: Type-level Programming in Rust][6]⏱0.5h
+- 📰 [Sergey Potapov: Builder with typestate in Rust][8]⏱0.25h
+- 🎥 [State Pattern - Design Patterns][9]⏱1.25h
+- 📰 [Azriel Hoh: Compile Time Correctness: Type State][11]⏱0.25h
 
 
 
@@ -124,7 +124,7 @@ For the `Post` type described above, assume the following behavior in our applic
                                    +---------+
 ```
 
-Implement this behavior using 📰 [typestates idiom][3], so that calling `delete()` on `New` post (or calling `deny()` on `Deleted` post) will be a compile-time error.
+Implement this behavior using 📰 [typestates idiom][3]⏱0.25h, so that calling `delete()` on `New` post (or calling `deny()` on `Deleted` post) will be a compile-time error.
 Write simple tests for the task.
 
 
