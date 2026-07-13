@@ -53,34 +53,34 @@ After you are done, notify your lead in an appropriate PR (pull request), and th
 
 _Additional_ articles, which may help to understand the above topic better:
 
-| Title | Author | Tags |
-| --- | --- | --- |
-| 📰 [Rust ownership, the hard way][1]⏱0.5h | Chris Morgan | type:article |
-| 📰 [You are holding it wrong][23]⏱0.25h | Adolfo Ochagavía | type:article |
-| 📰 [Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30]⏱0.5h | Vikram Fugro | type:article |
-| 🧭 [A guide to closures in Rust][24]⏱0.75h | HashRust | type:guide |
-| 📰 [Rusts Module System Explained][2]⏱0.25h | Ludwig Stecher | type:article |
-| 📰 [Models of Generics and Metaprogramming: Go, Rust, Swift, D and More][3]⏱0.5h | Tristan Hume | type:article |
-| 📰 [Generics Demystified Part 1][4]⏱0.25h | Jeff Anderson | type:article |
-| 📰 [Generics Demystified Part 2][5]⏱0.25h | Jeff Anderson | type:article |
-| 📰 [Demystifying trait generics in Rust][25]⏱0.25h | Bradford Hovinen | type:article |
-| 📰 [Three Kinds of Polymorphism in Rust][6]⏱0.25h | Brandon Smith | type:article |
-| 📰 [C++ & Rust: Generics and Specialization][7]⏱0.5h | Jeremy Steward | type:article |
-| 📰 [&stress about &Strings][8]⏱0.5h | cooscoos | type:article |
-| 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9]⏱0.75h | Jimmy Hartzell | type:article |
-| 📰 [Trait Drop][10]⏱0.25h | — | type:article |
-| 📰 [Common Lifetime Misconception][11]⏱0.75h | — | type:article |
-| 🎥 [Visualizing Memory Layout][12]⏱0.75h | — | type:video |
-| 📚 [Packages and crates (Rust wiki)][14]⏱0.25h | — | type:reference |
-| 📋 [Full list of available crates on Rust Playground][16]⏱1h | — | type:list |
-| 📚 [Blanket impl definition][17]⏱0.25h | — | type:reference |
-| 📚 [Auto-trait definition][18]⏱0.25h | — | type:reference |
-| 📰 [Rust vs Common C++ Bugs][21]⏱0.5h | Georgios Antonopoulos | type:article |
-| 📰 [True Observer Pattern with Unsubscribe mechanism using Rust][22]⏱0.25h | Yurii Shymon | type:article |
-| 🧭 [Rust API guidline checklist][19]⏱0.25h | — | type:guide |
-| 🧭 [Step-by-step instruction to start development in Rust][26]⏱0.25h | — | type:guide |
-| 📋 [Awesome collection of crates for productive development in Rust][27]⏱0.75h | — | type:list |
-| 📋 [Awesome Collection of Materials to Learn Rust][28]⏱0.25h | — | type:list |
+| Title | Author |
+| --- | --- |
+| 📰 [Rust ownership, the hard way][1]⏱0.5h | Chris Morgan |
+| 📰 [You are holding it wrong][23]⏱0.25h | Adolfo Ochagavía |
+| 📰 [Beyond Pointers: How Rust outshines C++ with its Borrow Checker][30]⏱0.5h | Vikram Fugro |
+| 🧭 [A guide to closures in Rust][24]⏱0.75h | HashRust |
+| 📰 [Rusts Module System Explained][2]⏱0.25h | Ludwig Stecher |
+| 📰 [Models of Generics and Metaprogramming: Go, Rust, Swift, D and More][3]⏱0.5h | Tristan Hume |
+| 📰 [Generics Demystified Part 1][4]⏱0.25h | Jeff Anderson |
+| 📰 [Generics Demystified Part 2][5]⏱0.25h | Jeff Anderson |
+| 📰 [Demystifying trait generics in Rust][25]⏱0.25h | Bradford Hovinen |
+| 📰 [Three Kinds of Polymorphism in Rust][6]⏱0.25h | Brandon Smith |
+| 📰 [C++ & Rust: Generics and Specialization][7]⏱0.5h | Jeremy Steward |
+| 📰 [&stress about &Strings][8]⏱0.5h | cooscoos |
+| 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9]⏱0.75h | Jimmy Hartzell |
+| 📰 [Trait Drop][10]⏱0.25h | — |
+| 📰 [Common Lifetime Misconception][11]⏱0.75h | — |
+| 🎥 [Visualizing Memory Layout][12]⏱0.75h | — |
+| 📚 [Packages and crates (Rust wiki)][14]⏱0.25h | — |
+| 📋 [Full list of available crates on Rust Playground][16]⏱1h | — |
+| 📚 [Blanket impl definition][17]⏱0.25h | — |
+| 📚 [Auto-trait definition][18]⏱0.25h | — |
+| 📰 [Rust vs Common C++ Bugs][21]⏱0.5h | Georgios Antonopoulos |
+| 📰 [True Observer Pattern with Unsubscribe mechanism using Rust][22]⏱0.25h | Yurii Shymon |
+| 🧭 [Rust API guidline checklist][19]⏱0.25h | — |
+| 🧭 [Step-by-step instruction to start development in Rust][26]⏱0.25h | — |
+| 📋 [Awesome collection of crates for productive development in Rust][27]⏱0.75h | — |
+| 📋 [Awesome Collection of Materials to Learn Rust][28]⏱0.25h | — |
 
 [Cargo]: https://github.com/rust-lang/cargo
 [Cargo Book]: https://doc.rust-lang.org/cargo
