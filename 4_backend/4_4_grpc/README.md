@@ -32,8 +32,8 @@ Try to keep your solution as simple and straightforward as possible.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is gRPC? What is the difference between RPC and gRPC?
-- What are the strengths of gRPC? Which are good use-cases for it, and which are not? Why? 
+1. What is gRPC? What is the difference between RPC and gRPC?
+2. What are the strengths of gRPC? Which are good use-cases for it, and which are not? Why? 
 
 [`grpcio`]: https://docs.rs/crate/grpcio
 [`tarpc`]: https://docs.rs/tarpc

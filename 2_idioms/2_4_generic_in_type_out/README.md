@@ -110,8 +110,8 @@ Refactor the code contained in [this task's crate](src/main.rs) to make it more 
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- Why abstracting over input type is good? Which problems does it have and how can they be overcome?
-- When returning a concrete type is good? When not? What are the trade-offs?
+1. Why abstracting over input type is good? Which problems does it have and how can they be overcome?
+2. When returning a concrete type is good? When not? What are the trade-offs?
 
 
 

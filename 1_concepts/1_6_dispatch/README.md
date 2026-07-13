@@ -175,11 +175,11 @@ Prove your implementation correctness with tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is dispatch? When a function call represents a dispatch and when not?
-- How does static dispatch work?
-- How does dynamic dispatch work? Why is it required? Which limitations does it have in 📚 [Rust]? Why does it have them?
-- When dynamic dispatch can be replaced with static dispatch? When not? What are the trade-offs?
-- How can we reduce the size of compiler-generated code when using static dispatch?
+1. What is dispatch? When a function call represents a dispatch and when not?
+2. How does static dispatch work?
+3. How does dynamic dispatch work? Why is it required? Which limitations does it have in 📚 [Rust]? Why does it have them?
+4. When dynamic dispatch can be replaced with static dispatch? When not? What are the trade-offs?
+5. How can we reduce the size of compiler-generated code when using static dispatch?
 
 
 

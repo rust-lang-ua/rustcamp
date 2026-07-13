@@ -41,8 +41,8 @@ Play with these types from multiple threads to see how compile time 📚 [fearle
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What does "fearless concurrency" mean in 📚 [Rust]? With which mechanisms does 📚 [Rust] fulfill this guarantee exactly?
-- Why do 📚 [`Send`] and 📚 [`Sync`] exist at all? How is it related to interior mutability?
+1. What does "fearless concurrency" mean in 📚 [Rust]? With which mechanisms does 📚 [Rust] fulfill this guarantee exactly?
+2. Why do 📚 [`Send`] and 📚 [`Sync`] exist at all? How is it related to interior mutability?
 
 
 

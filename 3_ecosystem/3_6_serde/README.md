@@ -144,9 +144,9 @@ Prove your implementation correctness with tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- How does 📚 [`serde`] achieve its performance? How does it model data and decouple responsibilities?
-- When does it have sense to prefer 📚 [`musli`] rather than 📚 [`serde`]?
-- What is zero-copy deserialization? Why is it beneficial? How does it work in 📚 [`serde`]? How does it work in 📚 [`rkyv`]?
+1. How does 📚 [`serde`] achieve its performance? How does it model data and decouple responsibilities?
+2. When does it have sense to prefer 📚 [`musli`] rather than 📚 [`serde`]?
+3. What is zero-copy deserialization? Why is it beneficial? How does it work in 📚 [`serde`]? How does it work in 📚 [`rkyv`]?
 
 
 

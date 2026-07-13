@@ -115,11 +115,11 @@ Avoid architecture 📰 [over-engineering][42] for this task, just use simple, s
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is API? What is RPC? How do they relate?
-- What does "code-first" approach mean? What does "schema-first" approach mean? Which advantages and disadvantages do they have?
-- What does REST paradigm mean? What are essentials of RESTful API? Which strengths does it have? What does it lack?  
-- What is OpenAPI? What is Swagger? How do they relate? Why are they beneficial for RESTful API?
-- What is GraphQL? Which are strong sides of this technology? What problems does it bring in practice? 
+1. What is API? What is RPC? How do they relate?
+2. What does "code-first" approach mean? What does "schema-first" approach mean? Which advantages and disadvantages do they have?
+3. What does REST paradigm mean? What are essentials of RESTful API? Which strengths does it have? What does it lack?  
+4. What is OpenAPI? What is Swagger? How do they relate? Why are they beneficial for RESTful API?
+5. What is GraphQL? Which are strong sides of this technology? What problems does it bring in practice? 
 
 
 

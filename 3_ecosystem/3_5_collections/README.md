@@ -96,9 +96,9 @@ Prove your implementation correctness with tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is a collection? What is an iterator? How do they differ? How are they used? Which limitations does each one have?
-- What are immutable collections? How do they work? Why shouldn't we use them all the time? When does it make sense to use them?
-- What are concurrent collections? How do they work? Why are they better than explicit synchronization on a normal collection?
+1. What is a collection? What is an iterator? How do they differ? How are they used? Which limitations does each one have?
+2. What are immutable collections? How do they work? Why shouldn't we use them all the time? When does it make sense to use them?
+3. What are concurrent collections? How do they work? Why are they better than explicit synchronization on a normal collection?
 
 
 

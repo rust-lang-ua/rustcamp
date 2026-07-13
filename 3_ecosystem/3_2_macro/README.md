@@ -135,11 +135,11 @@ Prove your implementation correctness with tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What are macros? Which problem do they solve?
-- Which benefits do declarative macros have in 📚 [Rust] comparing to procedural ones? Which downsides and limitations?
-- Which kinds of procedural macros do exist in 📚 [Rust]?
-- What are common crates for implementing procedural macros in 📚 [Rust]? What responsibilities does each one have? Which are mandatory, which are not?
-- What are good practices for implementing procedural macros in 📚 [Rust]?
+1. What are macros? Which problem do they solve?
+2. Which benefits do declarative macros have in 📚 [Rust] comparing to procedural ones? Which downsides and limitations?
+3. Which kinds of procedural macros do exist in 📚 [Rust]?
+4. What are common crates for implementing procedural macros in 📚 [Rust]? What responsibilities does each one have? Which are mandatory, which are not?
+5. What are good practices for implementing procedural macros in 📚 [Rust]?
 
 
 

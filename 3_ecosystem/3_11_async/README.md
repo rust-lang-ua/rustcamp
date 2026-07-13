@@ -198,17 +198,17 @@ It must read a list of links from the `<file>`, and then concurrently download a
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is asynchronous programming? How does it relate to multithreading? Which problems does it solve? What are the prerequisites for its existing?
-- How does non-blocking I/O works? How does it differs from blocking I/O?
-- What is a 📚 [`Future`]? Why do we need it? How does it work in 📚 [Rust] and how do its semantics differ from other programming languages? What makes it zero-cost?
-- What is `async`/`.await`? How do they desugar into a 📚 [`Future`]? Why are they vital for ergonomics?
-- What is an asynchronous task? How does it compare to a 📚 [`Future`]?
-- What is a 📚 [`Waker`]? How does it work? Why is it required?
-- What is an asynchronous runtime? From which parts does it usually consist?
-- What kind of multitasking is represented by 📚 [`Future`]s in 📚 [Rust]? Which advantages and disadvantages does it have?
-- What kinds of asynchronous runtimes do exist in 📚 [Rust] regarding multithreading? Which advantages and disadvantages does each one have?
-- Why blocking an asynchronous runtime is bad? How to avoid it in practice?
-- What are the key points of actor model concurrency paradigm? How may it be useful in 📚 [Rust]?
+1. What is asynchronous programming? How does it relate to multithreading? Which problems does it solve? What are the prerequisites for its existing?
+2. How does non-blocking I/O works? How does it differs from blocking I/O?
+3. What is a 📚 [`Future`]? Why do we need it? How does it work in 📚 [Rust] and how do its semantics differ from other programming languages? What makes it zero-cost?
+4. What is `async`/`.await`? How do they desugar into a 📚 [`Future`]? Why are they vital for ergonomics?
+5. What is an asynchronous task? How does it compare to a 📚 [`Future`]?
+6. What is a 📚 [`Waker`]? How does it work? Why is it required?
+7. What is an asynchronous runtime? From which parts does it usually consist?
+8. What kind of multitasking is represented by 📚 [`Future`]s in 📚 [Rust]? Which advantages and disadvantages does it have?
+9. What kinds of asynchronous runtimes do exist in 📚 [Rust] regarding multithreading? Which advantages and disadvantages does each one have?
+10. Why blocking an asynchronous runtime is bad? How to avoid it in practice?
+11. What are the key points of actor model concurrency paradigm? How may it be useful in 📚 [Rust]?
 
 
 

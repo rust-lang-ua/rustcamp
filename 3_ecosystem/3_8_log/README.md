@@ -82,11 +82,11 @@ Examples:
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- How does 📚 [`log`] crate achieve its reusability over ecosystem? What are the ideas behind it?
-- Why logging is preferred over printing (`println!` usage)? When it's not?
-- What is structured logging? What benefits does it provide?
-- Why 📚 [`tracing`] crate is good for logging? What makes it preferred over 📚 [`slog`] and 📚 [`log`] crates?
-- What is tracing? Why is it beneficial for observability?
+1. How does 📚 [`log`] crate achieve its reusability over ecosystem? What are the ideas behind it?
+2. Why logging is preferred over printing (`println!` usage)? When it's not?
+3. What is structured logging? What benefits does it provide?
+4. Why 📚 [`tracing`] crate is good for logging? What makes it preferred over 📚 [`slog`] and 📚 [`log`] crates?
+5. What is tracing? Why is it beneficial for observability?
 
 
 

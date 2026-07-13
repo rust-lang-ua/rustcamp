@@ -114,10 +114,10 @@ Refactor the code contained in [this task's crate](src/main.rs) to reduce trait 
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- Which problems do trait bounds impose in 📚 [Rust] when are placed on a type definition?
-- Why placing trait bounds on `impl` blocks is better?
-- When cannot we do that and should use trait bounds on a type definition? When is it preferred?
-- What are the problems with `std` derive macros regarding type parameters? How could they be solved?
+1. Which problems do trait bounds impose in 📚 [Rust] when are placed on a type definition?
+2. Why placing trait bounds on `impl` blocks is better?
+3. When cannot we do that and should use trait bounds on a type definition? When is it preferred?
+4. What are the problems with `std` derive macros regarding type parameters? How could they be solved?
 
 
 

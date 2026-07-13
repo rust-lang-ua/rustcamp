@@ -101,12 +101,12 @@ __Estimated time__: 1 day
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What does "boxing" mean in 📚 [Rust]? How is it useful? When and why is it required?
-- What is 📚 [`Pin`] and why is it required? What guarantees does it provide? How does it fulfill them?
-- How does 📚 [`Unpin`] affect the 📚 [`Pin`]? What does it mean?
-- Is it allowed to move pinned data after the 📚 [`Pin`] dies? Why?
-- What is structural pinning? When it should be used and why?
-- What is 📚 [`Pin`] projection? Why does it exist? How is it used?
+1. What does "boxing" mean in 📚 [Rust]? How is it useful? When and why is it required?
+2. What is 📚 [`Pin`] and why is it required? What guarantees does it provide? How does it fulfill them?
+3. How does 📚 [`Unpin`] affect the 📚 [`Pin`]? What does it mean?
+4. Is it allowed to move pinned data after the 📚 [`Pin`] dies? Why?
+5. What is structural pinning? When it should be used and why?
+6. What is 📚 [`Pin`] projection? Why does it exist? How is it used?
 
 
 

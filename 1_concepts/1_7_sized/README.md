@@ -60,8 +60,8 @@ Provide tests for `CommandHandler<CreateUser>` implementation where `dyn UserRep
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is 📚 [`Sized`] trait about? When 📚 [Rust] implies it? And when not?
-- Why `?Sized` trait bound is important? When should we use it and why?
+1. What is 📚 [`Sized`] trait about? When 📚 [Rust] implies it? And when not?
+2. Why `?Sized` trait bound is important? When should we use it and why?
 
 
 

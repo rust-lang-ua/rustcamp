@@ -107,10 +107,10 @@ Rework [the task from the previous task](../4_1_db/README.md#task) in a 📰 [cl
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is HTTP? What does HTTP/2 imply? What does HTTP/3 imply?
-- How do work-stealing and thread-per-core paradigms affect programming a web server in practice? Which one is better and when? When does this question (choosing) become meaningful, in practice?
-- What are common crates for making HTTP requests in 📚 [Rust]? Which trade-offs do they have?
-- What is WebSocket? How is it used and when? How does it work, in a nutshell?
+1. What is HTTP? What does HTTP/2 imply? What does HTTP/3 imply?
+2. How do work-stealing and thread-per-core paradigms affect programming a web server in practice? Which one is better and when? When does this question (choosing) become meaningful, in practice?
+3. What are common crates for making HTTP requests in 📚 [Rust]? Which trade-offs do they have?
+4. What is WebSocket? How is it used and when? How does it work, in a nutshell?
 
 
 

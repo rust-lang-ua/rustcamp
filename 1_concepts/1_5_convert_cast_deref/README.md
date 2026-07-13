@@ -196,11 +196,11 @@ Write simple tests for the task.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- How value-to-value conversion is represented in 📚 [Rust]? What is relation between fallible and infallible one?
-- How reference-to-reference conversion is represented in 📚 [Rust]? How its traits differ? When and which one should be used?
-- How can inner-to-outer reference conversion be achieved in 📚 [Rust]? Which prerequisites does it have?
-- What is dereferencing in 📚 [Rust]? How it can be abused? Why it shouldn't be abused?
-- Why using 📚 [`as`] keyword is not a good practice in 📚 [Rust]? Why do we still use it?
+1. How value-to-value conversion is represented in 📚 [Rust]? What is relation between fallible and infallible one?
+2. How reference-to-reference conversion is represented in 📚 [Rust]? How its traits differ? When and which one should be used?
+3. How can inner-to-outer reference conversion be achieved in 📚 [Rust]? Which prerequisites does it have?
+4. What is dereferencing in 📚 [Rust]? How it can be abused? Why it shouldn't be abused?
+5. Why using 📚 [`as`] keyword is not a good practice in 📚 [Rust]? Why do we still use it?
 
 
 

@@ -84,8 +84,8 @@ If neither `APP_CONF` env var nor `--conf` command line argument is specified, t
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is 📚 [`Cow`]? How it works?
-- When 📚 [`Cow`] is useful and why? Give some meaningful examples.
+1. What is 📚 [`Cow`]? How it works?
+2. When 📚 [`Cow`] is useful and why? Give some meaningful examples.
 
 
 

@@ -81,10 +81,10 @@ __Estimated time__: 1 day
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What purpose does 📚 [`Default`] trait serve in 📚 [Rust]?
-- What is `#[derive(Default)]` from `std` capable of? What does it wrong? Which are alternatives?
-- What does 📚 [`Clone`] mean semantically?
-- What does 📚 [`Copy`] mean semantically? How is it connected with 📚 [`Clone`]? Which limitations does it have and why?
+1. What purpose does 📚 [`Default`] trait serve in 📚 [Rust]?
+2. What is `#[derive(Default)]` from `std` capable of? What does it wrong? Which are alternatives?
+3. What does 📚 [`Clone`] mean semantically?
+4. What does 📚 [`Copy`] mean semantically? How is it connected with 📚 [`Clone`]? Which limitations does it have and why?
 
 
 

@@ -40,10 +40,10 @@ Prove your implementation correctness with additional tests. For tests reproduci
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- How does system clock and monotonic clock differ? What are use-cases for both?
-- Why is system clock is not reliable for measuring duration? What causes its drift?
-- What is the main practical difference between 📚 [`chrono`] and 📚 [`time`] crates?
-- When 📚 [`hifitime`] crate could be useful?
+1. How does system clock and monotonic clock differ? What are use-cases for both?
+2. Why is system clock is not reliable for measuring duration? What causes its drift?
+3. What is the main practical difference between 📚 [`chrono`] and 📚 [`time`] crates?
+4. When 📚 [`hifitime`] crate could be useful?
 
 
 

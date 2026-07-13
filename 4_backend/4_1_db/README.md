@@ -140,11 +140,11 @@ Consider to ensure 📰 [data consistency][202] in your database as much as poss
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is connection pool pattern? How does it work? Which problems does it solve?
-- What is ORM pattern? How does it differ from query building? What benefits do they give?
-- Why writing raw SQL queries could be meaningful? Which are use-cases for it and when is it preferred over ORMs?
-- What are migrations? Why should we use them? How do they work? 
-- Which kinds of migrations do exist? What are their advantages and disadvantages? When and which kind is preferred?  
+1. What is connection pool pattern? How does it work? Which problems does it solve?
+2. What is ORM pattern? How does it differ from query building? What benefits do they give?
+3. Why writing raw SQL queries could be meaningful? Which are use-cases for it and when is it preferred over ORMs?
+4. What are migrations? Why should we use them? How do they work? 
+5. Which kinds of migrations do exist? What are their advantages and disadvantages? When and which kind is preferred?  
 
 
 

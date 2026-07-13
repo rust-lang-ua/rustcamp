@@ -159,11 +159,11 @@ Implement tests for `GlobalStack<T>`.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What is shared ownership? Which problem does it solve? Which penalties does it have?
-- What is interior mutability? Why is it required in 📚 [Rust]? In what price does it come?
-- Is it possible to write a custom type with interior mutability without using `std`? Why?
-- What is shared mutability? Which are its common use-cases?
-- How can we expose panic/deadlock-free API to users when using interior mutability?
+1. What is shared ownership? Which problem does it solve? Which penalties does it have?
+2. What is interior mutability? Why is it required in 📚 [Rust]? In what price does it come?
+3. Is it possible to write a custom type with interior mutability without using `std`? Why?
+4. What is shared mutability? Which are its common use-cases?
+5. How can we expose panic/deadlock-free API to users when using interior mutability?
 
 
 

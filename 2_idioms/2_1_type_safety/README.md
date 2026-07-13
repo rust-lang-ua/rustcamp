@@ -132,9 +132,9 @@ Write simple tests for the task.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- Why expressing semantics in types is good? What are the benefits and downsides?
-- What is newtype pattern? How does it work? Which guarantees does it give?
-- What is typestates pattern? How does it work? Which guarantees does it give?
+1. Why expressing semantics in types is good? What are the benefits and downsides?
+2. What is newtype pattern? How does it work? Which guarantees does it give?
+3. What is typestates pattern? How does it work? Which guarantees does it give?
 
 
 

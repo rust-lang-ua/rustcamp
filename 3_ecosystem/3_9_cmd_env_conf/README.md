@@ -97,9 +97,9 @@ Options:
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-- What are the benefits of having strongly-type configuration?
-- Why environment variables are useful for configuring an application? What is the main use-case for them?
-- How is 📚 [`config`] crate really useful? Why should we it and cannot just deserialize a file into structs via 📚 [`serde`]?
+1. What are the benefits of having strongly-type configuration?
+2. Why environment variables are useful for configuring an application? What is the main use-case for them?
+3. How is 📚 [`config`] crate really useful? Why should we it and cannot just deserialize a file into structs via 📚 [`serde`]?
 
 
 
