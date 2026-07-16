@@ -6,7 +6,7 @@ Task 1.4: Clone-on-write
 
 ## Clone-on-write
 
-📚 [Rust]⏱0.25h has a 📚 [`Cow`]⏱1.5h (clone-on-write) smart pointer in its standard library. Understanding how to use it is _essential to write idiomatic and ergonomic_ 📚 [Rust]⏱0.25h code.
+🏠 [Rust] has a 📚 [`Cow`] (clone-on-write) smart pointer in its standard library. Understanding how to use it is _essential to write idiomatic and ergonomic_ 🏠 [Rust] code.
 
 In a nutshell: 
 - it allows to combine usage of owned and borrowed data in a single abstraction, which __leads to better ergonomics and minimize performance penalties as much as possible__;
@@ -26,8 +26,8 @@ fn describe(error: &Error) -> Cow<'static, str> {
 }
 ```
 
-For better understanding 📚 [`Cow`]⏱1.5h purpose, design, limitations and use cases read through:
-- 📚 [Official `Cow` docs][`Cow`]⏱1.5h
+For better understanding 📚 [`Cow`] purpose, design, limitations and use cases read through:
+- 📚 [Official `Cow` docs][`Cow`]
 - 📰 [Pascal Hertleif: The Secret Life of Cows][1]⏱0.25h
 - 📰 [Yashodhan Joshi: Using `Cow` in Rust for efficient memory utilization][6]⏱0.25h
 - 📰 [Konstantin Grechishchev: 6 things you can do with the Cow 🐄 in Rust 🦀][2]⏱0.5h
@@ -38,7 +38,7 @@ For better understanding 📚 [`Cow`]⏱1.5h purpose, design, limitations and us
 
 ## Alternative implementations
 
-📚 [`beef`]⏱0.25h crate provides alternative `Cow` types, being faster and leaner.
+📚 [`beef`] crate provides alternative `Cow` types, being faster and leaner.
 
 > There are two versions of `Cow` exposed by this crate:
 >
@@ -84,8 +84,8 @@ If neither `APP_CONF` env var nor `--conf` command line argument is specified, t
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. What is 📚 [`Cow`]⏱1.5h? How it works?
-2. When 📚 [`Cow`]⏱1.5h is useful and why? Give some meaningful examples.
+1. What is 📚 [`Cow`]? How it works?
+2. When 📚 [`Cow`] is useful and why? Give some meaningful examples.
 
 
 

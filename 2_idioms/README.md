@@ -1,16 +1,20 @@
 Chapter 2: Idioms
 ==============
 
-These tasks describe common idioms required for writing well-designed and idiomatic 📚 [Rust]⏱0.25h code.
+These tasks describe common idioms required for writing well-designed and idiomatic 🏠 [Rust] code.
 
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
 1. Why should I care about types and expressing things in types? How do types help to increase guarantees of a program being correct?
-2. What is essential for writing well-designed and ergonomic APIs in 📚 [Rust]⏱0.25h and why?
+2. What is essential for writing well-designed and ergonomic APIs in 🏠 [Rust] and why?
 3. Why `mem::replace` exists and what purpose does it solve? When and why is it really helpful?
-4. How input type polymorphism is usually organized in 📚 [Rust]⏱0.25h APIs? What cost does it have?
-5. Which ways and tools do exist for future-proofing source code in 📚 [Rust]⏱0.25h?
+4. How input type polymorphism is usually organized in 🏠 [Rust] APIs? What cost does it have?
+5. Which ways and tools do exist for future-proofing source code in 🏠 [Rust]?
+
+For more familiarity with writing idiomatic 🏠 [Rust] code, read through the following articles:
+- 🧭 [Rust Book: Test Organization][2]⏱0.25h
+- 🎥 [Constant fun (const fn) with Rust][3]⏱0.75h
 
 
 
@@ -22,7 +26,7 @@ __Estimated time__: 2 days
 
 
 
-Design and implement a `VendingMachine` type, which behaves like a 📰 [vending machine][1]⏱1h:
+Design and implement a `VendingMachine` type, which behaves like a 📰 [vending machine][1]:
 - `Product` should have a price and a name;
 - `VendingMachine` should have a limited capacity of `Product`s;
 - `VendingMachine` should be able to give change;

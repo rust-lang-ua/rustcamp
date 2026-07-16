@@ -5,19 +5,19 @@ Task 3.4: Regular expressions and custom parsers
 
 ## Regular expressions
 
-To operate with 📰 [regular expressions][1]⏱1.5h there is the 📚 [`regex`]⏱0.75h crate in 📚 [Rust]⏱0.25h ecosystem, which is kinda a default choice to go with in most cases.
+To operate with 📰 [regular expressions][1]⏱1.5h there is the 📚 [`regex`] crate in 🏠 [Rust] ecosystem, which is kinda a default choice to go with in most cases.
 
-> A Rust library for parsing, compiling, and executing regular expressions. Its syntax is similar to Perl-style regular expressions, but lacks a few features like look around and backreferences. In exchange, all searches execute in linear time with respect to the size of the regular expression and search text. Much of the syntax and implementation is inspired by 📰 [RE2]⏱0.5h.
+> A Rust library for parsing, compiling, and executing regular expressions. Its syntax is similar to Perl-style regular expressions, but lacks a few features like look around and backreferences. In exchange, all searches execute in linear time with respect to the size of the regular expression and search text. Much of the syntax and implementation is inspired by 🧭 [RE2]⏱0.25h.
 
 If you need additional features (like look around and backreferences), consider using:
-- 📚 [`fancy-regex`]⏱0.25h crate, building additional functionality on top of the 📚 [`regex`]⏱0.75h crate.
-- 📚 [`pcre2`]⏱0.25h crate, providing a safe high level Rust binding to 📰 [PCRE2]⏱0.25h library.
-- 📚 [`hyperscan`]⏱0.25h crate, wrapping a 📰 [Hyperscan]⏱0.25h library.
+- 📚 [`fancy-regex`] crate, building additional functionality on top of the 📚 [`regex`] crate.
+- 📚 [`pcre2`] crate, providing a safe high level Rust binding to 🏠 [PCRE2] library.
+- 📚 [`hyperscan`] crate, wrapping a 🏠 [Hyperscan] library.
 
 
 ### Compile only once
 
-Important to know, that in 📚 [Rust]⏱0.25h __regular expression needs to be compiled before we can use it__. The compilation is not cheap. So, the following code introduces a performance problem:
+Important to know, that in 🏠 [Rust] __regular expression needs to be compiled before we can use it__. The compilation is not cheap. So, the following code introduces a performance problem:
 ```rust
 fn is_email(email: &str) -> bool {
     let re = Regex::new(".+@.+").unwrap();  // compiles every time the function is called
@@ -25,7 +25,7 @@ fn is_email(email: &str) -> bool {
 }
 ```
 
-To omit unnecessary performance penalty we should __compile regular expression once and reuse its compilation result__. This is easily achieved by using the 📚 [`once_cell`]⏱0.25h crate both in global and/or local scopes:
+To omit unnecessary performance penalty we should __compile regular expression once and reuse its compilation result__. This is easily achieved by using the 📚 [`once_cell`] crate both in global and/or local scopes:
 ```rust
 static REGEX_EMAIL: Regex = once_cell::sync::Lazy::new(|| {
     Regex::new(".+@.+").unwrap()
@@ -36,25 +36,25 @@ fn is_email(email: &str) -> bool {
 }
 ```
 
-This may feel different with how 📰 [regular expressions][1]⏱1.5h are used in other programming languages, because some of them implicitly cache compilation results and/or do not expose compilation API at all (like 📰 [PHP]⏱0.25h). But if your background is a language like 📰 [Go]⏱0.25h or 📰 [Java]⏱0.25h, this concept should be familiar to you.
+This may feel different with how 📰 [regular expressions][1]⏱1.5h are used in other programming languages, because some of them implicitly cache compilation results and/or do not expose compilation API at all (like 🏠 [PHP]). But if your background is a language like 🏠 [Go] or 🏠 [Java], this concept should be familiar to you.
 
 
 
 
 ## Custom parsers
 
-If regular expressions are ❓ [not powerful enough][2]⏱1h for your parsing problem, then you are ended up with writing your own parser. 📚 [Rust]⏱0.25h ecosystem has 📋 [numerous][3]⏱2.25h crates to help with that:
+If regular expressions are ❓ [not powerful enough][2] for your parsing problem, then you are ended up with writing your own parser, usually producing an 📰 [AST][8] (abstract syntax tree) as its intermediate representation. 🏠 [Rust] ecosystem has 📋 [numerous][3] crates to help with that:
 - 📰 [Parser combinators][4]⏱0.25h:
-    - 📚 [`nom`]⏱0.25h crate, nearly the most performant among others, and especially good for parsing binary stuff (byte/bit-oriented).
-    - 📚 [`chumsky`]⏱0.25h crate, focusing on high-quality errors and ergonomics over performance.
-    - 📚 [`combine`]⏱0.25h crate, inspired by the 📰 [Parsec]⏱0.25h library in 📰 [Haskell]⏱0.25h.
-    - 📚 [`pom`]⏱0.25h crate, providing 📰 [PEG][5]⏱1h parser combinators created using operator overloading without macros.
-    - 📚 [`chomp`]⏱0.25h crate, a fast 📰 [monadic][13]⏱1.5h-style 📰 [parser combinator][4]⏱0.25h library.
+    - 📚 [`nom`] crate, nearly the most performant among others, and especially good for parsing binary stuff (byte/bit-oriented).
+    - 📚 [`chumsky`] crate, focusing on high-quality errors and ergonomics over performance.
+    - 📚 [`combine`] crate, inspired by the 📰 [Parsec] library in 📰 [Haskell].
+    - 📚 [`pom`] crate, providing 📰 [PEG][5]⏱1h parser combinators created using operator overloading without macros.
+    - 📚 [`chomp`] crate, a fast 📰 [monadic][13]⏱1.5h-style 📰 [parser combinator][4]⏱0.25h library.
 - 📰 [Parser generators][12]⏱0.75h:
-    - 📚 [`peg`]⏱0.25h crate, a simple yet flexible 📰 [parser generator][12]⏱0.75h that makes it easy to write robust parsers, based on the 📰 [Parsing Expression Grammar][5]⏱1h formalism.
-    - 📚 [`pest`]⏱0.25h crate, with a focus on accessibility, correctness, and performance, using 📰 [PEG (parsing expression grammar)][5]⏱1h as an input and deriving parser's code for it.
-    - 📚 [`lalrpop`]⏱0.25h crate, generating 📰 [LR(1) parser][6]⏱0.25h code from custom grammar files.
-    - 📚 [`parsel`]⏱0.25h crate, a library for generating parsers directly from syntax tree node types.
+    - 📚 [`peg`] crate, a simple yet flexible 📰 [parser generator][12]⏱0.75h that makes it easy to write robust parsers, based on the 📰 [Parsing Expression Grammar][5]⏱1h formalism.
+    - 📚 [`pest`] crate, with a focus on accessibility, correctness, and performance, using 📰 [PEG (parsing expression grammar)][5]⏱1h as an input and deriving parser's code for it.
+    - 📚 [`lalrpop`] crate, generating 📰 [LR(1) parser][6] code from custom grammar files.
+    - 📚 [`parsel`] crate, a library for generating parsers directly from syntax tree node types.
 
 For better understanding parsing problem and approaches, along with some examples, read through the following articles:
 - 📰 [Laurence Tratt: Which Parsing Approach?][9]⏱1h
@@ -77,7 +77,7 @@ __Estimated time__: 1 day
 
 
 
-Given the following 📚 [Rust `fmt` syntax grammar][7]⏱0.25h:
+Given the following 📚 [Rust `fmt` syntax grammar][7]:
 > ```
 > format_string := text [ maybe_format text ] *
 > maybe_format := '{' '{' | '}' '}' | format
@@ -102,7 +102,7 @@ Given the following 📚 [Rust `fmt` syntax grammar][7]⏱0.25h:
 
 Implement a parser to parse `sign`, `width` and `precision` from a given input (assumed to be a `format_spec`).
 
-Provide implementations in two flavours: 📚 [`regex`]⏱0.75h-based and via building a custom parser.
+Provide implementations in two flavours: 📚 [`regex`]-based and via building a custom parser.
 
 Prove your implementation correctness with tests.
 
@@ -112,9 +112,9 @@ Prove your implementation correctness with tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. How does 📚 [`regex`]⏱0.75h crate achieve linear time complexity? In what price?
-2. How to avoid regular expression recompilation in 📚 [Rust]⏱0.25h? Why is it important?
-3. Which are the common kinds of libraries for writing custom parses in 📚 [Rust]⏱0.25h? Which benefits does each one have?
+1. How does 📚 [`regex`] crate achieve linear time complexity? In what price?
+2. How to avoid regular expression recompilation in 🏠 [Rust]? Why is it important?
+3. Which are the common kinds of libraries for writing custom parses in 🏠 [Rust]? Which benefits does each one have?
 4. What advantages does libraries give for writing a custom parser? Are they mandatory? When does it make sense to avoid using a library for implementing a parser?
 
 

@@ -1,31 +1,31 @@
 Task 4.4: RPC
 ========================================
 
-📰 [gRPC]⏱0.25h is a widely-adopted high performance 📰 [RPC]⏱0.25h framework, having a __strict schema__, powered with pluggable support for load balancing, tracing, health checking and authentication, built on top of 📰 [HTTP/2]⏱0.75h (and so, having a __mandatory encryption__), and __heavily using code-from-schema generation__.
+🏠 [gRPC] is a widely-adopted high performance 📰 [RPC]⏱0.25h framework, having a __strict schema__, powered with pluggable support for load balancing, tracing, health checking and authentication, built on top of 📰 [HTTP/2]⏱0.75h (and so, having a __mandatory encryption__), and __heavily using code-from-schema generation__.
 
-For more familiarity with 📰 [gRPC]⏱0.25h, read through the following articles:
+For more familiarity with 🏠 [gRPC], read through the following articles:
 - 📰 [gRPC docs: Introduction to gRPC][301]⏱0.25h
 - 📰 [gRPC docs: Core concepts, architecture and lifecycle][302]⏱0.25h
 
 ### Server and client
 
-For implementing a 📰 [gRPC]⏱0.25h server in 📚 [Rust]⏱0.25h, there are two main production-ready crates in its ecosystem: 📚 [`tonic`]⏱0.25h (pure 📚 [Rust]⏱0.25h implementation, based on 📚 [`tokio`]⏱0.25h) and 📚 [`grpcio`]⏱0.25h (wrapper around 📰 [gRPC core][311]⏱1.5h implementation).
+For implementing a 🏠 [gRPC] server in 🏠 [Rust], there are two main production-ready crates in its ecosystem: 📚 [`tonic`] (pure 🏠 [Rust] implementation, based on 📚 [`tokio`]) and 📚 [`grpcio`] (wrapper around 🏠 [gRPC core][311] implementation).
 
-In 📰 [gRPC]⏱0.25h ecosystem, usually, implementing a 📰 [gRPC]⏱0.25h client doesn't differ much from implementing a server, since both are auto-generated from the same `.proto` schema. So, for 📚 [Rust]⏱0.25h, the same 📚 [`tonic`]⏱0.25h and 📚 [`grpcio`]⏱0.25h crates do the job when it comes to making 📰 [gRPC]⏱0.25h requests. 
+In 🏠 [gRPC] ecosystem, usually, implementing a 🏠 [gRPC] client doesn't differ much from implementing a server, since both are auto-generated from the same `.proto` schema. So, for 🏠 [Rust], the same 📚 [`tonic`] and 📚 [`grpcio`] crates do the job when it comes to making 🏠 [gRPC] requests. 
 
-For more familiarity with using 📰 [gRPC]⏱0.25h in 📚 [Rust]⏱0.25h, read through the following articles:
-- 📚 [Official `tonic` crate docs][`tonic`]⏱0.25h
-- 📚 [Official `grpcio` crate docs][`grpcio`]⏱0.25h
+For more familiarity with using 🏠 [gRPC] in 🏠 [Rust], read through the following articles:
+- 📚 [Official `tonic` crate docs][`tonic`]
+- 📚 [Official `grpcio` crate docs][`grpcio`]
 
 ## Task
 
 __Estimated time__: 1 day
 
-Rework the application [from the previous task](../4_3_api/README.md#task) by introducing 📰 [gRPC]⏱0.25h as an 📰 [API]⏱0.75h between the 📰 ["thick client"][41]⏱0.25h and the server, while preserving the 📰 [REST]⏱0.25hful [API]⏱0.75h:
+Rework the application [from the previous task](../4_3_api/README.md#task) by introducing 🏠 [gRPC] as an 📰 [API] between the 📰 ["thick client"][41]⏱0.25h and the server, while preserving the 📰 [REST]⏱0.25hful [API]:
 
-- Server communicates with the client via 📰 [gRPC]⏱0.25h.
-- 📰 [CLI]⏱1.5h client parses commands by itself and makes accurate requests to the server via 📰 [gRPC]⏱0.25h.
-- it should be still possible to perform all the operations via 📰 [cURL]⏱0.25h (or any other 📰 [HTTP]⏱1.5h/📰 [API]⏱0.75h client) directly on the 📰 [REST]⏱0.25hful 📰 [API]⏱0.75h server.
+- Server communicates with the client via 🏠 [gRPC].
+- 📰 [CLI] client parses commands by itself and makes accurate requests to the server via 🏠 [gRPC].
+- it should be still possible to perform all the operations via 📰 [cURL] (or any other 📰 [HTTP]⏱1.5h/📰 [API] client) directly on the 📰 [REST]⏱0.25hful 📰 [API] server.
 
 Try to keep your solution as simple and straightforward as possible.
 
@@ -36,7 +36,6 @@ After completing everything above, you should be able to answer (and understand 
 2. What are the strengths of gRPC? Which are good use-cases for it, and which are not? Why? 
 
 [`grpcio`]: https://docs.rs/crate/grpcio
-[`tarpc`]: https://docs.rs/tarpc
 [`tonic`]: https://docs.rs/tonic
 [`tokio`]: https://docs.rs/tokio
 [API]: https://en.wikipedia.org/wiki/API

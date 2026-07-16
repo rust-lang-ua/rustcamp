@@ -6,9 +6,9 @@ Task 3.6: Serialization and deserialization
 
 ## `serde`
 
-📚 [Rust]⏱0.25h ecosystem has the well-known 📚 [`serde`]⏱0.25h crate, which provides a common (standard, de facto) approach and toolset for serialization and deserialization.
+🏠 [Rust] ecosystem has the well-known 📚 [`serde`] crate, which provides a common (standard, de facto) approach and toolset for serialization and deserialization.
 
-The sweet part is that 📚 [`serde`]⏱0.25h __does not rely on a runtime reflection__ mechanism and uses trait implementation for each type, so __eliminates most runtime costs__ and in most cases __makes serialization as performant as handwritten serializer for a particular case__, yet __remains ergonomic due to 📰 [automatic code deriving][1]⏱0.25h__.
+The sweet part is that 📚 [`serde`] __does not rely on a runtime reflection__ mechanism and uses trait implementation for each type, so __eliminates most runtime costs__ and in most cases __makes serialization as performant as handwritten serializer for a particular case__, yet __remains ergonomic due to 📰 [automatic code deriving][1]⏱0.25h__.
 
 ```rust
 use serde::{Deserialize, Serialize};
@@ -30,12 +30,13 @@ fn main() {
 }
 ```
 
-📚 [`serde`]⏱0.25h by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already 📰 [implemented backends for most used formats][2]⏱0.25h, and you're free to 📰 [implement backend for your own format][3]⏱0.25h if it's not implemented yet. 
+📚 [`serde`] by itself represents only a universal serialization frontend, which can be backed by actual implementation for any format. There are already 📰 [implemented backends for most used formats][2], and you're free to 📰 [implement backend for your own format][3]⏱0.25h if it's not implemented yet. 
 
-For better understanding and familiarity with 📚 [`serde`]⏱0.25h's design, concepts, usage, and features (like 📰 [zero-copy deserialization][5]⏱0.25h), read through the following articles:
+For better understanding and familiarity with 📚 [`serde`]'s design, concepts, usage, and features (like 📰 [zero-copy deserialization][5]⏱0.25h), read through the following articles:
 - 📰 [Official `serde` crate guide][0]⏱0.25h
-- 📚 [Official `serde` crate docs][`serde`]⏱0.25h
-- 📚 [Official `serde_json` crate docs][`serde_json`]⏱0.25h
+- 📰 [Official `serde` crate examples][4]⏱0.25h
+- 📚 [Official `serde` crate docs][`serde`]
+- 📚 [Official `serde_json` crate docs][`serde_json`]
 - 📰 [Owen Gage: Understanding Rust's serde using macro expansion][6]⏱0.25h
 - 📰 [Owen Gage: Exploring serde's data model with a toy deserializer][7]⏱0.25h
 - 📰 [Owen Gage: A look at serde-json][11]⏱0.25h
@@ -46,31 +47,31 @@ For better understanding and familiarity with 📚 [`serde`]⏱0.25h's design, c
 
 ### Extras
 
-Being the de facto ecosystem standard, 📚 [`serde`]⏱0.25h crate itself is quite conservative about stability guarantees, so often may feel lacking obvious features. Therefore, additional ecosystem crates are worth considering, which extend 📚 [`serde`]⏱0.25h capabilities, being built on top of its machinery:
-- 📚 [`erased-serde`]⏱0.25h crate, providing type-erased versions of `serde`’s `Serialize`, `Serializer` and `Deserializer` traits that can be used as 📚 [trait objects][9]⏱0.25h.
-- 📚 [`serde_state`]⏱0.25h crate, extending the normal `Deserialize` and `Serialize` traits to allow state to be passed to every value which is serialized or deserialized.
-- 📚 [`serde_repr`]⏱0.25h crate, deriving `serde`'s `Serialize` and `Deserialize` traits in a way that delegates to the underlying repr of a C-like enum.
-- 📚 [`serde_with`]⏱0.25h crate, providing custom de/serialization helpers to use in combination with 📰 [`serde`’s `with`-annotation][8]⏱0.25h and with the improved `serde_as`-annotation.
-- 📚 [`serde_valid`]⏱0.25h crate, enabling 📰 [JSON Schema][10]⏱0.25h based validation. 
+Being the de facto ecosystem standard, 📚 [`serde`] crate itself is quite conservative about stability guarantees, so often may feel lacking obvious features. Therefore, additional ecosystem crates are worth considering, which extend 📚 [`serde`] capabilities, being built on top of its machinery:
+- 📚 [`erased-serde`] crate, providing type-erased versions of `serde`’s `Serialize`, `Serializer` and `Deserializer` traits that can be used as 🧭 [trait objects][9]⏱0.25h.
+- 📚 [`serde_state`] crate, extending the normal `Deserialize` and `Serialize` traits to allow state to be passed to every value which is serialized or deserialized.
+- 📚 [`serde_repr`] crate, deriving `serde`'s `Serialize` and `Deserialize` traits in a way that delegates to the underlying repr of a C-like enum.
+- 📚 [`serde_with`] crate, providing custom de/serialization helpers to use in combination with 📰 [`serde`’s `with`-annotation][8] and with the improved `serde_as`-annotation.
+- 📚 [`serde_valid`] crate, enabling 🏠 [JSON Schema][10] based validation. 
 
 
 
 
 ## `musli`
 
-📚 [`musli`]⏱0.25h is a relatively fresh and alternative framework for serialization and deserialization, which succeeds the principles of 📚 [`serde`]⏱0.25h, but also rethinks and overcomes some of its fundamental limitations.
+📚 [`musli`] is a relatively fresh and alternative framework for serialization and deserialization, which succeeds the principles of 📚 [`serde`], but also rethinks and overcomes some of its fundamental limitations.
 
-> Müsli is designed on similar principles as 📚 [`serde`]⏱0.25h. Relying on Rust’s powerful trait system to generate code which can largely be optimized away. The end result should be very similar to handwritten highly optimized code.
+> Müsli is designed on similar principles as 📚 [`serde`]. Relying on Rust’s powerful trait system to generate code which can largely be optimized away. The end result should be very similar to handwritten highly optimized code.
 
 > Where Müsli differs in design philosophy is twofold:
 >
 > We make use of GATs to provide tighter abstractions, which should be easier for Rust to optimize.
 >
-> We make less use of the Visitor pattern in certain instances where it’s deemed unnecessary, such as 📚 [when decoding collections][21]⏱0.25h. The result is usually cleaner decode implementations
+> We make less use of the Visitor pattern in certain instances where it’s deemed unnecessary, such as 📚 [when decoding collections][21]. The result is usually cleaner decode implementations
 
-However, the __main "killer feature"__ of 📚 [`musli`]⏱0.25h is its __ability to serialize/deserialize the same data model in different 📚 [modes][22]⏱0.25h__. 
+However, the __main "killer feature"__ of 📚 [`musli`] is its __ability to serialize/deserialize the same data model in different 📚 [modes][22]__. 
 
-> Another major aspect where Müsli differs is in the concept of 📚 [modes][22]⏱0.25h (note the `M` parameter above). Since this is a parameter of the `Encode` and `Decode` traits it allows for the same data model to be serialized in many different ways.
+> Another major aspect where Müsli differs is in the concept of 📚 [modes][22] (note the `M` parameter above). Since this is a parameter of the `Encode` and `Decode` traits it allows for the same data model to be serialized in many different ways.
 
 > ```rust
 > use musli::mode::{DefaultMode, Mode};
@@ -103,8 +104,8 @@ However, the __main "killer feature"__ of 📚 [`musli`]⏱0.25h is its __abilit
 > assert_eq!(out, r#"["あります",true]"#);
 > ```
 
-For better understanding and familiarity with 📚 [`musli`]⏱0.25h's design, concepts, usage, and features, read through the following articles:
-- 📚 [Official `musli` crate docs][`musli`]⏱0.25h
+For better understanding and familiarity with 📚 [`musli`]'s design, concepts, usage, and features, read through the following articles:
+- 📚 [Official `musli` crate docs][`musli`]
 - 📰 [John-John Tedro: A fresh look on incremental zero copy serialization][23]⏱0.25h
 
 
@@ -112,7 +113,7 @@ For better understanding and familiarity with 📚 [`musli`]⏱0.25h's design, c
 
 ## `rkyv`
 
-📚 [`rkyv`]⏱0.25h (_archive_) is an another alternative serialization/deserialization framework, __fully focused on 📰 [zero-copy][31]⏱0.25h operations__.
+📚 [`rkyv`] (_archive_) is an another alternative serialization/deserialization framework, __fully focused on 📰 [zero-copy][31]⏱0.25h operations__.
 
 > Like 📰 [serde][0]⏱0.25h, rkyv uses Rust’s powerful trait system to serialize data without the need for reflection. Despite having a wide array of features, you also only pay for what you use. If your data checks out, the serialization process can be as simple as a `memcpy`! Like serde, this allows rkyv to perform at speeds similar to handwritten serializers.
 >
@@ -120,9 +121,16 @@ For better understanding and familiarity with 📚 [`musli`]⏱0.25h's design, c
 
 > While rkyv is a great format for final data, it lacks a full schema system and isn’t well equipped for data migration and schema upgrades. If your use case requires these capabilities, you may need additional libraries the build these features on top of rkyv. You can use other serialization frameworks like serde with the same types as rkyv conflict-free.
 
-For better understanding and familiarity with 📚 [`rkyv`]⏱0.25h's design, concepts, usage, and features, read through the following articles:
-- 📚 [Official `rkyv` crate docs][`rkyv`]⏱0.25h
+For better understanding and familiarity with 📚 [`rkyv`]'s design, concepts, usage, and features, read through the following articles:
+- 📚 [Official `rkyv` crate docs][`rkyv`]
 - 📰 [`rkyv` book][30]⏱0.25h
+
+
+
+
+## `borsh-rs`
+
+📚 [`borsh-rs`]⏱0.25h is another alternative serialization/deserialization implementation, providing the __Borsh__ (Binary Object Representation Serializer for Hashing) format, __designed for security-critical projects__ prioritizing consistency, safety and speed.
 
 
 
@@ -144,9 +152,9 @@ Prove your implementation correctness with tests.
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. How does 📚 [`serde`]⏱0.25h achieve its performance? How does it model data and decouple responsibilities?
-2. When does it have sense to prefer 📚 [`musli`]⏱0.25h rather than 📚 [`serde`]⏱0.25h?
-3. What is zero-copy deserialization? Why is it beneficial? How does it work in 📚 [`serde`]⏱0.25h? How does it work in 📚 [`rkyv`]⏱0.25h?
+1. How does 📚 [`serde`] achieve its performance? How does it model data and decouple responsibilities?
+2. When does it have sense to prefer 📚 [`musli`] rather than 📚 [`serde`]?
+3. What is zero-copy deserialization? Why is it beneficial? How does it work in 📚 [`serde`]? How does it work in 📚 [`rkyv`]?
 
 
 
@@ -160,7 +168,6 @@ After completing everything above, you should be able to answer (and understand 
 [`serde_state`]: https://docs.rs/serde_state
 [`serde_valid`]: https://docs.rs/serde_valid
 [`serde_with`]: https://docs.rs/serde_with
-[`rkyv`]: https://rkyv.org/
 [`borsh-rs`]: https://github.com/near/borsh-rs
 [Rust]: https://www.rust-lang.org
 

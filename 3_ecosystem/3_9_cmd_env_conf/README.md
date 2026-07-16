@@ -6,16 +6,16 @@ Task 3.9: Command-line arguments, environment variables and configs
 
 ## CLI
 
-📚 [Rust]⏱0.25h provides a _simple_ 📚 [`std::env::Arg`]⏱0.5h iterator to access command-line arguments passed to a program.
+🏠 [Rust] provides a _simple_ 📚 [`std::env::Arg`] iterator to access command-line arguments passed to a program.
 
-However, most of the time you require more advanced tool for that, which provides `--help` and `--version` flags out-of-the-box and a _convenient way to setup and describe custom options/flags to build your own_ 📰 [CLI (command-line interface)][CLI]⏱1.5h. For such cases there is the well-known 📚 [`clap`]⏱0.25h crate in 📚 [Rust]⏱0.25h ecosystem.
+However, most of the time you require more advanced tool for that, which provides `--help` and `--version` flags out-of-the-box and a _convenient way to setup and describe custom options/flags to build your own_ 📰 [CLI (command-line interface)][CLI]. For such cases there is the well-known 📚 [`clap`] crate in 🏠 [Rust] ecosystem.
 
-It has the 📚 [`derive` Cargo feature][6]⏱0.25h (formerly, 📚 [`structopt`]⏱0.25h crate) allowing to define 📰 [CLI]⏱1.5h in a _declarative and clean way_.
+It has the 📚 [`derive` Cargo feature][6] (formerly, 📚 [`structopt`] crate) allowing to define 📰 [CLI] in a _declarative and clean way_.
 
-For better understanding and familiarity with 📰 [CLI]⏱1.5h tools in 📚 [Rust]⏱0.25h ecosystem, read through the following articles:
-- 📚 [Rust Book: 12.1. Accepting Command Line Arguments][1]⏱0.25h
-- 📚 [Official `std::env::Arg` docs][`std::env::Arg`]⏱0.5h
-- 📚 [Official `clap` crate docs][`clap`]⏱0.25h
+For better understanding and familiarity with 📰 [CLI] tools in 🏠 [Rust] ecosystem, read through the following articles:
+- 🧭 [Rust Book: 12.1. Accepting Command Line Arguments][1]⏱0.25h
+- 📚 [Official `std::env::Arg` docs][`std::env::Arg`]
+- 📚 [Official `clap` crate docs][`clap`]
 - 📰 [Pavlo Myroniuk: Rust Clap recipes][9]⏱0.25h
 
 
@@ -23,26 +23,26 @@ For better understanding and familiarity with 📰 [CLI]⏱1.5h tools in 📚 [R
 
 ## Environment variables
 
-📚 [Rust]⏱0.25h provides common primitives in 📚 [`std::env`]⏱0.25h for working with 📰 [environment variables][2]⏱1.5h as strings.
+🏠 [Rust] provides common primitives in 📚 [`std::env`] for working with 📰 [environment variables][2]⏱1.5h as strings.
 
-However, most of the time you want to operate with typed data, not with raw strings. Similarly to 📚 [`clap`]⏱0.25h for CLI, there is the 📚 [`envy`]⏱0.25h crate in 📚 [Rust]⏱0.25h ecosystem, which uses 📚 [`serde`]⏱0.25h as facade and allows to read data from 📰 [environment variables][2]⏱1.5h in a _declarative and clean way_ (due to 📰 [serde attributes][4]⏱0.25h support).
+However, most of the time you want to operate with typed data, not with raw strings. Similarly to 📚 [`clap`] for CLI, there is the 📚 [`envy`] crate in 🏠 [Rust] ecosystem, which uses 📚 [`serde`] as facade and allows to read data from 📰 [environment variables][2]⏱1.5h in a _declarative and clean way_ (due to 📰 [serde attributes][4] support).
 
-It's worth mentioning, that 📚 [`clap`]⏱0.25h crate is 📚 [able to parse from environment variables][7]⏱0.25h too, which is super handy when it comes to backing your 📰 [CLI]⏱1.5h with 📰 [environment variables][2]⏱1.5h.
+It's worth mentioning, that 📚 [`clap`] crate is 📚 [able to parse from environment variables][7] too, which is super handy when it comes to backing your 📰 [CLI] with 📰 [environment variables][2]⏱1.5h.
 
-Finally, 📚 [`dotenv`]⏱0.25h crate should be mentioned. It sets 📰 [environment variables][2]⏱1.5h basing on 📰 [`.env` file][8]⏱0.25h contents, which is widely used convention to simplify environment configuration and to omit declaring all the required environment variables by hand each time when running some program. This one is especially _useful in development_ (consider also 📰 [`rs-env`]⏱0.25h and 📰 [`direnv`]⏱0.25h for better development experience).
+Finally, 📚 [`dotenv`] crate should be mentioned. It sets 📰 [environment variables][2]⏱1.5h basing on 🧭 [`.env` file][8]⏱0.25h contents, which is widely used convention to simplify environment configuration and to omit declaring all the required environment variables by hand each time when running some program. This one is especially _useful in development_ (consider also 🧭 [`rs-env`]⏱0.25h and 📰 [`direnv`] for better development experience).
 
-For better understanding and familiarity with 📰 [environment variables][2]⏱1.5h tools in 📚 [Rust]⏱0.25h ecosystem, read through the following articles:
-- 📚 [Rust Book: 12.5. Working with Environment Variables][3]⏱0.25h
-- 📚 [Official `std::env` docs][`std::env`]⏱0.25h
-- 📚 [Official `envy` crate docs][`envy`]⏱0.25h
-- 📚 [Official `dotenv` crate docs][`dotenv`]⏱0.25h
+For better understanding and familiarity with 📰 [environment variables][2]⏱1.5h tools in 🏠 [Rust] ecosystem, read through the following articles:
+- 🧭 [Rust Book: 12.5. Working with Environment Variables][3]⏱0.25h
+- 📚 [Official `std::env` docs][`std::env`]
+- 📚 [Official `envy` crate docs][`envy`]
+- 📚 [Official `dotenv` crate docs][`dotenv`]
 
 
 
 
 ## Configuration
 
-For dealing with configurations there is the well-known 📚 [`config`]⏱0.25h crate in 📚 [Rust]⏱0.25h ecosystem, which simplifies creation and usage of hierarchical typed configuration structures in a 📰 [12-factor]⏱0.25h way.
+For dealing with configurations there is the well-known 📚 [`config`] crate in 🏠 [Rust] ecosystem, which simplifies creation and usage of hierarchical typed configuration structures in a 📰 [12-factor]⏱0.25h way.
 
 > `Config` lets you set a set of default parameters and then extend them via merging in configuration from a variety of sources:
 > - Environment variables
@@ -56,9 +56,9 @@ For dealing with configurations there is the well-known 📚 [`config`]⏱0.25h 
 > - Deep access into the merged configuration via a path syntax
 > - Deserialization via `serde` of the configuration or any subset defined via a path
 
-For better understanding and familiarity with 📚 [`config`]⏱0.25h crate design, concepts, usage, and features, read through the following articles:
-- 📚 [Official `config` crate docs][`config`]⏱0.25h
-- 📰 [`config` crate examples][5]⏱0.25h
+For better understanding and familiarity with 📚 [`config`] crate design, concepts, usage, and features, read through the following articles:
+- 📚 [Official `config` crate docs][`config`]
+- 📚 [`config` crate examples][5]
 
 
 
@@ -73,11 +73,11 @@ __Estimated time__: 1 day
 Write a simple program which prints out its actual configuration. Configuration should be implemented as a typed hierarchical structure, which is able to parse from a specified file and/or environment variables. 
 
 The following priority should be applied (in ascending order) when merging:
-1. Default values declared directly in 📚 [Rust]⏱0.25h sources;
+1. Default values declared directly in 🏠 [Rust] sources;
 2. Values read from TOML file;
 3. Values set by environment variables with `CONF_` prefix.
 
-📰 [CLI]⏱1.5h of the program should look like:
+📰 [CLI] of the program should look like:
 ```
 $ cargo run -- --help
 Prints its configuration to STDOUT
@@ -99,7 +99,7 @@ Options:
 After completing everything above, you should be able to answer (and understand why) the following questions:
 1. What are the benefits of having strongly-type configuration?
 2. Why environment variables are useful for configuring an application? What is the main use-case for them?
-3. How is 📚 [`config`]⏱0.25h crate really useful? Why should we it and cannot just deserialize a file into structs via 📚 [`serde`]⏱0.25h?
+3. How is 📚 [`config`] crate really useful? Why should we it and cannot just deserialize a file into structs via 📚 [`serde`]?
 
 
 

@@ -127,7 +127,7 @@ Our certification process is meticulously designed to maintain the highest level
 
 During the certification test, participants will be [supervised by a proctor][certification test]. We require participants to use two cameras and share their desktop throughout the test to prevent any unauthorized communication. In addition, we will monitor all active processes on the participant's computer at the beginning and during the test to curb any fraudulent activities.
 
-It's important to note that passing the certification test is challenging due to its intricate and tricky questions. Each participant has two attempts to pass the test. One attempt is shortened and one is basic. A shortened attempt is an opportunity to complete 10 questions in 10 minutes. If all the questions are correct, you can get a certificate based on the score of the shortened attempt. Participants who complete the first or second part of the program ahead of others, or those whose capstone project receives the most likes from mentors during presentation, will be awarded an extra attempt. We recommend utilizing available online quizzes as part of your **preparation for the certification test**. This method will help you thoroughly understand the topics related to any questions you might stumble upon.
+It's important to note that passing the certification test is challenging due to its intricate and tricky questions. Each participant has two attempts to pass the test. One attempt is shortened and one is basic. A shortened attempt is an opportunity to complete 10 questions in 10 minutes. If all the questions are correct, you can get a certificate based on the score of the shortened attempt. Participants who complete the first or second part of the program ahead of others, or those whose capstone project receives the most likes from mentors during presentation, will be awarded an extra attempt. We recommend utilizing available online quizzes, such as the 🏠 [Rust Quiz], as part of your **preparation for the certification test**. This method will help you thoroughly understand the topics related to any questions you might stumble upon.
 
 Any attempt to cheat during the certification test will lead to immediate expulsion from the boot camp.
 
@@ -164,7 +164,7 @@ There are a few potential reasons for expulsion from the group, which include bu
 
 ## Getting Started
 
-Wait for the invite to your new repository from [our bot](https://github.com/1tbot). For each exercise, you'll need to create separate pull requests. Then, when the reviewer checks and approves your pull request, [our bot](https://github.com/1tbot) will merge it into the master/main branch. After that, the exercise will be considered done.
+Wait for the invite to your new repository from 📰 [our bot][bot]. For each exercise, you'll need to create separate pull requests. Then, when the reviewer checks and approves your pull request, [our bot](https://github.com/1tbot) will merge it into the master/main branch. After that, the exercise will be considered done.
 
 1. [Our bot](https://github.com/1tbot) will create a private fork of the main [Rustcamp repository](https://github.com/rust-lang-ua/rustcamp) in [our organization](https://github.com/rust-bootcamp) and invite you.
 
@@ -179,7 +179,7 @@ For each task of the rustcamp, you should create and submit a separate [PR (pull
 Please, don't do PR merge yourself. 
 To ensure a thorough review and exchange of experience between mentors, your pull request must be approved by **all** of your assigned mentors before it can be merged into the main branch. After receiving approvals from all mentors, [our bot](https://github.com/1tbot) will merge your PR.
 
-Each task of the rustcamp is a [Cargo workspace member][workspace], meaning you can run and test it from the project root using commands like `cargo run -p task_1_8`. We highly recommend using tools like [rustfmt] and [Clippy] while writing your [Rust] code.
+Each task of the rustcamp is a 🧭 [Cargo workspace member][workspace]⏱0.25h, meaning you can run and test it from the project root using commands like `cargo run -p task_1_8`. We highly recommend using tools like [rustfmt] and [Clippy] while writing your [Rust] code.
 
 Never hesitate to reach out to your mentor or lead with questions. However, be aware that you may not always receive a direct answer. Instead, they may guide you towards a path for your own exploration and discovery. Remember, in this learning journey, it's usually the mentor or lead who asks the questions, expecting thorough and precise responses from you.
 
@@ -211,6 +211,7 @@ If you're feeling that the certification might be too challenging at this point,
 [Rustcamp]: https://github.com/rust-lang-ua/rustcamp/README.md
 [certification test]: https://www.youtube.com/watch?v=cInMjEaH1q0
 [how to fork - step by step]: ./how_to_fork.md
+[bot]: https://github.com/1tbot
 [PR]: https://help.github.com/articles/github-glossary/#pull-request
 [workspace]: https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html
 [Rust]: https://www.rust-lang.org

@@ -6,11 +6,11 @@ Task 1.1: Default values, cloning and copying
 
 ## Default values
 
-📚 [Rust]⏱0.25h has a standard way to deal with default values of a type via [`Default`]⏱0.25h trait. Read through 📚 [its official docs][`Default`]⏱0.25h to understand the design.
+🏠 [Rust] has a standard way to deal with default values of a type via [`Default`]⏱0.25h trait. Read through 📚 [its official docs][`Default`]⏱0.25h to understand the design.
 
 It can be auto-derived, but only for a `struct` whose all members have 📚 [`Default`]⏱0.25h implementations. It is implemented for a great many types in the standard library, and also used in a surprising number of places. So if your type has a value that can be construed as being "default", it is a good idea to implement this trait.
 
-If you're not satisfied with 📚 [std]⏱0.25h deriving capabilities for 📚 [`Default`]⏱0.25h, consider using 📚 [smart-default]⏱0.25h crate. An example is quite self-explanatory:
+If you're not satisfied with 📚 [std] deriving capabilities for 📚 [`Default`]⏱0.25h, consider using 📚 [smart-default] crate. An example is quite self-explanatory:
 ```rust
 #[derive(SmartDefault)]
 enum Foo {
@@ -41,7 +41,7 @@ let x = Foo { bar: baz, ..Default::default() };
 
 ## Cloning and copying
 
-By default, all types in 📚 [Rust]⏱0.25h follow ❓ ['move semantics'][1]⏱0.5h.
+By default, all types in 🏠 [Rust] follow ❓ ['move semantics'][1]⏱0.5h.
 
 If you need a duplicate of a value, then its type should implement [`Clone`]⏱0.75h trait (see 📚 [official docs][`Clone`]⏱0.75h), and a duplicate is created by calling [`Clone`]⏱0.75h methods __explicitly__. Cloning can be __either cheap or expensive__ operation depending on type semantics.
 
@@ -81,7 +81,7 @@ __Estimated time__: 1 day
 ## Questions
 
 After completing everything above, you should be able to answer (and understand why) the following questions:
-1. What purpose does 📚 [`Default`]⏱0.25h trait serve in 📚 [Rust]⏱0.25h?
+1. What purpose does 📚 [`Default`]⏱0.25h trait serve in 🏠 [Rust]?
 2. What is `#[derive(Default)]` from `std` capable of? What does it wrong? Which are alternatives?
 3. What does 📚 [`Clone`]⏱0.75h mean semantically?
 4. What does 📚 [`Copy`]⏱0.25h mean semantically? How is it connected with 📚 [`Clone`]⏱0.75h? Which limitations does it have and why?

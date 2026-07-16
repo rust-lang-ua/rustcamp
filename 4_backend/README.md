@@ -1,13 +1,13 @@
 Chapter 4: Backend ecosystem
 =========================
 
-These tasks describe common crates and tools in 📚 [Rust]⏱0.25h ecosystem required for web backend development.
+These tasks describe common crates and tools in 🏠 [Rust] ecosystem required for web backend development.
 
 > ❗️Before completing this task you should complete all its sub-tasks.
 
 After doing them you should be able to answer the following questions:
-1. How should I interact with databases in 📚 [Rust]⏱0.25h application and why? How can I organize migrations for my project?
-2. What should I use for 📰 [HTTP]⏱1.5h server implementation in 📚 [Rust]⏱0.25h, when and why? What about 📰 [WebSocket]⏱1h connections?
+1. How should I interact with databases in 🏠 [Rust] application and why? How can I organize migrations for my project?
+2. What should I use for 📰 [HTTP]⏱1.5h server implementation in 🏠 [Rust], when and why? What about 📰 [WebSocket]⏱1h connections?
 3. What are options for making 📰 [HTTP]⏱1.5h request (including 📰 [WebSocket]⏱1h ones)?
 4. What is 📰 [RPC]⏱0.25h? Name several the most adopted technologies, their advantages and disadvantages, explain which one could be used under which circumstances, and what and where is their best fit? 
 
@@ -35,10 +35,10 @@ Web frameworks, tools and database choices are up to you. Keep things simple to 
 
 If you have enough time after implementing base requirements, consider to add the following to your solution:
 - Provide migrations for database schema (if possible).
-- Add comprehensive documentation to your code and 📰 [API]⏱0.75h, and generate it in 📰 [HTML]⏱2h form.
+- Add comprehensive documentation to your code and 📰 [API], and generate it in 📰 [HTML] form.
 - Cover your implementation with unit and E2E tests.
 - Implement 📰 [GraphQL]⏱0.25h query 📰 [depth limiting][21]⏱0.25h.
-- Use 🧭 [dataloading][22]⏱0.25h to optimize interaction with database in 📰 [GraphQL]⏱0.25h resolvers. 
+- Use 🧭 [dataloading][22] to optimize interaction with database in 📰 [GraphQL]⏱0.25h resolvers. 
 
 
 

@@ -2,7 +2,7 @@
 
 To get started, you'll need to create a **private** fork of the [Rust Incubator](https://github.com/rust-lang-ua/rust_incubator). Each exercise should be completed via separate pull requests. Once a reviewer approves your pull request, merge it into the master/main branch. The exercise is considered completed at that point.
 
-#### 1. [Generate](https://github.com/rust-lang-ua/rust_incubator/generate) a new [GitHub repository](https://help.github.com/articles/github-glossary/#repository) from this one [using it as a template ❗](https://help.github.com/en/articles/creating-a-repository-from-a-template). Ensure your repository is private.
+#### 1. [Generate](https://github.com/rust-lang-ua/rust_incubator/generate) a new 📰 [GitHub repository][GitHub repository] from this one 📰 [using it as a template ❗][Fork As Template]. Ensure your repository is private.
 
  - Navigate to the [Rust Incubator](https://github.com/rust-lang-ua/rust_incubator).
  - Click the **"Use this template"** button and select **"create a new repository"**.
@@ -56,3 +56,6 @@ git merge upstream/master
 To stay aware of any new changes, consider [watch this repository on GitHub](https://github.com/rust-lang-ua/rust_incubator/subscription) or tracking it via [RSS subscription](https://github.com/rust-lang-ua/rust_incubator/commits/master.atom).
 
 If you get the error `fatal: refusing to merge unrelated histories` add option `--allow-unrelated-histories`  flag to the last command.
+
+[GitHub repository]: https://help.github.com/articles/github-glossary/#repository
+[Fork As Template]: https://help.github.com/en/articles/creating-a-repository-from-a-template

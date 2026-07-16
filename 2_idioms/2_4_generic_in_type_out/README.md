@@ -6,7 +6,7 @@ Task 2.4: Abstract type in, concrete type out
 
 ## Abstracting over input type
 
-The common and obvious rules in 📚 [Rust]⏱0.25h when choosing type for an input parameter are the following:
+The common and obvious rules in 🏠 [Rust] when choosing type for an input parameter are the following:
 - If you need a _read-only access_ to the value, then use a shared reference (`&T`).
 - If you want to _mutate the value in-place_, then use a mutable reference (`&mut T`).
 - If you want to _consume and own_ the value, then move it (`T`).
@@ -36,7 +36,7 @@ impl Nickname {
     }
 }
 ```
-However, due to the need of explicit type conversions in 📚 [Rust]⏱0.25h, such API can lack ergonomics in use (notice the explicit conversion methods that API user has to use):
+However, due to the need of explicit type conversions in 🏠 [Rust], such API can lack ergonomics in use (notice the explicit conversion methods that API user has to use):
 ```rust
 let mut nickname = Nickname::new("Vasya".to_string());
 add_hi(nickname.as_mut());
@@ -72,14 +72,14 @@ add_hi(&mut nickname);
 just_print_stringy(&nickname);
 ```
 
-This is one of the key features, which drive 📚 [Rust]⏱0.25h expressiveness and ergonomics. Just look over `std` library to see how widely it's used: 📚 [`Iterator::eq()`][1]⏱2h, 📚 [`Vec::drain()`][2]⏱3.5h, 📚 [`HashMap::extend()`][3]⏱0.5h, etc.
+This is one of the key features, which drive 🏠 [Rust] expressiveness and ergonomics. Just look over `std` library to see how widely it's used: 📚 [`Iterator::eq()`][1], 📚 [`Vec::drain()`][2], 📚 [`HashMap::extend()`][3], etc.
 
 The downside of this idiom is that compiler generates more code due to monomorphization, so potentially leads to code bloating. The way it can be optimized has already been [explained in "Reducing code bloat optimization" section of 1.6 task][6].
 
 Further reading on theme:
 - 📰 [Joe Wilm: From &str to Cow][4]⏱0.25h
 - 📰 [Pascal Hertleif: Elegant Library APIs in Rust: Use conversion traits][5]⏱0.5h
-- 📰 [Carl M. Kadie: Nine Rules for Elegant Rust Library APIs][10]⏱0.75h
+- 📰 [Carl M. Kadie: Nine Rules for Elegant Rust Library APIs][10]
 
 
 
@@ -88,7 +88,7 @@ Further reading on theme:
 
 While for an input parameter we want to accept as much types as possible, for return types a vice versa will be a good practice: __return the most concrete type to provide as much information as possible__, so prefer returning a concrete type instead of `impl Trait` or a type parameter. This extends usage API of a returned type (as it's concrete type not erased), and, potentially, may reduce monomorphization (actually, it shouldn't, as monomorphization mostly happens due to input type parameters).
 
-Consider 📚 [`Iterator`]⏱2h adapter methods as an example: 📚 [`Iterator::map()`][7]⏱2h, 📚 [`Iterator::enumerate()`][8]⏱2h, 📚 [`Iterator::filter()`][9]⏱2h, etc. They all return a concrete adapter type, rather than `impl Iterator<..>` abstraction.
+Consider 📚 [`Iterator`]⏱2h adapter methods as an example: 📚 [`Iterator::map()`][7], 📚 [`Iterator::enumerate()`][8], 📚 [`Iterator::filter()`][9], etc. They all return a concrete adapter type, rather than `impl Iterator<..>` abstraction.
 
 However, this is not a strict rule, so should not be applied blindly. If you _really need_ to abstract over a return type (for example, to future-proof your API), then just do it.
 

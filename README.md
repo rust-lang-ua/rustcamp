@@ -4,7 +4,7 @@ Rust Rustcamp
 > "It wasn't always so clear, but the Rust programming language is fundamentally about _empowerment_: no matter what kind of code you are writing now, Rust empowers you to reach farther, to program with confidence in a wider variety of domains than you did before."
 _<div align="right">Rust Book's Foreword</div>_
 
-In this rustcamp, you will participate in the [Rustcamp], a rigorous, step-by-step Rust certification program 🏆. The aim of this program is to shape you into a proficient **Strong Junior** Rust Developer. Indeed, with this rigorous training, you will find yourself better prepared than developers switching from other languages without a similar level of instruction. If you are a mid- or senior-level developer transitioning to Rust, you can confidently target **Middle-level** positions after achieving this certification.
+In this rustcamp, you will participate in the [Rustcamp]⏱0.25h, a rigorous, step-by-step Rust certification program 🏆. The aim of this program is to shape you into a proficient **Strong Junior** Rust Developer. Indeed, with this rigorous training, you will find yourself better prepared than developers switching from other languages without a similar level of instruction. If you are a mid- or senior-level developer transitioning to Rust, you can confidently target **Middle-level** positions after achieving this certification.
 
 | Description                     | Number |
 |---------------------------------|-------:|
@@ -15,7 +15,7 @@ In this rustcamp, you will participate in the [Rustcamp], a rigorous, step-by-st
 
 ## Prerequisites
 
-Before you begin the certification program, you should have a solid understanding of Rust and Git/GitHub. We strongly recommend completing the 📚 [Rust Book]⏱0.25h. It's also beneficial if you have completed 📰 [Rustlings]⏱0.25h and 📰 [Exercism]⏱0.25h, and have some hands-on practice. If you're transitioning from another programming language, you'll also find this certification program particularly useful.
+Before you begin the certification program, you should have a solid understanding of Rust and Git/GitHub. We strongly recommend completing the 🧭 [Rust Book]⏱0.25h. It's also beneficial if you have completed 🏠 [Rustlings] and 📰 [Exercism]⏱0.25h, and have some hands-on practice. If you're transitioning from another programming language, you'll also find this certification program particularly useful.
 
 ## Process
 
@@ -37,36 +37,36 @@ Please, read [instructions][Submitting Solutions].
 
 ### Toolchain
 
-- 📰 [rustup]⏱0.25h for installing 📚 [Rust]⏱0.25h toolchain and keeping it up-to-date.
-- 📰 [RustRover]⏱0.25h as development environment (or any other on your choice).
+- 🏠 [rustup] for installing 🏠 [Rust] toolchain and keeping it up-to-date.
+- 📰 [RustRover] as development environment (or any other on your choice).
 
 
 ### Bookshelf
 
-- 📚 [Rust Book]⏱0.25h teaches and explains 📚 [Rust]⏱0.25h basics.
-- 📚 [Rust By Example]⏱0.25h teaches you 📚 [Rust]⏱0.25h basics using editable examples.
-- 📚 [Rust Reference]⏱0.25h is not a formal spec, but is more detailed and comprehensive than the 📚 [Rust Book]⏱0.25h.
-- 📰 [Cheats.rs]⏱4.25h and 📰 [Rust SVG Cheatsheet] for quick reference.
-- 📚 [Rust Edition Guide]⏱0.25h for considering improvements of 📚 [Rust 2018]⏱0.25h and 📚 [Rust 2021]⏱0.25h.
-- 📚 [Rust std lib]⏱0.25h documentation.
-- 📚 [Cargo Book]⏱0.25h is a guide to 📰 [Cargo]⏱0.25h, 📚 [Rust]⏱0.25h's build tool and dependency manager.
-- 📚 [Rustdoc Book]⏱0.25h is a guide to `rustdoc` documentation tool.
-- 📰 [Rust Cookbook]⏱0.5h is a collection of simple examples that demonstrate good practices to accomplish common programming tasks, using the crates of the 📚 [Rust]⏱0.25h ecosystem.
-- 📰 [Rust Design Patterns]⏱0.25h is an open source repository of 📚 [Rust]⏱0.25h design patterns and idioms.
-- 📰 [Effective Rust]⏱0.25h is a collection of guidelines that had been learned from real world experience of creating software in 📚 [Rust]⏱0.25h.
-- 📚 [Rust API Guidelines]⏱0.25h is a set of recommendations on how to design and present APIs for 📚 [Rust]⏱0.25h.
-- 📰 [Rust FAQ] answers common question about 📚 [Rust]⏱0.25h.
-- 📰 [Rust Playground]⏱0.25h allows to share and check runnable 📚 [Rust]⏱0.25h code snippets online.
-- 📋 [Awesome Rust]⏱2.25h is a curated list of 📚 [Rust]⏱0.25h code and resources.
-- 📰 [This Week in Rust]⏱0.25h represents handpicked and subscribable 📚 [Rust]⏱0.25h weekly updates.
-- 📰 [Baby Steps]⏱0.25h blog of [Nicholas Matsakis](https://github.com/nikomatsakis) shares useful 📚 [Rust]⏱0.25h patterns, ideas and design decisions.
+- 🧭 [Rust Book]⏱0.25h teaches and explains 🏠 [Rust] basics.
+- 🧭 [Rust By Example]⏱0.25h teaches you 🏠 [Rust] basics using editable examples.
+- 📚 [Rust Reference]⏱0.25h is not a formal spec, but is more detailed and comprehensive than the 🧭 [Rust Book]⏱0.25h.
+- 📰 [Cheats.rs] and 📰 [Rust SVG Cheatsheet] for quick reference.
+- 🧭 [Rust Edition Guide]⏱0.25h for considering improvements of 🧭 [Rust 2018]⏱0.25h and 🧭 [Rust 2021]⏱0.25h.
+- 📚 [Rust std lib] documentation.
+- 🧭 [Cargo Book] is a guide to 📚 [Cargo], 🏠 [Rust]'s build tool and dependency manager.
+- 🧭 [Rustdoc Book]⏱0.25h is a guide to `rustdoc` documentation tool.
+- 📰 [Rust Cookbook]⏱0.5h is a collection of simple examples that demonstrate good practices to accomplish common programming tasks, using the crates of the 🏠 [Rust] ecosystem.
+- 📰 [Rust Design Patterns]⏱0.25h is an open source repository of 🏠 [Rust] design patterns and idioms.
+- 📰 [Effective Rust]⏱0.25h is a collection of guidelines that had been learned from real world experience of creating software in 🏠 [Rust].
+- 📚 [Rust API Guidelines]⏱0.25h is a set of recommendations on how to design and present APIs for 🏠 [Rust].
+- 📰 [Rust FAQ] answers common question about 🏠 [Rust].
+- 📰 [Rust Playground] allows to share and check runnable 🏠 [Rust] code snippets online.
+- 📋 [Awesome Rust] is a curated list of 🏠 [Rust] code and resources.
+- 🏠 [This Week in Rust] represents handpicked and subscribable 🏠 [Rust] weekly updates.
+- 📰 [Baby Steps] blog of [Nicholas Matsakis](https://github.com/nikomatsakis) shares useful 🏠 [Rust] patterns, ideas and design decisions.
 
 
 
 
 ### Schedule
 
-Each task must be performed as a separate 📰 [PR (pull request)][PR]⏱0.75h with an appropriate name and checkmarked here in README's schedule after completion. Each task is a 📚 [Cargo workspace member][13]⏱0.25h, so you can run/test it from the project root (i.e. `cargo run -p task_1_8`). __Consider to use 📰 [rustfmt]⏱0.5h and 📰 [Clippy]⏱0.5h when you're writing 📚 [Rust]⏱0.25h code.__
+Each task must be performed as a separate 📰 [PR (pull request)][PR] with an appropriate name and checkmarked here in README's schedule after completion. Each task is a 🧭 [Cargo workspace member][13]⏱0.25h, so you can run/test it from the project root (i.e. `cargo run -p task_1_8`). __Consider to use 🧭 [rustfmt]⏱0.25h and 🧭 [Clippy]⏱0.25h when you're writing 🏠 [Rust] code.__
 
 Each task has the estimated time for completion. If any deeper investigation on task's theme is needed by you, then it's on your own.
 
@@ -132,20 +132,20 @@ Do not hesitate to ask your mentor/lead with questions, however you won't receiv
 - 🧭 [Orientation] - Maximize your rustcamp experience with these tips.
 - ⏩ [Getting Started][Getting Started] - Kick off your learning journey here.
 - 🎓 [Exercism]⏱0.25h - Dive into coding exercises with the guidance of mentors.
-- 📚 [Learning Materials]⏱0.25h[Learning Materials]⏱0.25h - A curated collection of top-notch Rust learning materials.
-- 🔧 [Ecosystem]⏱0.75h[Ecosystem]⏱0.75h - A curated collection of frequently used crates, representing essential parts of the Rust ecosystem.
+- 📚 [Learning Materials][Learning Materials] - A curated collection of top-notch Rust learning materials.
+- 🔧 [Ecosystem][Ecosystem] - A curated collection of frequently used crates, representing essential parts of the Rust ecosystem.
 - 🌐 [Zero To Production]⏱0.25h - A back-end focused book to broaden your knowledge.
   - Access the book as a [series of articles][Zero To Production as a series of articles].
 - ❔ [FAQ] - Answers to frequently asked questions at your fingertips.
-- 🔄 [Progress Board]⏱0.25h - Participant progress board
-- 🚀 [Graduates' Capstone Projects]⏱0.75h - Graduates' сapstone зrojects
+- 🔄 [Progress Board] - Participant progress board
+- 🚀 [Graduates' Capstone Projects] - Graduates' сapstone зrojects
   
 ## Too hard?
 
 - 👣 [Step-by-Step Introduction]⏱0.25h - A gradual introduction to Rust programming.
-- 🐣 [Rustlings]⏱0.25h - Small exercises designed to familiarize you with reading and writing Rust code.
-- 📘 [Rust Book]⏱0.25h - An indispensable guide to Rust. While it's a must-have starting point, we strongly encourage revisiting it throughout your learning journey.
-<!-- - 🗂️ Awesome List of 📰 [Learning Materials on Git]⏱0.25h[Learning Materials on Git]⏱0.25h - Essential resources for mastering Git. -->
+- 🐣 [Rustlings] - Small exercises designed to familiarize you with reading and writing Rust code.
+- 🧭 [Rust Book]⏱0.25h - An indispensable guide to Rust. While it's a must-have starting point, we strongly encourage revisiting it throughout your learning journey.
+<!-- - 🗂️ Awesome List of 📋 [Learning Materials on Git][Learning Materials on Git] - Essential resources for mastering Git. -->
 
 ## Credits
 
@@ -210,9 +210,7 @@ Rustcamp materials were based on the [Rust Incubator](https://github.com/instrum
 [Cheats.rs]: https://cheats.rs
 [RustRover]: https://www.jetbrains.com/rust/
 [Effective Rust]: https://www.lurklurk.org/effective-rust
-[GitHub repository]: https://help.github.com/articles/github-glossary/#repository
 [PR]: https://help.github.com/articles/github-glossary/#pull-request
-[workspace]: https://doc.rust-lang.org/book/ch14-03-cargo-workspaces.html
 [Rust]: https://www.rust-lang.org
 [Rust 2018]: https://doc.rust-lang.org/edition-guide/rust-2018/index.html
 [Rust 2021]: https://doc.rust-lang.org/edition-guide/rust-2021/index.html
@@ -230,17 +228,14 @@ Rustcamp materials were based on the [Rust Incubator](https://github.com/instrum
 [Clippy]: https://github.com/rust-lang/rust-clippy
 [rustfmt]: https://github.com/rust-lang/rustfmt
 [Rustcamp ]: https://github.com/rust-lang-ua/rustcamp
-[Fork As Template]: https://help.github.com/en/articles/creating-a-repository-from-a-template
 [rustup]: https://rustup.rs
 [This Week in Rust]: https://this-week-in-rust.org
-[bot]: https://github.com/1tbot
 [how to fork - step by step]: ./how_to_fork.md
 
 [Orientation]: ./orientation.md
 [Getting Started]: ./orientation.md#getting-started
 [Submitting Solutions]: ./orientation.md#submitting-solutions
 [Exercism]: https://exercism.org/tracks/rust
-[Rust Quiz]: https://github.com/dtolnay/rust-quiz
 [Learning Materials]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md
 [Ecosystem]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/toolbox_general.md
 [Zero To Production]: https://www.zero2prod.com/index.html?country=Ukraine&discount_code=EEU60
