@@ -5,7 +5,7 @@ While [threads](../3_10_threads) represent a solution for 📰 [CPU-bound] probl
 
 As of now, 🏠 [Rust] has no async primitives in its standard library yet, so "by default" `std` I/O works in a synchronous manner (blocks the current 📰 [thread][33]⏱0.75h). However, it provides 📚 [core abstractions][`std::future`]⏱0.25h for building ones, using which, ecosystem crates (like 📚 [`tokio`]) implement and provide primitives for 📰 [async I/O][1].
 
-It's important to note, that async story in 🏠 [Rust] is 📰 [still][2]⏱2h 📚 [maturing][3]. That's why things could be 📰 [quite cumbersome][5]⏱0.25h at the moment, often 📚 [causing frustration][6]⏱0.25h (especially, when it 📰 [comes to abstractions][7]⏱0.5h). 📚 [wg-async][4] (async working group) works on making this easier, simpler, more ergonomic and powerful in the future.
+It's important to note, that async story in 🏠 [Rust] is 🏠 [still][2] 📚 [maturing][3]. That's why things could be 📰 [quite cumbersome][5]⏱0.25h at the moment, often 📚 [causing frustration][6]⏱0.25h (especially, when it 📰 [comes to abstractions][7]⏱0.5h). 📚 [wg-async][4] (async working group) works on making this easier, simpler, more ergonomic and powerful in the future.
 
 
 
@@ -36,7 +36,7 @@ It's important to mention, that before 📚 [futures design has been stabilized]
 
 🏠 [Rust] automatically 📚 [desugars `async` functions and blocks into the ones returning a `Future`][17]⏱0.25h, applying the correct 📚 [lifetime capturing and elision rules][18]⏱0.25h for the syntax ergonomics.
 
-Though, 📰 [`async` keyword in not supported in trait methods yet][2]⏱2h, there is the 📚 [`async-trait`] crate, which allows this for traits by desugaring into a 📚 [`Box`]ed 📚 [`Future`] (the main downside of which is being non-transparent over auto-traits like `Send`/`Sync`). 
+Though, 🏠 [`async` keyword in not supported in trait methods yet][2], there is the 📚 [`async-trait`] crate, which allows this for traits by desugaring into a 📚 [`Box`]ed 📚 [`Future`] (the main downside of which is being non-transparent over auto-traits like `Send`/`Sync`). 
 
 For better understanding `async`/`.await` keywords design, desugaring, usage, and features, read through the following articles:
 - 📚 [Rust RFC 2394: `async_await`][16]⏱0.25h

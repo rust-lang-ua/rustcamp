@@ -70,6 +70,7 @@ _Additional_ articles, which may help to understand the above topic better:
 | 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9]⏱0.75h | Jimmy Hartzell |
 | 📰 [Trait Drop][10]⏱0.25h | — |
 | 📰 [Common Lifetime Misconception][11]⏱0.75h | — |
+| 🎥 [Crust of Rust: Subtyping and Variance][32]⏱1.75h | Jon Gjengset |
 | 🎥 [Visualizing Memory Layout][12]⏱0.75h | — |
 | 📚 [Packages and crates (Rust wiki)][14]⏱0.25h | — |
 | 📰 [Non-lexical lifetimes (NLL) fully stable][15]⏱0.25h | Niko Matsakis |
@@ -118,3 +119,4 @@ _Additional_ articles, which may help to understand the above topic better:
 [28]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md
 [30]: https://dev.to/vikram2784/beyond-pointers-how-rust-outshines-c-with-its-borrow-checker-1mad
 [31]: https://en.wikipedia.org/wiki/Memory_model_(programming)
+[32]: https://www.youtube.com/watch?v=iVYWDIW71jk

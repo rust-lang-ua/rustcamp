@@ -110,7 +110,7 @@ Despite the fact it's quite a feature rich solution, it 📚 [lacks good support
 ## More reading
 
 - 📰 [Sylvain Kerkour: Overview of the Rust cryptography ecosystem][15]⏱0.25h (Tue, Aug 24, 2021)
-- 📰 [Cheatsheat on cyphering, hashing adn security][16]
+- 🏠 [Cheatsheat on cyphering, hashing adn security][16]
 
 
 

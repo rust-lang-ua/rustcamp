@@ -15,7 +15,7 @@ In this rustcamp, you will participate in the [Rustcamp]⏱0.25h, a rigorous, st
 
 ## Prerequisites
 
-Before you begin the certification program, you should have a solid understanding of Rust and Git/GitHub. We strongly recommend completing the 🧭 [Rust Book]⏱0.25h. It's also beneficial if you have completed 🏠 [Rustlings] and 📰 [Exercism]⏱0.25h, and have some hands-on practice. If you're transitioning from another programming language, you'll also find this certification program particularly useful.
+Before you begin the certification program, you should have a solid understanding of Rust and Git/GitHub. We strongly recommend completing the 🧭 [Rust Book]⏱0.25h. It's also beneficial if you have completed 🏠 [Rustlings] and 🏠 [Exercism], and have some hands-on practice. If you're transitioning from another programming language, you'll also find this certification program particularly useful.
 
 ## Process
 
@@ -38,7 +38,6 @@ Please, read [instructions][Submitting Solutions].
 ### Toolchain
 
 - 🏠 [rustup] for installing 🏠 [Rust] toolchain and keeping it up-to-date.
-- 📰 [RustRover] as development environment (or any other on your choice).
 
 
 ### Bookshelf
@@ -56,7 +55,7 @@ Please, read [instructions][Submitting Solutions].
 - 📰 [Effective Rust]⏱0.25h is a collection of guidelines that had been learned from real world experience of creating software in 🏠 [Rust].
 - 📚 [Rust API Guidelines]⏱0.25h is a set of recommendations on how to design and present APIs for 🏠 [Rust].
 - 📰 [Rust FAQ] answers common question about 🏠 [Rust].
-- 📰 [Rust Playground] allows to share and check runnable 🏠 [Rust] code snippets online.
+- 🏠 [Rust Playground] allows to share and check runnable 🏠 [Rust] code snippets online.
 - 📋 [Awesome Rust] is a curated list of 🏠 [Rust] code and resources.
 - 🏠 [This Week in Rust] represents handpicked and subscribable 🏠 [Rust] weekly updates.
 - 📰 [Baby Steps] blog of [Nicholas Matsakis](https://github.com/nikomatsakis) shares useful 🏠 [Rust] patterns, ideas and design decisions.
@@ -131,15 +130,15 @@ Do not hesitate to ask your mentor/lead with questions, however you won't receiv
 
 - 🧭 [Orientation] - Maximize your rustcamp experience with these tips.
 - ⏩ [Getting Started][Getting Started] - Kick off your learning journey here.
-- 🎓 [Exercism]⏱0.25h - Dive into coding exercises with the guidance of mentors.
+- 🎓 [Exercism] - Dive into coding exercises with the guidance of mentors.
 - 📚 [Learning Materials][Learning Materials] - A curated collection of top-notch Rust learning materials.
 - 🔧 [Ecosystem][Ecosystem] - A curated collection of frequently used crates, representing essential parts of the Rust ecosystem.
-- 🌐 [Zero To Production]⏱0.25h - A back-end focused book to broaden your knowledge.
+- 🌐 [Zero To Production] - A back-end focused book to broaden your knowledge.
   - Access the book as a [series of articles][Zero To Production as a series of articles].
 - ❔ [FAQ] - Answers to frequently asked questions at your fingertips.
 - 🔄 [Progress Board] - Participant progress board
 - 🚀 [Graduates' Capstone Projects] - Graduates' сapstone зrojects
-  
+
 ## Too hard?
 
 - 👣 [Step-by-Step Introduction]⏱0.25h - A gradual introduction to Rust programming.
@@ -208,7 +207,6 @@ Rustcamp materials were based on the [Rust Incubator](https://github.com/instrum
 [Cargo]: https://github.com/rust-lang/cargo
 [Cargo Book]: https://doc.rust-lang.org/cargo
 [Cheats.rs]: https://cheats.rs
-[RustRover]: https://www.jetbrains.com/rust/
 [Effective Rust]: https://www.lurklurk.org/effective-rust
 [PR]: https://help.github.com/articles/github-glossary/#pull-request
 [Rust]: https://www.rust-lang.org
