@@ -87,7 +87,7 @@ For better understanding 📚 [`PhantomData`] purpose, design, limitations and u
 - 📚 [Official `PhantomData` docs][`PhantomData`]
 - 🧭 [Rust By Example: 14.9. Phantom type parameters][1]⏱0.25h
 - 🧭 [Rustonomicon: 3.10. PhantomData][2]⏱0.25h
-- ❓ [Reddit: Why PhantomData][3]⏱0.25h
+- ❓ [Reddit: Why PhantomData][3]⏱0.25h [OP article was moved here][12]
 - 🧭 [RIP Tutorial: Using PhantomData as a Type Marker][4]
 - 📰 [Aayushya Vajpayee: Write Cleaner, More Maintainable Rust Code with PhantomData][11]⏱0.25h
 - 📰 [Sergey Potapov: Phantom Types in Rust][6]⏱0.25h
@@ -210,3 +210,4 @@ After completing everything above, you should be able to answer (and understand 
 [9]: https://docs.rs/variance/0.1.3/src/variance/lib.rs.html#92
 [10]: https://manishearth.github.io/blog/2017/01/11/rust-tidbits-what-is-a-lang-item
 [11]: https://aayushyavajpayee.substack.com/p/coming-soon
+[12]: http://troubles.md/why-phantomdata/
