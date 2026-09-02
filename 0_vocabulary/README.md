@@ -29,25 +29,25 @@ The table below maps Rust concepts to their closest analogue elsewhere, so you c
 
 After completing these steps, you should be able to answer (and understand why) the following questions:
 
-1. What 📰 [memory model][31]⏱0.25h 🏠 [Rust] has? Is 🏠 [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM?
-2. What runtime 🏠 [Rust] has? Does it use a GC (garbage collector)?
+1. What 📰 [memory model][31]⏱0.25h 🏠 [Rust] has? Is 🏠 [Rust] single-threaded or multi-threaded? Is it synchronous or asynchronous? What are the memory layouts of `Box` and `Vector`? What are a heap and a stack? Where, but on heap and stack data could live in RAM? (Box is a pointer to a single value on a heap but Vector is pointer to a start of an array on heap and it's legth)
+2. What runtime 🏠 [Rust] has? Does it use a GC (garbage collector)? (Fast runtime, no GC)
 3. What is special about slice? What is the layout of Rust standard data types? Difference between fat and thin pointers?
-4. Why does 🏠 [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`?
-5. What static typing means? What are the benefits of using it? Weak vs strong typing? Implicit vs explicit typing?
-6. What are generics and parametric polymorphism? Which problems do they solve?
+4. Why does 🏠 [Rust] have `&str` and `String` types? How do they differ? When should you use them? Why str slice coexists with slice? What is the difference between `String` and `Vec`? ( , &str has pointer to start of a string and its length, String )
+5. What static typing means? What are the benefits of using it? Weak vs strong typing? Implicit vs explicit typing? (static types means that you know all the types in compile time, benefits are that you can't have type error, )
+6. What are generics and parametric polymorphism? Which problems do they solve? (with generics you can allow somthing to use different types which applies some traits without rewriting code)
 7. What are nominative typing and structural typing? What is the difference?
 8. What are traits? How are they used? How do they compare to interfaces? What are auto trait and blanket impl? Uncovered type? What are marker traits?
 9. What are static and dynamic dispatches? Which should you use, and when? What is monomorphization?
-10. What are a crate, a module, and a package in Rust? How do they differ? How are they used? What is a workspace?
+10. What are a crate, a module, and a package in Rust? How do they differ? How are they used? What is a workspace? (package is a project that can contain different crates, a module is a file which you can use in a crate, crates are rust directories which can be compiled)
 11. What is cloning? What is copying? How do they compare? What is trait Drop for? What is special about this trait?
-12. What is immutability? What is the benefit of using it? What is the difference between immutability and const?
-13. What are move semantics? What are borrowing rules? What is the benefit of using them?
-14. What is RAII? How is it implemented in 🏠 [Rust]? What is the benefit of using it?
-15. What are lifetimes? Which problems do they solve? Which benefits do they provide?
+12. What is immutability? What is the benefit of using it? What is the difference between immutability and const? (immutability means that variable can't be changed any way possible, benefit is that you can't accidantly change variable which meant to be immutable)
+13. What are move semantics? What are borrowing rules? What is the benefit of using them? (move semantics means that every varible lives in a scope and automaticly deleted when scope ends, it also can be moved to another scope. borrowing rules are rules which prevent data races in a way that you can have any count of immutable references and only one mutable)
+14. What is RAII? How is it implemented in 🏠 [Rust]? What is the benefit of using it? (RAII is way to drop all memory used in oject when object is dropped, in rust it is implied automaticly to every object, benefit is you don't have to think how to deallocate the memory on your own)
+15. What are lifetimes? Which problems do they solve? Which benefits do they provide? (lifetimes is a way to speak with compiler and tell it how much value will be living, they solve the problem of dangling pointers)
 16. What is an iterator? What is a collection? How do they differ? How are they used?
 17. What are macros? Which problems do they solve? What is the difference between declarative and procedural macro?
-18. How code is tested in 🏠 [Rust]? Where should you put tests and why?
-19. Is 🏠 [Rust] an OOP language? Is it possible to use SOLID/GRASP? Does it have inheritance? Is Rust a functional language? What variance rules does Rust have?
+18. How code is tested in 🏠 [Rust]? Where should you put tests and why? (there are automated tests in rust which you can write on your own, they are putted in the same file as a function which it tests)
+19. Is 🏠 [Rust] an OOP language? Is it possible to use SOLID/GRASP? Does it have inheritance? Is Rust a functional language? What variance rules does Rust have? (rust is OOP but without inheritance)
 
 After you are done, notify your lead in an appropriate PR (pull request), and they will examine what you have learned.
 
@@ -70,6 +70,7 @@ _Additional_ articles, which may help to understand the above topic better:
 | 📰 [RAII: Compile-Time Memory Management in C++ and Rust][9]⏱0.75h | Jimmy Hartzell |
 | 📰 [Trait Drop][10]⏱0.25h | — |
 | 📰 [Common Lifetime Misconception][11]⏱0.75h | — |
+| 🎥 [Crust of Rust: Subtyping and Variance][32]⏱1.75h | Jon Gjengset |
 | 🎥 [Visualizing Memory Layout][12]⏱0.75h | — |
 | 📚 [Packages and crates (Rust wiki)][14]⏱0.25h | — |
 | 📰 [Non-lexical lifetimes (NLL) fully stable][15]⏱0.25h | Niko Matsakis |
@@ -118,3 +119,4 @@ _Additional_ articles, which may help to understand the above topic better:
 [28]: https://github.com/rust-lang-ua/learn_rust_together/blob/master/learn.md
 [30]: https://dev.to/vikram2784/beyond-pointers-how-rust-outshines-c-with-its-borrow-checker-1mad
 [31]: https://en.wikipedia.org/wiki/Memory_model_(programming)
+[32]: https://www.youtube.com/watch?v=iVYWDIW71jk
