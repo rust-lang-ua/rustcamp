@@ -3,3 +3,9 @@ name = "task_3_7"
 version = "0.1.0"
 edition = "2021"
 publish = false
+
+[dependencies]
+argon2 = "0.6.0"
+hex = "0.4.3"
+rand = "0.10.3"
+sha3 = "0.12.0"
